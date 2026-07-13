@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/* Pretendard 웹폰트 (프로젝트에 번들 → 오프라인에서도 PDF 동일).
+   dynamic-subset: "Pretendard" 패밀리를 모든 굵기로 등록, 필요한 한글 서브셋만 로드 */
+@import "pretendard/dist/web/static/pretendard-dynamic-subset.css";
+
+/* ============================================================
+   테마 토큰 — 여기 값만 바꾸면 전체 색/폰트가 바뀝니다.
+   text-accent / bg-accent / border-accent 유틸리티로 사용됩니다.
+   ============================================================ */
+@theme {
+  --color-accent: #2563eb;
+  --color-ink: #1a1a1a;
+  --color-muted: #6b7280;
+  --font-sans: "Pretendard", "Malgun Gothic", sans-serif;
+}
+
+@layer base {
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "pdf": "vite build && node scripts/export-pdf.mjs"
+    "pdf": "vite build && node scripts/export-pdf.mjs",
+    "portfolio-pdf": "vite build && node scripts/export-portfolio-pdf.mjs"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.2",

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>김도혁 포트폴리오</title>
+<link rel="stylesheet" href="/src/style-portfolio.css">
+</head>
+<!-- Tailwind CSS 사용. 페이지 1장 = A4(210mm x 297mm) 세로. 컴포넌트 클래스는 src/style-portfolio.css 참고 -->
+<body class="bg-gray-300 font-sans text-ink print:bg-white">
+
+<!-- 화면에서만 보이는 안내 (인쇄 시 자동 숨김) -->
+<div class="mx-auto mb-1 mt-3 w-[210mm] rounded-lg bg-gray-800 px-4 py-2.5 text-[13px] text-white print:hidden">
+  💡 PDF는 터미널에서 <b class="text-blue-300">npm run portfolio-pdf</b> 실행 (A4 세로, 배경 그래픽 자동 포함).
+  스크린샷 자리(점선 박스)는 실제 캡처 이미지로 교체하세요.
+</div>
+
+<main class="mx-auto flex flex-col items-center gap-6 py-3 print:gap-0 print:py-0">
+
+  <!-- ========== 01. 표지 ========== -->
+  <section class="slide break-after-page items-center justify-center bg-linear-to-br from-blue-600 to-indigo-800 p-0! text-white">
+    <img alt="김도혁 프로필 사진" src="./profile.jpg"
+         class="h-40 w-40 rounded-full border-4 border-white/20 object-cover shadow-lg">
+    <p class="mt-8 text-[15px] font-bold uppercase tracking-[0.4em] text-blue-200">Web Frontend Developer</p>
+    <h1 class="mt-4 text-[40px] font-extrabold tracking-tight">Kim Do Hyuk 김도혁</h1>
+  </section>
+
+  <!-- ========== 02. 인사 ========== -->
+  <section class="slide break-after-page items-center justify-center bg-linear-to-br from-blue-600 to-indigo-800 p-0! text-white">
+    <p class="text-[15px] font-bold uppercase tracking-[0.4em] text-blue-200">Portfolio</p>
+    <p class="mt-8 max-w-sm text-center text-[14px] leading-relaxed text-blue-100">
+      체계적인 설계와 끈기로 완성도를 높이고, AI를 도구로 다루는 프론트엔드 개발자입니다.
+    </p>
+    <div class="mt-10 flex flex-col items-center gap-2 text-[13px] text-blue-100">
+      <span>hyeeoooook@gmail.com</span>
+      <span>github.com/DoHyuk-Centric</span>
+      <span>hyeeoooook.tistory.com</span>
+    </div>
+    <p class="absolute bottom-10 text-[12px] text-blue-200">2026</p>
+  </section>
+
+  <!-- ========== 03. 목차 ========== -->
+  <section class="slide break-after-page">
+    <p class="slide-kicker">Contents</p>
+    <h2 class="mt-3 text-[30px] font-extrabold">목차</h2>
+    <div class="mt-16 flex flex-1 flex-col justify-center gap-8 text-[17px]">
+      <div class="flex items-baseline gap-4"><span class="text-[20px] font-extrabold text-accent">01</span><span class="font-semibold">About Me</span></div>
+      <div class="flex items-baseline gap-4"><span class="text-[20px] font-extrabold text-accent">02</span><span class="font-semibold">이력 &amp; 교육</span></div>
+      <div class="flex items-baseline gap-4"><span class="text-[20px] font-extrabold text-accent">03</span><span class="font-semibold">기술 스택</span></div>
+      <div class="flex items-baseline gap-4"><span class="text-[20px] font-extrabold text-accent">04</span><span class="font-semibold">프로젝트 — Kanto</span></div>
+      <div class="flex items-baseline gap-4"><span class="text-[20px] font-extrabold text-accent">05</span><span class="font-semibold">프로젝트 — Frontie</span></div>
+      <div class="flex items-baseline gap-4"><span class="text-[20px] font-extrabold text-accent">06</span><span class="font-semibold">프로젝트 — ESLint-KR</span></div>
+      <div class="flex items-baseline gap-4"><span class="text-[20px] font-extrabold text-accent">07</span><span class="font-semibold">프로젝트 — 개인 기술 블로그</span></div>
+      <div class="flex items-baseline gap-4"><span class="text-[20px] font-extrabold text-accent">08</span><span class="font-semibold">Contact</span></div>
+    </div>
+    <div class="slide-foot"><span>김도혁 Portfolio</span><span>03 / 15</span></div>
+  </section>
+
+  <!-- ========== 04. About Me ========== -->
+  <section class="slide break-after-page">
+    <p class="slide-kicker">01. About Me</p>
+    <h2 class="mt-3 text-[26px] font-extrabold">저는 이런 사람입니다</h2>
+
+    <div class="mt-8 flex flex-col items-center text-center">
+      <img alt="김도혁 프로필 사진" src="./profile.jpg"
+           class="h-28 w-28 rounded-full border border-gray-200 object-cover">
+      <p class="mt-3 text-[16px] font-bold">김도혁</p>
+      <p class="text-[12.5px] text-muted">Frontend Developer</p>
+    </div>
+
+    <div class="mt-10 flex flex-1 flex-col justify-center gap-8">
+      <div class="flex gap-4">
+        <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-50 text-[15px] font-bold text-accent">1</div>
+        <p class="text-[13.5px] leading-relaxed text-neutral-700"><b>체계적인 업무 습관</b> — 어떤 작업이든 먼저 설계를 고민하고, 체계가 없다면 스스로 만듭니다. 군 복무 중 초급 장교의 위치에서도 작전수행실(AOC) 업무를 체계화한 경험이 있습니다.</p>
+      </div>
+      <div class="flex gap-4">
+        <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-50 text-[15px] font-bold text-accent">2</div>
+        <p class="text-[13.5px] leading-relaxed text-neutral-700"><b>AI 도구의 체계적 활용</b> — 팀에 필요한 내부 규칙·문서화·보고서 초안 자동화에 AI를 활용해, 팀의 토큰 사용 효율과 개발 시간을 함께 단축시켰습니다.</p>
+      </div>
+      <div class="flex gap-4">
+        <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-blue-50 text-[15px] font-bold text-accent">3</div>
+        <p class="text-[13.5px] leading-relaxed text-neutral-700"><b>팀을 이끄는 끈기</b> — 몰입한 일에는 끈기 있게 매진하며, 팀의 분위기를 조성하는 역할에서 보람을 느낍니다. 문제를 만나면 방식을 가리지 않고 고민해 문서로 정리합니다.</p>
+      </div>
+    </div>
+    <div class="slide-foot"><span>김도혁 Portfolio</span><span>04 / 15</span></div>
+  </section>
+
+  <!-- ========== 05. 이력 & 교육 ========== -->
+  <section class="slide break-after-page">
+    <p class="slide-kicker">02. 이력 &amp; 교육</p>
+    <h2 class="mt-3 text-[26px] font-extrabold">이력 &amp; 교육</h2>
+    <div class="mt-16 flex-1 border-l-2 border-dotted border-gray-200 pl-10">
+      <div class="relative mb-12">
+        <span class="absolute -left-11.25 top-1 h-3 w-3 rounded-full bg-accent"></span>
+        <p class="text-[12.5px] font-semibold text-muted">2025.12 – 2026.07</p>
+        <h3 class="mt-1 text-[16px] font-bold">멋쟁이사자처럼 부트캠프 <span class="font-medium text-muted">· 프론트엔드 17기</span></h3>
+        <ul class="pf-list mt-2">
+          <li>JavaScript·TypeScript, React·Next.js 기반 웹 실무 과정 수료 (115일 / 총 920시간)</li>
+          <li>파이널 팀 프로젝트 전체 5개 팀 중 1위 — Kanto</li>
+        </ul>
+      </div>
+      <div class="relative mb-12">
+        <span class="absolute -left-11.25 top-1 h-3 w-3 rounded-full bg-accent"></span>
+        <p class="text-[12.5px] font-semibold text-muted">2017.03 – 2022.02</p>
+        <h3 class="mt-1 text-[16px] font-bold">세명대학교 <span class="font-medium text-muted">· 컴퓨터학부 (학사)</span></h3>
+        <ul class="pf-list mt-2">
+          <li>학군단(ROTC) 60기 · 육군 소위 임관 (2022)</li>
+        </ul>
+      </div>
+      <div class="relative">
+        <span class="absolute -left-11.25 top-1 h-3 w-3 rounded-full bg-accent"></span>
+        <p class="text-[12.5px] font-semibold text-muted">2026.07 – 진행 중</p>
+        <h3 class="mt-1 text-[16px] font-bold">KDT해커톤 <span class="font-medium text-muted">· KD2TH(케디스)</span></h3>
+        <ul class="pf-list mt-2">
+          <li>느린학습자를 위한 쉬운말 번역기</li>
+        </ul>
+      </div>
+    </div>
+    <div class="slide-foot"><span>김도혁 Portfolio</span><span>05 / 15</span></div>
+  </section>
+
+  <!-- ========== 06. 기술 스택 ========== -->
+  <section class="slide break-after-page">
+    <p class="slide-kicker">03. Tech Stack</p>
+    <h2 class="mt-3 text-[26px] font-extrabold">기술 스택</h2>
+    <div class="mt-12 flex flex-1 flex-col justify-center space-y-6">
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
+        <span class="inline-block w-full text-[13px] font-bold text-muted">Languages</span>
+        <span class="pf-tag">TypeScript</span><span class="pf-tag">JavaScript</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
+        <span class="inline-block w-full text-[13px] font-bold text-muted">Frontend</span>
+        <span class="pf-tag">React</span><span class="pf-tag">Next.js</span><span class="pf-tag">Vanilla JS</span><span class="pf-tag">Zustand</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
+        <span class="inline-block w-full text-[13px] font-bold text-muted">Styling</span>
+        <span class="pf-tag">Tailwind CSS</span><span class="pf-tag">shadcn/ui</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
+        <span class="inline-block w-full text-[13px] font-bold text-muted">Backend / DB</span>
+        <span class="pf-tag">Supabase</span><span class="pf-tag">PostgreSQL</span><span class="pf-tag">Redis</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
+        <span class="inline-block w-full text-[13px] font-bold text-muted">Testing</span>
+        <span class="pf-tag">Vitest</span><span class="pf-tag">Testing Library</span><span class="pf-tag">Playwright</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
+        <span class="inline-block w-full text-[13px] font-bold text-muted">Tools</span>
+        <span class="pf-tag">Vite</span><span class="pf-tag">Git</span><span class="pf-tag">GitHub Actions</span><span class="pf-tag">Vercel</span><span class="pf-tag">ESLint</span>
+      </div>
+    </div>
+    <div class="slide-foot"><span>김도혁 Portfolio</span><span>06 / 15</span></div>
+  </section>
+
+  <!-- ========== 07. Kanto — Overview ========== -->
+  <section class="slide break-after-page">
+    <p class="slide-kicker">04. Project</p>
+    <h2 class="mt-3 text-[30px] font-extrabold">Kanto</h2>
+    <p class="mt-2 text-[13.5px] text-neutral-600">필리핀 한인을 위한 통합 생활 플랫폼</p>
+    <div class="mt-4 flex flex-wrap gap-2">
+      <span class="pf-badge">팀 프로젝트 · 4인</span>
+      <span class="pf-badge">2026.05 – 2026.07</span>
+      <span class="pf-badge-accent">부트캠프 파이널 1위</span>
+    </div>
+
+    <div class="mt-6 flex flex-1 flex-col justify-center">
+      <div class="mock-shot aspect-video">
+        <div class="mock-shot-bar">
+          <span class="mock-shot-dot bg-red-300"></span><span class="mock-shot-dot bg-yellow-300"></span><span class="mock-shot-dot bg-green-300"></span>
+          <span class="ml-2 text-[11px] text-gray-400">kanto-iota.vercel.app</span>
+        </div>
+        <div class="mock-shot-body">메인 화면 스크린샷 자리 — 실제 캡처로 교체</div>
+      </div>
+      <p class="mt-6 text-[13.5px] leading-relaxed text-neutral-700">
+        중고거래, 구인구직, 부동산, 지도 기반 번개모임까지 — 필리핀 한인을 위한 통합 생활 플랫폼입니다.
+      </p>
+      <div class="mt-4 flex flex-wrap gap-1.5">
+        <span class="pf-tag">Next.js</span><span class="pf-tag">Zustand</span><span class="pf-tag">Upstash</span><span class="pf-tag">Supabase Realtime</span><span class="pf-tag">CI/CD</span>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <span>김도혁 Portfolio</span>
+      <span>Demo: kanto-iota.vercel.app · GitHub: FRONTENDBOOTCAMP-17th/kanto</span>
+      <span>07 / 15</span>
+    </div>
+  </section>
+
+  <!-- ========== 08. Kanto — 문제 정의 & 핵심 기능 ========== -->
+  <section class="slide break-after-page">
+    <p class="slide-kicker">04. Project — Kanto</p>
+    <h2 class="mt-3 text-[26px] font-extrabold">문제 정의 &amp; 핵심 기능</h2>
+    <div class="flex flex-1 flex-col justify-center gap-12">
+      <div>
+        <h3 class="mb-3 text-[14px] font-bold text-accent">문제 정의</h3>
+        <p class="text-[13.5px] leading-relaxed text-neutral-700">
+          필리핀 거주 한인들은 중고거래·구인구직·부동산·모임 정보가 여러 채널에 흩어져 있어,
+          신뢰할 수 있는 통합 창구가 부족했습니다. Kanto는 이 정보들을 하나의 플랫폼으로 모으는 것을 목표로 했습니다.
+        </p>
+      </div>
+      <div>
+        <h3 class="mb-3 text-[14px] font-bold text-accent">핵심 기능 &amp; 담당 역할</h3>
+        <ul class="pf-list">
+          <li>실시간 1:1 채팅 (Supabase Realtime)</li>
+          <li>신뢰도·인기 점수 시스템 (KTS·KPPS)</li>
+          <li>멀티 LLM 폴백 기반 AI 챗봇</li>
+          <li>Redis 기반 로그인 보안 구현</li>
+        </ul>
+      </div>
+    </div>
+    <div class="slide-foot"><span>김도혁 Portfolio</span><span>08 / 15</span></div>
+  </section>
+
+  <!-- ========== 09. Kanto — 트러블슈팅(성능 최적화) ========== -->
+  <section class="slide break-after-page">
+    <p class="slide-kicker">04. Project — Kanto</p>
+    <h2 class="mt-3 text-[26px] font-extrabold">트러블슈팅 — 성능 최적화</h2>
+    <div class="flex flex-1 flex-col justify-center">
+      <p class="text-[13.5px] text-neutral-700">Core Web Vitals(LCP·INP·CLS) 개선을 위해 다음을 적용했습니다.</p>
+      <ul class="pf-list mt-4">
+        <li>LCP 이미지에 <b>priority</b> 속성 적용, <b>WebP</b> 포맷 전환</li>
+        <li>이미지 캐시 <b>TTL</b> 적용으로 재방문 로딩 속도 개선</li>
+        <li>측정 자동화 <b>psi-check</b> 스크립트로 배포마다 지표 회귀 방지</li>
+      </ul>
+      <div class="mt-8 flex flex-col gap-4">
+        <div class="pf-card flex items-center justify-between">
+          <p class="text-[12px] font-semibold uppercase tracking-wide text-muted">LCP</p>
+          <p class="text-[13px] text-gray-400">[개선 전 → 후 수치 기입]</p>
+        </div>
+        <div class="pf-card flex items-center justify-between">
+          <p class="text-[12px] font-semibold uppercase tracking-wide text-muted">INP</p>
+          <p class="text-[13px] text-gray-400">[개선 전 → 후 수치 기입]</p>
+        </div>
+        <div class="pf-card flex items-center justify-between">
+          <p class="text-[12px] font-semibold uppercase tracking-wide text-muted">CLS</p>
+          <p class="text-[13px] text-gray-400">[개선 전 → 후 수치 기입]</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-foot"><span>김도혁 Portfolio</span><span>psi-check 측정 결과로 교체 예정</span><span>09 / 15</span></div>
+  </section>
+
+  <!-- ========== 10. Kanto — 회고 ========== -->
+  <section class="slide break-after-page">
+    <p class="slide-kicker">04. Project — Kanto</p>
+    <h2 class="mt-3 text-[26px] font-extrabold">회고</h2>
+    <div class="mt-10 flex flex-1 items-center">
+      <p class="text-[14.5px] leading-loose text-neutral-700">
+        부트캠프 파이널 프로젝트로 5개 팀 중 1위를 기록했습니다. 실시간 기능과 성능 최적화를 함께 다루면서
+        기술적 트레이드오프를 팀원들과 문서로 정리해 결정하는 과정을 경험했고, AI를 활용해 보고서 초안과
+        코드 리뷰를 자동화하며 팀의 개발 효율을 높이는 역할을 맡았습니다.
+      </p>
+    </div>
+    <div class="slide-foot"><span>김도혁 Portfolio</span><span>10 / 15</span></div>
+  </section>
+
+  <!-- ========== 11. Frontie ========== -->
+  <section class="slide break-after-page">
+    <p class="slide-kicker">05. Project</p>
+    <h2 class="mt-3 text-[26px] font-extrabold">Frontie</h2>
+    <p class="mt-2 text-[13.5px] text-neutral-600">멀티 LLM 기반 프론트엔드 학습 AI 챗봇</p>
+    <div class="mt-4 flex flex-wrap gap-2">
+      <span class="pf-badge">개인</span>
+      <span class="pf-badge">2026.05 · 약 2주</span>
+    </div>
+
+    <div class="mt-6 flex flex-1 flex-col justify-center">
+      <div class="mock-shot aspect-video">
+        <div class="mock-shot-bar">
+          <span class="mock-shot-dot bg-red-300"></span><span class="mock-shot-dot bg-yellow-300"></span><span class="mock-shot-dot bg-green-300"></span>
+          <span class="ml-2 text-[11px] text-gray-400">frontie-topaz.vercel.app</span>
+        </div>
+        <div class="mock-shot-body">화면 스크린샷 자리</div>
+      </div>
+      <ul class="pf-list mt-6">
+        <li>Anthropic·Groq·Cerebras·Google 멀티 LLM 기반 프론트엔드 학습 챗봇</li>
+        <li>파일 첨부·모델 스위칭 구현</li>
+        <li>Lighthouse 성능 점수 <b>48 → 75점</b> 개선</li>
+      </ul>
+      <div class="mt-4 flex flex-wrap gap-1.5">
+        <span class="pf-tag">Next.js</span><span class="pf-tag">Vercel AI SDK</span><span class="pf-tag">Zustand</span><span class="pf-tag">Tailwind CSS</span>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <span>김도혁 Portfolio</span>
+      <span>Demo: frontie-topaz.vercel.app · GitHub: DoHyuk-Centric/frontie</span>
+      <span>11 / 15</span>
+    </div>
+  </section>
+
+  <!-- ========== 12. ESLint-KR ========== -->
+  <section class="slide break-after-page">
+    <p class="slide-kicker">06. Project</p>
+    <h2 class="mt-3 text-[26px] font-extrabold">ESLint-KR</h2>
+    <p class="mt-2 text-[13.5px] text-neutral-600">ESLint 공식 문서 한국어 실전 가이드 사이트</p>
+    <div class="mt-4 flex flex-wrap gap-2">
+      <span class="pf-badge">개인</span>
+      <span class="pf-badge">2026.03 – 2026.04</span>
+    </div>
+
+    <div class="mt-6 flex flex-1 flex-col justify-center">
+      <div class="mock-shot aspect-video">
+        <div class="mock-shot-bar">
+          <span class="mock-shot-dot bg-red-300"></span><span class="mock-shot-dot bg-yellow-300"></span><span class="mock-shot-dot bg-green-300"></span>
+          <span class="ml-2 text-[11px] text-gray-400">dohyuk-centric.github.io/eslint-kr</span>
+        </div>
+        <div class="mock-shot-body">화면 스크린샷 자리</div>
+      </div>
+      <ul class="pf-list mt-6">
+        <li>ESLint 공식 문서의 영어 장벽을 낮추기 위한 한국어 가이드 사이트를 기획·개발·배포</li>
+        <li>빌드·타입체크·주간 라이브 스모크 테스트를 CI로 자동화</li>
+        <li>SPA 딥링크 폴백까지 검증</li>
+      </ul>
+      <div class="mt-4 flex flex-wrap gap-1.5">
+        <span class="pf-tag">React</span><span class="pf-tag">TypeScript</span><span class="pf-tag">React Router</span><span class="pf-tag">GitHub Actions</span>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <span>김도혁 Portfolio</span>
+      <span>Demo: dohyuk-centric.github.io/eslint-kr · GitHub: DoHyuk-Centric/eslint-kr</span>
+      <span>12 / 15</span>
+    </div>
+  </section>
+
+  <!-- ========== 13. 개인 기술 블로그 ========== -->
+  <section class="slide break-after-page">
+    <p class="slide-kicker">07. Project</p>
+    <h2 class="mt-3 text-[26px] font-extrabold">개인 기술 블로그</h2>
+    <p class="mt-2 text-[13.5px] text-neutral-600">DoHyuk.dev</p>
+    <div class="mt-4 flex flex-wrap gap-2">
+      <span class="pf-badge">개인</span>
+      <span class="pf-badge">2026.01 – 진행 중</span>
+    </div>
+
+    <div class="mt-6 flex flex-1 flex-col justify-center">
+      <div class="mock-shot aspect-video">
+        <div class="mock-shot-bar">
+          <span class="mock-shot-dot bg-red-300"></span><span class="mock-shot-dot bg-yellow-300"></span><span class="mock-shot-dot bg-green-300"></span>
+          <span class="ml-2 text-[11px] text-gray-400">dohyuk.dev</span>
+        </div>
+        <div class="mock-shot-body">화면 스크린샷 자리</div>
+      </div>
+      <ul class="pf-list mt-6">
+        <li>프레임워크 없이 바닐라 JS·Vite로 구현한 MPA 구조, 페이지별 필요한 스크립트만 로드</li>
+        <li>마크다운 블록 단위 실시간 미리보기 도구를 개발해 <b>npm 배포</b>(markdown-block-preview)</li>
+        <li>변경된 블록만 렌더링해 전체 재렌더 대비 최대 <b>8.2배</b> 빠름 (50블록 벤치마크)</li>
+      </ul>
+      <div class="mt-4 flex flex-wrap gap-1.5">
+        <span class="pf-tag">JavaScript</span><span class="pf-tag">Vite</span><span class="pf-tag">Supabase</span><span class="pf-tag">Docker</span>
+      </div>
+    </div>
+    <div class="slide-foot">
+      <span>김도혁 Portfolio</span>
+      <span>Demo: dohyuk.dev · GitHub: DoHyuk-Centric/myBlog</span>
+      <span>13 / 15</span>
+    </div>
+  </section>
+
+  <!-- ========== 14. 마무리 (PR) ========== -->
+  <section class="slide break-after-page">
+    <p class="slide-kicker">08. Contact 전에</p>
+    <h2 class="mt-3 text-[24px] font-extrabold">마지막으로 드리고 싶은 말씀</h2>
+    <div class="mt-10 flex flex-1 flex-col justify-center space-y-6 text-[13.5px] leading-relaxed text-neutral-700">
+      <p>개발을 정형화된 하나의 일로 한정하지 않으려 합니다. 배운 것을 나누는 오픈소스, 팀의 분위기를 이끄는 역할, 사회에 기여하는 방향으로 나아갈 때 가장 큰 보람을 느낍니다.</p>
+      <p>몰입한 일에는 누구에게도 지지 않는 끈기를 발휘하며, 무슨 일이든 체계화하려 합니다. 체계가 없다면 스스로 만들어냅니다.</p>
+      <p>AI는 하나의 도구로 받아들이되, 저만의 방식으로 정립해 활용하는 데 집중합니다. 빠르게 변하는 환경에서 뒤처지지 않도록 꾸준히 시도하며, 우직하게 저만의 길을 다지고 있습니다.</p>
+    </div>
+    <div class="slide-foot"><span>김도혁 Portfolio</span><span>14 / 15</span></div>
+  </section>
+
+  <!-- ========== 15. Contact ========== -->
+  <section class="slide items-center justify-center bg-linear-to-br from-blue-600 to-indigo-800 p-0! text-white">
+    <p class="text-[15px] font-bold uppercase tracking-[0.4em] text-blue-200">Thank You</p>
+    <h2 class="mt-6 max-w-sm text-center text-[32px] font-extrabold">함께 성장할 기회를 찾고 있습니다</h2>
+    <div class="mt-10 flex flex-col items-center gap-2 text-[15px] text-blue-100">
+      <span>hyeeoooook@gmail.com</span>
+      <span>010-9400-6992</span>
+      <span>github.com/DoHyuk-Centric</span>
+      <span>hyeeoooook.tistory.com</span>
+    </div>
+  </section>
+
+</main>
+</body>
+</html>

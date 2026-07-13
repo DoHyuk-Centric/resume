@@ -11,7 +11,10 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      input: "resume.html",
+      input: {
+        resume: "resume.html",
+        portfolio: "portfolio.html",
+      },
     },
   },
 });
