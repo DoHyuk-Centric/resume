@@ -17,6 +17,7 @@
 
 @layer base {
   html {
+    font-family: var(--font-sans);
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
