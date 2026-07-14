@@ -617,7 +617,7 @@
                     <li>실시간 1:1 채팅 시스템 구현 (Supabase Realtime)</li>
                     <li>KTS·KPPS(망고 지수) 신뢰도·인기 점수 시스템 설계</li>
                     <li>
-                      관리자(Admin) 페이지 — 감사 로그·권한 체계, TanStack Query
+                      관리자(Admin) 페이지 - 감사 로그·권한 체계, TanStack Query
                       리팩터링
                     </li>
                     <li>Redis(Upstash) 기반 로그인 보안</li>
@@ -691,8 +691,8 @@
                       문서엔 없는 자료)
                     </li>
                     <li>
-                      자체 AI 코드 리뷰 도입 CODE_REVIEW.md로 P0~P3 우선순위화
-                      후 반영
+                      반복 로직을 공통 컴포넌트(useClipboard·CopyableCodeBlock)로
+                      추출해 리팩토링
                     </li>
                     <li>
                       SPA 딥링크 404 문제 해결 (spa-github-pages 패턴) + CI·주간
@@ -747,9 +747,9 @@
         </div>
       </section>
 
-      <!-- ========== 04. Kanto — 프로젝트 소개 ========== -->
+      <!-- ========== 04. Kanto - 프로젝트 소개 ========== -->
       <section class="slide break-after-page">
-        <p class="slide-kicker">03. Project — Kanto · Details (1/4)</p>
+        <p class="slide-kicker">03. Project - Kanto · Details (1/4)</p>
         <div class="mt-3 flex items-center gap-4">
           <div
             class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white shadow-[0_0_10px_rgba(0,0,0,0.2)]"
@@ -930,9 +930,9 @@
         </div>
       </section>
 
-      <!-- ========== 05. Kanto — 경험 ========== -->
+      <!-- ========== 05. Kanto - 경험 ========== -->
       <section class="slide break-after-page">
-        <p class="slide-kicker">03. Project — Kanto · Details (2/4)</p>
+        <p class="slide-kicker">03. Project - Kanto · Details (2/4)</p>
         <h2 class="mt-3 text-[26px] font-extrabold">경험</h2>
 
         <div class="flex gap-2 flex-1 flex-col justify-evenly">
@@ -1129,7 +1129,7 @@
         </div>
       </section>
 
-      <!-- ========== 06. Kanto — 문제해결 ========== -->
+      <!-- ========== 06. Kanto - 문제해결 ========== -->
       <section class="slide break-after-page">
         <p class="slide-kicker">03. Project - Kanto · Details (3/4)</p>
         <h2 class="mt-3 text-[26px] font-extrabold">문제해결</h2>
@@ -1176,7 +1176,7 @@
 
           <div class="border-t border-gray-200 pt-6">
             <h3 class="text-[14px] font-bold text-accent">
-              내 프로필 페이지 — 서버/클라이언트 컴포넌트 분리
+              내 프로필 페이지 - 서버/클라이언트 컴포넌트 분리
             </h3>
             <p class="mt-2 text-[13.5px] text-neutral-700">
               프로필 페이지를 처음 구현할 때는 로그인·회원가입 페이지가 아직
@@ -1234,7 +1234,7 @@
         </div>
       </section>
 
-      <!-- ========== 07. Kanto — 부록 ========== -->
+      <!-- ========== 07. Kanto - 부록 ========== -->
       <section class="slide break-after-page">
         <p class="slide-kicker">03. Project - Kanto · Details (4/4)</p>
         <h2 class="mt-3 text-[26px] font-extrabold">부록</h2>
@@ -1297,7 +1297,7 @@
         </div>
       </section>
 
-      <!-- ========== 08. myBlog — 프로젝트 소개 ========== -->
+      <!-- ========== 08. myBlog - 프로젝트 소개 ========== -->
       <section class="slide break-after-page">
         <p class="slide-kicker">04. Project - myBlog · Details (1/2)</p>
         <div class="mt-3 flex items-center gap-4">
@@ -1464,9 +1464,9 @@
         </div>
       </section>
 
-      <!-- ========== 09. myBlog — 경험 및 문제해결 ========== -->
+      <!-- ========== 09. myBlog - 경험 및 문제해결 ========== -->
       <section class="slide break-after-page">
-        <p class="slide-kicker">04. Project — myBlog · Details (2/2)</p>
+        <p class="slide-kicker">04. Project - myBlog · Details (2/2)</p>
         <h2 class="mt-3 text-[26px] font-extrabold">경험 및 문제해결</h2>
 
         <div class="flex gap-2 flex-1 flex-col justify-evenly">
@@ -1570,7 +1570,7 @@
                   </li>
                   <li>
                     <b>URL.createObjectURL()</b>로 만든 <b>blob: 임시 주소</b>로
-                    해결했습니다 — 파일을 선택하면 브라우저가 그 파일을 가리키는
+                    해결했습니다 - 파일을 선택하면 브라우저가 그 파일을 가리키는
                     로컬 주소를 즉석에서 만들어 미리보기에 쓰고, 실제 파일은
                     별도 Map에 그 주소와 함께 잠깐 담아뒀습니다.
                   </li>
@@ -1585,7 +1585,7 @@
           </div>
           <div class="border-t border-gray-200 pt-6">
             <h3 class="text-[14px] font-bold text-accent">
-              인증 수단 일원화 — Firebase → Supabase
+              인증 수단 일원화 - Firebase → Supabase
             </h3>
             <p class="mt-2 text-[13.5px] text-neutral-700">
               게시글·프로필 DB는 Supabase Postgres로 쓰기로 했는데, 인증은 먼저
@@ -1615,9 +1615,9 @@
         </div>
       </section>
 
-      <!-- ========== 10. Frontie — 프로젝트 소개 ========== -->
+      <!-- ========== 10. Frontie - 프로젝트 소개 ========== -->
       <section class="slide break-after-page">
-        <p class="slide-kicker">05. Project — Frontie · Details (1/2)</p>
+        <p class="slide-kicker">05. Project - Frontie · Details (1/2)</p>
         <div class="mt-3 flex items-center gap-4">
           <div
             class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white shadow-[0_0_10px_rgba(0,0,0,0.2)]"
@@ -1645,10 +1645,7 @@
           <p class="text-[13.5px] leading-relaxed text-neutral-700 px-4">
             부트캠프 팀 프로젝트(Kanto)와 병행한 개인 미니 프로젝트입니다.
             이슈 단위로 브랜치를 나누고 PR로 병합하는 협업 워크플로우를 1인
-            개발에도 동일하게 적용해, 약 2주 동안 61개 커밋·14개 PR의 이력을
-            추적 가능하게 관리했습니다. AI 코드 어시스턴트를 적극 활용해
-            반복 작업의 속도를 냈지만, 이슈 정의·원인 분석·해결책 검증은
-            직접 판단해 진행했습니다. Groq·Gemini·Cerebras 3개 LLM
+            개발에도 동일하게 적용했습니다. Groq·Gemini·Cerebras 3개 LLM
             프로바이더를 하나의 채팅 인터페이스에서 실시간으로 전환하며 쓸 수
             있는 프론트엔드 학습용 AI 챗봇입니다.
           </p>
@@ -1673,7 +1670,7 @@
               <li class="grid grid-cols-[90px_1fr] items-baseline">
                 <span class="text-[13px] font-bold text-ink">개발 기간</span>
                 <span class="text-[13.5px] text-neutral-600"
-                  >2026.05.16 - 2026.05.27 (약 2주)</span
+                  >2026.05.16 - 2026.05.27</span
                 >
               </li>
               <li class="grid grid-cols-[90px_1fr] items-baseline">
@@ -1761,9 +1758,9 @@
         </div>
       </section>
 
-      <!-- ========== 11. Frontie — 경험 및 문제해결 ========== -->
+      <!-- ========== 11. Frontie - 경험 및 문제해결 ========== -->
       <section class="slide break-after-page">
-        <p class="slide-kicker">05. Project — Frontie · Details (2/2)</p>
+        <p class="slide-kicker">05. Project - Frontie · Details (2/2)</p>
         <h2 class="mt-3 text-[26px] font-extrabold">경험 및 문제해결</h2>
 
         <div class="flex gap-2 flex-1 flex-col justify-evenly">
@@ -1784,12 +1781,12 @@
                 <div class="flex h-[60mm] items-center justify-center">
                   <img
                     src="./frontie/frontie_switch_model.png"
-                    alt="설정 모달 — 모델·창의성·언어 전환"
+                    alt="설정 모달 - 모델·창의성·언어 전환"
                     class="h-full w-auto rounded-lg border border-gray-200 object-contain"
                   />
                 </div>
                 <p class="mt-0.5 text-center text-[9px] leading-snug text-muted px-4">
-                  설정 모달 — 모델·창의성·언어를 즉시 전환할 수 있습니다.
+                  설정 모달 - 모델·창의성·언어를 즉시 전환할 수 있습니다.
                 </p>
               </div>
               <div>
@@ -1813,7 +1810,7 @@ streamText({
   temperature: creativity / 100,
 });</code></pre>
                 <p class="mt-0.5 text-center text-[9px] leading-snug text-muted px-4">
-                  lib/ai-providers.ts — 3개 프로바이더를 하나의 룩업
+                  lib/ai-providers.ts - 3개 프로바이더를 하나의 룩업
                   테이블로 통일해, 요청 시점에 모델 하나만 골라 씁니다.
                 </p>
               </div>
@@ -1884,43 +1881,119 @@ streamText({
         </div>
       </section>
 
-      <!-- ========== 12. ESLint-KR ========== -->
+      <!-- ========== 12. ESLint-KR - 프로젝트 소개 ========== -->
       <section class="slide break-after-page">
-        <p class="slide-kicker">06. Project</p>
-        <h2 class="mt-3 text-[26px] font-extrabold">ESLint-KR</h2>
-        <p class="mt-2 text-[13.5px] text-neutral-600">
-          ESLint 공식 문서 한국어 실전 가이드 사이트
-        </p>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <span class="pf-badge">개인</span>
-          <span class="pf-badge">2026.03 – 2026.04</span>
+        <p class="slide-kicker">06. Project - ESLint-KR · Details (1/2)</p>
+        <div class="mt-3 flex items-center gap-4">
+          <div
+            class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white shadow-[0_0_10px_rgba(0,0,0,0.2)]"
+          >
+            <img
+              src="./eslint-kr-favicon.svg"
+              alt="ESLint-KR 파비콘"
+              class="h-10 w-10 object-contain"
+            />
+          </div>
+          <h2 class="text-[36px] font-extrabold leading-tight">ESLint-KR</h2>
+          <div class="ml-3 mt-0.5 h-4 w-0.5 bg-gray-400"></div>
+          <p class="mt-1 text-[16px] text-neutral-600">
+            ESLint 공식 문서 한국어 실전 가이드 사이트
+          </p>
         </div>
 
-        <div class="mt-6 flex flex-1 flex-col justify-center">
-          <div class="mock-shot aspect-video">
-            <div class="mock-shot-bar">
-              <span class="mock-shot-dot bg-red-300"></span
-              ><span class="mock-shot-dot bg-yellow-300"></span
-              ><span class="mock-shot-dot bg-green-300"></span>
-              <span class="ml-2 text-[11px] text-gray-400"
-                >dohyuk-centric.github.io/eslint-kr</span
-              >
-            </div>
-            <div class="mock-shot-body">화면 스크린샷 자리</div>
+        <img
+          src="./eslint/ESLint.png"
+          alt="ESLint-KR 홈 화면"
+          class="mt-6 mx-auto block h-[85mm] w-auto rounded-lg border border-gray-200 object-contain shadow-md"
+        />
+
+        <div class="mt-6">
+          <p class="text-[13.5px] leading-relaxed text-neutral-700 px-4">
+            부트캠프 수업에서 처음 ESLint를 접하고 더 공부해보려 했지만,
+            일본어 지원은 있는데 한국어 지원만 없다는 걸 알게 됐습니다.
+            실제로 ESLint 공식 저장소에는 한국어 번역 제안이 "수요 대비
+            유지보수 오버헤드"를 이유로 거절된 이슈가 남아 있었고,
+            ESLint만 집중적으로 다루는 한국어 커뮤니티도 없다는 걸
+            확인했습니다. <br /> 반면 React는 언어별 문서 사이트 인프라를 공식
+            지원해 커뮤니티가 채워나가게 했고, 그 결과 중국어 번역
+            저장소만으로도 1,000개 이상의 포크를 받을 만큼 활발한
+            생태계가 만들어져 있었습니다. 모국어가 학습에 미치는 영향을
+            알고 있었기에, 저와 같이 처음 배우는 주니어 개발자들이 더 쉽게 접근할
+            수 있도록 이 프로젝트를 시작했습니다.
+          </p>
+        </div>
+
+        <div class="mt-6 flex flex-1 items-start gap-8">
+          <div class="w-1/2">
+            <h3 class="mb-3 ml-4 text-[14px] font-bold text-accent">
+              프로젝트 정보
+            </h3>
+            <ul class="ml-4 flex list-none flex-col gap-2.5">
+              <li class="grid grid-cols-[90px_1fr] items-baseline">
+                <span class="text-[13px] font-bold text-ink">개발 인원</span>
+                <span class="text-[13.5px] text-neutral-600"
+                  >개인 프로젝트</span
+                >
+              </li>
+              <li class="grid grid-cols-[90px_1fr] items-baseline">
+                <span class="text-[13px] font-bold text-ink">플랫폼</span>
+                <span class="text-[13.5px] text-neutral-600">Web</span>
+              </li>
+              <li class="grid grid-cols-[90px_1fr] items-baseline">
+                <span class="text-[13px] font-bold text-ink">개발 기간</span>
+                <span class="text-[13.5px] text-neutral-600"
+                  >2026.03.23 - 04.06</span
+                >
+              </li>
+              <li class="grid grid-cols-[90px_1fr] items-baseline">
+                <span class="text-[13px] font-bold text-ink">서비스 링크</span>
+                <a
+                  href="https://dohyuk-centric.github.io/eslint-kr"
+                  target="_blank"
+                  rel="noopener"
+                  class="pf-link text-[13.5px]"
+                  >dohyuk-centric.github.io/eslint-kr</a
+                >
+              </li>
+              <li class="grid grid-cols-[90px_1fr] items-baseline">
+                <span class="text-[13px] font-bold text-ink">GitHub</span>
+                <a
+                  href="https://github.com/DoHyuk-Centric/eslint-kr"
+                  target="_blank"
+                  rel="noopener"
+                  class="pf-link text-[13.5px]"
+                  >DoHyuk-Centric/eslint-kr</a
+                >
+              </li>
+            </ul>
           </div>
-          <ul class="pf-list mt-6">
-            <li>
-              ESLint 공식 문서의 영어 장벽을 낮추기 위한 한국어 가이드 사이트를
-              기획·개발·배포
-            </li>
-            <li>빌드·타입체크·주간 라이브 스모크 테스트를 CI로 자동화</li>
-            <li>SPA 딥링크 폴백까지 검증</li>
-          </ul>
-          <div class="mt-4 flex flex-wrap gap-1.5">
-            <span class="pf-tag">React</span
-            ><span class="pf-tag">TypeScript</span
-            ><span class="pf-tag">React Router</span
-            ><span class="pf-tag">GitHub Actions</span>
+
+          <div class="w-3/5">
+            <h3 class="mb-3 ml-4 text-[14px] font-bold text-accent">
+              개발 환경
+            </h3>
+            <ul class="ml-4 flex list-none flex-col gap-2.5">
+              <li class="grid grid-cols-[90px_1fr] items-baseline">
+                <span class="text-[13px] font-bold text-ink">언어</span>
+                <span class="text-[13.5px] text-neutral-600">TypeScript</span>
+              </li>
+              <li class="grid grid-cols-[90px_1fr] items-baseline">
+                <span class="text-[13px] font-bold text-ink">프레임워크</span>
+                <span class="text-[13.5px] text-neutral-600"
+                  >React 19 · Vite · React Router DOM v7</span
+                >
+              </li>
+              <li class="grid grid-cols-[90px_1fr] items-baseline">
+                <span class="text-[13px] font-bold text-ink">배포/인프라</span>
+                <span class="text-[13.5px] text-neutral-600"
+                  >GitHub Pages · GitHub Actions(CI, 주간 스모크 테스트)</span
+                >
+              </li>
+              <li class="grid grid-cols-[90px_1fr] items-baseline">
+                <span class="text-[13px] font-bold text-ink">라이선스</span>
+                <span class="text-[13.5px] text-neutral-600">MIT</span>
+              </li>
+            </ul>
           </div>
         </div>
         <div class="slide-foot">
@@ -1933,54 +2006,195 @@ streamText({
         </div>
       </section>
 
-      <!-- ========== 13. 마무리 (PR) ========== -->
+      <!-- ========== 13. ESLint-KR - 경험 및 문제해결 ========== -->
       <section class="slide break-after-page">
-        <p class="slide-kicker">07. Contact 전에</p>
-        <h2 class="mt-3 text-[24px] font-extrabold">
-          마지막으로 드리고 싶은 말씀
-        </h2>
-        <div
-          class="mt-10 flex flex-1 flex-col justify-center space-y-6 text-[13.5px] leading-relaxed text-neutral-700"
-        >
-          <p>
-            개발을 정형화된 하나의 일로 한정하지 않으려 합니다. 배운 것을 나누는
-            오픈소스, 팀의 분위기를 이끄는 역할, 사회에 기여하는 방향으로 나아갈
-            때 가장 큰 보람을 느낍니다.
-          </p>
-          <p>
-            몰입한 일에는 누구에게도 지지 않는 끈기를 발휘하며, 무슨 일이든
-            체계화하려 합니다. 체계가 없다면 스스로 만들어냅니다.
-          </p>
-          <p>
-            AI는 하나의 도구로 받아들이되, 저만의 방식으로 정립해 활용하는 데
-            집중합니다. 빠르게 변하는 환경에서 뒤처지지 않도록 꾸준히 시도하며,
-            우직하게 저만의 길을 다지고 있습니다.
-          </p>
+        <p class="slide-kicker">06. Project - ESLint-KR · Details (2/2)</p>
+        <h2 class="mt-3 text-[26px] font-extrabold">경험 및 문제해결</h2>
+
+        <div class="flex gap-2 flex-1 flex-col justify-evenly">
+          <div>
+            <h3 class="text-[14px] font-bold text-accent">
+              Layout + Outlet - 페이지 뼈대와 콘텐츠 분리
+            </h3>
+            <p class="mt-2 text-[13.5px] text-neutral-700">
+              가이드 페이지를 10개 가까이 구성해두고 제작에 들어간
+              만큼, 처음부터 Header·Aside(사이드 내비게이션)·Footer를
+              페이지마다 반복해서 넣지 않는 구조로 설계했습니다.
+            </p>
+            <ul class="pf-list mt-3 px-4">
+              <li>
+                Header, Aside, Footer를 각각 독립된 컴포넌트로 분리하고,
+                이를 감싸는 <b>Layout</b> 컴포넌트 하나로 합성했습니다.
+              </li>
+              <li>
+                <b>App.tsx</b>에서
+                <b>&lt;Route path="/" element={&lt;Layout /&gt;}&gt;</b>로
+                감싼 뒤 Intro·Install·Setting·Rules 등 10개 페이지를 자식
+                라우트로 등록했고, Layout 내부는 <b>&lt;Outlet /&gt;</b>로
+                현재 라우트에 맞는 페이지 컴포넌트만 갈아 끼우는 구조로
+                설계했습니다.
+              </li>
+              <li>
+                새 가이드 페이지가 추가될 때마다 Layout이나 Header/Footer
+                코드는 한 줄도 건드릴 필요 없이, <b>pages/</b>에 컴포넌트
+                하나 만들고 <b>App.tsx</b>에 라우트 한 줄만 추가하면 되는
+                구조를 끝까지 유지했습니다.
+              </li>
+            </ul>
+          </div>
+
+          <div class="border-t border-gray-200 pt-6">
+            <h3 class="text-[14px] font-bold text-accent">
+              반복되는 UI를 공통 컴포넌트로 설계
+            </h3>
+            <p class="mt-2 text-[13.5px] text-neutral-700">
+              가이드 페이지마다 코드 예제와 복사 버튼이 반복해서
+              필요했는데, 처음엔 페이지마다 각자 구현하다 보니 같은 로직이
+              여러 곳에 흩어져 있었습니다.
+            </p>
+            <ul class="pf-list mt-3 px-4">
+              <li>
+                목표까지 완성 후 전체적으로 점검하다가, 클립보드 복사 로직이
+                페이지마다 중복돼 있는 것을 확인했습니다.
+              </li>
+              <li>
+                이 로직을 <b>useClipboard</b> 커스텀 훅으로 추출하고,
+                패키지 매니저(npm/yarn/pnpm) 탭까지 포함한
+                <b>CopyableCodeBlock</b> 공통 컴포넌트로 통일해, 모든 가이드
+                페이지가 같은 컴포넌트를 재사용하도록 만들었습니다.
+              </li>
+            </ul>
+          </div>
+
+          <div class="border-t border-gray-200 pt-6">
+            <h3 class="text-[14px] font-bold text-accent">
+              CSS 디자인 토큰으로 재사용성 확보
+            </h3>
+            <p class="mt-2 text-[13.5px] text-neutral-700">
+              가이드북을 처음 Figma Make로 디자인할 때, 페이지마다 레이아웃과
+              디자인 패턴이 거의 동일하다는 걸 확인했습니다. 그래서 개발에
+              들어가기 전부터 CSS 디자인(변수)을 먼저 정의하고 시작하기로
+              했습니다.
+            </p>
+            <ul class="pf-list mt-3 px-4">
+              <li>
+                <b>index.css</b>에 색상·폰트·사이드바 너비·헤더 높이 같은
+                값을 <b>:root</b> 변수(디자인 토큰)로 모아뒀습니다.
+              </li>
+              <li>
+                코드블록·콜아웃·표 같은 재사용 컴포넌트 스타일은
+                <b>components.css</b>로 파일 자체를 분리하고, 값을
+                하드코딩하지 않고 <b>var(--color-border)</b>,
+                <b>var(--font-mono)</b>처럼 위 변수만 참조하도록
+                통일했습니다.
+              </li>
+              <li>
+                덕분에 테마 색상을 바꾸고 싶으면 <b>:root</b> 한 곳만
+                고치면 되고, 새 컴포넌트를 추가할 때도 이미 정의된 변수를
+                가져다 쓰기만 하면 되는 구조를 유지했습니다.
+              </li>
+            </ul>
+          </div>
+
+          <div class="border-t border-gray-200 pt-6">
+            <h3 class="text-[14px] font-bold text-accent">
+              한국어 콘텐츠 제작 - 번역이 아니라 재구성
+            </h3>
+            <p class="mt-2 text-[13.5px] text-neutral-700">
+              ESLint 공식 문서(영문)를 그대로 옮기는 게 아니라, 처음
+              배우는 한국 개발자 기준으로 다시 구성하는 데 집중했습니다.
+            </p>
+            <ul class="pf-list mt-3 px-4">
+              <li>
+                공식 영문 문서를 기반으로 번역한 뒤, 초급자가 순서대로
+                따라올 수 있도록 시작하기 → 핵심 개념 → 규칙/설정 심화
+                순서로 콘텐츠 구조를 재구성했습니다.
+              </li>
+              <li>
+                마침 ESLint가 v8(<b>.eslintrc</b>)에서 v9(<b>Flat
+                Config</b>)로 넘어가는 전환기라, 온라인 자료에 구버전·신버전
+                정보가 뒤섞여 있는 문제까지 확인했습니다. 모든 콘텐츠를
+                <b>v9 Flat Config 기준으로만</b> 정리해 이 전환기 혼란을
+                줄이는 것도 목표에 포함시켰습니다.
+              </li>
+              <li>
+                그 결과 <b>RulesReference.tsx</b>(947줄)·<b>Rules.tsx</b
+                >(851줄)·<b>SettingFile.tsx</b>(462줄) 등 페이지당 상당한
+                분량의 콘텐츠를 직접 작성했습니다.
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="slide-foot">
           <span>김도혁 Portfolio</span><span>13 / 14</span>
         </div>
       </section>
 
-      <!-- ========== 14. Contact ========== -->
+      <!-- ========== 14. 끝 ========== -->
       <section
-        class="slide items-center justify-center bg-linear-to-br from-blue-600 to-indigo-800 p-0! text-white"
+        class="slide relative items-start justify-center overflow-hidden bg-slate-600 p-0! text-white"
       >
-        <p
-          class="text-[15px] font-bold uppercase tracking-[0.4em] text-blue-200"
+        <!-- 발자국 워터마크 (표지와 대칭, 반대쪽에 배치) -->
+        <svg
+          viewBox="0 0 960 960"
+          class="pointer-events-none absolute -left-[50mm] bottom-[30mm] h-[220mm] w-[220mm] -rotate-12 opacity-[0.07]"
         >
-          Thank You
-        </p>
-        <h2 class="mt-6 max-w-sm text-center text-[32px] font-extrabold">
-          함께 성장할 기회를 찾고 있습니다
-        </h2>
+          <g fill="white">
+            <path
+              d="M 200 330 C 234 328, 261 349, 277 381 C 294 414, 293 453, 275 483 C 257 511, 229 523, 200 516 C 170 509, 146 484, 135 452 C 124 419, 130 383, 150 355 C 164 338, 181 329, 200 330 Z"
+            />
+            <path
+              d="M 760 330 C 726 328, 699 349, 683 381 C 666 414, 667 453, 685 483 C 703 511, 731 523, 760 516 C 790 509, 814 484, 825 452 C 836 419, 830 383, 810 355 C 796 338, 779 329, 760 330 Z"
+            />
+            <path
+              d="M 330 128 C 348 122, 370 121, 388 127 C 424 138, 443 177, 446 226 C 449 275, 437 316, 411 340 C 387 362, 351 364, 325 343 C 296 320, 280 277, 277 229 C 274 179, 294 139, 330 128 Z"
+            />
+            <path
+              d="M 630 128 C 612 122, 590 121, 572 127 C 536 138, 517 177, 514 226 C 511 275, 523 316, 549 340 C 573 362, 609 364, 635 343 C 664 320, 680 277, 683 229 C 686 179, 666 139, 630 128 Z"
+            />
+            <path
+              d="M 212 705 C 212 756, 256 798, 328 824 C 394 848, 453 854, 480 854 C 507 854, 566 848, 632 824 C 704 798, 748 756, 748 705 C 748 664, 732 631, 702 606 C 674 583, 642 559, 613 528 C 588 500, 566 469, 544 441 C 526 420, 506 409, 480 409 C 454 409, 434 420, 416 441 C 394 469, 372 500, 347 528 C 318 559, 286 583, 258 606 C 228 631, 212 664, 212 705 Z"
+            />
+          </g>
+        </svg>
+
         <div
-          class="mt-10 flex flex-col items-center gap-2 text-[15px] text-blue-100"
+          class="absolute left-[32mm] top-[104mm] max-w-[72mm] flex flex-col items-center"
         >
-          <span>hyeeoooook@gmail.com</span>
-          <span>010-9400-6992</span>
-          <span>github.com/DoHyuk-Centric</span>
-          <span>hyeeoooook.tistory.com</span>
+          <h2 class="text-[96px] font-extrabold tracking-wide">끝</h2>
+          <p class="mt-8 text-[20px] text-blue-100 text-center">
+            "끝은 새로운 시작입니다."
+          </p>
+        </div>
+
+        <div
+          class="absolute bottom-[16mm] right-[16mm] flex flex-col items-end text-right"
+        >
+          <div class="mb-6 h-px w-16 bg-blue-200/60"></div>
+          <p
+            class="text-[13px] font-bold uppercase tracking-[0.45em] text-blue-200"
+          >
+            Web Frontend Developer
+          </p>
+          <h1
+            class="mt-5 text-[30px] font-extrabold leading-[1.05] tracking-tight"
+          >
+            <p>
+              <span class="tracking-widest mt-4">김도혁</span>
+              ㆍ
+              <span>
+                K<span class="text-[20px]">im</span> D<span class="text-[20px]"
+                  >o</span
+                >
+                H<span class="text-[20px]">yuk</span>
+              </span>
+            </p>
+          </h1>
+          <p
+            class="mt-6 text-[12px] uppercase tracking-[0.35em] text-blue-200/80"
+          >
+            Portfolio · 2026
+          </p>
         </div>
       </section>
     </main>
