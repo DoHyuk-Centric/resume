@@ -1793,16 +1793,28 @@
                 </p>
               </div>
               <div>
-                <div class="flex h-[60mm] items-center justify-center">
-                  <img
-                    src="./frontie/frontie_chat.png"
-                    alt="마크다운·코드블록 렌더링 채팅 화면"
-                    class="h-full w-auto rounded-lg border border-gray-200 object-contain"
-                  />
-                </div>
+                <pre
+                  class="h-[60mm] overflow-hidden rounded-lg bg-[#1e1e2e] p-3 text-[8px] leading-snug text-slate-100"
+                ><code>// lib/ai-providers.ts
+export const MODELS = {
+  groq: groq(&#96;llama-4-scout-17b&#96;),
+  gemini: google(&#96;gemini-2.5-flash&#96;),
+  cerebras: cerebras(&#96;gpt-oss-120b&#96;),
+} as const;
+
+// app/api/chat/route.ts
+const selectedModel =
+  MODELS[model] ?? MODELS.gemini;
+
+streamText({
+  model: selectedModel,
+  system,
+  messages,
+  temperature: creativity / 100,
+});</code></pre>
                 <p class="mt-0.5 text-center text-[9px] leading-snug text-muted px-4">
-                  채팅 화면 — 마크다운 응답과 코드블록(shiki)이 렌더링된
-                  모습입니다.
+                  lib/ai-providers.ts — 3개 프로바이더를 하나의 룩업
+                  테이블로 통일해, 요청 시점에 모델 하나만 골라 씁니다.
                 </p>
               </div>
             </div>
