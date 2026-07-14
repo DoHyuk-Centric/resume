@@ -559,9 +559,9 @@
         <div class="slide-foot"><span>김도혁 Portfolio</span><span>03 / 13</span></div>
       </section>
 
-      <!-- ========== 04. Kanto — Details ========== -->
+      <!-- ========== 04. Kanto — 프로젝트 소개 ========== -->
       <section class="slide break-after-page">
-        <p class="slide-kicker">03. Project - Details (1/5)</p>
+        <p class="slide-kicker">03. Project — Kanto · Details (1/4)</p>
         <div class="mt-3 flex items-center gap-4">
           <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white shadow-[0_0_10px_rgba(0,0,0,0.2)]">
             <img src="./kanto-favicon.png" alt="Kanto 파비콘" class="h-12 w-12 object-contain">
@@ -644,15 +644,216 @@
             >Demo: kanto-iota.vercel.app · GitHub:
             FRONTENDBOOTCAMP-17th/kanto</span
           >
-          <span>04 / 13</span>
+          <span>04 / 12</span>
         </div>
       </section>
 
-      <!-- ========== 05. Kanto — 부록 ========== -->
+      <!-- ========== 05. Kanto — 경험 ========== -->
       <section class="slide break-after-page">
-        <p class="slide-kicker">03. Project — Kanto</p>
+        <p class="slide-kicker">03. Project — Kanto · Details (2/4)</p>
+        <h2 class="mt-3 text-[26px] font-extrabold">경험</h2>
+
+        <div class="flex gap-2 flex-1 flex-col justify-evenly">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <img src="./kanto/score.png" alt="칸토 망고 점수 프로필 화면" class="w-[52mm] shrink-0 rounded-lg border border-gray-200 shadow-md">
+              <div>
+                <h3 class="text-[13.5px] font-bold text-ink">프로필 페이지 · 칸토 망고 점수</h3>
+                <p class="px-4 mt-0.5 text-[10.5px] leading-snug text-neutral-600">
+                  프로필 페이지를 서버 컴포넌트로 구현하면서, <b>KTS(신뢰도)·KPPS(인기도)</b>
+                  점수를 계산해 "망고 지수"로 시각화하고 게시글 인기 뱃지 등급까지 반영했습니다.
+                  KTS는 리뷰 평점·거래 완료 건수·계정 활동·4주 등급 추이·제재 이력 5개 요소를
+                  배치 함수로 합산해 A~E 등급을 매기고, KPPS는 이를 반영해 유형별 인기
+                  게시물 상위 5개에 자동으로 배지를 부여합니다.
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-2 grid grid-cols-3 gap-3">
+              <div>
+                <div class="flex h-[32mm] w-[40mm] mx-auto items-center justify-center bg-white">
+                  <img src="./kanto/pg_cron.png" alt="pg_cron 스케줄" class="max-h-full max-w-full object-contain">
+                </div>
+                <p class="mt-0.5 text-[9px] leading-snug text-muted px-4">매일 KTS 03:00·15:00 → KPPS 03:30·15:30 순서로 pg_cron 자동 재계산합니다.</p>
+              </div>
+              <div>
+                <div class="flex h-[32mm] items-center justify-center bg-white">
+                  <img src="./kanto/KTS-matrix.png" alt="KTS 예상 점수 분포" class="max-h-full max-w-full object-contain">
+                </div>
+                <p class="mt-0.5 text-[9px] leading-snug text-muted px-4">시나리오를 세워서 유형별 예상 KTS·등급 분포를 미리 그려보며 기준을 조율했습니다.</p>
+              </div>
+              <div>
+                <div class="flex h-[32mm] items-center justify-center bg-white">
+                  <img src="./kanto/KPPS-matrix.png" alt="KTSx참여도 KPPS 매트릭스" class="max-h-full max-w-full object-contain">
+                </div>
+                <p class="mt-0.5 text-[9px] leading-snug text-muted px-4">KTS 등급×참여도 조합별 KPPS 값과 분포까지 시뮬레이션해 인기글 기준(상위 5개)을 설계했습니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border-t border-gray-200 pt-6">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="flex h-[32mm] shrink-0 items-center justify-center bg-white">
+                <img src="./kanto/chat.png" alt="Kanto 채팅 화면" class="max-h-full max-w-full object-contain">
+              </div>
+              <div>
+                <h3 class="text-[13.5px] font-bold text-ink">채팅 · 관리자 채팅 로그</h3>
+                <p class="px-4 mt-0.5 text-[10.5px] leading-snug text-neutral-600">
+                  Supabase Realtime 기반 1:1 채팅을 전체 구현하고, 관리자가 신고된
+                  채팅방의 대화 내역을 페이지네이션으로 조회하고 TXT로 다운로드할 수
+                  있는 관리 도구까지 구축했습니다.
+                </p>
+              </div>
+            </div>
+            <div class="mt-2 grid grid-cols-2 gap-3">
+              <div>
+                <div class="flex h-[32mm] items-center justify-center bg-white">
+                  <img src="./kanto/admin_chat_log.png" alt="관리자 채팅 상세 드로어" class="max-h-full max-w-full object-contain">
+                </div>
+                <p class="mt-0.5 text-[9px] leading-snug text-muted px-16 text-center">관리자 채팅 상세 드로어 - 향후 법적 분쟁 또는 사용자의 문의 사항에 명확한 답을 제시하기 위해 참여자 별로 탭을 통해서 채팅 로그를 조회가 가능하도록 했습니다.</p>
+              </div>
+              <div>
+                <div class="flex h-[32mm] items-center justify-center bg-white">
+                  <img src="./kanto/chatlog_txt.png" alt="다운로드된 채팅 로그 TXT" class="max-h-full max-w-full object-contain">
+                </div>
+                <p class="mt-0.5 text-[9px] leading-snug text-muted text-center px-16">다운로드된 TXT 파일 - 채팅방에서 로그를 txt로 다운로드 받을 수 있으며 채팅방 ID·참여자·게시글 정보가 포함됩니다.</p>
+              </div>
+            </div>
+          </div>
+          <div class="border-t border-gray-200 pt-6">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="flex h-[32mm] shrink-0 items-center justify-center bg-white">
+                <img src="./kanto/operate.png" alt="관리자 권한 관리 페이지" class="max-h-full max-w-full object-contain">
+              </div>
+              <div>
+                <h3 class="text-[13.5px] font-bold text-ink">관리자 운영관리 · 관리자 권한 체계</h3>
+                <p class="px-4 mt-0.5 text-[10.5px] leading-snug text-neutral-600">
+                  대시보드 KPI·신고 관리·감사 로그 등 운영관리 페이지 전체와, 어드민 →
+                  슈퍼어드민 승격 및 팀별 세부 권한을 설정할 수 있는 권한 체계를 함께
+                  설계·구현했습니다. 감사 로그 조회로 관리자들의 처리 이력까지
+                  추적할 수 있도록 고려했습니다.
+                </p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <div class="flex h-[32mm] items-center justify-center bg-white">
+                  <img src="./kanto/operteam.png" alt="팀 목록 관리" class="max-h-full max-w-full object-contain">
+                </div>
+                <p class="mt-0.5 text-[9px] leading-snug text-muted text-center px-16">팀 목록 - 팀 단위로 권한을 묶어 관리, 새 팀 추가가 가능하도록 했습니다. 또한, 슈퍼어드민은 여기서 어드민을 슈퍼어드민으로 승격시킬 수 있습니다. 단, 감사 로그에 로그가 남도록 했습니다.</p>
+              </div>
+              <div>
+                <div class="flex h-[32mm] items-center justify-center bg-white">
+                  <img src="./kanto/adminchoice.png" alt="어드민 추가" class="max-h-full max-w-full object-contain">
+                </div>
+                <p class="mt-0.5 text-[9px] leading-snug px-16 text-muted text-center">어드민 추가 - 유저를 팀에 등록하면 팀 권한이 자동 적용됩니다. DB 기준 유저명을 통해 검색이 가능하며 해당 유저를 팀에 배정해 추가가 가능합니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide-foot">
+          <span>김도혁 Portfolio</span><span>05 / 12</span>
+        </div>
+      </section>
+
+      <!-- ========== 06. Kanto — 문제해결 ========== -->
+      <section class="slide break-after-page">
+        <p class="slide-kicker">03. Project — Kanto · Details (3/4)</p>
+        <h2 class="mt-3 text-[26px] font-extrabold">문제해결</h2>
+        <div class="flex flex-1 flex-col justify-center gap-8">
+          <div>
+            <h3 class="text-[14px] font-bold text-accent">① 성능 최적화</h3>
+            <p class="mt-2 text-[13.5px] text-neutral-700">
+              Core Web Vitals(LCP·INP·CLS) 개선을 위해 다음을 적용했습니다.
+            </p>
+            <ul class="pf-list mt-3">
+              <li>
+                LCP 이미지에 <b>priority</b> 속성 적용, <b>WebP</b> 포맷 전환
+              </li>
+              <li>이미지 캐시 <b>TTL</b> 적용으로 재방문 로딩 속도 개선</li>
+              <li>
+                측정 자동화 <b>psi-check</b> 스크립트로 배포마다 지표 회귀 방지
+              </li>
+            </ul>
+            <div class="mt-4 grid grid-cols-3 gap-3">
+              <div class="pf-card flex items-center justify-between p-4">
+                <p
+                  class="text-[12px] font-semibold uppercase tracking-wide text-muted"
+                >
+                  LCP
+                </p>
+                <p class="text-[12px] text-gray-400">[전 → 후 수치]</p>
+              </div>
+              <div class="pf-card flex items-center justify-between p-4">
+                <p
+                  class="text-[12px] font-semibold uppercase tracking-wide text-muted"
+                >
+                  INP
+                </p>
+                <p class="text-[12px] text-gray-400">[전 → 후 수치]</p>
+              </div>
+              <div class="pf-card flex items-center justify-between p-4">
+                <p
+                  class="text-[12px] font-semibold uppercase tracking-wide text-muted"
+                >
+                  CLS
+                </p>
+                <p class="text-[12px] text-gray-400">[전 → 후 수치]</p>
+              </div>
+            </div>
+          </div>
+          <div class="border-t border-gray-200 pt-6">
+            <h3 class="text-[14px] font-bold text-accent">
+              ② Supabase 트래픽 한도 초과 대응
+            </h3>
+            <div
+              class="mt-3 flex h-[36mm] items-center justify-center overflow-hidden bg-white"
+            >
+              <img
+                src="./kanto/supabaseUsage.png"
+                alt="Supabase Egress per day 그래프 - 7월 1일 트래픽 급증"
+                class="max-h-full max-w-full object-contain"
+              />
+            </div>
+            <p class="mt-1 text-center text-[9px] leading-snug text-muted">
+              7/1 Storage Egress 390MB(전체 88.7%) 급증 → WebP 전환 후 재발
+              없음
+            </p>
+            <p class="mt-2 text-[13.5px] text-neutral-700">
+              기획 단계에서 무료 플랜의 트래픽·토큰 한도를 미리 계산해 소진
+              시나리오와 대응 전략을 세워뒀지만, 실제로는 예상 밖의 지점에서
+              문제가 터졌습니다.
+            </p>
+            <ul class="pf-list mt-3 px-4">
+              <li>
+                이미지를 <b>WebP로 사전 전환</b>해두지 않은 상태에서, 시연
+                준비 중 봇 계정과 목업 이미지를 대량 등록하다
+                <b>Supabase 트래픽 한도 초과</b>가 발생했습니다.
+              </li>
+              <li>
+                사전에 세워둔 대응 전략 덕분에 당황하지 않고 원인을 빠르게
+                추적했고, 원인은 <b>이미지 용량이 트래픽에 미치는 영향</b>을 원인으로
+                특정했습니다.
+              </li>
+              <li>
+                부계정 이전 대신 <b>유료 플랜 전환</b>으로 즉시 정상화하고,
+                WebP 전환 로직을 중간단계로 추가 후 동일 조건으로 이미지를 올려도 트래픽이 안정적임을
+                확인해 재발 방지까지 검증했습니다.
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+        <div class="slide-foot">
+          <span>김도혁 Portfolio</span
+          ><span>psi-check 측정 결과로 교체 예정</span><span>06 / 12</span>
+        </div>
+      </section>
+
+      <!-- ========== 07. Kanto — 부록 ========== -->
+      <section class="slide break-after-page">
+        <p class="slide-kicker">03. Project — Kanto · Details (4/4)</p>
         <h2 class="mt-3 text-[26px] font-extrabold">부록</h2>
-        <div class="mt-10 flex flex-1 flex-col justify-center">
+        <div class="mt-10 flex flex-1 flex-col">
           <ul class="ml-4 flex list-none flex-col gap-4">
             <li class="grid grid-cols-[100px_1fr] items-baseline">
               <span class="text-[13px] font-bold text-ink">서비스 링크</span>
@@ -674,115 +875,34 @@
               <span class="text-[13px] font-bold text-ink">Notion</span>
               <a href="https://app.notion.com/p/1-it-s-real-36e73873401a8099b037f045e2d2c9eb" target="_blank" rel="noopener" class="pf-link break-all text-[13.5px]">app.notion.com/p/1-it-s-real-36e73873401a8099b037f045e2d2c9eb</a>
             </li>
-          </ul>
-        </div>
-        <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>05 / 13</span>
-        </div>
-      </section>
-
-      <!-- ========== 06. Kanto — 문제 정의 & 핵심 기능 ========== -->
-      <section class="slide break-after-page">
-        <p class="slide-kicker">03. Project — Kanto</p>
-        <h2 class="mt-3 text-[26px] font-extrabold">
-          문제 정의 &amp; 핵심 기능
-        </h2>
-        <div class="flex flex-1 flex-col justify-center gap-12">
-          <div>
-            <h3 class="mb-3 text-[14px] font-bold text-accent">문제 정의</h3>
-            <p class="text-[13.5px] leading-relaxed text-neutral-700">
-              필리핀 거주 한인들은 중고거래·구인구직·부동산·모임 정보가 여러
-              채널에 흩어져 있어, 신뢰할 수 있는 통합 창구가 부족했습니다.
-              Kanto는 이 정보들을 하나의 플랫폼으로 모으는 것을 목표로 했습니다.
-            </p>
-          </div>
-          <div>
-            <h3 class="mb-3 text-[14px] font-bold text-accent">
-              핵심 기능 &amp; 담당 역할
-            </h3>
-            <ul class="pf-list">
-              <li>실시간 1:1 채팅 (Supabase Realtime)</li>
-              <li>신뢰도·인기 점수 시스템 (KTS·KPPS)</li>
-              <li>멀티 LLM 폴백 기반 AI 챗봇</li>
-              <li>Redis 기반 로그인 보안 구현</li>
-            </ul>
-          </div>
-        </div>
-        <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>06 / 13</span>
-        </div>
-      </section>
-
-      <!-- ========== 07. Kanto — 트러블슈팅(성능 최적화) ========== -->
-      <section class="slide break-after-page">
-        <p class="slide-kicker">03. Project — Kanto</p>
-        <h2 class="mt-3 text-[26px] font-extrabold">
-          트러블슈팅 — 성능 최적화
-        </h2>
-        <div class="flex flex-1 flex-col justify-center">
-          <p class="text-[13.5px] text-neutral-700">
-            Core Web Vitals(LCP·INP·CLS) 개선을 위해 다음을 적용했습니다.
-          </p>
-          <ul class="pf-list mt-4">
-            <li>
-              LCP 이미지에 <b>priority</b> 속성 적용, <b>WebP</b> 포맷 전환
+            <li class="grid grid-cols-[100px_1fr] items-baseline">
+              <span class="text-[13px] font-bold text-ink">개인 보고서</span>
+              <a href="./kanto/김도혁_프로젝트활동_보고서.pdf" target="_blank" rel="noopener" class="pf-link text-[13.5px]">김도혁_프로젝트활동_보고서.pdf</a>
             </li>
-            <li>이미지 캐시 <b>TTL</b> 적용으로 재방문 로딩 속도 개선</li>
-            <li>
-              측정 자동화 <b>psi-check</b> 스크립트로 배포마다 지표 회귀 방지
+            <li class="grid grid-cols-[100px_1fr] items-baseline">
+              <span class="text-[13px] font-bold text-ink">팀 활동 보고서</span>
+              <a href="./kanto/Kanto_주차별_팀활동_보고서.pdf" target="_blank" rel="noopener" class="pf-link text-[13.5px]">Kanto_주차별_팀활동_보고서.pdf</a>
+            </li>
+            <li class="grid grid-cols-[100px_1fr] items-baseline">
+              <span class="text-[13px] font-bold text-ink">팀원 기여도</span>
+              <a href="./kanto/Kanto_페이지별_팀원_기여도.pdf" target="_blank" rel="noopener" class="pf-link text-[13.5px]">Kanto_페이지별_팀원_기여도.pdf</a>
+            </li>
+            <li class="grid grid-cols-[100px_1fr] items-baseline">
+              <span class="text-[13px] font-bold text-ink">간트차트</span>
+              <a href="./kanto/Kanto_간트차트.pdf" target="_blank" rel="noopener" class="pf-link text-[13.5px]">Kanto_간트차트.pdf</a>
+            </li>
+            <li class="grid grid-cols-[100px_1fr] items-baseline">
+              <span class="text-[13px] font-bold text-ink">팀 활동 흐름</span>
+              <a href="./kanto/Kanto_팀활동흐름_주차별.pdf" target="_blank" rel="noopener" class="pf-link text-[13.5px]">Kanto_팀활동흐름_주차별.pdf</a>
             </li>
           </ul>
-          <div class="mt-8 flex flex-col gap-4">
-            <div class="pf-card flex items-center justify-between">
-              <p
-                class="text-[12px] font-semibold uppercase tracking-wide text-muted"
-              >
-                LCP
-              </p>
-              <p class="text-[13px] text-gray-400">[개선 전 → 후 수치 기입]</p>
-            </div>
-            <div class="pf-card flex items-center justify-between">
-              <p
-                class="text-[12px] font-semibold uppercase tracking-wide text-muted"
-              >
-                INP
-              </p>
-              <p class="text-[13px] text-gray-400">[개선 전 → 후 수치 기입]</p>
-            </div>
-            <div class="pf-card flex items-center justify-between">
-              <p
-                class="text-[12px] font-semibold uppercase tracking-wide text-muted"
-              >
-                CLS
-              </p>
-              <p class="text-[13px] text-gray-400">[개선 전 → 후 수치 기입]</p>
-            </div>
-          </div>
         </div>
         <div class="slide-foot">
-          <span>김도혁 Portfolio</span
-          ><span>psi-check 측정 결과로 교체 예정</span><span>07 / 13</span>
+          <span>김도혁 Portfolio</span><span>07 / 12</span>
         </div>
       </section>
 
-      <!-- ========== 08. Kanto — 회고 ========== -->
-      <section class="slide break-after-page">
-        <p class="slide-kicker">03. Project — Kanto</p>
-        <h2 class="mt-3 text-[26px] font-extrabold">회고</h2>
-        <div class="mt-10 flex flex-1 items-center">
-          <p class="text-[14.5px] leading-loose text-neutral-700">
-            부트캠프 파이널 프로젝트로 5개 팀 중 1위를 기록했습니다. 실시간
-            기능과 성능 최적화를 함께 다루면서 기술적 트레이드오프를 팀원들과
-            문서로 정리해 결정하는 과정을 경험했고, AI를 활용해 보고서 초안과
-            코드 리뷰를 자동화하며 팀의 개발 효율을 높이는 역할을 맡았습니다.
-          </p>
-        </div>
-        <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>08 / 13</span>
-        </div>
-      </section>
-
-      <!-- ========== 09. Frontie ========== -->
+      <!-- ========== 08. Frontie ========== -->
       <section class="slide break-after-page">
         <p class="slide-kicker">04. Project</p>
         <h2 class="mt-3 text-[26px] font-extrabold">Frontie</h2>
@@ -826,11 +946,11 @@
             >Demo: frontie-topaz.vercel.app · GitHub:
             DoHyuk-Centric/frontie</span
           >
-          <span>09 / 13</span>
+          <span>08 / 12</span>
         </div>
       </section>
 
-      <!-- ========== 10. ESLint-KR ========== -->
+      <!-- ========== 09. ESLint-KR ========== -->
       <section class="slide break-after-page">
         <p class="slide-kicker">05. Project</p>
         <h2 class="mt-3 text-[26px] font-extrabold">ESLint-KR</h2>
@@ -875,11 +995,11 @@
             >Demo: dohyuk-centric.github.io/eslint-kr · GitHub:
             DoHyuk-Centric/eslint-kr</span
           >
-          <span>10 / 13</span>
+          <span>09 / 12</span>
         </div>
       </section>
 
-      <!-- ========== 11. 개인 기술 블로그 ========== -->
+      <!-- ========== 10. 개인 기술 블로그 ========== -->
       <section class="slide break-after-page">
         <p class="slide-kicker">06. Project</p>
         <h2 class="mt-3 text-[26px] font-extrabold">개인 기술 블로그</h2>
@@ -922,11 +1042,11 @@
         <div class="slide-foot">
           <span>김도혁 Portfolio</span>
           <span>Demo: dohyuk.dev · GitHub: DoHyuk-Centric/myBlog</span>
-          <span>11 / 13</span>
+          <span>10 / 12</span>
         </div>
       </section>
 
-      <!-- ========== 12. 마무리 (PR) ========== -->
+      <!-- ========== 11. 마무리 (PR) ========== -->
       <section class="slide break-after-page">
         <p class="slide-kicker">07. Contact 전에</p>
         <h2 class="mt-3 text-[24px] font-extrabold">
@@ -951,11 +1071,11 @@
           </p>
         </div>
         <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>12 / 13</span>
+          <span>김도혁 Portfolio</span><span>11 / 12</span>
         </div>
       </section>
 
-      <!-- ========== 13. Contact ========== -->
+      <!-- ========== 12. Contact ========== -->
       <section
         class="slide items-center justify-center bg-linear-to-br from-blue-600 to-indigo-800 p-0! text-white"
       >
