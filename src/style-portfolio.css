@@ -47,6 +47,16 @@
 
   .pf-link { @apply text-accent hover:underline; }
 
+  .pf-title-link {
+    @apply inline-flex items-center gap-1 text-accent hover:underline;
+  }
+
+  .pf-icon-link {
+    @apply flex h-8 w-8 shrink-0 items-center justify-center rounded-full border
+           border-gray-200 text-[12px] font-bold text-neutral-500 transition-colors
+           hover:border-accent hover:text-accent;
+  }
+
   /* 실제 스크린샷 도착 전 자리 표시자 (가짜 브라우저 프레임). 실제 캡처 화면 비율(16:9)에
      맞춰 aspect-video와 함께 사용 — 세로로 좁은 페이지에서도 화면 스샷은 가로형으로 보이게 함 */
   .mock-shot { @apply flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-gray-50; }
