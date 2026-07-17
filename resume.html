@@ -15,9 +15,9 @@
   <b class="text-blue-300">Ctrl/⌘ + P</b> → "PDF로 저장", 배경 그래픽 체크).
 </div>
 
-<!-- ============ A4 페이지 ============ -->
-<main class="mx-auto my-3 min-h-[297mm] w-[210mm] bg-white p-[18mm] shadow-[0_2px_18px_rgba(0,0,0,.12)]
-            print:m-0 print:min-h-0 print:w-auto print:p-[18mm] print:shadow-none">
+<!-- ============ A4 페이지 (1/2) ============ -->
+<main class="relative mx-auto my-3 min-h-[297mm] w-[210mm] bg-white p-[18mm] shadow-[0_2px_18px_rgba(0,0,0,.12)]
+            print:m-0 print:w-auto print:p-[18mm] print:shadow-none">
 
   <!-- ---------- 헤더 ---------- -->
   <header class="mb-10 flex justify-between gap-6 pb-3.5">
@@ -31,21 +31,17 @@
         <span class="contact-item"><svg class="mr-1.5 h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg><a href="https://hyeeoooook.tistory.com/" target="_blank" rel="noopener" class="text-muted no-underline">hyeeoooook.tistory.com</a></span>
       </address>
     </div>
-
-    <!-- 프로필 사진 (resume 폴더의 profile.jpg). 다른 사진으로 바꾸려면 이 파일을 교체하세요.
-         크기는 아래 h-[..]/w-[..] 의 mm 숫자로 조절하세요 (이름+리스트 높이에 맞춰 미세조정). -->
-    <img alt="김도혁 프로필 사진" src="./profile.jpg"
-         class="h-[30mm] w-[30mm] shrink-0 self-center rounded-full border border-gray-200 object-cover">
   </header>
 
   <!-- ---------- 소개 ---------- -->
   <section class="mb-10">
     <h2 class="section-title">소개</h2>
     <div class="px-4 text-neutral-700">
-      <ul class="text-[11pt] space-y-4">
-        <li>장교 생활때의 체계적인 업무 습관과 꾸준함을 통해서 개발 분위기 조성을 합니다.<br>어떤 작업을 하더라도 미리 생각을 하고, 설계 작업과 더 나은 방식을 고려해 완성도 높은 결과물을 만듭니다.</li>
-        <li>AI 도구를 더 체계적이고 효율적으로 다루는 데 관심이 많습니다.<br>특히 팀프로젝트간에 필요한 내부 규칙, 문서화, 보고서 등을 자동화해서 사용하기 위해서 노력했습니다.<br>이러한 노력은 팀 프로젝트간에 더욱 효율적인 토큰 사용과 개발시간 단축을 가져왔습니다.</li>
-      </ul>
+      <p>React·Next.js 기반으로 팀 프로젝트 1개와 개인 프로젝트 3개를 완성한 프론트엔드 개발자입니다.</p>
+      <br />
+      <p>부트캠프 파이널 프로젝트 Kanto에서 실시간 채팅·관리자 권한 체계를 구현해 전체 5개 팀 중 1위를 기록했고, <br /> 마크다운 블록 단위 렌더링 npm 패키지를 직접 개발·배포해 편집 미리보기 성능을 최대 8.2배 개선했습니다.</p>
+      <br />
+      <p>설계 문서·코드 리뷰에 AI 도구를 역할별로 분리 운용해 팀의 개발 기간을 단축한 경험이 있으며, 문제를 만나면 <br /> 원인을 실측으로 특정하고 문서로 남기는 개발자를 지향합니다.</p>
     </div>
   </section>
 
@@ -59,7 +55,7 @@
         <h3 class="text-[12pt] font-semibold">멋쟁이사자처럼 부트캠프 <span class="font-medium text-muted">· 프론트엔드 17기</span></h3>
       </div>
       <ul class="bullets mt-0.5">
-        <li>JavaScript·TypeScript, React·Next.js 기반 웹 실무 과정 수료 (115일 / 총 920시간)</li>
+        <li>JavaScript·TypeScript, React·Next.js 기반 웹 실무 과정 수료(115일 / 총 920시간)</li>
         <li>파이널 팀 프로젝트 전체 5개 팀 중 1위 — Kanto(한인·필리핀 중고거래 플랫폼)</li>
       </ul>
     </article>
@@ -69,62 +65,6 @@
         <time datetime="2017-03" class="period whitespace-nowrap text-[10pt]">2017.03 - 2022.02</time>
         <h3 class="text-[12pt] font-semibold">세명대학교 <span class="font-medium text-muted">· 컴퓨터학부 (학사)</span></h3>
       </div>
-      <ul class="bullets mt-0.5">
-        <li>학군단(ROTC) 60기 · 육군 소위 임관 (2022)</li>
-      </ul>
-    </article>
-  </section>
-
-  <!-- ---------- 프로젝트 ---------- -->
-  <section class="mb-10">
-    <h2 class="section-title">프로젝트</h2>
-    <article class="mb-5 px-4">
-      <div class="flex gap-4 items-end mb-3">
-        <time datetime="2026-05" class="period whitespace-nowrap text-[10pt]">2026.05 - 2026.07</time>
-        <h3 class="text-[12pt] font-bold"><a href="https://kanto-iota.vercel.app/" target="_blank" rel="noopener" class="no-underline hover:underline">Kanto</a> <span class="font-medium text-muted">· 팀<span class="text-sm">(4인)</span></span></h3>
-      </div>
-      <ul class="bullets mt-0.5">
-        <li>중고거래, 구인구직, 부동산, 지도 기반 번개모임까지, 필리핀 한인을 위한 통합 생활 플랫폼</li>
-        <li>실시간 1:1 채팅(Supabase Realtime), 신뢰도·인기 점수 시스템(KTS·KPPS), AI 챗봇(멀티 LLM 폴백), Redis 기반 로그인 보안 구현</li>
-        <li>Core Web Vitals(LCP/INP/CLS) 성능 최적화 — LCP 이미지 priority·WebP 전환·이미지 캐시 TTL 적용, 측정 자동화(psi-check 스크립트)</li>
-        <li>기술 스택: Next.js, Zustand, Upstash, Supabase(Realtime), CI/CD · <a href="https://github.com/FRONTENDBOOTCAMP-17th/kanto" target="_blank" rel="noopener" aria-label="Kanto GitHub 저장소 (새 창)" class="text-accent">GitHub</a></li>
-      </ul>
-    </article>
-
-    <article class="mb-5 px-4">
-      <div class="flex gap-4 items-end mb-3">
-        <time datetime="2026-05" class="period whitespace-nowrap text-[10pt]">2026.05 (약 2주)</time>
-        <h3 class="ml-4 text-[12pt] font-bold"><a href="https://frontie-topaz.vercel.app/chat" target="_blank" rel="noopener" class="no-underline hover:underline">Frontie</a> <span class="font-medium text-muted">· 개인</span></h3>
-      </div>
-      <ul class="bullets mt-0.5">
-        <li>멀티 LLM(Anthropic·Groq·Cerebras·Google) 기반 프론트엔드 학습 AI 챗봇</li>
-        <li>파일 첨부·모델 스위칭 구현, Lighthouse 성능 점수 48 → 75점 개선</li>
-        <li>기술 스택: Next.js, React, TypeScript, Vercel AI SDK, Zustand, Tailwind CSS · <a href="https://github.com/DoHyuk-Centric/frontie" target="_blank" rel="noopener" aria-label="Frontie GitHub 저장소 (새 창)" class="text-accent">GitHub</a></li>
-      </ul>
-    </article>
-
-    <article class="mb-5 px-4">
-      <div class="flex gap-4 items-end mb-3">
-        <time datetime="2026-03" class="period whitespace-nowrap text-[10pt]">2026.03 - 2026.04</time>
-        <h3 class="text-[12pt] font-bold"><a href="https://dohyuk-centric.github.io/eslint-kr/" target="_blank" rel="noopener" class="no-underline hover:underline">ESLint-KR</a> <span class="font-medium text-muted">· 개인</span></h3>
-      </div>
-      <ul class="bullets mt-0.5">
-        <li>ESLint 공식 문서의 영어 장벽을 낮추기 위한 한국어 실전 가이드 사이트를 기획·개발·배포</li>
-        <li>빌드·타입체크·주간 라이브 스모크 테스트를 CI로 자동화하고 SPA 딥링크 폴백까지 검증</li>
-        <li>기술 스택: React, TypeScript, React Router, Vite, GitHub Actions, GitHub Pages · <a href="https://github.com/DoHyuk-Centric/eslint-kr" target="_blank" rel="noopener" aria-label="ESLint-KR GitHub 저장소 (새 창)" class="text-accent">GitHub</a></li>
-      </ul>
-    </article>
-
-    <article class="px-4">
-      <div class="flex gap-4 items-end mb-3">
-        <time datetime="2026-01" class="period whitespace-nowrap text-[10pt]">2026.01 - 2026.03</time>
-        <h3 class="text-[12pt] font-bold"><a href="https://dohyuk.dev/" target="_blank" rel="noopener" class="no-underline hover:underline">개인 기술 블로그(DoHyuk.dev)</a> <span class="font-medium text-muted">· 개인</span></h3>
-      </div>
-      <ul class="bullets mt-0.5">
-        <li>프레임워크 없이 바닐라 JS·Vite로 구현, 페이지별 필요한 스크립트만 로드하는 MPA 구조로 로딩 성능 최적화</li>
-        <li>마크다운 블록 단위 실시간 미리보기 도구를 직접 개발해 <b>npm 배포</b>(markdown-block-preview) — 변경된 블록만 렌더링해 편집 시 전체 재렌더 대비 최대 8.2배 빠름(50블록 벤치마크)</li>
-        <li>기술 스택: JavaScript, Vite, Tailwind CSS, Supabase(DB/Storage), Docker · <a href="https://github.com/DoHyuk-Centric/myBlog" target="_blank" rel="noopener" aria-label="개인 기술 블로그 GitHub 저장소 (새 창)" class="text-accent">GitHub</a></li>
-      </ul>
     </article>
   </section>
 
@@ -149,36 +89,109 @@
         <span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span>
       </div>
       <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5">
-        <span class="inline-block min-w-[90px] font-bold">Testing</span>
-        <span class="tag">Vitest</span><span class="tag">Testing Library</span><span class="tag">Playwright</span>
-      </div>
-      <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5">
         <span class="inline-block min-w-[90px] font-bold">Tools</span>
         <span class="tag">Vite</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">GitHub Actions</span><span class="tag">Vercel</span><span class="tag">npm</span><span class="tag">ESLint</span>
       </div>
     </div>
   </section>
 
-  <!-- ---------- 기타 ---------- -->
+  <span class="absolute bottom-[10mm] right-[18mm] text-[9pt] text-muted">1 / 2</span>
+</main>
+
+<!-- ============ A4 페이지 (2/2) ============ -->
+<main class="relative mx-auto my-3 min-h-[297mm] w-[210mm] bg-white p-[18mm] shadow-[0_2px_18px_rgba(0,0,0,.12)]
+            print:m-0 print:w-auto print:p-[18mm] print:shadow-none print:break-before-page">
+
+  <!-- ---------- 프로젝트 ---------- -->
   <section class="mb-10">
-    <h2 class="section-title">기타</h2>
-    <div class="px-4">
-      <ul class="bullets">
-        <li>KDT해커톤 - KD2TH(케디스) / 느린학습자를 위한 쉬운말 번역기 (2026.07 ~ 진행중)</li>
+    <h2 class="section-title">프로젝트</h2>
+    <article class="mb-6 px-4">
+      <div class="flex gap-4 items-end mb-3">
+        <time datetime="2026-05" class="period whitespace-nowrap text-[10pt]">2026.05 - 2026.07</time>
+        <h3 class="text-[12pt] font-bold"><a href="https://kanto-iota.vercel.app/" target="_blank" rel="noopener" class="no-underline hover:underline">Kanto</a> <span class="font-medium text-muted">· 팀<span class="text-sm">(4인)</span></span></h3>
+      </div>
+      <ul class="bullets mt-0.5">
+        <li>
+          중고거래, 구인구직, 부동산, 지도 기반 번개모임까지, 필리핀 한인을 위한 통합 생활 플랫폼
+          <ul class="bullets mt-1 border-l-0 pl-0">
+            <li class="flex gap-1">
+              <span class="shrink-0">역할:</span>
+              <span>채팅 · 인증 보안 · 관리자 시스템 · 설계 문서화</span>
+            </li>
+            <li class="flex gap-1">
+              <span class="shrink-0">담당:</span>
+              <span>내 프로필, 이용약관, 실시간 1:1 채팅(Supabase Realtime), AI 챗봇(멀티 LLM 폴백),<br />신뢰도·인기 점수 산정 알고리즘 직접 설계(KTS·KPPS) , Redis 기반 로그인 보안 구현</span>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Supabase 트래픽 폭증으로 무료 티어 초과
+          <ul class="bullets mt-1 border-l-0 pl-0">
+            <li>트래픽 폭증의 원인이 이미지 리사이징·WebP 미적용(원본 그대로 업로드)임을 진단</li>
+            <li>업로드 단계 WebP 변환 적용 (390MB → 64MB로 약 <b>84% 감소</b>)</li>
+            <li>Core Web Vitals(LCP/INP/CLS) 점검 - LCP 이미지 priority·이미지 캐시 TTL 적용</li>
+          </ul>
+        </li>
+        <li>
+          어드민 콘텐츠 영역의 불필요한 재요청 문제를 발견해 TanStack Query 도입
+          <ul class="bullets mt-1 border-l-0 pl-0">
+            <li>useState·useEffect로 직접 관리하던 서버 상태에서 문제 발견</li>
+            <li>서버/UI 상태 분리, 캐시 교체 방식으로 GET 요청 감소 (18회 → 3회로 약 <b>83.3% 감소</b>)</li>
+          </ul>
+        </li>
+        <li>기술 스택: Next.js, Zustand, TanStack Query, Upstash, Supabase(Realtime), CI/CD · <a href="https://github.com/FRONTENDBOOTCAMP-17th/kanto" target="_blank" rel="noopener" aria-label="Kanto GitHub 저장소 (새 창)" class="text-accent">GitHub</a></li>
       </ul>
-    </div>
+    </article>
+
+    <article class="mb-6 px-4">
+      <div class="flex gap-4 items-end mb-3">
+        <time datetime="2026-05" class="period whitespace-nowrap text-[10pt]">2026.05 (약 2주)</time>
+        <h3 class="ml-4 text-[12pt] font-bold"><a href="https://frontie-topaz.vercel.app/chat" target="_blank" rel="noopener" class="no-underline hover:underline">Frontie</a> <span class="font-medium text-muted">· 개인</span></h3>
+      </div>
+      <ul class="bullets mt-0.5">
+        <li>멀티 LLM(Groq·Gemini·Cerebras) 기반 프론트엔드 학습 AI 챗봇</li>
+        <li>하이라이터·마크다운 렌더러 지연 로딩, 컴포넌트 분리 + memo 적용(Lighthouse 성능 점수 75 → 92점 개선)</li>
+        <li>기술 스택: Next.js, React, TypeScript, Vercel AI SDK, Zustand, Tailwind CSS · <a href="https://github.com/DoHyuk-Centric/frontie" target="_blank" rel="noopener" aria-label="Frontie GitHub 저장소 (새 창)" class="text-accent">GitHub</a></li>
+      </ul>
+    </article>
+
+    <article class="mb-6 px-4">
+      <div class="flex gap-4 items-end mb-3">
+        <time datetime="2026-03" class="period whitespace-nowrap text-[10pt]">2026.03 - 2026.04</time>
+        <h3 class="text-[12pt] font-bold"><a href="https://dohyuk-centric.github.io/eslint-kr/" target="_blank" rel="noopener" class="no-underline hover:underline">ESLint-KR</a> <span class="font-medium text-muted">· 개인</span></h3>
+      </div>
+      <ul class="bullets mt-0.5">
+        <li>
+          ESLint 공식 문서에 한국어 버전이 없다는 문제의식으로 한국 개발자 커뮤니티에 기여하고자 시작
+          <ul class="bullets mt-1 border-l-0 pl-0">
+            <li>기존에 거절된 번역 요청 이슈 발견, 학습할 때 모국어가 주는 압도적인 학습 효율을 인지하고 있음</li>
+            <li>온라인 자료에 v8(.eslintrc)·v9(Flat Config) 정보가 뒤섞여 있는 전환기 혼란 포착</li>
+          </ul>
+        </li>
+        <li>기술 스택: React, TypeScript, React Router, Vite, GitHub Actions, GitHub Pages · <a href="https://github.com/DoHyuk-Centric/eslint-kr" target="_blank" rel="noopener" aria-label="ESLint-KR GitHub 저장소 (새 창)" class="text-accent">GitHub</a></li>
+      </ul>
+    </article>
+
+    <article class="px-4">
+      <div class="flex gap-4 items-end mb-3">
+        <time datetime="2026-01" class="period whitespace-nowrap text-[10pt]">2026.01 - 2026.03</time>
+        <h3 class="text-[12pt] font-bold"><a href="https://dohyuk.dev/" target="_blank" rel="noopener" class="no-underline hover:underline">개인 기술 블로그(DoHyuk.dev)</a> <span class="font-medium text-muted">· 개인</span></h3>
+      </div>
+      <ul class="bullets mt-0.5">
+        <li>프레임워크 없이 바닐라 JS·Vite로 구현, 페이지별 필요한 스크립트만 로드하는 MPA 구조로 설계</li>
+        <li>
+          마크다운 블록 단위 실시간 미리보기 도구를 직접 개발해 <b>npm 배포</b>(markdown-block-preview)
+          <ul class="bullets mt-1 border-l-0 pl-0">
+            <li>변경된 블록만 렌더링해 문서 길이 무관 0.03~0.07ms 유지</li>
+            <li>naive 방식은 700블록부터 프레임 예산(16.6ms) 초과</li>
+          </ul>
+        </li>
+        <li>기술 스택: JavaScript, Vite, Tailwind CSS, Supabase(DB/Storage) · <a href="https://github.com/DoHyuk-Centric/myBlog" target="_blank" rel="noopener" aria-label="개인 기술 블로그 GitHub 저장소 (새 창)" class="text-accent">GitHub</a></li>
+      </ul>
+    </article>
   </section>
 
-  <!-- ---------- PR ---------- -->
-  <section>
-    <h2 class="section-title">PR</h2>
-    <div class="space-y-4 px-4 text-[10.5pt] text-neutral-700">
-      <p>개발을 정형화된 하나의 일로 한정하지 않으려 합니다. 배운 것을 나누는 오픈소스, 팀의 분위기를 이끄는 역할, 사회에 기여하는 방향으로 나아갈 때 가장 큰 보람을 느낍니다. 문제를 만나면 방식을 가리지 않고, 깊이 고민한 내용을 문서로 정리해 저만의 해결책을 도출합니다.</p>
-      <p>몰입한 일에는 누구에게도 지지 않는 끈기를 발휘하며, 무슨 일이든 체계화하려 합니다. 체계가 없다면 스스로 만들어냅니다 — 군 복무 중에는 초급 장교임에도 작전수행실(AOC)에서 업무를 체계화해 작전장교의 업무를 대행했습니다.</p>
-      <p>AI는 하나의 도구로 받아들이되, 저만의 방식으로 정립해 활용하는 데 집중합니다. 보고서 초안 자동화, PR·코드 리뷰와 설계 문서의 AI 협업을 통한 기술 트레이드오프 검토, 개발 규칙의 명확한 규칙화로 AI를 프로젝트에 녹였습니다. 빠르게 변하는 환경에서 뒤처지지 않도록 꾸준히 시도하며, 우직하게 저만의 길을 다지고 있습니다.</p>
-    </div>
-  </section>
-
+  <span class="absolute bottom-[10mm] right-[18mm] text-[9pt] text-muted">2 / 2</span>
 </main>
 </body>
 </html>
