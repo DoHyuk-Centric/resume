@@ -43,7 +43,7 @@
     @apply inline-block rounded border border-gray-200 bg-slate-50 px-2 py-0.5 text-[11.5px] text-neutral-600;
   }
 
-  .pf-list { @apply ml-4 list-disc space-y-1.5 text-[13.5px] text-neutral-600 marker:text-accent; }
+  .pf-list { @apply ml-4 list-disc space-y-1.5 text-[14.5px] text-neutral-600 marker:text-accent; }
 
   .pf-link { @apply text-accent hover:underline; }
 
