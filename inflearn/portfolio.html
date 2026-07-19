@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>김도혁 포트폴리오 · 인프런</title>
+    <title>김도혁 포트폴리오</title>
     <link rel="stylesheet" href="/src/style-portfolio.css" />
   </head>
   <!-- Tailwind CSS 사용. 페이지 1장 = A4(210mm x 297mm) 세로. 컴포넌트 클래스는 src/style-portfolio.css 참고 -->
@@ -12,9 +12,10 @@
     <div
       class="mx-auto mb-1 mt-3 w-[210mm] rounded-lg bg-gray-800 px-4 py-2.5 text-[13px] text-white print:hidden"
     >
-      💡 PDF는 브라우저에서 <b class="text-blue-300">Ctrl/⌘ + P</b> → "PDF로
-      저장" (A4 세로, 배경 그래픽 체크). Gentlelion-clone 슬라이드의
-      스크린샷 자리(점선 박스)는 실제 캡처 이미지로 교체하세요.
+      💡 PDF는 터미널에서
+      <b class="text-blue-300">npm run portfolio-pdf</b> 실행 (A4 세로, 배경
+      그래픽 자동 포함). 스크린샷 자리(점선 박스)는 실제 캡처 이미지로
+      교체하세요.
     </div>
 
     <main
@@ -230,10 +231,10 @@
                   1
                 </div>
                 <p class="text-[15px] leading-relaxed text-blue-50">
-                  <b class="text-[17px] text-white">실측으로 만드는 성능</b>
-                  <br />감이 아니라 측정으로 병목을 찾습니다. Lighthouse 성능
-                  점수를 48점에서 PC 92점·Mobile 100점으로, 마크다운 렌더링
-                  성능을 8.2배 개선한 경험이 있습니다.
+                  <b class="text-[17px] text-white">실측으로 원인을 찾습니다</b>
+                  <br />추측보다 먼저 측정합니다. 트래픽 급증의 원인을 이미지
+                  용량으로 특정해 84% 줄였고, 렌더링 병목도 재파싱과 DOM 재구성
+                  시간을 나눠 측정해 개선했습니다.
                 </p>
               </div>
               <div class="flex flex-1 items-center gap-4">
@@ -243,10 +244,10 @@
                   2
                 </div>
                 <p class="text-[15px] leading-relaxed text-blue-50">
-                  <b class="text-[17px] text-white">테스트와 문서로 증명하는 완결성</b>
-                  <br />Playwright E2E 테스트를 직접 작성해 자체 검증 체계를
-                  갖추고, 코드 리뷰·API 협업 과정을 문서로 남겨 팀과 공유하는
-                  방식으로 일합니다.
+                  <b class="text-[17px] text-white">구조로 팀의 기준을 만듭니다</b>
+                  <br />Kanto에서 데이터 조회는 서버 컴포넌트에, 인터랙션은
+                  클라이언트 컴포넌트에 두는 원칙을 제안해 팀 컨벤션으로 정하고
+                  프로젝트 끝까지 유지했습니다.
                 </p>
               </div>
               <div class="flex flex-1 items-center gap-4">
@@ -256,10 +257,12 @@
                   3
                 </div>
                 <p class="text-[15px] leading-relaxed text-blue-50">
-                  <b class="text-[17px] text-white">체계적인 업무 습관</b>
-                  <br />어떤 작업이든 먼저 설계를 고민하고, 체계가 없다면 스스로
-                  만듭니다. 군 복무 중 초급 장교의 위치에서도 작전수행실(AOC)
-                  업무를 체계화한 경험이 있습니다.
+                  <b class="text-[17px] text-white"
+                    >문서와 시스템으로 팀이 움직이게 합니다</b
+                  >
+                  <br />Notion WBS와 주간 활동 보고서로 일정과 기여를 공유했습니다.
+                  반복되는 정리·초안 작업은 AI로 효율화했고, 군에서 익힌 업무
+                  체계화 경험을 팀 운영으로 이어갔습니다.
                 </p>
               </div>
             </div>
@@ -471,7 +474,7 @@
           <div
             class="flex items-center justify-between border-t border-white/20 pt-3 text-[11px] text-blue-200"
           >
-            <span>김도혁 Portfolio</span><span>02 / 16</span>
+            <span>김도혁 Portfolio</span><span>02 / 15</span>
           </div>
         </div>
       </section>
@@ -601,7 +604,8 @@
                       리팩터링
                     </li>
                     <li>Redis(Upstash) 기반 로그인 보안</li>
-                    <li>공통 디자인 시스템 구축 (WCAG 2.1 AA)</li>
+                    <li>공통 디자인 시스템·WCAG 2.1 AA 접근성 구축</li>
+                    <li>next-intl 기반 다국어(EN·FIL) 지원</li>
                   </ul>
                 </div>
               </div>
@@ -642,39 +646,41 @@
               <div class="pf-card w-1/2">
                 <div class="flex items-center justify-around my-3">
                   <div
-                    class="flex h-18 w-18 items-center justify-center rounded-2xl bg-white text-accent shadow-[0_0_10px_rgba(0,0,0,0.2)]"
+                    class="flex h-18 w-18 items-center justify-center rounded-2xl bg-white shadow-[0_0_10px_rgba(0,0,0,0.2)]"
                   >
-                    <svg viewBox="0 0 24 24" class="h-9 w-9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
-                      <path d="M3.27 6.96 12 12.01l8.73-5.05" />
-                      <path d="M12 22.08V12" />
-                    </svg>
+                    <img
+                      src="../eslint-kr-favicon.svg"
+                      alt="ESLint-KR 파비콘"
+                      class="h-10 w-10 object-contain"
+                    />
                   </div>
                   <div class="flex flex-col gap-3">
                     <p class="text-[16px] font-semibold text-ink">
-                      팀 프로젝트 · 3인 (팀장)
+                      개인 프로젝트
                     </p>
                     <p class="text-[10.5px] text-muted">2026.03 - 2026.04</p>
                   </div>
                 </div>
                 <div class="px-6 py-6">
-                  <p class="text-[15px] font-bold text-ink">Gentlelion-clone</p>
-                  <p class="mt-1 text-[11px] text-muted">젠틀몬스터 클론 · 모노레포</p>
+                  <p class="text-[15px] font-bold text-ink">ESLint-KR</p>
+                  <p class="mt-1 text-[11px] text-muted">가이드 사이트</p>
                   <p class="text-[11px] text-muted">
-                    유저·관리자 페이지 분리 배포
+                    ESLint 공식홈페이지는 한국어 지원 X
                   </p>
                   <ul
                     class="mt-2 list-disc pl-4 text-[10.5px] leading-snug text-muted"
                   >
                     <li>
-                      npm workspaces 모노레포(user·admin·share-api) 구조 설계
+                      ESLint v9 Flat Config 기준 한국어 가이드 콘텐츠 (공식
+                      문서엔 없는 자료)
                     </li>
                     <li>
-                      공통 함수(renderRows·search) 추출로 목록·검색·페이지네이션
-                      재사용
+                      반복 로직을 공통 컴포넌트(useClipboard·CopyableCodeBlock)로
+                      추출해 리팩토링
                     </li>
                     <li>
-                      Playwright E2E 테스트 작성 (로그인·장바구니·주문 등)
+                      SPA 딥링크 404 문제 해결 (spa-github-pages 패턴) + CI·주간
+                      스모크 테스트 구축
                     </li>
                   </ul>
                 </div>
@@ -721,7 +727,7 @@
           </div>
         </div>
         <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>03 / 16</span>
+          <span>김도혁 Portfolio</span><span>03 / 15</span>
         </div>
       </section>
 
@@ -873,6 +879,10 @@
                   <b>AI 챗봇</b> - Groq·Gemini·Cerebras 멀티 LLM 폴백으로
                   안정적으로 응답하며, 반복 문의를 자동 처리해 운영 부담 절감
                 </li>
+                <li>
+                  <b>다국어 지원</b> - next-intl 기반 EN·FIL 국제화(약관·공지·
+                  날짜 로캘 처리), 번역 API가 죽어도 콘텐츠는 저장되는 폴백 설계
+                </li>
               </ul>
             </div>
           </div>
@@ -1007,7 +1017,7 @@
         </div>
         <div class="slide-foot">
           <span>김도혁 Portfolio</span>
-          <span>04 / 16</span>
+          <span>04 / 15</span>
         </div>
       </section>
 
@@ -1089,8 +1099,8 @@
                   class="w-[64mm] bg-white"
                 >
                   <img
-                    src="../kanto/chatLog.png"
-                    alt="Kanto 관리자 채팅로그"
+                    src="../kanto/공지관리.png"
+                    alt="Kanto 관리자 공지 등록과 데스크톱 공지 배너 미리보기"
                     class="max-h-full object-contain"
                   />
                   
@@ -1099,8 +1109,8 @@
                   class="w-[64mm] bg-white"
                 >
                   <img
-                      src="../kanto/chatlog_txt.png"
-                      alt="다운로드된 채팅 로그 TXT"
+                      src="../kanto/모바일 공지.png"
+                      alt="Kanto 모바일 화면의 아이콘형 공지 진입 UI"
                       class="max-h-full object-contain"
                     />
                   
@@ -1108,37 +1118,37 @@
               </div>
               <div>
                 <h3 class="text-[16px] mb-3 font-bold text-accent">
-                  채팅 · 관리자 채팅 로그
+                  공지 관리 · 반응형 모바일 UI
                 </h3>
                 <p class="text-[13px] ml-4">
-                  유저 간의 소통을 위해 <b>Supabase Realtime 기반 1:1
-                  채팅</b>을 전체 구현하고, 운영적 측면에서 생각해 법적 분쟁·사용자 문의에 대응할 수
-                  있는 관리자 도구를 구축했습니다.
+                  관리자가 등록한 공지를 모든 화면에서 놓치지 않고 확인할 수
+                  있도록, <b>화면 폭과 정보 밀도에 따라 공지 노출 방식을
+                  다르게 설계</b>했습니다.
                 </p>
-                <h4 class="text-[14px] mt-1 ml-4 text-accent font-semibold">사용자</h4>
+                <h4 class="text-[14px] mt-1 ml-4 text-accent font-semibold">
+                  데스크톱
+                </h4>
                 <ul class="pf-list pl-6">
                   <li>
-                    Realtime 메시지 송수신·읽음 처리에 <b>읽지 않은 메시지</b> 구현
+                    넓은 화면에서는 카테고리 내비게이션 아래에
+                    <b>전체 폭 공지 배너</b>를 배치해 메시지를 바로 확인
                   </li>
                   <li>
-                    언마운트 시 리셋 + 낙관적 업데이트 적용
-                  </li>
-                  <li>
-                    N초 내 N회 이상 전송 시 <b>도배 방지</b> 쿨다운 적용(관리자 운영관리에서 수정 기능 연동)
+                    관리자 등록 화면에서 제목과 시작·종료 일시를 설정하고
+                    <b>실제 사용자 화면을 미리 확인</b>
                   </li>
                 </ul>
-                <h4 class="text-[14px] mt-1 ml-4 text-accent font-semibold">관리자</h4>
+                <h4 class="text-[14px] mt-1 ml-4 text-accent font-semibold">
+                  모바일
+                </h4>
                 <ul class="pf-list px-6">
                   <li>
-                    관리자가 신고된 채팅방의 대화 내역을
-                    <b>페이지네이션으로 조회</b>(최대 20개씩 로드)
+                    좁은 화면에서는 배너가 본문을 밀어내지 않도록
+                    <b>아이콘형 공지 진입 UI</b>로 축약
                   </li>
                   <li>
-                    대화 내역을 <b>TXT로 다운로드</b>해 분쟁 발생 시 증빙
-                    자료로 활용
-                  </li>
-                  <li>
-                    대화방을 나가거나 회원을 탈퇴하더라도 일정 기간동안은 내역을 유지
+                    로고·유틸리티 메뉴·햄버거 메뉴와 함께 헤더 구조를 재배치해
+                    <b>모바일 콘텐츠 영역을 확보</b>
                   </li>
                 </ul>
               </div>
@@ -1146,7 +1156,7 @@
           </div>
         </div>
         <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>05 / 16</span>
+          <span>김도혁 Portfolio</span><span>05 / 15</span>
         </div>
       </section>
 
@@ -1154,7 +1164,7 @@
       <section class="slide break-after-page">
         <p class="slide-kicker">03. Project - Kanto · Details (3/5)</p>
         <h2 class="mt-3 text-[28px] font-extrabold">문제해결</h2>
-        <div class="flex flex-1 flex-col justify-evenly gap-8">
+        <div class="flex flex-1 flex-col gap-4">
           <div>
             <h3 class="text-[16px] font-bold text-accent">
               Supabase 트래픽 한도 초과 대응
@@ -1234,10 +1244,11 @@
                 브라우저에서 데이터를 요청해오니 버튼·카테고리가 늦게 나타난 것이었습니다.
               </li>
               <li>
-                <b>팀 컨벤션에 따라 페이지 전체를 서버 컴포넌트로 두고</b>, 필요한 데이터를
-                서버에서 미리 불러와 완성된 상태로 클라이언트에 내려주는 구조로
-                전환했습니다. 클라이언트 훅은 자체 fetch 로직을 걷어내고, 서버가
-                준 초기값만 받아쓰도록 단순화했습니다.
+                이 문제를 계기로 <b>'데이터 조회는 서버 컴포넌트, 인터랙션만
+                클라이언트'</b> 원칙을 직접 제안해 팀 컨벤션으로 정했고, 그에 따라
+                페이지 전체를 서버 컴포넌트로 두어 완성된 상태로 클라이언트에
+                내려주는 구조로 전환했습니다. 클라이언트 훅은 자체 fetch 로직을
+                걷어내고 서버가 준 초기값만 받아쓰도록 단순화했습니다.
               </li>
               <li>
                 이후 페이지가 복잡해지면서(리뷰·모임·활동 통계 등) 늘어난
@@ -1245,11 +1256,16 @@
                 모으고 인터랙션만 클라이언트 컴포넌트로 넘기는 구조를 끝까지
                 지켰습니다.
               </li>
+              <li>
+                같은 리팩터링에서 <b>접근성도 함께 개선</b>했습니다 — 섹션 heading
+                계층 정리, 탈퇴 모달 <code class="rounded bg-neutral-100 px-1 font-mono text-[11px]">role="dialog"</code>·Escape
+                닫기·포커스 관리, 탭 UI <code class="rounded bg-neutral-100 px-1 font-mono text-[11px]">role="tablist"</code>·aria-selected 적용.
+              </li>
             </ul>
           </div>
         </div>
         <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>06 / 16</span>
+          <span>김도혁 Portfolio</span><span>06 / 15</span>
         </div>
       </section>
 
@@ -1334,7 +1350,7 @@
           </div>
         </div>
         <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>07 / 16</span>
+          <span>김도혁 Portfolio</span><span>07 / 15</span>
         </div>
       </section>
 
@@ -1342,44 +1358,46 @@
       <section class="slide break-after-page">
         <p class="slide-kicker">03. Project - Kanto · Details (5/5)</p>
         <h2 class="mt-3 text-[28px] font-extrabold">협업 방식</h2>
-        <p class="mt-2 text-[13px] text-muted">
-          4인 팀에서 역할이 어떻게 나뉘었고, 무엇을 근거로 기록했는지를
-          정리했습니다.
-        </p>
+        
+        <div class="mt-6">
+          <h3 class="text-[16px] font-bold text-accent">
+            브랜치 전략 · 코드 리뷰 (Git Flow)
+          </h3>
 
-        <div class="mt-8 grid grid-cols-4 gap-3">
-          <div class="pf-card !p-3 text-center">
-            <p class="text-[11px] font-bold text-accent">김도혁</p>
-            <p class="mt-1 text-[10.5px] leading-snug text-neutral-600">
-              서비스 구조·데이터 연동
-              <br />채팅·프로필·임대상세
-              <br />관리자 게시글·운영
-            </p>
+          <!-- 브랜치 병합 흐름: feature/fix/hotfix → develop → release → main -->
+          <div
+            class="mt-4 flex flex-wrap items-center justify-center gap-x-2 gap-y-2 text-[11.5px] font-semibold text-neutral-700"
+          >
+            <span class="rounded border border-gray-300 bg-slate-50 px-3 py-1"
+              >feature · fix · hotfix</span
+            >
+            <span class="text-gray-400">→</span>
+            <span class="rounded border border-gray-300 bg-slate-50 px-3 py-1"
+              >develop</span
+            >
+            <span class="text-gray-400">→</span>
+            <span class="rounded border border-gray-300 bg-slate-50 px-3 py-1"
+              >release</span
+            >
+            <span class="text-gray-400">→</span>
+            <span
+              class="rounded border border-accent bg-blue-50 px-3 py-1 text-accent"
+              >main (배포)</span
+            >
           </div>
-          <div class="pf-card !p-3 text-center">
-            <p class="text-[11px] font-bold text-neutral-700">박소유</p>
-            <p class="mt-1 text-[10.5px] leading-snug text-neutral-600">
-              UI 시스템·운영/품질 관리
-              <br />중고거래 UI·공통 UX
-              <br />관리자 채팅·결제
-            </p>
-          </div>
-          <div class="pf-card !p-3 text-center">
-            <p class="text-[11px] font-bold text-neutral-700">이동근</p>
-            <p class="mt-1 text-[10.5px] leading-snug text-neutral-600">
-              회원·거래 흐름 구현
-              <br />회원가입·중고상세
-              <br />관리자 사용자 관리
-            </p>
-          </div>
-          <div class="pf-card !p-3 text-center">
-            <p class="text-[11px] font-bold text-neutral-700">임태형</p>
-            <p class="mt-1 text-[10.5px] leading-snug text-neutral-600">
-              인증·작성 경험·실시간
-              <br />로그인·Kanto Go
-              <br />관리자 대시보드·신고
-            </p>
-          </div>
+
+          <ul class="pf-list mt-4 px-4 text-[13px]">
+            <li>
+              <b>6종 브랜치(main·develop·release·feature·fix·hotfix)</b>로
+              운영하고, 모든 병합은 본인 외 1명 이상 Approve를 받은 PR로만
+              진행했습니다.
+            </li>
+            <li>
+              <b>3단계 점진 배포(6/22 · 7/1 · 7/6)</b>로 릴리스했고, 결제
+              웹훅·Storage 트래픽 이슈는 <b>hotfix 브랜치로 실서비스 중
+              대응</b>했습니다.
+            </li>
+          </ul>
         </div>
 
         <div class="mt-8 border-t border-gray-200 pt-6">
@@ -1435,11 +1453,7 @@
               매주 팀 전체 커밋 로그를 취합해 활동 보고서를 작성했습니다. <br />
               기여도 산정에는 Notion 회의록·자기보고 WBS는 물론 단순 커밋
               개수도 왜곡 소지가 있다고 판단해 배제하고, 최초 작성자·코드
-              계보·PR 근거로 담당 영역과 주도 기능을 정리했습니다. <br /> <br /> 보고서
-              초안 작성에는 같은 AI(Claude)를
-              <b>단계마다 다르게 프롬프팅</b>했습니다. 팀원 개인 보고서
-              3건을 팀 활동 보고서로 합치는 프롬프트와, 이를 다시 팀 활동
-              흐름으로 요약하는 프롬프트를 나눠 순차 실행했습니다.
+              계보·PR 근거로 담당 영역과 주도 기능을 정리했습니다.
             </p>
           </div>
         </div>
@@ -1488,192 +1502,13 @@
           </ul>
         </div>
         <div class="slide-foot border-t-0">
-          <span>김도혁 Portfolio</span><span>08 / 16</span>
-        </div>
-      </section>
-
-      <!-- ========== 08-1. Gentlelion-clone - 프로젝트 소개 ========== -->
-      <section class="slide break-after-page">
-        <p class="slide-kicker">04. Project - Gentlelion-clone</p>
-        <div class="mt-3 flex items-center justify-between">
-          <div class="flex items-center gap-4">
-            <div
-              class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white shadow-[0_0_10px_rgba(0,0,0,0.2)]"
-            >
-              <svg viewBox="0 0 24 24" class="h-9 w-9 text-accent" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
-                <path d="M3.27 6.96 12 12.01l8.73-5.05" />
-                <path d="M12 22.08V12" />
-              </svg>
-            </div>
-            <h2 class="text-[36px] font-extrabold leading-tight">
-              <a
-                href="https://github.com/DoHyuk-Centric/gentlelion-clone"
-                target="_blank"
-                rel="noopener"
-                class="inline-flex items-start gap-1 hover:underline"
-                >Gentlelion-clone<svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="mt-1.5 h-3.5 w-3.5 shrink-0 text-neutral-400"
-                ><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path
-                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  /></svg
-              ></a>
-            </h2>
-            <div class="ml-3 mt-0.5 h-4 w-0.5 bg-gray-400"></div>
-            <p class="mt-1 text-[16px] text-neutral-600">
-              젠틀몬스터 홈페이지 클론 · 유저/관리자 모노레포
-            </p>
-          </div>
-          <div class="flex items-center gap-2">
-            <a
-              href="https://github.com/DoHyuk-Centric/gentlelion-clone"
-              target="_blank"
-              rel="noopener"
-              class="pf-icon-link"
-              title="GitHub 저장소"
-              aria-label="GitHub 저장소"
-              ><svg
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="h-4 w-4"
-                aria-hidden="true"
-              ><path
-                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-                /></svg
-            ></a>
-          </div>
-        </div>
-
-        <div class="mt-6 flex gap-4">
-          <div class="flex w-[62mm] shrink-0 flex-col gap-3">
-            <div class="mock-shot aspect-video">
-              <div class="mock-shot-bar">
-                <span class="mock-shot-dot bg-red-300"></span>
-                <span class="mock-shot-dot bg-yellow-300"></span>
-                <span class="mock-shot-dot bg-green-300"></span>
-              </div>
-              <div class="mock-shot-body">관리자 대시보드 화면</div>
-            </div>
-            <div class="mock-shot aspect-video">
-              <div class="mock-shot-bar">
-                <span class="mock-shot-dot bg-red-300"></span>
-                <span class="mock-shot-dot bg-yellow-300"></span>
-                <span class="mock-shot-dot bg-green-300"></span>
-              </div>
-              <div class="mock-shot-body">유저 장바구니 화면</div>
-            </div>
-          </div>
-
-          <div class="flex flex-1 flex-col gap-4 justify-between">
-            <div>
-              <h3 class="mb-3 text-[16px] ml-2 font-bold text-accent">개요</h3>
-              <ul class="pf-list ml-6 text-[13px]">
-                <li>
-                  부트캠프 중간 팀 프로젝트로, 젠틀몬스터 홈페이지를 REST
-                  API 기반 CRUD로 클론했습니다. 유저 페이지와 관리자
-                  페이지를 분리 배포하는 <b>npm workspaces 모노레포</b>
-                  (packages/user·admin·share-api)로 구성했습니다.
-                </li>
-                <li>
-                  3인 팀의 <b>팀장</b>으로 브랜치 전략(main/develop/feature)과
-                  PR 리뷰 프로세스를 운영하며, 관리자 페이지 전반과 공통
-                  모듈 설계를 담당했습니다.
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 class="mb-3 text-[16px] ml-2 font-bold text-accent">
-                담당 영역
-              </h3>
-              <ul class="pf-list ml-6 text-[13px]">
-                <li>
-                  <b>관리자 페이지</b> - 대시보드·로그인·주문/사용자/상품
-                  관리 등 CRUD 대부분을 구현
-                </li>
-                <li>
-                  <b>공통 모듈 추출</b> - 설정값(config) 기반으로 동작하는
-                  <code class="rounded bg-neutral-100 px-1 py-0.5 font-mono text-[11.5px]">renderRows.js</code>
-                  ·<code class="rounded bg-neutral-100 px-1 py-0.5 font-mono text-[11.5px]">search.js</code>
-                  등을 콜백 함수로 분리해 주문·사용자·상품 페이지가
-                  공통으로 재사용하도록 리팩터링
-                </li>
-                <li>
-                  <b>Playwright E2E 테스트</b> - 로그인·회원가입·장바구니·
-                  주문·프로필 플로우 테스트 함수를 직접 작성해 자체 검증
-                  체계를 구축
-                </li>
-                <li>
-                  <b>API 설계 협업</b> - 장바구니 가격 변경 감지 시나리오를
-                  요청해 <code class="rounded bg-neutral-100 px-1 py-0.5 font-mono text-[11.5px]">acknowledge-price</code>
-                  API 신설로 이어졌고, 회원탈퇴 후 이메일 재가입 불가 버그를
-                  리포트해 수정 반영
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-6 flex flex-1 items-start gap-4">
-          <div class="w-1/2">
-            <h3 class="mb-3 ml-4 text-[16px] font-bold text-accent">
-              문제 해결 사례
-            </h3>
-            <ul class="pf-list ml-4 text-[12.5px]">
-              <li>
-                <b>연산자 우선순위 버그</b> - <code class="rounded bg-neutral-100 px-1 py-0.5 font-mono text-[11px]">lastName + firstName ?? "-"</code>
-                에서 <code class="rounded bg-neutral-100 px-1 py-0.5 font-mono text-[11px]">+</code>가
-                <code class="rounded bg-neutral-100 px-1 py-0.5 font-mono text-[11px]">??</code>보다 먼저
-                실행돼 "undefined홍길동"으로 표시되던 문제를 발견해 수정
-              </li>
-              <li>
-                <b>다수 상품 주문 표시 누락</b> - 여러 상품을 한 번에
-                주문하면 목록에 최상위 1개만 보이던 버그를 전체 목록이
-                보이도록 개선
-              </li>
-              <li>
-                <b>중복 이벤트 리스너</b> - 기존 핸들러를 제거하지 않고
-                다시 등록해 발생하던 중복 실행을 방지 처리
-              </li>
-            </ul>
-          </div>
-          <div class="w-1/2">
-            <h3 class="mb-3 ml-4 text-[16px] font-bold text-accent">
-              프로젝트 정보
-            </h3>
-            <ul class="ml-4 flex list-none flex-col gap-2.5">
-              <li class="grid grid-cols-[90px_1fr] items-baseline">
-                <span class="text-[13px] font-bold text-ink">개발 인원</span>
-                <span class="text-[13px] text-neutral-600">팀 프로젝트 · 3인 (팀장)</span>
-              </li>
-              <li class="grid grid-cols-[90px_1fr] items-baseline">
-                <span class="text-[13px] font-bold text-ink">개발 기간</span>
-                <span class="text-[13px] text-neutral-600">2026.03.26 - 04.20</span>
-              </li>
-              <li class="grid grid-cols-[90px_1fr] items-baseline">
-                <span class="text-[13px] font-bold text-ink">구조</span>
-                <span class="text-[13px] text-neutral-600">npm workspaces 모노레포</span>
-              </li>
-              <li class="grid grid-cols-[90px_1fr] items-baseline">
-                <span class="text-[13px] font-bold text-ink">개발 환경</span>
-                <span class="text-[13px] text-neutral-600">JavaScript · Vite · Tailwind CSS v4 · Playwright · Vercel</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>09 / 16</span>
+          <span>김도혁 Portfolio</span><span>08 / 15</span>
         </div>
       </section>
 
       <!-- ========== 09. myBlog - 프로젝트 소개 ========== -->
       <section class="slide break-after-page">
-        <p class="slide-kicker">05. Project - myBlog · Details (1/3)</p>
+        <p class="slide-kicker">04. Project - myBlog · Details (1/3)</p>
         <div class="mt-3 flex items-center justify-between">
           <div class="flex items-center gap-4">
             <div
@@ -1815,6 +1650,10 @@
                   발행 시점에만 실제 업로드해 고아 이미지 방지
                 </li>
                 <li><b>소셜 로그인</b> - Supabase Auth 기반 GitHub·Google OAuth</li>
+                <li>
+                  <b>웹 접근성</b> - 시맨틱 마크업(header·nav·main), WAI-ARIA,
+                  Tab 키보드 내비게이션·포커스 복귀를 바닐라 JS로 직접 구현
+                </li>
               </ul>
             </div>
           </div>
@@ -1901,13 +1740,13 @@
         </div>
         <div class="slide-foot">
           <span>김도혁 Portfolio</span>
-          <span>10 / 16</span>
+          <span>09 / 15</span>
         </div>
       </section>
 
       <!-- ========== 10. myBlog - 경험 ========== -->
       <section class="slide break-after-page">
-        <p class="slide-kicker">05. Project - myBlog · Details (2/3)</p>
+        <p class="slide-kicker">04. Project - myBlog · Details (2/3)</p>
         <h2 class="mt-3 text-[28px] font-extrabold">경험</h2>
 
         <div class="flex gap-2 flex-1 flex-col justify-evenly">
@@ -2044,13 +1883,13 @@
           </div>
         </div>
         <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>11 / 16</span>
+          <span>김도혁 Portfolio</span><span>10 / 15</span>
         </div>
       </section>
 
       <!-- ========== 11. myBlog - 문제해결 ========== -->
       <section class="slide break-after-page">
-        <p class="slide-kicker">05. Project - myBlog · Details (3/3)</p>
+        <p class="slide-kicker">04. Project - myBlog · Details (3/3)</p>
         <h2 class="mt-3 text-[28px] font-extrabold">문제해결</h2>
 
         <div class="flex gap-2 flex-1 flex-col justify-evenly">
@@ -2197,13 +2036,13 @@
           </div>
         </div>
         <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>12 / 16</span>
+          <span>김도혁 Portfolio</span><span>11 / 15</span>
         </div>
       </section>
 
       <!-- ========== 12. ESLint-KR - 프로젝트 소개 ========== -->
       <section class="slide break-after-page">
-        <p class="slide-kicker">06. Project - ESLint-KR</p>
+        <p class="slide-kicker">05. Project - ESLint-KR</p>
         <div class="mt-3 flex items-center justify-between">
           <div class="flex items-center gap-4">
             <div
@@ -2381,13 +2220,13 @@
         </div>
         <div class="slide-foot">
           <span>김도혁 Portfolio</span>
-          <span>13 / 16</span>
+          <span>12 / 15</span>
         </div>
       </section>
 
       <!-- ========== 13. Frontie - 프로젝트 소개 ========== -->
       <section class="slide break-after-page">
-        <p class="slide-kicker">07. Project - Frontie · Details (1/2)</p>
+        <p class="slide-kicker">06. Project - Frontie · Details (1/2)</p>
         <div class="mt-3 flex items-center justify-between">
           <div class="flex items-center gap-4">
             <div
@@ -2578,13 +2417,13 @@
         </div>
         <div class="slide-foot">
           <span>김도혁 Portfolio</span>
-          <span>14 / 16</span>
+          <span>13 / 15</span>
         </div>
       </section>
 
       <!-- ========== 14. Frontie - 경험 및 문제해결 ========== -->
       <section class="slide break-after-page">
-        <p class="slide-kicker">07. Project - Frontie · Details (2/2)</p>
+        <p class="slide-kicker">06. Project - Frontie · Details (2/2)</p>
         <h2 class="mt-3 text-[28px] font-extrabold">경험 및 문제해결</h2>
 
         <div class="flex gap-2 flex-1 flex-col mt-4">
@@ -2721,7 +2560,7 @@
           </div>
         </div>
         <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>15 / 16</span>
+          <span>김도혁 Portfolio</span><span>14 / 15</span>
         </div>
       </section>
 
