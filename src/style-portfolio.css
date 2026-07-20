@@ -3,7 +3,7 @@
 /* 스캔할 소스 파일을 명시 (자동 감지가 이 프로젝트의 git 루트 때문에
    놓치는 문제를 방지). */
 @source "../portfolio.html";
-@source "../infrun/portfolio.html";
+@source "../inflearn/portfolio.html";
 
 /* ---------- 인쇄(PDF) 기본 규칙 ----------
    resume.html과 별도 파일로 분리한 이유: @page 규칙은 문서마다 달라야 하는데

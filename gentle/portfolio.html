@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="../" />
     <title>김도혁 포트폴리오</title>
     <link rel="stylesheet" href="/src/style-portfolio.css" />
   </head>
@@ -1746,6 +1747,125 @@
         </div>
       </section>
 
+      <!-- ========== 11. Gentlelion - 프로젝트 소개 ========== -->
+      <section class="slide break-after-page">
+        <p class="slide-kicker">04. Project - Gentlelion · Details (1/2)</p>
+        <div class="mt-3 flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-black text-[20px] font-black tracking-tight text-white shadow-[0_0_10px_rgba(0,0,0,0.2)]">
+              GL
+            </div>
+            <div>
+              <h2 class="text-[36px] font-extrabold leading-tight">
+                <a href="https://gentlelion.vercel.app/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 no-underline hover:underline">
+                  Gentlelion
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" /></svg>
+                </a>
+              </h2>
+              <p class="mt-1 text-[13px] font-medium text-muted">Vanilla JavaScript 기반 패션 커머스 · 유저/관리자 서비스</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <a href="https://github.com/FRONTENDBOOTCAMP-17th/gentlelion" target="_blank" rel="noopener" class="pf-icon-link" title="GitHub 저장소" aria-label="GitHub 저장소">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" /></svg>
+            </a>
+          </div>
+        </div>
+
+        <h3 class="mt-5 text-[22px] font-extrabold text-accent">유저·관리자·공통 API를 하나의 모노레포로 분리했습니다.</h3>
+
+        <div class="mt-5 grid grid-cols-[1.55fr_1fr] gap-5">
+          <div class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md">
+            <img src="./gentle/assets/user-flow.gif" alt="Gentlelion 상품 목록과 사용자 흐름" class="h-[77mm] w-full object-cover object-top" />
+          </div>
+          <div class="flex flex-col gap-4">
+            <div>
+              <h3 class="mb-2 text-[16px] font-bold text-accent">구조 설계</h3>
+              <ul class="pf-list pl-5 text-[13px]">
+                <li><b>Vite Workspace</b>로 <code>user</code>·<code>admin</code>·<code>share-api</code> 패키지 분리</li>
+                <li>유저와 관리자 앱을 각각 빌드해 <b>두 서비스로 개별 배포</b></li>
+                <li>공통 API 계층에서 인증 토큰 주입·에러 처리·HTTP 메서드 관리</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="mb-2 text-[16px] font-bold text-accent">담당 기능</h3>
+              <ul class="pf-list pl-5 text-[13px]">
+                <li>상품 조회·필터·정렬, 장바구니 수량 변경, 주문 생성</li>
+                <li>관리자 사용자 목록·삭제, 주문 목록·상세 조회</li>
+                <li>공통 컴포넌트와 브랜치 전략, 이슈 기반 작업 흐름 관리</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 grid grid-cols-2 gap-6 border-t border-gray-200 pt-5">
+          <div>
+            <h3 class="mb-3 text-[16px] font-bold text-accent">프로젝트 정보</h3>
+            <ul class="flex list-none flex-col gap-2.5 text-[13px]">
+              <li class="grid grid-cols-[86px_1fr]"><b>개발 인원</b><span class="text-neutral-600">3인 팀 프로젝트 · 팀장</span></li>
+              <li class="grid grid-cols-[86px_1fr]"><b>개발 기간</b><span class="text-neutral-600">2026.03.26 - 2026.04.20</span></li>
+              <li class="grid grid-cols-[86px_1fr]"><b>배포</b><span class="text-neutral-600">유저 · 관리자 서비스 분리</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="mb-3 text-[16px] font-bold text-accent">개발 환경</h3>
+            <ul class="flex list-none flex-col gap-2.5 text-[13px]">
+              <li class="grid grid-cols-[86px_1fr]"><b>프론트엔드</b><span class="text-neutral-600">HTML · CSS · JavaScript</span></li>
+              <li class="grid grid-cols-[86px_1fr]"><b>빌드/구조</b><span class="text-neutral-600">Vite · npm Workspaces</span></li>
+              <li class="grid grid-cols-[86px_1fr]"><b>테스트</b><span class="text-neutral-600">Playwright</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="slide-foot"><span>김도혁 Portfolio</span><span>11 / 13</span></div>
+      </section>
+
+      <!-- ========== 12. Gentlelion - 테스트 및 문제해결 ========== -->
+      <section class="slide break-after-page">
+        <p class="slide-kicker">04. Project - Gentlelion · Details (2/2)</p>
+        <h2 class="mt-3 text-[28px] font-extrabold">핵심 5개 사용자 흐름을 E2E로 검증했습니다.</h2>
+
+        <div class="mt-5 grid grid-cols-[1.45fr_1fr] gap-5">
+          <div class="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md">
+            <img src="./gentle/assets/admin-sync.gif" alt="Gentlelion 관리자 상품 관리 화면" class="h-[72mm] w-full object-cover object-top" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p class="text-[13px] leading-relaxed">유저와 관리자 양쪽에서 CRUD가 이어지면서 수정 한 번이 다른 흐름을 깨뜨리는지 수동으로 확인하기 어려웠습니다.</p>
+            <div class="mt-4 rounded-xl border border-blue-100 bg-blue-50 p-4">
+              <p class="text-[13px] font-bold text-accent">제가 맡은 검증 범위</p>
+              <p class="mt-2 text-[22px] font-extrabold">5개 핵심 흐름</p>
+              <p class="mt-1 text-[12px] leading-relaxed text-neutral-600">회원가입 · 로그인 · 장바구니 · 주문 · 프로필</p>
+            </div>
+            <ul class="pf-list mt-4 pl-5 text-[13px]">
+              <li>Playwright 설치와 유저·관리자 테스트 폴더 구조 설계</li>
+              <li>팀 전체 결과물은 <b>20개 spec</b>, 개인 작성 범위는 5개 흐름으로 구분</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-6 grid grid-cols-[0.95fr_1.05fr] gap-6 border-t border-gray-200 pt-5">
+          <div>
+            <h3 class="mb-3 text-[16px] font-bold text-accent">공유 API 중심 통신 구조</h3>
+            <div class="rounded-xl border border-gray-200 bg-[#161616] p-3 shadow-sm">
+              <img src="./gentle/assets/all-architecture.svg" alt="유저와 관리자 앱이 공통 API 계층을 사용하는 구조" class="h-[75mm] w-full object-contain" />
+            </div>
+          </div>
+          <div class="flex flex-col gap-5">
+            <div>
+              <h3 class="mb-2 text-[16px] font-bold text-accent">동적 헤더 로드 뒤 사라지던 메뉴 애니메이션</h3>
+              <p class="text-[13px] leading-relaxed">헤더를 비동기로 DOM에 주입하기 전에 메뉴 초기화 코드가 실행되어 대상 요소를 찾지 못했습니다. 헤더 로드 완료 후 초기화하도록 실행 순서를 조정하고, 모바일 메뉴 생성 책임을 한 곳으로 모았습니다.</p>
+            </div>
+            <div class="border-t border-gray-200 pt-4">
+              <h3 class="mb-2 text-[16px] font-bold text-accent">로컬과 배포 환경의 경로 차이</h3>
+              <p class="text-[13px] leading-relaxed">Vercel에서 동적 컴포넌트 경로가 달라 유저·관리자 앱 일부가 로드되지 않았습니다. 현재 origin을 기준으로 경로를 계산하고 각 패키지의 Vite 설정을 정리해 분리 배포 환경에서 동일하게 동작하도록 수정했습니다.</p>
+            </div>
+            <a href="https://github.com/FRONTENDBOOTCAMP-17th/gentlelion/tree/main/tests" target="_blank" rel="noopener" class="mt-auto inline-flex items-center gap-1 text-[12px] font-semibold text-accent underline">테스트 코드 확인 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="slide-foot"><span>김도혁 Portfolio</span><span>12 / 13</span></div>
+      </section>
+
+      <template id="retired-frontie-slides">
+      <!-- ========== 기존 Frontie 슬라이드 (Gentlelion 반영본에서는 미표시) ========== -->
       <!-- ========== 11. Frontie - 프로젝트 소개 ========== -->
       <section class="slide break-after-page">
         <p class="slide-kicker">04. Project - Frontie · Details (1/2)</p>
@@ -2085,6 +2205,8 @@
           <span>김도혁 Portfolio</span><span>12 / 13</span>
         </div>
       </section>
+
+      </template>
 
       <!-- ========== 13. 끝 ========== -->
       <section

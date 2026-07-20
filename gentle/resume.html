@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="../">
 <title>김도혁 이력서</title>
 <link rel="stylesheet" href="/src/style.css">
 </head>
@@ -20,12 +21,12 @@
             print:m-0 print:w-auto print:p-[18mm] print:shadow-none">
 
   <!-- ---------- 헤더 ---------- -->
-  <header class="mb-8 pb-3.5">
-    <div class="flex w-full items-start justify-between gap-8">
-      <h1 class="shrink-0 text-[30pt] font-extrabold tracking-[-0.5px]">
+  <header class="mb-8 flex justify-between gap-6 pb-3.5">
+    <div class="min-w-0">
+      <h1 class="text-[30pt] font-extrabold tracking-[-0.5px]">
         김도혁
       </h1>
-      <address class="mt-1 flex flex-col items-end space-y-1 text-[11pt] not-italic text-muted">
+      <address class="mt-3 flex flex-col items-start space-y-1 text-[11pt] not-italic text-muted">
         <span class="contact-item"><svg class="mr-1.5 h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z"/></svg><a href="mailto:hyeeoooook@gmail.com" class="text-muted no-underline">hyeeoooook@gmail.com</a><span class="mx-1.5 text-gray-300" aria-hidden="true">|</span><a href="tel:+821094006992" class="text-muted no-underline">010-9400-6992</a></span>
         <span class="contact-item"><svg class="mr-1.5 h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.523 2 12 2z"/></svg><a href="https://github.com/DoHyuk-Centric" target="_blank" rel="noopener" class="text-muted no-underline">github.com/DoHyuk-Centric</a></span>
         <span class="contact-item"><svg class="mr-1.5 h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg><a href="https://hyeeoooook.tistory.com/" target="_blank" rel="noopener" class="text-muted no-underline">hyeeoooook.tistory.com</a></span>
@@ -47,6 +48,53 @@
     </div>
   </section>
 
+  <!-- ---------- 교육 ---------- -->
+  <section class="mb-8">
+    <h2 class="section-title">교육</h2>
+
+    <article class="mb-2 px-4">
+      <div class="flex gap-4 items-end mb-3">
+        <time datetime="2025-12" class="period whitespace-nowrap text-[11pt]">2025.12 - 2026.07</time>
+        <h3 class="text-[13pt] font-semibold">멋쟁이사자처럼 부트캠프 <span class="font-medium text-muted">· 프론트엔드 17기</span></h3>
+      </div>
+      <ul class="bullets mt-0.5">
+        <li>JavaScript·TypeScript, React·Next.js 기반 웹 실무 과정 수료(115일 / 총 920시간)</li>
+        <li>파이널 프로젝트: Kanto Project</li>
+        <li><a href="https://github.com/FRONTENDBOOTCAMP-17th/gentlelion" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-accent">중간 프로젝트<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07.07l2-2A5 5 0 0 0 12 4l-1.15 1.15"/><path d="M14 11a5 5 0 0 0-7.07-.07l-2 2A5 5 0 0 0 12 20l1.15-1.15"/></svg></a>: Vanilla JavaScript·Vite 모노레포 기반 Gentlelion (3인 팀장)</li>
+      </ul>
+    </article>
+
+    <article class="px-4">
+      <div class="flex gap-4 items-end mb-3">
+        <time datetime="2017-03" class="period whitespace-nowrap text-[11pt]">2017.03 - 2022.02</time>
+        <h3 class="text-[13pt] font-semibold">세명대학교 <span class="font-medium text-muted">· 컴퓨터학부 (학사)</span></h3>
+      </div>
+    </article>
+  </section>
+
+  <!-- ---------- 병역 ---------- -->
+  <section>
+    <h2 class="section-title">병역</h2>
+
+    <article class="mb-5 px-4">
+      <div class="flex gap-4 items-end mb-3">
+        <time datetime="2025-12" class="period whitespace-nowrap text-[11pt]">2022.02 - 2024.06</time>
+        <h3 class="text-[13pt] font-semibold">
+          육군
+          <span class="font-medium text-muted">· 중위</span>
+          <span class="font-medium text-[14px] text-muted ml-4">1사단</span>
+        </h3>
+      </div>
+    </article>
+  </section>
+
+  <span class="absolute bottom-[10mm] right-[18mm] text-[10pt] text-muted">1 / 2</span>
+</main>
+
+<!-- ============ A4 페이지 (2/2) ============ -->
+<main class="relative mx-auto my-3 min-h-[297mm] w-[210mm] bg-white p-[18mm] shadow-[0_2px_18px_rgba(0,0,0,.12)]
+            print:m-0 print:w-auto print:p-[18mm] print:shadow-none print:break-before-page">
+
   <!-- ---------- 기술 스택 ---------- -->
   <section class="mb-8">
     <h2 class="section-title">기술 스택</h2>
@@ -64,56 +112,15 @@
         <span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span>
       </div>
       <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+        <span class="inline-block min-w-[90px] font-bold">Build / Test</span>
+        <span class="tag">Vite</span><span class="tag">Playwright</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5">
         <span class="inline-block min-w-[90px] font-bold">Infra / CI</span>
         <span class="tag">Vercel</span><span class="tag">GitHub Actions</span>
       </div>
     </div>
   </section>
-
-  <!-- ---------- 교육 ---------- -->
-  <section class="mb-8">
-    <h2 class="section-title">교육</h2>
-
-    <article class="mb-2 px-4">
-      <div class="flex gap-4 items-end mb-3">
-        <time datetime="2025-12" class="period whitespace-nowrap text-[11pt]">2025.12 - 2026.07</time>
-        <h3 class="text-[13pt] font-semibold">멋쟁이사자처럼 부트캠프 <span class="font-medium text-muted">· 프론트엔드 17기</span></h3>
-      </div>
-      <ul class="bullets mt-0.5">
-        <li>JavaScript·TypeScript, React·Next.js 기반 웹 실무 과정 수료(115일 / 총 920시간)</li>
-        <li>
-          <a href="https://github.com/FRONTENDBOOTCAMP-17th/kanto" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-accent">파이널 프로젝트(4인)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07.07l2-2A5 5 0 0 0 12 4l-1.15 1.15"/><path d="M14 11a5 5 0 0 0-7.07-.07l-2 2A5 5 0 0 0 12 20l1.15-1.15"/></svg></a>
-          <ul class="sub-bullets text-gray-400">
-            <li>Kanto · 필리핀 한인 대상 중고거래·구인·부동산 통합 플랫폼</li>
-            <li>Supabase BaaS·Next.js Route Handler 기반 API 통신 구조</li>
-            <li>팀 평가 96점, 파이널 프로젝트 5개 팀 중 1위</li>
-          </ul>
-        </li>
-        <li>
-          <a href="https://github.com/FRONTENDBOOTCAMP-17th/gentlelion" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-accent">중간 프로젝트(3인)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07.07l2-2A5 5 0 0 0 12 4l-1.15 1.15"/><path d="M14 11a5 5 0 0 0-7.07-.07l-2 2A5 5 0 0 0 12 20l1.15-1.15"/></svg></a>
-          <ul class="sub-bullets text-gray-400">
-            <li>JS기반 Gentle Monster 클론코딩</li>
-            <li>팀장으로 브랜치 전략과 이슈 기반 작업 방식 운영</li>
-            <li>모노레포 페이지 별도 배포(user/admin), REST API 기반 데이터 처리, CRUD, playwright(E2E)</li>
-          </ul>
-        </li>
-      </ul>
-    </article>
-
-    <article class="px-4">
-      <div class="flex gap-4 items-end mb-3">
-        <time datetime="2017-03" class="period whitespace-nowrap text-[11pt]">2017.03 - 2022.02</time>
-        <h3 class="text-[13pt] font-semibold">세명대학교 <span class="font-medium text-muted">· 컴퓨터학부 (학사)</span></h3>
-      </div>
-    </article>
-  </section>
-
-  <span class="absolute bottom-[10mm] right-[18mm] text-[10pt] text-muted">1 / 2</span>
-</main>
-
-<!-- ============ A4 페이지 (2/2) ============ -->
-<main class="relative mx-auto my-3 min-h-[297mm] w-[210mm] bg-white p-[18mm] shadow-[0_2px_18px_rgba(0,0,0,.12)]
-            print:m-0 print:w-auto print:p-[18mm] print:shadow-none print:break-before-page">
 
   <!-- ---------- 프로젝트 ---------- -->
   <section class="w-full">
@@ -136,15 +143,15 @@
 
     <article class="grid grid-cols-[38mm_1fr] gap-x-6 border-b border-gray-200 py-5">
       <div class="px-2">
-        <time datetime="2026-05" class="block whitespace-nowrap text-[10.5pt] text-muted">2026.05 (약 2주)</time>
-        <h3 class="mt-2 text-[13pt] font-bold"><a href="https://frontie-topaz.vercel.app/chat" target="_blank" rel="noopener" class="no-underline hover:underline">Frontie</a></h3>
-        <p class="mt-1 text-[10pt] text-muted">개인 프로젝트</p>
+        <time datetime="2026-03" class="block whitespace-nowrap text-[10.5pt] text-muted">2026.03 - 2026.04</time>
+        <h3 class="mt-2 text-[13pt] font-bold"><a href="https://gentlelion.vercel.app/" target="_blank" rel="noopener" class="no-underline hover:underline">Gentlelion</a></h3>
+        <p class="mt-1 text-[10pt] text-muted">팀 프로젝트 · 3인 · 팀장</p>
       </div>
       <ul class="bullets !ml-0">
-        <li>Vercel AI SDK로 Groq·Gemini·Cerebras의 스트리밍 응답과 실시간 모델 전환을 통합한 프론트엔드 학습 챗봇</li>
-        <li>멀티 LLM 폴백 구조를 통해 API 장애 또는 토큰 소진 시 자동 전환으로 가용성 확보</li>
-        <li>하이라이터 교체·마크다운 렌더러 지연 로딩 적용 Lighthouse Performance <b>48 → PC 92 · Mobile 100</b></li>
-        <li>Next.js · Vercel AI SDK · Zustand · <a href="https://github.com/DoHyuk-Centric/frontie" target="_blank" rel="noopener" aria-label="Frontie GitHub 저장소 (새 창)" class="text-accent">GitHub</a></li>
+        <li>Vanilla JavaScript·Vite Workspace로 유저·관리자·공통 API를 분리한 모노레포를 구성하고 두 서비스를 개별 배포</li>
+        <li>상품 조회·필터, 장바구니 수량 변경, 주문 생성과 관리자 사용자·주문 관리까지 REST API 기반 CRUD 구현</li>
+        <li>Playwright 환경과 테스트 구조를 설계하고 회원가입·로그인·장바구니·주문·프로필 <b>5개 핵심 흐름</b>을 E2E로 검증</li>
+        <li>JavaScript · Vite · Tailwind CSS · Playwright · <a href="https://github.com/FRONTENDBOOTCAMP-17th/gentlelion" target="_blank" rel="noopener" aria-label="Gentlelion GitHub 저장소 (새 창)" class="text-accent">GitHub</a></li>
       </ul>
     </article>
 
