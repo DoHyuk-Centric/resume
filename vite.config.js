@@ -14,6 +14,10 @@ export default defineConfig({
       input: {
         resume: "resume.html",
         portfolio: "portfolio.html",
+        coverletter: "coverletter.html",
+        infrunResume: "infrun/resume.html",
+        infrunPortfolio: "infrun/portfolio.html",
+        infrunCoverletter: "infrun/coverletter.html",
       },
     },
   },
