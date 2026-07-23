@@ -27,7 +27,7 @@
 
   /* 세로 템플릿의 정보 밀도를 유지하면서 가로 캔버스에 맞춥니다. */
   .landscape-fit > :not(.slide-foot) {
-    zoom: 0.7;
+    zoom: 1;
   }
 
   .slide-kicker { @apply text-[12px] font-bold uppercase tracking-[0.25em] text-accent; }
