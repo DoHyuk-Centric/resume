@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:resume": "npm --prefix legacy-resume run dev -- --base /legacy-resume/ --port 3000 --strictPort --open /legacy-resume/tilda/resume.html",
     "build": "next build",
     "start": "next start",
     "lint": "eslint ."
