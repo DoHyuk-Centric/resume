@@ -1,4 +1,4 @@
-// portfolio.html → portfolio.pdf 자동 추출 (A4 세로 슬라이드)
+// portfolio.html → portfolio.pdf 자동 추출 (A4 가로 슬라이드)
 // 사용법:  npm run portfolio-pdf
 //
 // resume.html의 export-pdf.mjs와 동일하게 로컬 Vite 서버(http://)를 거칩니다.
@@ -24,7 +24,7 @@ try {
 
   const validation = await page.evaluate(() => ({
     slideCount: document.querySelectorAll(".slide").length,
-    hasProjectFocus: ["Kanto", "DoHyuk.dev", "Frontie"].every((name) =>
+    hasProjectFocus: ["Kanto", "DoHyuk.dev", "GentleLion"].every((name) =>
       document.body.innerText.includes(name),
     ),
     overflowSlides: [...document.querySelectorAll(".slide")]
@@ -36,7 +36,7 @@ try {
       // 1번 표지는 좌측 장식 SVG를 의도적으로 캔버스 밖에 배치합니다.
       .filter((item) => item.height > 1 || (item.slide !== 1 && item.width > 1)),
   }));
-  if (validation.slideCount !== 13 || !validation.hasProjectFocus || validation.overflowSlides.length) {
+  if (validation.slideCount !== 10 || !validation.hasProjectFocus || validation.overflowSlides.length) {
     throw new Error(`포트폴리오 레이아웃 검증 실패: ${JSON.stringify(validation)}`);
   }
 

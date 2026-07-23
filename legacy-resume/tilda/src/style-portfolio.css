@@ -9,21 +9,31 @@
    같은 스타일시트에서 두 @page를 두면 빌드 시 <link> 순서가 바뀌면서
    어느 문서가 어떤 크기를 쓸지 꼬입니다. */
 @layer base {
-  @page { size: A4; margin: 0; }
+  @page { size: A4 landscape; margin: 0; }
 }
 
-/* ---------- 반복 사용하는 컴포넌트 클래스 (A4 세로 페이지 PDF) ---------- */
+/* ---------- 반복 사용하는 컴포넌트 클래스 (A4 가로 페이지 PDF) ---------- */
 @layer components {
-  /* 페이지 한 장 = A4 (210mm x 297mm) */
+  /* 페이지 한 장 = A4 landscape (297mm x 210mm) */
   .slide {
-    @apply relative flex h-[297mm] w-[210mm] shrink-0 flex-col overflow-hidden
-           bg-white p-[16mm] shadow-[0_2px_18px_rgba(0,0,0,.15)] print:shadow-none;
+    @apply relative flex h-[210mm] w-[297mm] shrink-0 flex-col overflow-hidden
+           bg-white p-[12mm] shadow-[0_2px_18px_rgba(0,0,0,.15)] print:shadow-none;
+  }
+
+  .compact-slide {
+    padding-top: 8mm;
+    padding-bottom: 8mm;
+  }
+
+  /* 세로 템플릿의 정보 밀도를 유지하면서 가로 캔버스에 맞춥니다. */
+  .landscape-fit > :not(.slide-foot) {
+    zoom: 0.7;
   }
 
   .slide-kicker { @apply text-[12px] font-bold uppercase tracking-[0.25em] text-accent; }
 
   .slide-foot {
-    @apply absolute inset-x-[16mm] bottom-[10mm] flex items-center justify-between
+    @apply absolute inset-x-[12mm] bottom-[7mm] flex items-center justify-between
            border-t border-gray-100 pt-3 text-[10px] text-muted;
   }
 

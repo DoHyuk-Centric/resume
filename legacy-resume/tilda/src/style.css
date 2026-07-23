@@ -24,6 +24,7 @@
     content: "";
     @apply absolute left-0.5 top-[9px] h-1 w-1 rounded-full bg-accent;
   }
+  .bullets-black > li::before { @apply bg-ink; }
 
   /* 하위 목록 (네모 불릿) */
   .sub-bullets { @apply mt-0.5 ml-1 list-none space-y-0.5 pl-2 text-[10.5pt]; }

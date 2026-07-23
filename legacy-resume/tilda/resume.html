@@ -8,6 +8,14 @@
 </head>
 <!-- Tailwind CSS 사용. 스타일 토큰/컴포넌트 클래스는 src/style.css 참고 -->
 <body class="bg-gray-100 font-sans text-ink leading-relaxed text-[10.5pt] print:bg-white">
+<svg class="hidden" aria-hidden="true">
+  <symbol id="icon-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+  <symbol id="icon-figma" viewBox="0 0 24 24"><path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z"/></symbol>
+  <symbol id="icon-notion" viewBox="0 0 24 24"><path d="M4.46 4.21c.75.6 1.03.56 2.43.46l13.21-.79c.28 0 .05-.28-.04-.33l-2.2-1.58c-.42-.33-.98-.7-2.05-.61L3.01 2.3c-.47.05-.56.28-.37.47Zm.79 3.08v13.9c0 .75.37 1.03 1.21.98l14.53-.84c.84-.05.93-.56.93-1.17V6.35c0-.6-.23-.93-.74-.88L6 6.35c-.56.05-.75.33-.75.94Zm14.34.74c.09.42 0 .84-.42.89l-.7.14v10.26c-.61.33-1.17.52-1.64.52-.75 0-.93-.24-1.49-.94l-4.58-7.18v6.95L12.21 19s0 .84-1.17.84l-3.22.19c-.09-.19 0-.66.33-.75l.84-.23V9.85l-1.17-.09c-.09-.42.14-1.03.79-1.07l3.46-.24 4.76 7.28V9.29l-1.21-.14c-.09-.51.28-.89.75-.93Z"/></symbol>
+  <symbol id="icon-spreadsheet" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6zM14 2v6h6M9 12h8M9 16h8M13 10v9" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="icon-npm" viewBox="0 0 24 24"><path d="M1.763 0C.786 0 0 .786 0 1.763v20.474C0 23.214.786 24 1.763 24h20.474c.977 0 1.763-.786 1.763-1.763V1.763C24 .786 23.214 0 22.237 0zM5.13 5.323l13.837.019-.009 13.836h-3.464l.01-10.382h-3.456L12.04 19.17H5.113z"/></symbol>
+  <symbol id="icon-wiki" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
 
 <!-- 화면에서만 보이는 안내 (인쇄 시 자동 숨김) -->
 <div class="mx-auto -mb-1 mt-3 max-w-[210mm] rounded-lg bg-gray-800 px-4 py-2.5 text-[13pt] text-white print:hidden">
@@ -20,7 +28,7 @@
             print:m-0 print:w-auto print:p-[18mm] print:shadow-none">
 
   <!-- ---------- 헤더 ---------- -->
-  <header class="mb-8 pb-3.5">
+  <header class="mb-4 pb-3.5">
     <div class="flex w-full items-start justify-between gap-8">
       <h1 class="shrink-0 text-[30pt] font-extrabold tracking-[-0.5px]">
         김도혁
@@ -37,12 +45,12 @@
   <section class="mb-8">
     <h2 class="section-title">소개</h2>
     <div class="px-4 text-neutral-700">
-      <h4 class="text-slate-700 text-[16px] font-semibold">구조를 고민하고 실측을 토대로 작업하는 프론트엔드 개발자입니다.</h4>
-      <p>React·Next.js 기반 프론트엔드 개발자로 개인 프로젝트에선 마크다운 렌더링 npm 패키지를 최적화해 배포하고, 팀 프로젝트에선 채팅 시스템 도입과 운영 기능 개발에 참여해 파이널 프로젝트 1위에 기여했습니다.</p>
+      <h4 class="text-slate-700 text-[16px] font-semibold">경청(傾聽)하며 문제를 함께 고민하는 프론트엔드 개발자입니다.</h4>
+      <p>TypeScript와 JavaScript 기반의 개발자로 팀의 분위기와 협업간의 효율성을 위해 팀내 컨벤션에 집중하며, 소통을 중심으로 요구사항과 문제를 함께 고민하는것에 집중합니다.</p>
       <ul class="bullets border-l-0 mt-2 ml-0">
-        <li>마크다운 미리보기를 변경 블록 단위 렌더링으로 개선해 성능을 최대 <b>8.2배 향상</b></li>
-        <li>관리자 금칙어 관리에 TanStack Query를 도입해 GET 요청을 <b>18회에서 3회로 감소</b></li>
-        <li>신뢰도·인기 게시물 점수 공식을 설계해, AI로 <b>9가지 사용자 패턴을 시뮬레이션</b>해 등급 분포를 사전 검증</li>
+        <li>부트캠프 팀 프로젝트에서 <b>적극적인 PR과 문서화</b>로 완성도를 높여 96점, 5개 팀 중 1위에 기여했습니다.</li>
+        <li>팀의 중앙에서 <b>의견을 조율하고 문제를 함께 고민</b>하며 근본적인 해결책을 제안합니다.</li>
+        <li>Supabase 무료 한도 초과와 사용자 인증 구현 전 목업데이터 활용 등 사전에 예상되는 문제를 미리 발견해 <b>일관된 해결책을 제안</b>합니다.</li>
       </ul>
     </div>
   </section>
@@ -64,8 +72,8 @@
         <span class="tag">Supabase</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span>
       </div>
       <div class="flex flex-wrap items-center gap-x-2 gap-y-1.5">
-        <span class="inline-block min-w-[90px] font-bold">Infra / CI</span>
-        <span class="tag">Vercel</span><span class="tag">GitHub Actions</span>
+        <span class="inline-block min-w-[90px] font-bold">Test / CI</span>
+        <span class="tag">Playwright</span><span class="tag">GitHub Actions</span>
       </div>
     </div>
   </section>
@@ -77,24 +85,23 @@
     <article class="mb-2 px-4">
       <div class="flex gap-4 items-end mb-3">
         <time datetime="2025-12" class="period whitespace-nowrap text-[11pt]">2025.12 - 2026.07</time>
-        <h3 class="text-[13pt] font-semibold">멋쟁이사자처럼 부트캠프 <span class="font-medium text-muted">· 프론트엔드 17기</span></h3>
+        <h3 class="text-[13pt] font-semibold">멋쟁이사자처럼 부트캠프<span class="font-medium text-muted">· 프론트엔드 17기</span></h3>
       </div>
       <ul class="bullets mt-0.5">
         <li>JavaScript·TypeScript, React·Next.js 기반 웹 실무 과정 수료(115일 / 총 920시간)</li>
         <li>
-          <a href="https://github.com/FRONTENDBOOTCAMP-17th/kanto" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-accent">파이널 프로젝트(4인)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07.07l2-2A5 5 0 0 0 12 4l-1.15 1.15"/><path d="M14 11a5 5 0 0 0-7.07-.07l-2 2A5 5 0 0 0 12 20l1.15-1.15"/></svg></a>
+          <a href="https://github.com/FRONTENDBOOTCAMP-17th/kanto" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-accent">파이널 프로젝트(4인ㆍ1위)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07.07l2-2A5 5 0 0 0 12 4l-1.15 1.15"/><path d="M14 11a5 5 0 0 0-7.07-.07l-2 2A5 5 0 0 0 12 20l1.15-1.15"/></svg></a>
           <ul class="sub-bullets text-gray-400">
             <li>Kanto · 필리핀 한인 대상 중고거래·구인·부동산 통합 플랫폼</li>
             <li>Supabase BaaS·Next.js Route Handler 기반 API 통신 구조</li>
-            <li>팀 평가 96점, 파이널 프로젝트 5개 팀 중 1위</li>
           </ul>
         </li>
         <li>
           <a href="https://github.com/FRONTENDBOOTCAMP-17th/gentlelion" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-accent">중간 프로젝트(3인)<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07.07l2-2A5 5 0 0 0 12 4l-1.15 1.15"/><path d="M14 11a5 5 0 0 0-7.07-.07l-2 2A5 5 0 0 0 12 20l1.15-1.15"/></svg></a>
           <ul class="sub-bullets text-gray-400">
-            <li>JS기반 Gentle Monster 클론코딩</li>
+            <li>Gentle Monster 클론코딩</li>
             <li>팀장으로 브랜치 전략과 이슈 기반 작업 방식 운영</li>
-            <li>모노레포 페이지 별도 배포(user/admin), REST API 기반 데이터 처리, CRUD, playwright(E2E)</li>
+            <li>모노레포 페이지 별도 배포, REST API 기반 데이터 처리, CRUD, playwright(E2E)</li>
           </ul>
         </li>
       </ul>
@@ -121,44 +128,107 @@
     <article class="grid grid-cols-[38mm_1fr] gap-x-6 border-b border-gray-200 py-5">
       <div class="px-2">
         <time datetime="2026-05" class="block whitespace-nowrap text-[10.5pt] text-muted">2026.05 - 2026.07</time>
-        <h3 class="mt-2 text-[13pt] font-bold"><a href="https://kanto-iota.vercel.app/" target="_blank" rel="noopener" class="no-underline hover:underline">Kanto</a></h3>
+        <h3 class="mt-2 text-[13pt] font-bold"><a href="https://kanto-iota.vercel.app/" target="_blank" rel="noopener" class="inline-flex items-center gap-1 no-underline hover:underline">Kanto<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07.07l2-2A5 5 0 0 0 12 4l-1.15 1.15"/><path d="M14 11a5 5 0 0 0-7.07-.07l-2 2A5 5 0 0 0 12 20l1.15-1.15"/></svg></a></h3>
         <p class="mt-1 text-[10pt] text-muted">팀 프로젝트 · 4인</p>
+        <div class="mt-4 flex items-center gap-2 text-muted">
+          <a href="https://github.com/FRONTENDBOOTCAMP-17th/kanto" target="_blank" rel="noopener" title="GitHub 저장소" aria-label="Kanto GitHub 저장소" class="hover:text-accent"><svg class="h-4 w-4" fill="currentColor" aria-hidden="true"><use href="#icon-github"/></svg></a>
+          <a href="https://www.figma.com/design/CQmnk9mfFP83bnl937dIj6/Kanto-?node-id=194-8349&amp;t=4F6xMFKjPXYoJzUq-1" target="_blank" rel="noopener" title="Figma 디자인" aria-label="Kanto Figma 디자인" class="hover:text-accent"><svg class="h-4 w-4" fill="currentColor" aria-hidden="true"><use href="#icon-figma"/></svg></a>
+          <a href="https://app.notion.com/p/1-it-s-real-36e73873401a8099b037f045e2d2c9eb" target="_blank" rel="noopener" title="Notion 문서" aria-label="Kanto Notion 문서" class="hover:text-accent"><svg class="h-4 w-4" fill="currentColor" aria-hidden="true"><use href="#icon-notion"/></svg></a>
+        </div>
       </div>
-      <ul class="bullets !ml-0">
-        <li>필리핀 한인 대상 중고거래·구인·부동산 통합 플랫폼 - 팀 평가 <b>96점, 파이널 프로젝트 5개 팀 중 1위</b></li>
-        <li>Supabase Realtime 기반 1:1 채팅을 상태 관리부터 실시간 송수신·읽음 처리·도배 방지 구현</li>
-        <li>공지·금칙어·스팸 관리 등 운영관리 구조를 설계하고, 공지 등록 시 한·영·필 자동 번역과 번역 API 장애 시 원문 저장 fallback 구현</li>
-        <li>관리자 금칙어 관리의 서버 상태를 TanStack Query로 분리 → 탭 5회 왕복과 룰 등록·목록 조회에서 GET 요청 <b>18회→3회(83% 감소)</b></li>
-        <li>KTS·KPPS를 설계하여, 신뢰도 점수를 통해 스팸 계정을 필터링 하도록 사전 작업, 인기글 뱃지 구현</li>
-        <li>Next.js · Supabase Realtime · TanStack Query · Upstash · <a href="https://github.com/FRONTENDBOOTCAMP-17th/kanto" target="_blank" rel="noopener" aria-label="Kanto GitHub 저장소 (새 창)" class="text-accent">GitHub</a></li>
-      </ul>
+      <div class="space-y-2 text-[10.5pt] leading-[1.55]">
+        <p>필리핀 한인 대상 중고거래·구인·부동산 통합 플랫폼</p>
+        <p><b class="text-slate-600 mr-3.5">역할</b>기술ㆍ구조 설계 및 의사결정</p>
+        <div class="flex items-start">
+          <b class="mr-3.5 shrink-0 text-slate-600">협업</b>
+          <ul class="bullets bullets-black !m-0 !border-l-0 !p-0 text-[10.5pt]">
+            <li>Git Flow 전략(main, develop, fix, bug, hotfix, release) 및 버전관리</li>
+            <li>소통 : Discord, 문서화 규칙, Notion 회의 기록</li>
+          </ul>
+        </div>
+        <div class="flex items-start">
+          <b class="mr-3.5 shrink-0 text-slate-600">스킬</b>
+          <p>Next.js · TypeScript · Supabase · Zustand · TanStack Query · next-intl · Upstash Redis · Google Maps · Sentry · Xendit · Notion API</p>
+        </div>
+        <div class="flex items-start">
+          <b class="mr-3.5 shrink-0 text-slate-600">담당</b>
+          <ul class="bullets bullets-black !m-0 !border-l-0 !p-0 text-[10.5pt]">
+            <li><b>ContentCard·GlobalLayout·InteractionButtons</b>와 URL 상태 훅·API 로직을 공통화해 UI부터 데이터 흐름까지 재사용 구조 설계</li>
+            <li>Supabase Realtime 채팅과 API 연동, 클라이언트·서버 상태 관리</li>
+            <li>관리자 운영 기능 개선 및 서버 상태 분리로 GET 요청 <b>18회→3회</b> 최적화</li>
+          </ul>
+        </div>
+      </div>
     </article>
 
     <article class="grid grid-cols-[38mm_1fr] gap-x-6 border-b border-gray-200 py-5">
       <div class="px-2">
-        <time datetime="2026-05" class="block whitespace-nowrap text-[10.5pt] text-muted">2026.05 (약 2주)</time>
-        <h3 class="mt-2 text-[13pt] font-bold"><a href="https://frontie-topaz.vercel.app/chat" target="_blank" rel="noopener" class="no-underline hover:underline">Frontie</a></h3>
-        <p class="mt-1 text-[10pt] text-muted">개인 프로젝트</p>
+        <time datetime="2026-03" class="block whitespace-nowrap text-[10.5pt] text-muted">2026.03 - 2026.04</time>
+        <h3 class="mt-2 text-[13pt] font-bold"><a href="https://gentlelion.vercel.app/" target="_blank" rel="noopener" class="inline-flex items-center gap-1 no-underline hover:underline">Gentlelion<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07.07l2-2A5 5 0 0 0 12 4l-1.15 1.15"/><path d="M14 11a5 5 0 0 0-7.07-.07l-2 2A5 5 0 0 0 12 20l1.15-1.15"/></svg></a></h3>
+        <p class="mt-1 text-[10pt] text-muted">팀 프로젝트 · 3인 <br /> 팀장</p>
+        <div class="mt-4 flex items-center gap-2 text-muted">
+          <a href="https://github.com/FRONTENDBOOTCAMP-17th/gentlelion" target="_blank" rel="noopener" title="GitHub 저장소" aria-label="Gentlelion GitHub 저장소" class="hover:text-accent"><svg class="h-4 w-4" fill="currentColor" aria-hidden="true"><use href="#icon-github"/></svg></a>
+          <a href="https://docs.google.com/spreadsheets/d/1eMk9LSMSgCT4elowuOH5ih5qwoPIU5I_DoUY5-D9W9Y/edit?gid=0" target="_blank" rel="noopener" title="기능·API 명세 및 WBS" aria-label="Gentlelion 기능·API 명세 및 WBS" class="hover:text-accent"><svg class="h-4 w-4" aria-hidden="true"><use href="#icon-spreadsheet"/></svg></a>
+          <a href="https://www.figma.com/design/Wl4PONfUzYXLKX80Di2idD/GentleLion?node-id=494-2&amp;t=CXWXbSv9YHxe0nx8-1" target="_blank" rel="noopener" title="Figma 디자인" aria-label="Gentlelion Figma 디자인" class="hover:text-accent"><svg class="h-4 w-4" fill="currentColor" aria-hidden="true"><use href="#icon-figma"/></svg></a>
+          <a href="https://github.com/FRONTENDBOOTCAMP-17th/gentlelion/wiki" target="_blank" rel="noopener" title="스크럼 회의 Wiki" aria-label="Gentlelion 스크럼 회의 Wiki" class="hover:text-accent"><svg class="h-4 w-4" aria-hidden="true"><use href="#icon-wiki"/></svg></a>
+        </div>
       </div>
-      <ul class="bullets !ml-0">
-        <li>Vercel AI SDK로 Groq·Gemini·Cerebras의 스트리밍 응답과 실시간 모델 전환을 통합한 프론트엔드 학습 챗봇</li>
-        <li>멀티 LLM 폴백 구조를 통해 API 장애 또는 토큰 소진 시 자동 전환으로 가용성 확보</li>
-        <li>하이라이터 교체·마크다운 렌더러 지연 로딩 적용 Lighthouse Performance <b>48 → PC 92 · Mobile 100</b></li>
-        <li>Next.js · Vercel AI SDK · Zustand · <a href="https://github.com/DoHyuk-Centric/frontie" target="_blank" rel="noopener" aria-label="Frontie GitHub 저장소 (새 창)" class="text-accent">GitHub</a></li>
-      </ul>
+      <div class="space-y-2 text-[10.5pt] leading-[1.55]">
+        <p>Gentle Monster 클론코딩</p>
+        <p><b class="mr-3.5 text-slate-600">역할</b>팀장 · 프론트엔드 개발</p>
+        <div class="flex items-start">
+          <b class="mr-3.5 shrink-0 text-slate-600">협업</b>
+          <ul class="bullets bullets-black !m-0 !border-l-0 !p-0 text-[10.5pt]">
+            <li>API 명세·WBS 작성, 브랜치 전략·이슈 관리 환경 구성</li>
+            <li>스크럼 회의와 진행 상황을 GitHub Wiki에 기록·공유</li>
+          </ul>
+        </div>
+        <div class="flex items-start">
+          <b class="mr-3.5 shrink-0 text-slate-600">스킬</b>
+          <p>JavaScript · Vite · npm Workspaces · Tailwind CSS · REST API · Playwright</p>
+        </div>
+        <div class="flex items-start">
+          <b class="mr-3.5 shrink-0 text-slate-600">담당</b>
+          <ul class="bullets bullets-black !m-0 !border-l-0 !p-0 text-[10.5pt]">
+            <li><b>npm Workspaces 모노레포</b>로 사용자·관리자·공용 API를 분리하고 <br /> 서비스별 독립 배포</li>
+            <li>상품 카드·버튼 공통화 및 메뉴·스크롤 인터랙션 구현</li>
+            <li>상품·장바구니·주문·관리자 기능의 <b>REST API CRUD</b> 구현</li>
+            <li><b>Playwright</b>로 회원가입·로그인·장바구니·주문·프로필 5개 흐름 검수</li>
+          </ul>
+        </div>
+      </div>
     </article>
 
     <article class="grid grid-cols-[38mm_1fr] gap-x-6 py-5">
       <div class="px-2">
         <time datetime="2026-01" class="block whitespace-nowrap text-[10.5pt] text-muted">2026.01 - 2026.03</time>
-        <h3 class="mt-2 text-[13pt] font-bold"><a href="https://dohyuk.dev/" target="_blank" rel="noopener" class="no-underline hover:underline">DoHyuk.dev</a></h3>
-        <p class="mt-1 text-[10pt] text-muted">개인 기술 블로그</p>
+        <h3 class="mt-2 text-[13pt] font-bold"><a href="https://dohyuk.dev/" target="_blank" rel="noopener" class="inline-flex items-center gap-1 no-underline hover:underline">DoHyuk.dev<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.07.07l2-2A5 5 0 0 0 12 4l-1.15 1.15"/><path d="M14 11a5 5 0 0 0-7.07-.07l-2 2A5 5 0 0 0 12 20l1.15-1.15"/></svg></a></h3>
+        <p class="mt-1 text-[10pt] text-muted">개인 프로젝트</p>
+        <div class="mt-4 flex items-center gap-2 text-muted">
+          <a href="https://github.com/DoHyuk-Centric/myBlog" target="_blank" rel="noopener" title="GitHub 저장소" aria-label="DoHyuk.dev GitHub 저장소" class="hover:text-accent"><svg class="h-4 w-4" fill="currentColor" aria-hidden="true"><use href="#icon-github"/></svg></a>
+          <a href="https://www.npmjs.com/package/markdown-block-preview" target="_blank" rel="noopener" title="npm 패키지" aria-label="markdown-block-preview npm 패키지" class="hover:text-accent"><svg class="h-4 w-4" fill="currentColor" aria-hidden="true"><use href="#icon-npm"/></svg></a>
+        </div>
       </div>
-      <ul class="bullets !ml-0">
-        <li>프레임워크 기본기와 번들 구성을 직접 다루기 위해 바닐라 JavaScript·Vite 기반 <b>14개 진입점의 MPA</b>로 구현</li>
-        <li>전체 문서의 DOM을 교체하던 미리보기 병목을 측정 → 변경 블록만 반영하는 <a href="https://www.npmjs.com/package/markdown-block-preview" target="_blank" rel="noopener" class="text-accent">npm 패키지</a> 개발·배포, 50블록 기준 <b>최대 8.2배 개선</b></li>
-        <li>JavaScript · Vite · Supabase · <a href="https://github.com/DoHyuk-Centric/myBlog" target="_blank" rel="noopener" aria-label="개인 기술 블로그 GitHub 저장소 (새 창)" class="text-accent">GitHub</a></li>
-      </ul>
+      <div class="space-y-2 text-[10.5pt] leading-[1.55]">
+        <p>바닐라 JavaScript 기반 개인 기술 블로그</p>
+        <div class="flex items-start">
+          <b class="mr-3.5 shrink-0 text-slate-600">운영</b>
+          <p>GitHub 버전 관리 · npm 패키지 공개·문서화</p>
+        </div>
+        <div class="flex items-start">
+          <b class="mr-3.5 shrink-0 text-slate-600">스킬</b>
+          <p>JavaScript · Vite · Tailwind CSS · Supabase · Edge Functions</p>
+        </div>
+        <div class="flex items-start">
+          <b class="mr-3.5 shrink-0 text-slate-600">담당</b>
+          <ul class="bullets bullets-black !m-0 !border-l-0 !p-0 text-[10.5pt]">
+            <li>Supabase Auth·DB·Storage를 연동해 인증·게시글·프로필 데이터 흐름 구현</li>
+            <li>공공데이터포털 API를 연동한 공휴일 캘린더 구현, <b>Edge Function으로 외부 API 호출 분리</b></li>
+            <li>게시글 CRUD·임시저장·휴지통 상태 흐름과 발행 시점 이미지 지연 업로드 구현</li>
+            <li>변경 블록만 렌더링하는 로직 배포, 50블록 기준 <b>최대 8.2배 개선</b></li>
+          </ul>
+        </div>
+      </div>
     </article>
   </section>
 

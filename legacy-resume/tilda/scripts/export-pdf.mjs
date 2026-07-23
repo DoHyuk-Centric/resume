@@ -23,8 +23,8 @@ try {
 
   const validation = await page.evaluate(() => ({
     pageCount: document.querySelectorAll("main").length,
-    hasRevisedIntro: document.body.innerText.includes("구조를 고민하고 실측"),
-    hasRevisedProject: document.body.innerText.includes("팀 평가 96점, 파이널 프로젝트 5개 팀 중 1위"),
+    hasRevisedIntro: document.body.innerText.includes("경청(傾聽)하며 문제를 함께 고민"),
+    hasRevisedProject: document.body.innerText.includes("기술ㆍ구조 설계 및 의사결정"),
     overflowPages: [...document.querySelectorAll("main")].filter(
       (item) => item.scrollHeight > item.clientHeight + 1,
     ).length,

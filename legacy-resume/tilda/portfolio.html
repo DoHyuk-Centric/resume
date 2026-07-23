@@ -6,14 +6,14 @@
     <title>김도혁 포트폴리오</title>
     <link rel="stylesheet" href="./src/style-portfolio.css" />
   </head>
-  <!-- Tailwind CSS 사용. 페이지 1장 = A4(210mm x 297mm) 세로. 컴포넌트 클래스는 src/style-portfolio.css 참고 -->
+  <!-- Tailwind CSS 사용. 페이지 1장 = A4(297mm x 210mm) 가로. 컴포넌트 클래스는 src/style-portfolio.css 참고 -->
   <body class="bg-gray-300 font-sans text-ink print:bg-white">
     <!-- 화면에서만 보이는 안내 (인쇄 시 자동 숨김) -->
     <div
-      class="mx-auto mb-1 mt-3 w-[210mm] rounded-lg bg-gray-800 px-4 py-2.5 text-[13px] text-white print:hidden"
+      class="mx-auto mb-1 mt-3 w-[297mm] rounded-lg bg-gray-800 px-4 py-2.5 text-[13px] text-white print:hidden"
     >
       💡 PDF는 터미널에서
-      <b class="text-blue-300">npm run portfolio-pdf</b> 실행 (A4 세로, 배경
+      <b class="text-blue-300">npm run portfolio-pdf</b> 실행 (A4 가로, 배경
       그래픽 자동 포함). 스크린샷 자리(점선 박스)는 실제 캡처 이미지로
       교체하세요.
     </div>
@@ -28,7 +28,7 @@
         <!-- 발자국 워터마크 (github.com/DoHyuk-Centric/myBlog catpaw.svg) -->
         <svg
           viewBox="0 0 960 960"
-          class="pointer-events-none absolute -right-[50mm] top-[30mm] h-[220mm] w-[220mm] rotate-12 opacity-[0.07]"
+          class="pointer-events-none absolute -right-[30mm] top-[15mm] h-[160mm] w-[160mm] rotate-12 opacity-[0.07]"
         >
           <g fill="white">
             <path
@@ -55,28 +55,10 @@
           <h2
             class="text-[64px] font-extrabold leading-[1.4] tracking-wide text-right mb-16"
           >
-            <span class="block">실측으로</span>
-            <span class="block">원인을 찾는</span>
+            <span class="block">경청으로</span>
+            <span class="block">협업하는</span>
             <span class="block">개발자</span>
           </h2>
-          <div>
-            <p class="mt-2 text-[20px] text-blue-100">
-              "답이 없는 문제는 없다"
-            </p>
-            <p class="max-w-[60mm] mt-4 font-extralight text-left text-gray-300">
-              문제를 해결함에 있어
-              <b class="font-bold text-gray-100">체계적</b>으로 정리해 원인을
-              찾아내는 것은
-              <br />
-              개발자가 가져야 하는 역량입니다.
-              <br />
-              항상 문제에 직면했을 때,
-              <br />
-              <b class="font-bold text-gray-100">실측</b>으로 원인을 확인하고
-              구조를 개선했을 때 정답에 가까워지는
-              <b class="font-bold text-gray-100">경험</b>을 했습니다.
-            </p>
-          </div>
         </div>
         <div
           class="absolute bottom-[16mm] right-[16mm] flex flex-col items-end text-right"
@@ -223,41 +205,41 @@
 
             </div>
 
-            <div class="flex flex-1 flex-col gap-6">
-              <div class="flex flex-1 items-center gap-4">
+            <div class="flex flex-1 flex-col gap-8">
+              <div class="flex flex-1 gap-4">
                 <div
-                  class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15 text-[16px] font-bold text-white"
+                  class="flex mt-1 h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15 text-[16px] font-bold text-white"
                 >
                   1
                 </div>
                 <p class="text-[15px] leading-relaxed text-blue-50">
-                  <b class="text-[17px] text-white">변경된 블록만 다시 렌더링합니다.</b>
+                  <b class="text-[17px] text-white">PR·문서화로 팀의 결정을 연결</b>
                   <br />
-                  마크다운 미리보기를 변경 블록 단위 렌더링으로 개선해 성능을 최대 8.2배 <b>향상</b>시켰습니다.
+                  팀의 의견을 듣고 결정 과정과 작업 기준을 기록해 프로젝트 96점, 5개 팀 중 <b>1위</b>에 기여
                 </p>
               </div>
-              <div class="flex flex-1 items-center gap-4">
+              <div class="flex flex-1 gap-4">
                 <div
-                  class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15 text-[16px] font-bold text-white"
+                  class="flex mt-1 h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15 text-[16px] font-bold text-white"
                 >
                   2
                 </div>
                 <p class="text-[15px] leading-relaxed text-blue-50">
-                  <b class="text-[17px] text-white">서버 상태를 분리해 요청을 줄였습니다.</b>
+                  <b class="text-[17px] text-white">UI부터 데이터 흐름까지 재사용 구조 제작</b>
                   <br />
-                  관리자 금칙어 관리에 TanStack Query를 도입해 GET 요청을 18회에서 3회로 <b>감소</b>시켰습니다.
+                  공통 UI·인터랙션, URL 상태 훅과 좋아요 DB 호출 로직을 분리해 여러 페이지에서 <b>재사용</b>
                 </p>
               </div>
-              <div class="flex flex-1 items-center gap-4">
+              <div class="flex flex-1 gap-4">
                 <div
-                  class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15 text-[16px] font-bold text-white"
+                  class="flex mt-1 h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15 text-[16px] font-bold text-white"
                 >
                   3
                 </div>
                 <p class="text-[15px] leading-relaxed text-blue-50">
-                  <b class="text-[17px] text-white">사용자 패턴으로 점수 공식을 검증했습니다.</b>
+                  <b class="text-[17px] text-white">예상 문제를 먼저 찾아 미리 공통 해결책 제안</b>
                   <br />
-                  신뢰도·인기 게시물 점수 공식을 설계하고 9가지 사용자 패턴을 시뮬레이션해 등급 분포를 <b>사전 검증</b>했습니다.
+                  Supabase 무료 한도와 인증 구현 전 개발 공백을 발견해 팀이 함께 적용할 대응 방식을 정리 및 공유
                 </p>
               </div>
             </div>
@@ -442,14 +424,14 @@
           <div
             class="flex items-center justify-between border-t border-white/20 pt-3 text-[11px] text-blue-200"
           >
-            <span>김도혁 Portfolio</span><span>02 / 13</span>
+            <span>김도혁 Portfolio</span><span>02 / 10</span>
           </div>
         </div>
       </section>
 
       <!-- ========== 03. Kanto - 프로젝트 소개 ========== -->
-      <section class="slide break-after-page">
-        <p class="slide-kicker">02. Project - Kanto · Details (1/5)</p>
+      <section class="slide landscape-fit break-after-page">
+        <p class="slide-kicker">02. Project - Kanto · Details (1/3)</p>
         <div class="mt-3 flex items-center justify-between">
           <div class="flex items-center gap-4">
             <div
@@ -628,7 +610,7 @@
               </li>
               <li class="grid grid-cols-[90px_1fr] items-baseline">
                 <span class="text-[13px] font-bold text-ink">결과</span>
-                <span class="text-[13px] font-semibold text-accent"
+                <span class="text-[13px]"
                   >파이널 1위</span
                 >
               </li>
@@ -729,14 +711,14 @@
         </div>
         <div class="slide-foot">
           <span>김도혁 Portfolio</span>
-          <span>03 / 13</span>
+          <span>03 / 10</span>
         </div>
       </section>
 
       <!-- ========== 04. Kanto - 경험 ========== -->
-      <section class="slide break-after-page">
-        <p class="slide-kicker">02. Project - Kanto · Details (2/5)</p>
-        <h2 class="mt-3 text-[28px] font-extrabold">경험</h2>
+      <section class="slide compact-slide landscape-fit break-after-page">
+        <p class="slide-kicker">02. Project - Kanto · Details (2/3)</p>
+        <h2 class="mt-3 text-[28px] font-extrabold">구현과 문제 해결</h2>
 
         <div class="flex gap-2 flex-1 flex-col">
           <div>
@@ -868,12 +850,12 @@
           </div>
         </div>
         <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>04 / 13</span>
+          <span>김도혁 Portfolio</span><span>04 / 10</span>
         </div>
       </section>
 
       <!-- ========== 05. Kanto - 문제해결 ========== -->
-      <section class="slide break-after-page">
+      <section class="legacy-slide hidden">
         <p class="slide-kicker">02. Project - Kanto · Details (3/5)</p>
         <h2 class="mt-3 text-[28px] font-extrabold">문제해결</h2>
         <div class="flex flex-1 flex-col justify-evenly gap-8">
@@ -976,7 +958,7 @@
       </section>
 
       <!-- ========== 06. Kanto - 문제해결 (2) ========== -->
-      <section class="slide break-after-page">
+      <section class="legacy-slide hidden">
         <p class="slide-kicker">02. Project - Kanto · Details (4/5)</p>
         <h2 class="mt-3 text-[28px] font-extrabold">문제해결 (2)</h2>
         <div class="flex flex-1 flex-col justify-evenly gap-8">
@@ -1061,8 +1043,8 @@
       </section>
 
       <!-- ========== 07. Kanto - 협업 방식 ========== -->
-      <section class="slide break-after-page">
-        <p class="slide-kicker">02. Project - Kanto · Details (5/5)</p>
+      <section class="slide compact-slide landscape-fit break-after-page">
+        <p class="slide-kicker">02. Project - Kanto · Details (3/3)</p>
         <h2 class="mt-3 text-[28px] font-extrabold">협업 방식</h2>
 
         <div class="mt-6">
@@ -1212,13 +1194,13 @@
           </ul>
         </div>
         <div class="slide-foot border-t-0">
-          <span>김도혁 Portfolio</span><span>07 / 13</span>
+          <span>김도혁 Portfolio</span><span>05 / 10</span>
         </div>
       </section>
 
       <!-- ========== 08. myBlog - 프로젝트 소개 ========== -->
-      <section class="slide break-after-page">
-        <p class="slide-kicker">03. Project - myBlog · Details (1/3)</p>
+      <section class="slide landscape-fit break-after-page">
+        <p class="slide-kicker">03. Project - DoHyuk.dev · Details (1/2)</p>
         <div class="mt-3 flex items-center justify-between">
           <div class="flex items-center gap-4">
             <div
@@ -1446,14 +1428,14 @@
         </div>
         <div class="slide-foot">
           <span>김도혁 Portfolio</span>
-          <span>08 / 13</span>
+          <span>06 / 10</span>
         </div>
       </section>
 
       <!-- ========== 09. myBlog - 경험 ========== -->
-      <section class="slide break-after-page">
-        <p class="slide-kicker">03. Project - myBlog · Details (2/3)</p>
-        <h2 class="mt-3 text-[28px] font-extrabold">경험</h2>
+      <section class="slide compact-slide landscape-fit break-after-page">
+        <p class="slide-kicker">03. Project - DoHyuk.dev · Details (2/2)</p>
+        <h2 class="mt-3 text-[28px] font-extrabold">구현과 문제 해결</h2>
 
         <div class="flex gap-2 flex-1 flex-col justify-evenly">
           <div>
@@ -1589,12 +1571,12 @@
           </div>
         </div>
         <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>09 / 13</span>
+          <span>김도혁 Portfolio</span><span>07 / 10</span>
         </div>
       </section>
 
       <!-- ========== 10. myBlog - 문제해결 ========== -->
-      <section class="slide break-after-page">
+      <section class="legacy-slide hidden">
         <p class="slide-kicker">03. Project - myBlog · Details (3/3)</p>
         <h2 class="mt-3 text-[28px] font-extrabold">문제해결</h2>
 
@@ -1746,8 +1728,112 @@
         </div>
       </section>
 
-      <!-- ========== 11. Frontie - 프로젝트 소개 ========== -->
+      <!-- ========== 08. GentleLion - 프로젝트 소개 ========== -->
       <section class="slide break-after-page">
+        <p class="slide-kicker">04. Project - GentleLion · Details (1/2)</p>
+        <div class="mt-3 flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-black text-[20px] font-black tracking-tight text-white shadow-[0_0_10px_rgba(0,0,0,0.2)]">GL</div>
+            <div>
+              <h2 class="text-[36px] font-extrabold leading-tight">
+                <a href="https://github.com/FRONTENDBOOTCAMP-17th/gentlelion" target="_blank" rel="noopener" class="inline-flex items-start gap-1 hover:underline">GentleLion<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="mt-1.5 h-3.5 w-3.5 text-neutral-400"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+              </h2>
+              <p class="mt-1 text-[15px] text-neutral-600">Gentle Monster 커머스 서비스 클론코딩</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-[11px]">
+            <a href="https://github.com/FRONTENDBOOTCAMP-17th/gentlelion" target="_blank" rel="noopener" class="pf-link">GitHub</a>
+            <a href="https://docs.google.com/spreadsheets/d/1eMk9LSMSgCT4elowuOH5ih5qwoPIU5I_DoUY5-D9W9Y/edit?gid=0" target="_blank" rel="noopener" class="pf-link">API·WBS</a>
+            <a href="https://www.figma.com/design/Wl4PONfUzYXLKX80Di2idD/GentleLion?node-id=494-2&amp;t=CXWXbSv9YHxe0nx8-1" target="_blank" rel="noopener" class="pf-link">Figma</a>
+            <a href="https://github.com/FRONTENDBOOTCAMP-17th/gentlelion/wiki" target="_blank" rel="noopener" class="pf-link">Scrum Wiki</a>
+          </div>
+        </div>
+
+        <div class="mt-8 grid grid-cols-[1.05fr_.95fr] gap-6">
+          <div class="rounded-xl border border-gray-200 bg-neutral-50 p-6">
+            <p class="text-[11px] font-bold uppercase tracking-[.16em] text-muted">Monorepo Structure</p>
+            <div class="mt-5 rounded-lg bg-white p-5 shadow-sm">
+              <div class="mx-auto w-fit rounded-lg bg-black px-5 py-2 text-[14px] font-bold text-white">npm Workspaces</div>
+              <div class="mx-auto h-6 w-px bg-gray-300"></div>
+              <div class="grid grid-cols-3 gap-3 text-center">
+                <div class="rounded-lg border border-gray-200 p-3"><b class="text-[13px]">User</b><p class="mt-1 text-[10px] text-muted">고객 서비스</p></div>
+                <div class="rounded-lg border border-gray-200 p-3"><b class="text-[13px]">Admin</b><p class="mt-1 text-[10px] text-muted">운영 관리</p></div>
+                <div class="rounded-lg border border-blue-200 bg-blue-50 p-3"><b class="text-[13px] text-accent">Shared API</b><p class="mt-1 text-[10px] text-muted">공통 통신 계층</p></div>
+              </div>
+            </div>
+            <p class="mt-4 text-[13px] leading-relaxed text-neutral-700">사용자·관리자 앱의 경계를 분리하고 공통 API 패키지를 공유해 <b>중복을 줄이면서도 앱별 독립 배포가 가능한 구조</b>를 설계했습니다.</p>
+          </div>
+
+          <div class="flex flex-col gap-5">
+            <div>
+              <h3 class="text-[16px] font-bold text-accent">프로젝트 개요</h3>
+              <ul class="pf-list mt-3 pl-5 text-[13px]">
+                <li>3인 팀 프로젝트 · <b>팀장</b></li>
+                <li>상품 탐색부터 주문·관리까지 사용자 흐름 구현</li>
+                <li>화면 요구사항을 기능·API 명세와 WBS로 구체화</li>
+              </ul>
+            </div>
+            <div class="border-t border-gray-200 pt-5">
+              <h3 class="text-[16px] font-bold text-accent">담당 역할</h3>
+              <ul class="pf-list mt-3 pl-5 text-[13px]">
+                <li><b>npm Workspaces 모노레포</b> 구조 설계</li>
+                <li>기능·API 명세서와 일정 기준 수립</li>
+                <li>공통 카드·버튼·인터랙션 컴포넌트 구현</li>
+                <li>스크럼 회의 기록과 PR 단위 검수</li>
+              </ul>
+            </div>
+            <div class="border-t border-gray-200 pt-5">
+              <h3 class="text-[16px] font-bold text-accent">사용 스택</h3>
+              <p class="mt-3 text-[12.5px] leading-relaxed text-neutral-600">JavaScript · Vite · npm Workspaces · REST API · Playwright · GitHub Actions</p>
+            </div>
+          </div>
+        </div>
+        <div class="slide-foot"><span>김도혁 Portfolio</span><span>08 / 10</span></div>
+      </section>
+
+      <!-- ========== 09. GentleLion - 구현과 검수 ========== -->
+      <section class="slide break-after-page">
+        <p class="slide-kicker">04. Project - GentleLion · Details (2/2)</p>
+        <h2 class="mt-3 text-[28px] font-extrabold">구현과 검수</h2>
+
+        <div class="mt-7 grid grid-cols-2 gap-5">
+          <div class="rounded-xl border border-gray-200 p-6 shadow-sm">
+            <p class="text-[11px] font-bold uppercase tracking-wider text-muted">01 · 화면 기획</p>
+            <h3 class="mt-3 text-[17px] font-bold text-accent">요구사항을 구현 단위로 구체화</h3>
+            <p class="mt-3 text-[13px] leading-relaxed text-neutral-700">사용자·관리자 화면의 기능을 나누고 요청·응답 데이터와 담당 일정을 <b>API 명세서와 WBS</b>로 정리했습니다.</p>
+          </div>
+          <div class="rounded-xl border border-gray-200 p-6 shadow-sm">
+            <p class="text-[11px] font-bold uppercase tracking-wider text-muted">02 · 구조 설계</p>
+            <h3 class="mt-3 text-[17px] font-bold text-accent">앱 경계와 공통 코드를 함께 관리</h3>
+            <p class="mt-3 text-[13px] leading-relaxed text-neutral-700">User·Admin 앱을 분리하고 Shared API 패키지를 공유해, 각 앱의 독립성을 유지하면서 <b>통신 로직 중복을 줄였습니다.</b></p>
+          </div>
+          <div class="rounded-xl border border-gray-200 p-6 shadow-sm">
+            <p class="text-[11px] font-bold uppercase tracking-wider text-muted">03 · UI·API 구현</p>
+            <h3 class="mt-3 text-[17px] font-bold text-accent">재사용 UI와 REST 데이터 흐름</h3>
+            <p class="mt-3 text-[13px] leading-relaxed text-neutral-700">상품 카드·버튼·인터랙션을 공통 컴포넌트로 구성하고 CRUD API를 연결해 화면과 서버 사이의 상태 흐름을 구현했습니다.</p>
+          </div>
+          <div class="rounded-xl border border-gray-200 p-6 shadow-sm">
+            <p class="text-[11px] font-bold uppercase tracking-wider text-muted">04 · 자동화 검수</p>
+            <h3 class="mt-3 text-[17px] font-bold text-accent">핵심 사용자 흐름 5개 E2E 테스트</h3>
+            <p class="mt-3 text-[13px] leading-relaxed text-neutral-700">Playwright로 실제 사용 흐름을 자동화하고 GitHub Actions에서 반복 검수해 변경 이후의 회귀 오류를 확인했습니다.</p>
+          </div>
+        </div>
+
+        <div class="mt-7 rounded-xl bg-neutral-900 px-7 py-6 text-white">
+          <p class="text-[11px] font-bold uppercase tracking-[.16em] text-blue-200">Collaboration Flow</p>
+          <div class="mt-4 flex items-center justify-between text-center text-[12px] font-semibold">
+            <span class="rounded-lg bg-white/10 px-4 py-3">요구사항 정리</span><span class="text-blue-300">→</span>
+            <span class="rounded-lg bg-white/10 px-4 py-3">API·WBS 명세</span><span class="text-blue-300">→</span>
+            <span class="rounded-lg bg-white/10 px-4 py-3">PR 구현·리뷰</span><span class="text-blue-300">→</span>
+            <span class="rounded-lg bg-white/10 px-4 py-3">Playwright 검수</span>
+          </div>
+          <p class="mt-5 text-[13px] leading-relaxed text-gray-300">팀장으로서 구현만 담당하지 않고, 화면 요구사항이 명세·코드·테스트까지 이어지도록 작업 기준을 연결했습니다.</p>
+        </div>
+        <div class="slide-foot"><span>김도혁 Portfolio</span><span>09 / 10</span></div>
+      </section>
+
+      <!-- ========== 11. Frontie - 프로젝트 소개 (보관) ========== -->
+      <section class="legacy-slide hidden">
         <p class="slide-kicker">04. Project - Frontie · Details (1/2)</p>
         <div class="mt-3 flex items-center justify-between">
           <div class="flex items-center gap-4">
@@ -1944,7 +2030,7 @@
       </section>
 
       <!-- ========== 12. Frontie - 경험 및 문제해결 ========== -->
-      <section class="slide break-after-page">
+      <section class="legacy-slide hidden">
         <p class="slide-kicker">04. Project - Frontie · Details (2/2)</p>
         <h2 class="mt-3 text-[28px] font-extrabold">경험 및 문제해결</h2>
 
@@ -2086,7 +2172,268 @@
         </div>
       </section>
 
-      <!-- ========== 13. 끝 ========== -->
+      <!-- ========== 03. Kanto - 개요 ========== -->
+      <section class="legacy-slide hidden">
+        <p class="slide-kicker">02. Project · Kanto (1/3)</p>
+        <div class="mt-3 flex items-end justify-between">
+          <div>
+            <h2 class="text-[30px] font-extrabold">Kanto</h2>
+            <p class="mt-2 text-[15px] text-neutral-600">필리핀 한인 대상 중고거래·구인·부동산 통합 플랫폼</p>
+          </div>
+          <span class="pf-badge-accent">4인 팀 · 2026.05–07</span>
+        </div>
+
+        <img src="./kanto/kanto-main-desktop.png" alt="Kanto 메인 화면" class="mt-7 h-[80mm] w-full rounded-xl border border-gray-200 object-cover object-top shadow-sm" />
+
+        <div class="mt-7 grid grid-cols-2 gap-4">
+          <div class="pf-card">
+            <p class="text-[12px] font-bold text-accent">ROLE</p>
+            <p class="mt-2 text-[18px] font-bold">기술·구조 설계 및 의사결정</p>
+            <p class="mt-3 text-[14px] leading-relaxed text-neutral-600">재사용 구조, 실시간 데이터 흐름, 운영 기능을 설계하고 팀의 기술적 선택을 구체화했습니다.</p>
+          </div>
+          <div class="pf-card">
+            <p class="text-[12px] font-bold text-accent">RESULT</p>
+            <p class="mt-2 text-[18px] font-bold">96점 · 5개 팀 중 1위</p>
+            <p class="mt-3 text-[14px] leading-relaxed text-neutral-600">PR·문서화·리뷰 대응을 통해 구현뿐 아니라 팀 전체의 완성도를 높였습니다.</p>
+          </div>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-2">
+          <span class="pf-tag">Next.js</span><span class="pf-tag">TypeScript</span><span class="pf-tag">Supabase</span>
+          <span class="pf-tag">Zustand</span><span class="pf-tag">TanStack Query</span><span class="pf-tag">next-intl</span>
+          <span class="pf-tag">Upstash Redis</span><span class="pf-tag">Google Maps</span><span class="pf-tag">Sentry</span>
+        </div>
+        <div class="slide-foot"><span>김도혁 Portfolio</span><span>03 / 10</span></div>
+      </section>
+
+      <!-- ========== 04. Kanto - 재사용 구조와 데이터 흐름 ========== -->
+      <section class="legacy-slide hidden">
+        <p class="slide-kicker">02. Project · Kanto (2/3)</p>
+        <h2 class="mt-3 text-[28px] font-extrabold">UI부터 데이터 흐름까지 재사용 구조로</h2>
+        <p class="mt-3 max-w-[155mm] text-[14px] leading-relaxed text-neutral-600">화면만 공통화하지 않고 사용자 인터랙션, URL 상태, 반복되는 DB 호출의 책임을 나눠 여러 도메인이 같은 구조를 사용할 수 있도록 설계했습니다.</p>
+
+        <div class="mt-7 grid grid-cols-3 gap-3">
+          <div class="rounded-xl border border-blue-100 bg-blue-50 p-5">
+            <p class="text-[12px] font-bold text-accent">UI</p>
+            <p class="mt-2 text-[17px] font-bold">ContentCard<br />GlobalLayout</p>
+            <p class="mt-3 text-[13px] leading-relaxed text-neutral-600">중고거래·구인·방렌트 카드와 전역 레이아웃의 중복 제거</p>
+          </div>
+          <div class="rounded-xl border border-blue-100 bg-blue-50 p-5">
+            <p class="text-[12px] font-bold text-accent">INTERACTION</p>
+            <p class="mt-2 text-[17px] font-bold">InteractionButtons</p>
+            <p class="mt-3 text-[13px] leading-relaxed text-neutral-600">좋아요·공유·신고 동작과 반응형 표현을 상세 페이지에서 공통 사용</p>
+          </div>
+          <div class="rounded-xl border border-blue-100 bg-blue-50 p-5">
+            <p class="text-[12px] font-bold text-accent">DATA</p>
+            <p class="mt-2 text-[17px] font-bold">useUrlParams<br />toggleLike</p>
+            <p class="mt-3 text-[13px] leading-relaxed text-neutral-600">검색·필터 URL 상태와 Supabase 좋아요 호출 로직을 분리</p>
+          </div>
+        </div>
+
+        <div class="mt-8 rounded-xl border border-gray-200 p-6">
+          <p class="text-[14px] font-bold">실시간 채팅 데이터 흐름</p>
+          <div class="mt-5 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-3 text-center">
+            <div class="rounded-lg bg-slate-50 p-4"><b>채팅 UI</b><br /><span class="text-[12px] text-neutral-500">Zustand 상태</span></div>
+            <span class="text-accent">→</span>
+            <div class="rounded-lg bg-slate-50 p-4"><b>Supabase Realtime</b><br /><span class="text-[12px] text-neutral-500">송수신·읽음 처리</span></div>
+            <span class="text-accent">→</span>
+            <div class="rounded-lg bg-slate-50 p-4"><b>Upstash Redis</b><br /><span class="text-[12px] text-neutral-500">요청 제한</span></div>
+          </div>
+        </div>
+
+        <div class="mt-8 border-l-4 border-accent pl-5">
+          <p class="text-[16px] font-bold">결과</p>
+          <p class="mt-2 text-[14px] leading-relaxed text-neutral-600">UI 컴포넌트는 표현에, 훅은 URL 상태에, 서비스 함수는 DB 호출에 집중하도록 책임을 분리해 변경 범위를 줄였습니다.</p>
+        </div>
+        <div class="slide-foot"><span>김도혁 Portfolio</span><span>04 / 10</span></div>
+      </section>
+
+      <!-- ========== 05. Kanto - 운영 개선과 협업 ========== -->
+      <section class="legacy-slide hidden">
+        <p class="slide-kicker">02. Project · Kanto (3/3)</p>
+        <h2 class="mt-3 text-[28px] font-extrabold">운영 문제를 구조와 협업 방식으로 해결</h2>
+
+        <div class="mt-7 grid grid-cols-2 gap-5">
+          <div class="pf-card">
+            <span class="pf-badge-accent">운영 관리</span>
+            <h3 class="mt-4 text-[19px] font-bold">서버 상태와 UI 상태가 뒤섞인 문제</h3>
+            <p class="mt-3 text-[14px] leading-relaxed text-neutral-600">금칙어·스팸 관리 페이지의 서버 데이터를 TanStack Query로 분리하고, 저장 후 전체 재조회 대신 캐시를 교체했습니다.</p>
+            <div class="mt-5 rounded-lg bg-slate-50 p-4 text-center">
+              <span class="text-[13px] text-neutral-500">GET 요청</span>
+              <p class="mt-1 text-[24px] font-extrabold text-accent">18회 → 3회</p>
+            </div>
+          </div>
+          <div class="pf-card">
+            <span class="pf-badge-accent">오류 대응</span>
+            <h3 class="mt-4 text-[19px] font-bold">외부 번역 API 장애 시 데이터 유실</h3>
+            <p class="mt-3 text-[14px] leading-relaxed text-neutral-600">한·영·필 공지 자동 번역이 실패해도 원문을 저장하도록 fallback을 두어 운영 흐름이 중단되지 않게 했습니다.</p>
+            <div class="mt-5 rounded-lg bg-slate-50 p-4 text-[13px] text-neutral-600">정상: 번역문 저장<br />장애: 원문 저장 → 운영 지속</div>
+          </div>
+        </div>
+
+        <div class="mt-7 rounded-xl bg-slate-900 p-6 text-white">
+          <p class="text-[12px] font-bold text-blue-300">COLLABORATION</p>
+          <h3 class="mt-2 text-[20px] font-bold">리뷰를 개인 피드백이 아닌 팀 태스크로 전환</h3>
+          <ul class="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 text-[13.5px] text-slate-200">
+            <li>• 외부 멘토 리뷰를 팀원·우선순위별로 재구성</li>
+            <li>• 완료 여부를 문서에서 함께 추적</li>
+            <li>• hotfix 브랜치·1인 승인 규칙 문서화</li>
+            <li>• Discord·Notion 기반 결정 사항 공유</li>
+          </ul>
+        </div>
+
+        <p class="mt-7 text-[15px] leading-relaxed text-neutral-700"><b>경청한 내용을 결정과 규칙으로 남겨</b>, 다른 팀원이 같은 기준으로 기능을 이어갈 수 있도록 만들었습니다.</p>
+        <div class="slide-foot"><span>김도혁 Portfolio</span><span>05 / 10</span></div>
+      </section>
+
+      <!-- ========== 06. Gentlelion - 개요 ========== -->
+      <section class="legacy-slide hidden">
+        <p class="slide-kicker">03. Project · Gentlelion (1/2)</p>
+        <div class="mt-3 flex items-end justify-between">
+          <div>
+            <h2 class="text-[30px] font-extrabold">Gentlelion</h2>
+            <p class="mt-2 text-[15px] text-neutral-600">Gentle Monster 클론코딩</p>
+          </div>
+          <span class="pf-badge-accent">3인 팀 · 팀장 · 2026.03–04</span>
+        </div>
+
+        <div class="mt-8 rounded-2xl bg-slate-950 p-8 text-white">
+          <p class="text-[12px] font-bold text-blue-300">KEY ARCHITECTURE</p>
+          <h3 class="mt-3 text-[23px] font-bold">npm Workspaces 모노레포</h3>
+          <div class="mt-7 grid grid-cols-3 gap-4 text-center">
+            <div class="rounded-xl border border-white/15 bg-white/10 p-5"><b>User App</b><p class="mt-2 text-[12px] text-slate-300">상품·장바구니·주문</p></div>
+            <div class="rounded-xl border border-white/15 bg-white/10 p-5"><b>Admin App</b><p class="mt-2 text-[12px] text-slate-300">사용자·주문 관리</p></div>
+            <div class="rounded-xl border border-white/15 bg-white/10 p-5"><b>Shared API</b><p class="mt-2 text-[12px] text-slate-300">공용 데이터 호출</p></div>
+          </div>
+          <p class="mt-6 text-center text-[14px] text-slate-200">앱의 책임을 분리하고 사용자·관리자 서비스를 각각 독립 배포</p>
+        </div>
+
+        <div class="mt-7 grid grid-cols-2 gap-4">
+          <div class="pf-card"><p class="text-[12px] font-bold text-accent">ROLE</p><p class="mt-2 text-[18px] font-bold">팀장 · 프론트엔드 개발</p><p class="mt-3 text-[14px] text-neutral-600">API 명세·WBS 작성, 브랜치 전략과 이슈 관리 환경 구성</p></div>
+          <div class="pf-card"><p class="text-[12px] font-bold text-accent">PROCESS</p><p class="mt-2 text-[18px] font-bold">스크럼 기록과 검수</p><p class="mt-3 text-[14px] text-neutral-600">진행 상황을 GitHub Wiki에 기록하고 핵심 흐름을 E2E로 검수</p></div>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-2"><span class="pf-tag">JavaScript</span><span class="pf-tag">Vite</span><span class="pf-tag">npm Workspaces</span><span class="pf-tag">Tailwind CSS</span><span class="pf-tag">REST API</span><span class="pf-tag">Playwright</span></div>
+        <div class="slide-foot"><span>김도혁 Portfolio</span><span>06 / 10</span></div>
+      </section>
+
+      <!-- ========== 07. Gentlelion - 구현과 검수 ========== -->
+      <section class="legacy-slide hidden">
+        <p class="slide-kicker">03. Project · Gentlelion (2/2)</p>
+        <h2 class="mt-3 text-[28px] font-extrabold">화면 구현부터 API·E2E 검수까지</h2>
+
+        <div class="mt-7 space-y-4">
+          <div class="grid grid-cols-[32mm_1fr] rounded-xl border border-gray-200 p-5">
+            <b class="text-accent">재사용 UI</b>
+            <p class="text-[14px] leading-relaxed text-neutral-600">상품 카드·더보기 버튼을 모듈로 분리하고 Footer·서브메뉴, 헤더 메뉴·스크롤 인터랙션을 구현했습니다.</p>
+          </div>
+          <div class="grid grid-cols-[32mm_1fr] rounded-xl border border-gray-200 p-5">
+            <b class="text-accent">REST API</b>
+            <p class="text-[14px] leading-relaxed text-neutral-600">상품 조회·필터, 장바구니 수량 변경, 주문 생성, 관리자 사용자·주문 관리 CRUD를 구현했습니다.</p>
+          </div>
+          <div class="grid grid-cols-[32mm_1fr] rounded-xl border border-gray-200 p-5">
+            <b class="text-accent">E2E 검수</b>
+            <p class="text-[14px] leading-relaxed text-neutral-600">Playwright 테스트 구조를 만들고 회원가입·로그인·장바구니·주문·프로필의 5개 핵심 흐름을 자동 검수했습니다.</p>
+          </div>
+        </div>
+
+        <div class="mt-8 rounded-xl bg-blue-50 p-6">
+          <p class="text-[12px] font-bold text-accent">DATA FLOW</p>
+          <div class="mt-5 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-3 text-center text-[14px]">
+            <div class="rounded-lg bg-white p-4 shadow-sm">사용자 인터랙션</div><span class="text-accent">→</span>
+            <div class="rounded-lg bg-white p-4 shadow-sm">Shared API</div><span class="text-accent">→</span>
+            <div class="rounded-lg bg-white p-4 shadow-sm">User·Admin UI 갱신</div>
+          </div>
+        </div>
+
+        <div class="mt-8 border-l-4 border-accent pl-5">
+          <p class="text-[17px] font-bold">클론 화면보다 구조와 검수 과정에 집중했습니다.</p>
+          <p class="mt-2 text-[14px] leading-relaxed text-neutral-600">앱 경계를 나누고 공용 API를 분리한 뒤, 실제 사용 흐름을 자동화 테스트로 확인해 개발부터 배포까지의 흐름을 경험했습니다.</p>
+        </div>
+        <div class="slide-foot"><span>김도혁 Portfolio</span><span>07 / 10</span></div>
+      </section>
+
+      <!-- ========== 08. DoHyuk.dev - 개요 ========== -->
+      <section class="legacy-slide hidden">
+        <p class="slide-kicker">04. Project · DoHyuk.dev (1/2)</p>
+        <div class="mt-3 flex items-end justify-between">
+          <div><h2 class="text-[30px] font-extrabold">DoHyuk.dev</h2><p class="mt-2 text-[15px] text-neutral-600">바닐라 JavaScript 기반 개인 기술 블로그</p></div>
+          <span class="pf-badge-accent">개인 · 기획·설계·개발·배포</span>
+        </div>
+
+        <div class="mt-8 grid grid-cols-2 gap-5">
+          <div class="pf-card">
+            <p class="text-[12px] font-bold text-accent">SERVICE FLOW</p>
+            <h3 class="mt-3 text-[20px] font-bold">Supabase 기반 데이터 흐름</h3>
+            <ul class="mt-5 space-y-3 text-[14px] text-neutral-600">
+              <li>• Auth — Google·GitHub 로그인</li>
+              <li>• DB — 게시글·프로필 데이터</li>
+              <li>• Storage — 게시글·프로필 이미지</li>
+              <li>• Edge Function — 외부 API 호출 분리</li>
+            </ul>
+          </div>
+          <div class="pf-card">
+            <p class="text-[12px] font-bold text-accent">CONTENT FLOW</p>
+            <h3 class="mt-3 text-[20px] font-bold">게시글 상태와 이미지 업로드</h3>
+            <div class="mt-5 space-y-3 text-[14px] text-neutral-600">
+              <p>발행 · 임시저장 · 휴지통의 3단 상태 관리</p>
+              <p>작성 중에는 blob 미리보기만 사용</p>
+              <p>발행 시점에 Storage 업로드 및 URL 치환</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-7 rounded-xl bg-slate-900 p-6 text-white">
+          <p class="text-[12px] font-bold text-blue-300">PUBLIC DATA API</p>
+          <h3 class="mt-2 text-[20px] font-bold">공공데이터 기반 공휴일 캘린더</h3>
+          <div class="mt-5 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-3 text-center text-[13px]">
+            <div class="rounded-lg bg-white/10 p-4">캘린더 UI</div><span>→</span>
+            <div class="rounded-lg bg-white/10 p-4">Supabase<br />Edge Function</div><span>→</span>
+            <div class="rounded-lg bg-white/10 p-4">공공데이터포털<br />공휴일 API</div>
+          </div>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-2"><span class="pf-tag">JavaScript</span><span class="pf-tag">Vite</span><span class="pf-tag">Tailwind CSS</span><span class="pf-tag">Supabase</span><span class="pf-tag">Edge Functions</span><span class="pf-tag">npm</span></div>
+        <div class="slide-foot"><span>김도혁 Portfolio</span><span>08 / 10</span></div>
+      </section>
+
+      <!-- ========== 09. DoHyuk.dev - 구현과 문제해결 ========== -->
+      <section class="legacy-slide hidden">
+        <p class="slide-kicker">04. Project · DoHyuk.dev (2/2)</p>
+        <h2 class="mt-3 text-[28px] font-extrabold">측정한 병목을 독립 패키지로 해결</h2>
+
+        <div class="mt-7 grid grid-cols-2 gap-5">
+          <div class="rounded-xl border border-red-100 bg-red-50 p-6">
+            <p class="text-[12px] font-bold text-red-600">PROBLEM</p>
+            <h3 class="mt-3 text-[19px] font-bold">입력할 때마다 전체 DOM 교체</h3>
+            <p class="mt-4 text-[14px] leading-relaxed text-neutral-600">마크다운 문서 전체를 다시 파싱하고 미리보기 DOM을 통째로 교체해 글이 길수록 입력 반응이 느려졌습니다.</p>
+          </div>
+          <div class="rounded-xl border border-blue-100 bg-blue-50 p-6">
+            <p class="text-[12px] font-bold text-accent">SOLUTION</p>
+            <h3 class="mt-3 text-[19px] font-bold">변경 블록만 선택적으로 반영</h3>
+            <p class="mt-4 text-[14px] leading-relaxed text-neutral-600">문서를 빈 줄 기준 블록으로 나누고 이전 상태와 비교해 변경된 블록의 DOM만 갱신했습니다.</p>
+          </div>
+        </div>
+
+        <div class="mt-7 rounded-xl border border-gray-200 p-6">
+          <div class="flex items-end justify-between">
+            <div><p class="text-[12px] font-bold text-accent">RESULT</p><h3 class="mt-2 text-[20px] font-bold">markdown-block-preview</h3></div>
+            <p class="text-[30px] font-extrabold text-accent">최대 8.2배</p>
+          </div>
+          <p class="mt-4 text-[14px] leading-relaxed text-neutral-600">로직을 npm 패키지로 분리·배포하고 50블록 문서에서 성능을 비교해 개선 효과를 검증했습니다.</p>
+        </div>
+
+        <div class="mt-7 grid grid-cols-3 gap-4">
+          <div class="pf-card"><b>문제 정의</b><p class="mt-2 text-[13px] text-neutral-600">긴 글에서 입력 지연 확인</p></div>
+          <div class="pf-card"><b>원인 측정</b><p class="mt-2 text-[13px] text-neutral-600">파싱보다 DOM 교체 비용 확인</p></div>
+          <div class="pf-card"><b>검증·배포</b><p class="mt-2 text-[13px] text-neutral-600">벤치마크 후 npm 공개</p></div>
+        </div>
+
+        <p class="mt-8 text-[15px] leading-relaxed text-neutral-700">기능 구현에 그치지 않고 <b>병목을 측정하고, 재사용 가능한 도구로 분리하고, 수치로 검증</b>하는 과정을 경험했습니다.</p>
+        <div class="slide-foot"><span>김도혁 Portfolio</span><span>09 / 10</span></div>
+      </section>
+
+      <!-- ========== 10. 끝 ========== -->
       <section
         class="slide relative items-start justify-center overflow-hidden bg-slate-600 p-0! text-white"
       >
@@ -2115,7 +2462,7 @@
         </svg>
 
         <div
-          class="absolute left-[32mm] top-[104mm] max-w-[72mm] flex flex-col items-center"
+          class="absolute left-[50mm] top-[70mm] max-w-[72mm] flex flex-col items-center"
         >
           <h2 class="text-[96px] font-extrabold tracking-wide">끝</h2>
           <p class="mt-8 text-[20px] text-blue-100 text-center">
