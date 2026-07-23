@@ -30,6 +30,10 @@
     zoom: 1;
   }
 
+  .timeline-scale-70 > :not(.slide-foot) {
+    zoom: 0.7;
+  }
+
   .slide-kicker { @apply text-[12px] font-bold uppercase tracking-[0.25em] text-accent; }
 
   .slide-foot {
