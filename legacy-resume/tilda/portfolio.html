@@ -23,7 +23,7 @@
     >
       <!-- ========== 01. 표지 ========== -->
       <section
-        class="slide break-after-page relative items-start justify-center overflow-hidden bg-slate-600 p-0! text-white"
+        class="slide order-[1] break-after-page relative items-start justify-center overflow-hidden bg-slate-600 p-0! text-white"
       >
         <!-- 발자국 워터마크 (github.com/DoHyuk-Centric/myBlog catpaw.svg) -->
         <svg
@@ -90,9 +90,9 @@
         </div>
       </section>
 
-      <!-- ========== 02. About Me ========== -->
+      <!-- ========== About Me (이력서와 중복되어 보관) ========== -->
       <section
-        class="slide break-after-page bg-cover bg-position-[center_65%] bg-no-repeat p-0! text-white"
+        class="legacy-slide hidden"
         style="
           background-image:
             linear-gradient(
@@ -433,9 +433,9 @@
         </div>
       </section>
 
-      <!-- ========== 03. TimeLine ========== -->
-      <section class="slide landscape-fit timeline-scale-70 break-after-page">
-        <p class="slide-kicker text-[19px]!">02. TimeLine</p>
+      <!-- ========== 02. TimeLine ========== -->
+      <section class="slide order-[2] landscape-fit timeline-scale-70 break-after-page">
+        <p class="slide-kicker text-[19px]!">01. TimeLine</p>
 
         <div
           class="mt-4 flex flex-1 items-center justify-center"
@@ -552,13 +552,13 @@
 
         <div class="slide-foot">
           <span>김도혁 Portfolio</span>
-          <span>03 / 13</span>
+          <span>02 / 11</span>
         </div>
       </section>
 
-      <!-- ========== 04. Kanto - 프로젝트 소개 ========== -->
-      <section class="slide break-keep break-after-page">
-        <p class="slide-kicker">03. Project — Kanto · Overview</p>
+      <!-- ========== 03. Kanto - 프로젝트 소개 ========== -->
+      <section class="slide order-[3] break-keep break-after-page">
+        <p class="slide-kicker">02. Kanto</p>
 
         <div
           class="mt-4 flex items-center justify-between border-b border-neutral-200 px-1 pb-4"
@@ -679,7 +679,7 @@
                 </svg>
               </span>
               <span
-                class="relative h-9 w-9 overflow-hidden rounded-lg bg-white"
+                class="relative h-9 w-9 overflow-hidden rounded-2xl"
                 title="TanStack Query"
                 role="img"
                 aria-label="TanStack Query"
@@ -688,7 +688,7 @@
                   src="./kanto/TanStack.png"
                   alt=""
                   aria-hidden="true"
-                  class="absolute -left-[347px] -top-[49px] h-[186px] w-[508px] max-w-none"
+                  class="absolute -left-[348px] -top-[51px] h-[186px] w-[509px] max-w-none"
                 />
               </span>
               <span class="h-9 w-9 overflow-hidden rounded-lg bg-white" title="Zustand">
@@ -777,13 +777,13 @@
 
         <div class="slide-foot">
           <span>김도혁 Portfolio</span>
-          <span>04 / 13</span>
+          <span>03 / 11</span>
         </div>
       </section>
 
       <!-- ========== 04. Kanto - 경험 ========== -->
-      <section class="slide break-keep break-after-page">
-        <p class="slide-kicker">03. Project — Kanto · Core Features</p>
+      <section class="slide order-[4] break-keep break-after-page">
+        <p class="slide-kicker">02. Kanto</p>
         <div class="mt-4 flex items-end justify-between">
           <div>
             <h2 class="text-[32px] font-extrabold">신뢰 수치화 & 채팅 운영</h2>
@@ -803,18 +803,17 @@
             <div class="mt-5">
               <h3 class="mt-2 text-[22px] font-extrabold">KTS·KPPS 신뢰도 시스템</h3>
               <p class="mt-3 text-[13.5px] leading-[1.7] text-neutral-600">
-                거래와 활동 데이터를 점수로 변환해 사용자의 신뢰도와 게시물 인기도를 한눈에 판단하도록 했습니다.
+                거래 전 상대방을 신뢰할 수 있는지 판단할 객관적인 기준이 필요했습니다.
+              </p>
+              <p class="text-[13.5px] leading-[1.7] text-neutral-600">
+                이에 거래·리뷰·활동·신고 데이터를 KTS로, 게시물 반응·최신성·작성자 신뢰도를 KPPS로 산정해 프로필 신뢰도와 인기 게시물 노출에 반영했습니다.
               </p>
             </div>
 
-            <div class="mt-4 rounded-xl bg-slate-50 px-4 py-3 font-mono text-[10.5px] text-neutral-600">
-              Review + Transaction + Activity − Penalty
-            </div>
-
             <ul class="mt-4 pl-4 space-y-2 text-[13px] text-neutral-700">
-              <li class="flex gap-2"><span class="font-bold text-accent">01</span><span>9가지 시나리오로 등급 분포를 사전 검증</span></li>
-              <li class="flex gap-2"><span class="font-bold text-accent">02</span><span>위험 등급은 인기 배지에서 자동 제외</span></li>
-              <li class="flex gap-2"><span class="font-bold text-accent">03</span><span>pg_cron으로 매일 점수를 자동 재계산</span></li>
+              <li class="flex gap-2"><span class="font-bold text-accent">01</span><span>9가지 사용자 행동 시나리오를 AI 기반으로 시뮬레이션해 평균 점수와 등급별 분포의 적정성을 사전 검증</span></li>
+              <li class="flex gap-2"><span class="font-bold text-accent">02</span><span>KTS와 KPPS를 각각 user.kts_score와 posts.kpps_score로 관리하고, pg_cron을 통해 매일 자동 재계산</span></li>
+              <li class="flex gap-2"><span class="font-bold text-accent">03</span><span>작성자가 위험 등급(E등급)이면 KPPS와 관계없이 인기 배지 노출에서 자동 제외</span></li>
             </ul>
           </article>
 
@@ -835,168 +834,46 @@
             <div class="mt-5">
               <h3 class="mt-2 text-[22px] font-extrabold">실시간 채팅·운영 로그</h3>
               <p class="mt-3 text-[13.5px] leading-[1.7] text-neutral-600">
-                Supabase Realtime 채팅과 함께 신고·분쟁 상황에서 관리자가 확인할 수 있는 운영 도구를 구축했습니다.
+                거래 전 상품 상태와 거래 조건을 확인할 수 있는 실시간 소통 수단이 필요했습니다.
+              </p>
+              <p class="text-[13.5px] leading-[1.7] text-neutral-600">
+                이에 사용자 간 원활한 거래를 위해 1:1 실시간 채팅을 구현했습니다. 또한 신고·분쟁 발생 가능성을 고려해 관리자가 대화 내역을 확인하고 대응할 수 있는 운영 도구도 함께 구축했습니다.
               </p>
             </div>
 
-            <div class="mt-4 rounded-xl bg-slate-50 px-4 py-3 font-mono text-[10.5px] text-neutral-600">
-              Realtime + Read status + Anti-spam + Audit log
-            </div>
-
             <ul class="mt-4 pl-4 space-y-2 text-[13px] text-neutral-700">
-              <li class="flex gap-2"><span class="font-bold text-accent">01</span><span>읽음 처리·낙관적 업데이트·도배 방지 적용</span></li>
-              <li class="flex gap-2"><span class="font-bold text-accent">02</span><span>신고 대화 조회와 TXT 증빙 다운로드 제공</span></li>
-              <li class="flex gap-2"><span class="font-bold text-accent">03</span><span>탈퇴 이후에도 정책 기간 동안 운영 기록 유지</span></li>
+              <li class="flex gap-2">
+                <span class="font-bold text-accent">01</span>
+                <span>Supabase Realtime 기반 사용자 간 실시간 1:1 채팅 구현</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="font-bold text-accent">02</span>
+                <span>메시지 읽음 상태 동기화와 낙관적 업데이트로 즉각적인 전송 경험 제공</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="font-bold text-accent">03</span>
+                <span>짧은 시간 내 반복 전송을 제한하는 도배 방지 로직 구현</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="font-bold text-accent">04</span>
+                <span>Zustand로 채팅 위젯·채팅 목록·미읽음 수 등 전역 상태 관리</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="font-bold text-accent">05</span>
+                <span>채팅방 메시지와 페이지네이션을 커스텀 훅의 로컬 상태로 분리</span>
+              </li>
             </ul>
           </article>
         </div>
 
         <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>05 / 13</span>
-        </div>
-      </section>
-
-      <section class="legacy-slide hidden">
-        <p class="slide-kicker">03. Project - Kanto · Details (2/5)</p>
-        <h2 class="mt-3 text-[28px] font-extrabold">구현과 문제 해결</h2>
-
-        <div class="flex gap-2 flex-1 flex-col">
-          <div>
-            <div class="flex gap-3 mb-4">
-              <div class="flex items-center my-auto flex-col gap-4 p-4 shadow-[0_0_4px_rgba(0,0,0,0.2)] rounded-xl">
-                <div class="w-[64mm] bg-white">
-                  <img
-                    src="./kanto/score.png"
-                    alt="망고 지수 점수"
-                    class="max-h-full object-contain"
-                  />
-                </div>
-                <div class="h-[64mm] bg-white">
-                  <img
-                    src="./kanto/popularBadge.png"
-                    alt="인기 게시물 배지"
-                    class="max-h-full object-contain"
-                  />
-                </div>
-              </div>
-              <div>
-                <h3 class="text-[16px] mb-3 font-bold text-accent">
-                  프로필 페이지 · 칸토 망고 점수
-                </h3>
-                <p class="text-[13px] ml-4">
-                  당근온도처럼 신뢰가 핵심인 서비스엔 신뢰도를 시각적으로
-                  보여줄 지표가 필요하다고 판단해
-                  <b>KTS(신뢰도)·KPPS(인기도)</b> 점수 시스템을 설계했습니다.
-                </p>
-                <ul class="pf-list mt-2 pl-6">
-                  <li>
-                    <b class="text-[13px]">KTS 공식</b>
-                    <code
-                      class="mt-1 block w-fit rounded bg-neutral-100 px-2 py-1 font-mono text-[11.5px] text-neutral-700"
-                      >KTS = clamp(36 + Review + Transaction + Activity + Trend
-                      − Penalty, 0, 100)</code
-                    >
-                    <p class="mt-0.5 font-mono text-[10px] text-muted">
-                      Review 리뷰 평점 · Transaction 거래 완료 · Activity 활동 · Trend 등급 추이 · Penalty 신고·제재
-                    </p>
-                  </li>
-                  <li>
-                    <b class="text-[13px]">KPPS 공식</b>
-                    <code
-                      class="mt-1 block w-fit rounded bg-neutral-100 px-2 py-1 font-mono text-[11.5px] text-neutral-700"
-                      >KPPS = clamp(Engagement + LikeRate + KTSBonus + Quality
-                      + Recency − Report, 0, 100)</code
-                    >
-                    <p class="mt-0.5 font-mono text-[10px] text-muted">
-                      Engagement 좋아요·조회수 · LikeRate 좋아요 전환율 · <br />
-                      KTSBonus 신뢰등급 · Quality 이미지·정보
-                      완성도 · <br /> Recency 최신성 · Report 신고
-                    </p>
-                  </li>
-                  <li>
-                    <b>9가지 유저 시나리오로 시뮬레이션</b>해 등급 분포(A 7%· <br /> B 22%·C 45%·D 22%·E 4%)를 사전 검증한 뒤 기준 확정
-                  </li>
-                  <li>
-                    작성자가 E등급이면 위험수준 유저라고 판단해 순위·점수와 무관하게 <b>배지 제외</b>
-                  </li>
-                  <li>
-                    점수는 매일 일정 시간 <b>pg_cron으로 자동 재계산</b>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="border-t border-gray-200 pt-6">
-            <div class="flex items-start gap-4 mb-4">
-              <div class="flex flex-col my-auto gap-4 p-4 shadow-[0_0_4px_rgba(0,0,0,0.2)] rounded-xl">
-                <div
-                  class="w-[64mm] bg-white"
-                >
-                  <img
-                    src="./kanto/chatLog.png"
-                    alt="Kanto 관리자 채팅로그"
-                    class="max-h-full object-contain"
-                  />
-                  
-                </div>
-                <div
-                  class="w-[64mm] bg-white"
-                >
-                  <img
-                      src="./kanto/chatlog_txt.png"
-                      alt="다운로드된 채팅 로그 TXT"
-                      class="max-h-full object-contain"
-                    />
-                  
-                </div>
-              </div>
-              <div>
-                <h3 class="text-[16px] mb-3 font-bold text-accent">
-                  채팅 · 관리자 채팅 로그
-                </h3>
-                <p class="text-[13px] ml-4">
-                  유저 간의 소통을 위해 <b>Supabase Realtime 기반 1:1
-                  채팅</b>을 전체 구현하고, 운영적 측면에서 생각해 법적 분쟁·사용자 문의에 대응할 수
-                  있는 관리자 도구를 구축했습니다.
-                </p>
-                <h4 class="text-[14px] mt-1 ml-4 text-accent font-semibold">사용자</h4>
-                <ul class="pf-list pl-6">
-                  <li>
-                    Realtime 메시지 송수신·읽음 처리에 <b>읽지 않은 메시지</b> 구현
-                  </li>
-                  <li>
-                    언마운트 시 리셋 + 낙관적 업데이트 적용
-                  </li>
-                  <li>
-                    N초 내 N회 이상 전송 시 <b>도배 방지</b> 쿨다운 적용(관리자 운영관리에서 수정 기능 연동)
-                  </li>
-                </ul>
-                <h4 class="text-[14px] mt-1 ml-4 text-accent font-semibold">관리자</h4>
-                <ul class="pf-list px-6">
-                  <li>
-                    관리자가 신고된 채팅방의 대화 내역을
-                    <b>페이지네이션으로 조회</b>(최대 20개씩 로드)
-                  </li>
-                  <li>
-                    대화 내역을 <b>TXT로 다운로드</b>해 분쟁 발생 시 증빙
-                    자료로 활용
-                  </li>
-                  <li>
-                    대화방을 나가거나 회원을 탈퇴하더라도 일정 기간동안은 내역을 유지
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>05 / 13</span>
+          <span>김도혁 Portfolio</span><span>04 / 11</span>
         </div>
       </section>
 
       <!-- ========== 05. Kanto - 문제해결 ========== -->
-      <section class="slide break-keep break-after-page">
-        <p class="slide-kicker">03. Project - Kanto · Details (4/5)</p>
+      <section class="slide order-[5] break-keep break-after-page">
+        <p class="slide-kicker">02. Kanto</p>
         <div class="mt-3 flex items-end justify-between border-b border-neutral-200 pb-5">
           <div>
             <h2 class="text-[28px] font-extrabold">서버 상태 분리와 요청 최적화</h2>
@@ -1004,416 +881,154 @@
               관리자 콘텐츠 중복 GET 제거 - TanStack Query 캐싱
             </h3>
           </div>
-          <div class="text-right">
-            <p class="text-[11px] font-bold tracking-[0.12em] text-neutral-400">GET REQUEST</p>
-            <p class="mt-1 text-[27px] font-extrabold text-accent">18회 → 3회</p>
-          </div>
         </div>
 
-        <div class="mt-6 grid grid-cols-[0.7fr_1.3fr] items-center gap-7">
-          <div class="space-y-2.5">
-            <div class="border-l-2 border-neutral-300 bg-slate-50 px-4 py-3">
-              <p class="text-[10px] font-extrabold tracking-[0.08em] text-neutral-400">초기 상태</p>
-              <p class="mt-1 text-[12px] leading-[1.6] text-neutral-700">
-                관리자 운영관리 페이지의 금칙어·스팸 관리 탭 데이터를
-                useEffect와 useState로 관리
+        <div class="mt-6 grid min-h-0 flex-1 grid-cols-[0.7fr_1.3fr] gap-8">
+          <div class="relative flex flex-col gap-12 py-1 pl-11">
+            <div class="absolute bottom-32 left-[15px] top-5 w-px bg-gradient-to-b from-red-300 via-slate-300 to-blue-400"></div>
+
+            <div class="relative">
+              <span class="absolute -left-11 top-0 flex h-8 w-8 items-center justify-center rounded-full border-4 border-white bg-slate-900 text-[10px] font-extrabold text-white shadow-sm">01</span>
+              <h4 class="text-[15px] font-extrabold text-slate-900">초기</h4>
+              <p class="mt-1.5 text-[12.5px] leading-[1.65] text-neutral-600">
+                관리자 운영관리 페이지의 금칙어·스팸 관리 탭 데이터를 <b>useEffect와 useState</b>로 관리
               </p>
             </div>
-            <div class="border-l-2 border-red-400 bg-red-50/60 px-4 py-3">
-              <p class="text-[10px] font-extrabold tracking-[0.08em] text-red-500">GET 요청 발생</p>
-              <p class="mt-1 text-[12px] leading-[1.6] text-neutral-700">
-                탭 전환 시 컴포넌트가 언마운트되어 상태가 사라지고,
-                재진입할 때마다 같은 GET 요청 반복
+
+            <div class="relative">
+              <span class="absolute -left-11 top-0 flex h-8 w-8 items-center justify-center rounded-full border-4 border-white bg-red-500 text-[10px] font-extrabold text-white shadow-sm">02</span>
+              <h4 class="text-[15px] font-extrabold text-red-600">문제 발생</h4>
+              <p class="mt-1.5 text-[12.5px] leading-[1.65] text-neutral-600">
+                탭 전환 시 컴포넌트가 언마운트되면서 조회 상태가 사라져, 재진입할 때마다 동일한 GET 요청 반복
               </p>
             </div>
-            <div class="border-l-2 border-accent bg-blue-50/70 px-4 py-3">
-              <p class="text-[10px] font-extrabold tracking-[0.08em] text-accent">TanStack Query로 개선</p>
-              <p class="mt-1 text-[12px] leading-[1.6] text-neutral-700">
-                서버 조회값을 캐시로 분리해 탭 전환 후에도 유지하고
-                불필요한 재요청 제거
+
+            <div class="relative">
+              <span class="absolute -left-11 top-0 flex h-8 w-8 items-center justify-center rounded-full border-4 border-white bg-blue-500 text-[10px] font-extrabold text-white shadow-sm">03</span>
+              <h4 class="text-[15px] font-extrabold text-accent">서버·UI 상태 분리</h4>
+              <p class="mt-1.5 text-[12.5px] leading-[1.65] text-neutral-600">
+                탭 전환 후에도 기존 조회 결과를 재사용하고, 데이터 변경 시 관련 목록만 갱신이 필요
+              </p>
+              <p class="text-[12.5px] leading-[1.65] text-neutral-600">
+                서버 상태는 TanStack Query로, 입력값·선택 항목 등 일시적인 UI 상태는 useState로 분리해 관리
+              </p>
+            </div>
+
+            <div class="relative">
+              <span class="absolute -left-11 top-0 flex h-8 w-8 items-center justify-center rounded-full border-4 border-white bg-teal-500 text-[10px] font-extrabold text-white shadow-sm">04</span>
+              <h4 class="text-[15px] font-extrabold text-teal-700">불필요한 재요청 제거</h4>
+              <p class="mt-1.5 text-[12.5px] leading-[1.65] text-neutral-600">
+                staleTime을 30초로 설정해 탭을 반복 전환해도 금칙어·스팸 관련 3개 조회 API를 캐시에서 재사용
               </p>
             </div>
           </div>
-          <figure>
-            <img
-              src="./kanto/TanStack.png"
-              alt="TanStack Query 적용 전에는 탭 전환마다 Supabase에 GET 요청하고 useState에 저장했지만, 적용 후에는 캐시를 확인해 데이터가 없을 때만 API를 호출하는 흐름도"
-              class="h-[76mm] w-full rounded-xl bg-white object-contain"
-            />
-          </figure>
-        </div>
 
-        <ul class="mt-6 grid grid-cols-3 gap-4">
-          <li class="rounded-xl border border-neutral-200 p-5 text-[12.5px] leading-[1.7] text-neutral-700">
-            <span class="mb-3 flex h-7 w-7 items-center justify-center rounded-full bg-slate-900 text-[11px] font-extrabold text-white">01</span>
-            서버 조회값을 useState에 두면 탭 언마운트와
-            함께 사라져, 재진입할 때마다 useEffect가 같은 GET을
-            반복했습니다. 조회 데이터는 컴포넌트 수명과 분리해 TanStack
-            Query가 관리하고, draft·editingId처럼 화면에만 필요한 상태만
-            useState에 남겼습니다.
-          </li>
-          <li class="rounded-xl border border-neutral-200 p-5 text-[12.5px] leading-[1.7] text-neutral-700">
-            <span class="mb-3 flex h-7 w-7 items-center justify-center rounded-full bg-slate-900 text-[11px] font-extrabold text-white">02</span>
-            설정·템플릿 수정 결과는 캐시에 즉시
-            반영해 추가 GET을 막고, 금칙어 CRUD 후에는 해당 목록 캐시만
-            무효화해 최신 데이터를 다시 조회했습니다.
-          </li>
-          <li class="rounded-xl border border-blue-200 bg-blue-50/70 p-5 text-[12.5px] leading-[1.7] text-neutral-700">
-            <span class="mb-3 flex h-7 w-7 items-center justify-center rounded-full bg-accent text-[11px] font-extrabold text-white">03</span>
-            탭 5회 왕복 + 룰 등록/목록 2회 왕복을 동일하게
-            재현해 GET 요청이 <b>18회 → 3회(약 83.3% 감소)</b>로
-            줄어든 것을 네트워크 탭에서 확인했습니다.
-          </li>
-        </ul>
-
-        <div class="hidden">
-          <div>
-            <h3 class="text-[16px] font-bold text-accent">
-              Supabase 트래픽 한도 초과 대응
-            </h3>
-            <p class="mt-2 text-[14.5px] text-neutral-700">
-              기획 단계에서 무료 플랜의 트래픽·토큰 한도를 미리 계산해 소진
-              시나리오와 대응 전략을 세워뒀지만, 실제로는 예상 밖의 지점에서
-              문제가 터졌습니다.
-            </p>
-            <div
-              class="mt-3 flex h-[36mm] items-center justify-center overflow-hidden bg-white"
-            >
-              <img
-                src="./kanto/supabaseUsage.png"
-                alt="Supabase Egress per day 그래프 - 7월 1일 트래픽 급증"
-                class="max-h-full max-w-full object-contain"
-              />
-            </div>
-            <p class="mt-1 text-center text-[10px] leading-snug text-muted">
-              7/1 Storage Egress 390MB(전체 88.7%) 급증 → WebP 전환 후 재발 없음
-            </p>
-            <ul class="pf-list mt-3 px-4">
-              <li>
-                이미지를 <b>WebP로 사전 전환</b>해두지 않은 상태에서, 시연 준비
-                중 봇 계정과 목업 이미지를 대량 등록하다
-                <b>Supabase 트래픽 한도 초과</b>가 발생했습니다.
-              </li>
-              <li>
-                사전에 세워둔 대응 전략은 있었지만 트래픽에서 문제가 터질 것이라곤 생각하지 못했습니다.
-                <br /> 하지만 과도한 트래픽은 최근 추가한 봇과 게시글이 원인일 것으로 추정해 <b>이미지 용량</b>으로 특정했습니다.
-              </li>
-              <li>
-                DB 양이 많아 부계정 이전 대신 <b>유료 플랜 전환</b>으로 즉시 정상화하고,
-                업로드 단계 WebP 변환 로직을 추가해 동일 조건으로 이미지를
-                올려도 <b>390MB → 64MB(약 84% 감소)</b>로 트래픽이 안정적임을
-                확인해 재발 방지까지 검증했습니다.
-              </li>
-            </ul>
-          </div>
-
-          <div class="border-t border-gray-200 pt-6">
-            <h3 class="text-[16px] font-bold text-accent">
-              내 프로필 페이지 - 서버/클라이언트 컴포넌트 분리
-            </h3>
-            <p class="mt-2 text-[14.5px] text-neutral-700">
-              프로필 페이지를 처음 구현할 때는 로그인·회원가입 페이지가 아직
-              구현되기 전이라, 빠른 개발을 위해 목업 데이터를 쓰는 클라이언트
-              컴포넌트로 만들었습니다. 이후 Supabase API로 실제 데이터를
-              연결하고 소셜 로그인 "연결하기/연결됨" 버튼과 관심 카테고리를
-              구현하는 과정에서, 깜빡이는 <b>CLS(레이아웃 시프트)</b> 현상이 생겼습니다.
-            </p>
-            <div class="mt-3 flex gap-3">
-              <div
-                class="flex h-[32mm] flex-1 items-center justify-center bg-white"
-              >
+          <div class="flex min-h-0 flex-col mt-8">
+            <figure class="overflow-hidden">
+              <div class="flex h-max items-center justify-center bg-white">
                 <img
-                  src="./kanto/account.PNG"
-                  alt="소셜 로그인 연결하기/연결됨 버튼"
-                  class="max-h-full max-w-full object-contain"
+                  src="./kanto/TanStack.png"
+                  alt="TanStack Query 적용 전에는 탭 전환마다 Supabase에 GET 요청하고 useState에 저장했지만, 적용 후에는 캐시를 확인해 데이터가 없을 때만 API를 호출하는 흐름도"
+                  class="max-h-full w-full object-contain"
                 />
               </div>
-              <div
-                class="flex h-[32mm] flex-1 items-center justify-center bg-white"
-              >
-                <img
-                  src="./kanto/favorate.PNG"
-                  alt="관심 카테고리 설정"
-                  class="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-            <ul class="pf-list mt-3 px-4">
-              <li>
-                원인은 각 섹션이
-                <b>클라이언트 훅에서 자체적으로 데이터를 불러오던 구조</b>였기
-                때문이었습니다. 페이지가 먼저 빈 상태로 그려지고, 그 다음
-                브라우저에서 데이터를 요청해오니 버튼·카테고리가 늦게 나타난 것이었습니다.
-              </li>
-              <li>
-                <b>팀 컨벤션에 따라 페이지 전체를 서버 컴포넌트로 두고</b>, 필요한 데이터를
-                서버에서 미리 불러와 완성된 상태로 클라이언트에 내려주는 구조로
-                전환했습니다. 클라이언트 훅은 자체 fetch 로직을 걷어내고, 서버가
-                준 초기값만 받아쓰도록 단순화했습니다.
-              </li>
-              <li>
-                이후 페이지가 복잡해지면서(리뷰·모임·활동 통계 등) 늘어난
-                기능들도 같은 원칙을 유지해, 데이터 조회는 서버 컴포넌트에
-                모으고 인터랙션만 클라이언트 컴포넌트로 넘기는 구조를 끝까지
-                지켰습니다.
-              </li>
-            </ul>
+              <figcaption class="mt-12 px-8">
+                <h3 class="mt-2 text-[22px] font-extrabold">탭 전환마다 반복되는 데이터 조회</h3>
+                <p class="mt-3 text-[13.5px] leading-[1.7] text-neutral-600">
+                  관리자 콘텐츠 페이지에서 금칙어·스팸 관리 탭을 이동할 때마다 컴포넌트가 다시 마운트되며 동일한 서버 데이터를 반복 조회했습니다.
+                </p>
+                <p class="text-[13.5px] leading-[1.7] text-neutral-600">
+                  Figma로 서버 상태 관리 구조의 Before·After를 시각화하고, TanStack Query를 도입해 캐시 우선 렌더링과 중복 GET 요청 방지를 적용했습니다.
+                </p>
+              </figcaption>
+            </figure>
           </div>
         </div>
+
         <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>06 / 13</span>
+          <span>김도혁 Portfolio</span><span>05 / 11</span>
         </div>
       </section>
 
       <!-- ========== 06. Kanto - 문제해결 (2) ========== -->
-      <section class="slide break-keep break-after-page">
-        <p class="slide-kicker">03. Project - Kanto · Details (4/5)</p>
+      <section class="slide order-[6] break-keep break-after-page">
+        <p class="slide-kicker">02. Kanto</p>
         <div class="mt-3 flex items-end justify-between border-b border-neutral-200 pb-5">
           <div>
-            <h2 class="text-[28px] font-extrabold">예상 문제를 먼저 찾아 미리 공통 해결책 제안</h2>
+            <h2 class="text-[28px] font-extrabold">Storage Egress 급증 원인 분석과 재발 방지</h2>
             <p class="mt-3 max-w-[154mm] text-[14px] leading-relaxed text-neutral-600">
-              Supabase 무료 한도와 인증 구현 전 개발 공백을 발견해 팀이 함께 적용할 대응 방식을 정리 및 공유
-            </p>
-          </div>
-          <div class="shrink-0 text-right">
-            <p class="text-[11px] font-bold tracking-[0.12em] text-neutral-400">STORAGE EGRESS</p>
-            <p class="mt-1 text-[27px] font-extrabold text-accent">약 84% 감소</p>
-          </div>
-        </div>
-
-        <div class="mt-5 flex items-start gap-3">
-          <span class="mt-0.5 shrink-0 rounded-full bg-slate-900 px-3 py-1 text-[10px] font-extrabold tracking-[0.1em] text-white">EVIDENCE</span>
-          <div>
-            <h3 class="text-[16px] font-bold text-accent">Supabase 트래픽 한도 초과 대응</h3>
-            <p class="mt-1 text-[12.5px] leading-relaxed text-neutral-600">
-              기획 단계에서 무료 플랜의 트래픽·토큰 한도를 미리 계산해 소진
-              시나리오와 대응 전략을 세워뒀지만, 실제로는 예상 밖의 지점에서
-              문제가 터졌습니다.
+              사용량 추이로 이미지 전송량을 원인으로 특정하고 WebP 변환을 적용해 390MB에서 64MB로 감소
             </p>
           </div>
         </div>
 
-        <div class="mt-4 grid grid-cols-[0.9fr_1.1fr] items-center gap-7">
-          <figure>
-            <div class="flex h-[61mm] items-center justify-center overflow-hidden rounded-xl border border-neutral-200 bg-white p-3">
-              <img
-                src="./kanto/supabaseUsage.png"
-                alt="Supabase Egress per day 그래프 - 7월 1일 트래픽 급증"
-                class="max-h-full max-w-full object-contain"
-              />
+        <div class="mt-6 grid min-h-0 flex-1 grid-cols-[1.3fr_0.7fr] gap-8">
+          <div class="flex min-h-0 flex-col mt-8">
+            <figure class="overflow-hidden">
+              <div class="flex h-[58mm] items-center justify-center bg-white">
+                <img
+                  src="./kanto/supabaseUsage.png"
+                  alt="Supabase Egress per day 그래프 - 7월 1일 트래픽 급증"
+                  class="max-h-full w-full object-contain"
+                />
+              </div>
+              <figcaption class="mt-8 px-8">
+                <h3 class="mt-2 text-[22px] font-extrabold">Supabase 트래픽 한도 초과 대응</h3>
+                <p class="mt-3 text-[13.5px] leading-[1.7] text-neutral-600">
+                  시연을 위해 봇 계정과 목업 게시글을 대량 등록하는 과정에서, 사전에 예상하지 못한 Storage Egress 한도 초과가 발생했습니다.
+                </p>
+                <p class="text-[13.5px] leading-[1.7] text-neutral-600">
+                  사용량 추이와 새로 등록한 게시물의 원본 이미지 용량을 대조해 원인을 이미지 전송량으로 특정했습니다. 업로드 단계에 WebP 변환 로직을 적용한 뒤 동일 조건으로 재검증한 결과, <b>390MB에서 64MB</b>로 감소한 것을 확인했습니다.
+                </p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="relative flex flex-col gap-14 py-1 pl-11">
+            <div class="absolute bottom-42 left-[15px] top-5 w-px bg-gradient-to-b from-slate-300 via-red-300 to-blue-400"></div>
+
+            <div class="relative">
+              <span class="absolute -left-11 top-0 flex h-8 w-8 items-center justify-center rounded-full border-4 border-white bg-slate-900 text-[10px] font-extrabold text-white shadow-sm">01</span>
+              <h4 class="text-[15px] font-extrabold text-slate-900">사전 대응</h4>
+              <p class="mt-1.5 text-[12.5px] leading-[1.65] text-neutral-600">
+                무료 플랜의 트래픽·토큰 한도 초과에 대비해 <b>새 프로젝트로 이전 후 재배포</b>와 <b>유료 플랜 전환</b>의 두 가지 대응안 정리
+              </p>
             </div>
-            <figcaption class="mt-2 text-center text-[10.5px] leading-snug text-muted">
-              7/1 Storage Egress 390MB(전체 88.7%) 급증 → WebP 전환 후 재발 없음
-            </figcaption>
-          </figure>
 
-          <div class="space-y-3">
-            <section class="border-l-2 border-red-400 bg-red-50/60 px-5 py-4">
-              <p class="text-[11px] font-extrabold tracking-[0.12em] text-red-600">01 · 발생</p>
-              <p class="mt-2 text-[13px] leading-[1.7] text-neutral-700">
-                이미지를 <b>WebP로 사전 전환</b>해두지 않은 상태에서, 시연 준비
-                중 봇 계정과 목업 이미지를 대량 등록하다
-                <b>Supabase 트래픽 한도 초과</b>가 발생했습니다.
+            <div class="relative">
+              <span class="absolute -left-11 top-0 flex h-8 w-8 items-center justify-center rounded-full border-4 border-white bg-red-500 text-[10px] font-extrabold text-white shadow-sm">02</span>
+              <h4 class="text-[15px] font-extrabold text-red-600">예상 밖의 문제 발생</h4>
+              <p class="mt-1.5 text-[12.5px] leading-[1.65] text-neutral-600">
+                시연용 봇 계정과 목업 게시글을 대량 등록하며 Storage Egress 390MB까지 급증
               </p>
-            </section>
+            </div>
 
-            <section class="border-l-2 border-amber-400 bg-amber-50/60 px-5 py-4">
-              <p class="text-[11px] font-extrabold tracking-[0.12em] text-amber-700">02 · 원인 특정</p>
-              <p class="mt-2 text-[13px] leading-[1.7] text-neutral-700">
-                사전에 세워둔 대응 전략은 있었지만 트래픽에서 문제가 터질 것이라곤 생각하지 못했습니다.
-                <br /> 하지만 과도한 트래픽은 최근 추가한 봇과 게시글이 원인일 것으로 추정해 <b>이미지 용량</b>으로 특정했습니다.
+            <div class="relative">
+              <span class="absolute -left-11 top-0 flex h-8 w-8 items-center justify-center rounded-full border-4 border-white bg-amber-500 text-[10px] font-extrabold text-white shadow-sm">03</span>
+              <h4 class="text-[15px] font-extrabold text-amber-700">원인 특정</h4>
+              <p class="mt-1.5 text-[12.5px] leading-[1.65] text-neutral-600">
+                최근 추가된 봇·게시글과 트래픽 추이를 대조해 원본 이미지 용량을 원인으로 판단
               </p>
-            </section>
+            </div>
 
-            <section class="border-l-2 border-accent bg-blue-50/70 px-5 py-4">
-              <p class="text-[11px] font-extrabold tracking-[0.12em] text-accent">03 · 복구 및 재발 방지</p>
-              <p class="mt-2 text-[13px] leading-[1.7] text-neutral-700">
-                DB 양이 많아 부계정 이전 대신 <b>유료 플랜 전환</b>으로 즉시 정상화하고,
-                업로드 단계 WebP 변환 로직을 추가해 동일 조건으로 이미지를
-                올려도 <b>390MB → 64MB(약 84% 감소)</b>로 트래픽이 안정적임을
-                확인해 재발 방지까지 검증했습니다.
+            <div class="relative">
+              <span class="absolute -left-11 top-0 flex h-8 w-8 items-center justify-center rounded-full border-4 border-white bg-blue-500 text-[10px] font-extrabold text-white shadow-sm">04</span>
+              <h4 class="text-[15px] font-extrabold text-accent">복구 및 재발 방지</h4>
+              <p class="mt-1.5 text-[12.5px] leading-[1.65] text-neutral-600">
+                유료 플랜 전환으로 즉시 복구하고 업로드 단계에 WebP 변환을 적용해 <b>390MB → 64MB</b>로 감소
               </p>
-            </section>
+            </div>
           </div>
         </div>
 
         <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>07 / 13</span>
+          <span>김도혁 Portfolio</span><span>06 / 11</span>
         </div>
       </section>
 
-      <!-- ========== 07. Kanto - 협업 방식 ========== -->
-      <section class="slide compact-slide landscape-fit break-keep break-after-page">
-        <p class="slide-kicker">03. Project - Kanto · Details (5/5)</p>
-        <div class="mt-3 flex items-end justify-between border-b border-neutral-200 pb-5">
-          <div>
-            <h2 class="text-[28px] font-extrabold">협업</h2>
-            <h3 class="mt-3 text-[18px] font-extrabold text-accent">PR·문서화로 팀의 결정을 연결</h3>
-            <p class="mt-1 text-[13.5px] text-neutral-600">
-              팀의 의견을 듣고 결정 과정과 작업 기준을 기록해 프로젝트 96점, 5개 팀 중 <b>1위</b>에 기여
-            </p>
-          </div>
-          <div class="shrink-0 text-right">
-            <p class="text-[11px] font-bold tracking-[0.12em] text-neutral-400">FINAL EVALUATION</p>
-            <p class="mt-1 text-[27px] font-extrabold text-accent">96점 · 1위</p>
-            <p class="mt-1 text-[10.5px] text-neutral-500">협업 16/20 · 문서화 10/10</p>
-          </div>
-        </div>
-
-        <div class="mt-5 grid min-h-0 flex-1 grid-cols-3 gap-4">
-          <section class="flex min-h-0 flex-col border-r border-neutral-200 pr-4">
-            <h3 class="text-[15px] font-bold text-accent">브랜치 전략 · 코드 리뷰</h3>
-            <div class="mt-3 space-y-2 text-center text-[10.5px] font-semibold text-neutral-700">
-              <div class="rounded border border-gray-300 bg-slate-50 px-2 py-1.5">feature · fix · hotfix</div>
-              <div class="text-gray-400">↓</div>
-              <div class="rounded border border-gray-300 bg-slate-50 px-2 py-1.5">develop → release</div>
-              <div class="text-gray-400">↓</div>
-              <div class="rounded border border-accent bg-blue-50 px-2 py-1.5 text-accent">main (배포)</div>
-            </div>
-            <ul class="pf-list mt-4 px-3 text-[11.5px] leading-[1.6]">
-              <li>
-                <b>6종 브랜치(main·develop·release·feature·fix·hotfix)</b>로
-                운영하고, 모든 병합은 본인 외 1명 이상 Approve를 받은 PR로만
-                진행했습니다.
-              </li>
-              <li>
-                <b>3단계 점진 배포(6/22 · 7/1 · 7/6)</b>로 릴리스했고, 결제
-                웹훅·Storage 트래픽 이슈는 <b>hotfix 브랜치로 실서비스 중
-                대응</b>했습니다.
-              </li>
-            </ul>
-          </section>
-
-          <section class="flex min-h-0 flex-col border-r border-neutral-200 pr-4">
-            <h3 class="text-[15px] font-bold text-accent">일정 관리 · Notion WBS</h3>
-            <div class="mt-3 grid grid-cols-2 gap-2">
-              <figure>
-                <div class="flex h-[43mm] items-center justify-center overflow-hidden bg-white">
-                  <img
-                    src="./kanto/wbs-0524-0613.png"
-                    alt="Kanto WBS 캘린더 5/24~6/13"
-                    class="max-h-full max-w-full object-contain"
-                  />
-                </div>
-                <figcaption class="mt-1 text-center text-[9.5px] text-muted">5/24–6/13</figcaption>
-              </figure>
-              <figure>
-                <div class="flex h-[43mm] items-center justify-center overflow-hidden bg-white">
-                  <img
-                    src="./kanto/wbs-0614-0708.png"
-                    alt="Kanto WBS 캘린더 6/14~7/8"
-                    class="max-h-full max-w-full object-contain"
-                  />
-                </div>
-                <figcaption class="mt-1 text-center text-[9.5px] text-muted">6/14–7/8</figcaption>
-              </figure>
-            </div>
-            <p class="mt-4 text-[11.5px] leading-[1.65] text-neutral-700">
-              1~2주차에 인증·마켓 기본기를 다진 뒤, 3주차부터 거래 흐름이
-              안정되며 팀 전체가 관리자·운영 기능으로 무게 중심을 옮겼습니다.
-              4주차 Kanto Go 확장으로 기능이 늘자 5주차 계획을
-              <b>전 구간 성능 감사</b>로 조정했고, 6주차는 신규 기능 없이
-              안정화·검증에만 집중하도록 범위를 좁혔습니다.
-            </p>
-          </section>
-
-          <section class="flex min-h-0 flex-col">
-            <h3 class="text-[15px] font-bold text-accent">주간 보고서 · 동료 피드백</h3>
-            <div class="mt-3 flex h-[28mm] items-center justify-center overflow-hidden bg-white">
-              <img
-                src="./kanto/prompt.png"
-                alt="개인 보고서 → 팀 활동 보고서 → 팀 활동 흐름 프롬프트 단계"
-                class="max-h-full max-w-full object-contain"
-              />
-            </div>
-            <p class="mt-4 text-[11.5px] leading-[1.65] text-neutral-700">
-              매주 팀 전체 커밋 로그를 취합해 활동 보고서를 작성했습니다.
-              기여도 산정에는 Notion 회의록·자기보고 WBS는 물론 단순 커밋
-              개수도 왜곡 소지가 있다고 판단해 배제하고, 최초 작성자·코드
-              계보·PR 근거로 담당 영역과 주도 기능을 정리했습니다.
-            </p>
-            <p class="mt-3 text-[11.5px] leading-[1.65] text-neutral-700">
-              보고서 초안 작성에는 같은 AI(Claude)를
-              <b>단계마다 다르게 프롬프팅</b>했습니다. 팀원 개인 보고서
-              3건을 팀 활동 보고서로 합치는 프롬프트와, 이를 다시 팀 활동
-              흐름으로 요약하는 프롬프트를 나눠 순차 실행했습니다.
-            </p>
-            <blockquote class="mt-3 border-l-2 border-accent bg-blue-50/70 px-3 py-2.5 text-[10.5px] leading-[1.55] text-neutral-700">
-              “챙기지 못한 부분까지 짚어줘 프로젝트 퀄리티가 많이 높아졌습니다.”
-              <footer class="mt-1 font-bold text-accent">동료평가 15개 항목 모두 5.0</footer>
-            </blockquote>
-          </section>
-        </div>
-
-        <div class="mt-4 border-t border-gray-100 pt-3">
-          <p class="text-[10px] font-bold uppercase tracking-wider text-muted">
-            참고자료 (원본 PDF)
-          </p>
-          <ul class="mt-2 flex flex-wrap gap-x-5 gap-y-1">
-            <li>
-              <a
-                href="./kanto/김도혁_프로젝트활동_보고서.pdf"
-                target="_blank"
-                rel="noopener"
-                class="pf-link text-[11px]"
-                >개인 보고서</a
-              >
-            </li>
-            <li>
-              <a
-                href="./kanto/Kanto_주차별_팀활동_보고서.pdf"
-                target="_blank"
-                rel="noopener"
-                class="pf-link text-[11px]"
-                >팀 활동 보고서</a
-              >
-            </li>
-            <li>
-              <a
-                href="./kanto/Kanto_페이지별_팀원_기여도.pdf"
-                target="_blank"
-                rel="noopener"
-                class="pf-link text-[11px]"
-                >팀원 기여도</a
-              >
-            </li>
-            <li>
-              <a
-                href="./kanto/Kanto_팀활동흐름_주차별.pdf"
-                target="_blank"
-                rel="noopener"
-                class="pf-link text-[11px]"
-                >팀 활동 흐름</a
-              >
-            </li>
-            <li>
-              <a
-                href="./kanto/동료피드백_김도혁.pdf"
-                target="_blank"
-                rel="noopener"
-                class="pf-link text-[11px]"
-                >동료 피드백</a
-              >
-            </li>
-            <li>
-              <a
-                href="./kanto/최종프로젝트_평가표.pdf"
-                target="_blank"
-                rel="noopener"
-                class="pf-link text-[11px]"
-                >최종 평가표</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="slide-foot border-t-0">
-          <span>김도혁 Portfolio</span><span>08 / 13</span>
-        </div>
-      </section>
-
-      <!-- ========== 08. myBlog - 프로젝트 소개 ========== -->
-      <section class="slide landscape-fit break-after-page">
-        <p class="slide-kicker">04. Project - DoHyuk.dev · Details (1/2)</p>
+      <!-- ========== 07. myBlog - 프로젝트 소개 ========== -->
+      <section class="slide order-[9] landscape-fit break-after-page">
+        <p class="slide-kicker">04. DoHyuk.dev</p>
         <div class="mt-3 flex items-center justify-between">
           <div class="flex items-center gap-4">
             <div
@@ -1641,13 +1256,13 @@
         </div>
         <div class="slide-foot">
           <span>김도혁 Portfolio</span>
-          <span>09 / 13</span>
+          <span>09 / 11</span>
         </div>
       </section>
 
-      <!-- ========== 09. myBlog - 경험 ========== -->
-      <section class="slide compact-slide landscape-fit break-after-page">
-        <p class="slide-kicker">04. Project - DoHyuk.dev · Details (2/2)</p>
+      <!-- ========== 08. myBlog - 경험 ========== -->
+      <section class="slide order-[10] compact-slide landscape-fit break-after-page">
+        <p class="slide-kicker">04. DoHyuk.dev</p>
         <h2 class="mt-3 text-[28px] font-extrabold">구현과 문제 해결</h2>
 
         <div class="flex gap-2 flex-1 flex-col justify-evenly">
@@ -1784,7 +1399,7 @@
           </div>
         </div>
         <div class="slide-foot">
-          <span>김도혁 Portfolio</span><span>10 / 13</span>
+          <span>김도혁 Portfolio</span><span>10 / 11</span>
         </div>
       </section>
 
@@ -1941,9 +1556,9 @@
         </div>
       </section>
 
-      <!-- ========== 08. GentleLion - 프로젝트 소개 ========== -->
-      <section class="slide break-after-page">
-        <p class="slide-kicker">05. Project - GentleLion · Details (1/2)</p>
+      <!-- ========== 09. GentleLion - 프로젝트 소개 ========== -->
+      <section class="slide order-[7] break-after-page">
+        <p class="slide-kicker">03. GentleLion</p>
         <div class="mt-3 flex items-center justify-between">
           <div class="flex items-center gap-4">
             <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-black text-[20px] font-black tracking-tight text-white shadow-[0_0_10px_rgba(0,0,0,0.2)]">GL</div>
@@ -2001,12 +1616,12 @@
             </div>
           </div>
         </div>
-        <div class="slide-foot"><span>김도혁 Portfolio</span><span>11 / 13</span></div>
+        <div class="slide-foot"><span>김도혁 Portfolio</span><span>07 / 11</span></div>
       </section>
 
-      <!-- ========== 09. GentleLion - 구현과 검수 ========== -->
-      <section class="slide break-after-page">
-        <p class="slide-kicker">05. Project - GentleLion · Details (2/2)</p>
+      <!-- ========== 10. GentleLion - 구현과 검수 ========== -->
+      <section class="slide order-[8] break-after-page">
+        <p class="slide-kicker">03. GentleLion</p>
         <h2 class="mt-3 text-[28px] font-extrabold">구현과 검수</h2>
 
         <div class="mt-7 grid grid-cols-2 gap-5">
@@ -2042,7 +1657,7 @@
           </div>
           <p class="mt-5 text-[13px] leading-relaxed text-gray-300">팀장으로서 구현만 담당하지 않고, 화면 요구사항이 명세·코드·테스트까지 이어지도록 작업 기준을 연결했습니다.</p>
         </div>
-        <div class="slide-foot"><span>김도혁 Portfolio</span><span>12 / 13</span></div>
+        <div class="slide-foot"><span>김도혁 Portfolio</span><span>08 / 11</span></div>
       </section>
 
       <!-- ========== 11. Frontie - 프로젝트 소개 (보관) ========== -->
@@ -2472,8 +2087,8 @@
             <h3 class="mt-4 text-[19px] font-bold">서버 상태와 UI 상태가 뒤섞인 문제</h3>
             <p class="mt-3 text-[14px] leading-relaxed text-neutral-600">금칙어·스팸 관리 페이지의 서버 데이터를 TanStack Query로 분리하고, 저장 후 전체 재조회 대신 캐시를 교체했습니다.</p>
             <div class="mt-5 rounded-lg bg-slate-50 p-4 text-center">
-              <span class="text-[13px] text-neutral-500">GET 요청</span>
-              <p class="mt-1 text-[24px] font-extrabold text-accent">18회 → 3회</p>
+              <span class="text-[13px] text-neutral-500">금칙어·스팸 탭 반복 전환</span>
+              <p class="mt-1 text-[24px] font-extrabold text-accent">30초 내 GET 3회</p>
             </div>
           </div>
           <div class="pf-card">
@@ -2648,7 +2263,7 @@
 
       <!-- ========== 10. 끝 ========== -->
       <section
-        class="slide relative items-start justify-center overflow-hidden bg-slate-600 p-0! text-white"
+        class="slide order-[11] relative items-start justify-center overflow-hidden bg-slate-600 p-0! text-white"
       >
         <!-- 발자국 워터마크 (표지와 대칭, 반대쪽에 배치) -->
         <svg
