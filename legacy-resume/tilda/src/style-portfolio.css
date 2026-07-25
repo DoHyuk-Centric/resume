@@ -37,7 +37,7 @@
   .slide-kicker { @apply text-[12px] font-bold uppercase tracking-[0.25em] text-accent; }
 
   .slide-foot {
-    @apply absolute inset-x-[12mm] bottom-[7mm] flex items-center justify-between
+    @apply absolute inset-x-[12mm] bottom-[7mm] flex items-center justify-end
            border-t border-gray-100 pt-3 text-[10px] text-muted;
   }
 
