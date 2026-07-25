@@ -1031,9 +1031,7 @@
         <p class="slide-kicker">04. DoHyuk.dev</p>
         <div class="mt-3 flex items-center justify-between">
           <div class="flex items-center gap-4">
-            <div
-              class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white text-black shadow-[0_0_10px_rgba(0,0,0,0.2)]"
-            >
+            <div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#15202f] text-white shadow-[0_0_10px_rgba(0,0,0,0.2)]">
               <svg
                 viewBox="0 0 960 960"
                 class="h-10 w-10"
@@ -1057,29 +1055,17 @@
                 />
               </svg>
             </div>
-            <h2 class="text-[36px] font-extrabold leading-tight">
-              <a
-                href="https://dohyuk.dev"
-                target="_blank"
-                rel="noopener"
-                class="inline-flex items-start gap-1 hover:underline"
-                >DoHyuk.dev<svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="mt-1.5 h-3.5 w-3.5 shrink-0 text-neutral-400"
-                ><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path
-                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  /></svg
-              ></a>
-            </h2>
-            <div class="mt-2 h-4 w-0.5 bg-gray-400"></div>
-            <p class="mt-1 text-[16px] text-neutral-600">개인 기술 블로그</p>
+            <div>
+              <h2 class="text-[36px] font-extrabold leading-tight">DoHyuk.dev</h2>
+              <p class="mt-1 text-[15px] text-neutral-600">Vanilla JavaScript 기반 개인 기술 블로그</p>
+            </div>
           </div>
           <div class="flex items-center gap-2">
+            <a href="https://dohyuk.dev" target="_blank" rel="noopener" class="pf-icon-link border-slate-900 bg-slate-900 text-white hover:border-slate-700 hover:bg-slate-700 hover:text-white" title="DoHyuk.dev 사용자 페이지" aria-label="DoHyuk.dev 사용자 페이지">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" /><path d="M3 12h18" /><path d="M12 3c2.5 2.5 2.5 15 0 18" /><path d="M12 3c-2.5 2.5-2.5 15 0 18" />
+              </svg>
+            </a>
             <a
               href="https://github.com/DoHyuk-Centric/myBlog"
               target="_blank"
@@ -1115,48 +1101,54 @@
           </div>
         </div>
 
-        <div class="mt-6 flex gap-4">
-          <div class="flex w-[62mm] shrink-0 flex-col gap-3">
-            <img
-              src="./myblog/intro.png"
-              alt="인트로 화면"
-              class="w-full rounded-lg border border-gray-200 object-contain shadow-md"
-            />
-            <img
-              src="./myblog/devLog.png"
-              alt="DoHyuk.dev 블로그 목록 화면"
-              class="w-full rounded-lg border border-gray-200 object-contain shadow-md"
-            />
+        <div class="mt-8 grid h-[112mm] grid-cols-[1.15fr_0.85fr] gap-6">
+          <div class="flex h-full min-h-0 flex-col">
+            <figure class="min-h-0 w-full overflow-hidden rounded-xl">
+              <img
+                src="./myblog/devLog.png"
+                alt="DoHyuk.dev 블로그 목록 화면"
+                class="h-full w-full object-contain"
+              />
+            </figure>
+            <div class="mt-3 flex w-full items-center justify-start gap-3" aria-label="기술 스택">
+              <span class="flex h-9 w-9 items-end justify-end rounded-lg bg-[#F7DF1E] p-1 text-[12px] font-bold text-black" title="JavaScript">JS</span>
+              <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-[#17132B]" title="Vite">
+                <svg viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true">
+                  <defs><linearGradient id="dohyuk-vite-gradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#41D1FF" /><stop offset="1" stop-color="#BD34FE" /></linearGradient></defs>
+                  <path fill="url(#dohyuk-vite-gradient)" d="M2.5 3.8 12 21l9.5-17.2-9.5 1.7-9.5-1.7Z" />
+                  <path fill="#FFD62E" d="m13.4 2-5 10.2 3.6-.7-1.4 7.1 5.2-10.7-3.5.7L13.4 2Z" />
+                </svg>
+              </span>
+              <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-[#0F172A]" title="Tailwind CSS">
+                <svg viewBox="0 0 24 24" fill="#38BDF8" class="h-5 w-5" aria-hidden="true">
+                  <path d="M12 6c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.9.2 1.6.9 2.4 1.7 1.3 1.3 2.8 2.8 5.9 2.8 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.9-.2-1.6-.9-2.4-1.7C16.6 7.5 15.1 6 12 6ZM6 13.5c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.9.2 1.6.9 2.4 1.7 1.3 1.3 2.8 2.8 5.9 2.8 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.9-.2-1.6-.9-2.4-1.7-1.3-1.3-2.8-2.8-5.9-2.8Z" />
+                </svg>
+              </span>
+              <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-[#181818]" title="Supabase">
+                <svg viewBox="0 0 24 24" class="h-6 w-6" aria-hidden="true">
+                  <defs><linearGradient id="dohyuk-supabase-gradient" x1="7" y1="2" x2="17" y2="22"><stop stop-color="#3ECF8E" /><stop offset="1" stop-color="#16A36B" /></linearGradient></defs>
+                  <path fill="url(#dohyuk-supabase-gradient)" d="M13.4 2.6c.5-.7 1.6-.3 1.5.6l-1 6.1h5.2c.8 0 1.2 1 .7 1.6l-9.2 10.5c-.6.7-1.7.1-1.5-.7l1.1-6H5c-.8 0-1.2-1-.7-1.6l9.1-10.5Z" />
+                </svg>
+              </span>
+            </div>
           </div>
 
-          <div class="flex flex-1 flex-col justify-between">
+          <div class="flex flex-col gap-4">
             <div>
-              <h3 class="mb-3 text-[16px] ml-2 font-bold text-accent">개요</h3>
-              <ul class="pf-list ml-6 text-[13px]">
+              <h3 class="text-[16px] font-bold text-accent">프로젝트 개요</h3>
+              <ul class="pf-list mt-2 pl-5 text-[13px]">
+                <li>개인 프로젝트 · 2026.01 - 2026.03</li>
                 <li>
-                  첫 프론트엔드 프로젝트입니다. 직접 관리ㆍ유지보수가 가능한
-                  블로그가 필요했고, 당시 velog에서 이미지 버튼 클릭 시
-                  커서 위치에 줄바꿈 없이 마크다운이 바로 삽입돼 문장
-                  중간에 이미지 태그가 붙던 불편함을 직접 개선하고자
-                  만들었습니다.
+                  직접 관리·유지보수할 수 있는 기술 블로그와 마크다운 작성 경험의 불편함을 개선하기 위해 개발
                 </li>
                 <li>
-                  당시 다룰 수 있는 기술은 Vanilla JS였고, Vite의 멀티 페이지
-                  빌드로 페이지마다 필요한 스크립트만 로드하는 MPA 구조를
-                  직접 설계했습니다.
-                </li>
-                <li>
-                  About 페이지에 데스크탑 Windows XP·모바일 삼성 One UI
-                  테마를 인터랙션으로 재현해, 프로젝트 소개 자체를 하나의
-                  UI 실험으로 구성했습니다.
+                  Vanilla JavaScript와 Vite 멀티 페이지 빌드로 페이지별 스크립트만 로드하는 MPA 구조 설계
                 </li>
               </ul>
             </div>
-            <div>
-              <h3 class="mb-3 mt-4 text-[16px] ml-2 font-bold text-accent">
-                핵심 기능
-              </h3>
-              <ul class="pf-list ml-6 text-[13px]">
+            <div class="border-t border-gray-200 pt-2">
+              <h3 class="text-[16px] font-bold text-accent">핵심 기능</h3>
+              <ul class="pf-list mt-3 pl-5 text-[13px]">
                 <li>
                   <b>마크다운 에디터</b> - 블록 단위 프리뷰로 8.2배 빠른
                   렌더링, 자체 npm 패키지(markdown-block-preview)로 개발·배포
@@ -1172,88 +1164,17 @@
                 <li><b>소셜 로그인</b> - Supabase Auth 기반 GitHub·Google OAuth</li>
               </ul>
             </div>
+            <div class="border-t border-gray-200 pt-2">
+              <p class="text-[11px] font-bold uppercase tracking-[.16em] text-muted">Project Environment</p>
+              <ul class="pf-list mt-3 pl-5 text-[12px]">
+                <li><b>Frontend</b> · JavaScript, Vite(MPA), Tailwind CSS v4</li>
+                <li><b>Data &amp; Auth</b> · PostgreSQL, Supabase Auth, Edge Function</li>
+                <li><b>Deploy</b> · Vercel, GitHub Actions(CI·gitleaks)</li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div class="mt-6 flex flex-1 items-start gap-4">
-          <div class="w-1/2">
-            <h3 class="mb-3 ml-4 text-[16px] font-bold text-accent">
-              프로젝트 정보
-            </h3>
-            <ul class="ml-4 flex list-none flex-col gap-2.5">
-              <li class="grid grid-cols-[90px_1fr] items-baseline">
-                <span class="text-[13px] font-bold text-ink">개발 인원</span>
-                <span class="text-[13px] text-neutral-600"
-                  >개인 프로젝트</span
-                >
-              </li>
-              <li class="grid grid-cols-[90px_1fr] items-baseline">
-                <span class="text-[13px] font-bold text-ink">플랫폼</span>
-                <span class="text-[13px] text-neutral-600">Web</span>
-              </li>
-              <li class="grid grid-cols-[90px_1fr] items-baseline">
-                <span class="text-[13px] font-bold text-ink">개발 기간</span>
-                <span class="text-[13px] text-neutral-600"
-                  >2026.01 - 2026.03</span
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="flex-1">
-            <h3 class="mb-3 ml-4 text-[16px] font-bold text-accent">
-              개발 환경
-            </h3>
-            <ul class="ml-4 flex list-none flex-col gap-2.5">
-              <li class="grid grid-cols-[90px_1fr] items-baseline">
-                <span class="text-[13px] font-bold text-ink">언어</span>
-                <span class="text-[13px] text-neutral-600">JavaScript</span>
-              </li>
-              <li class="grid grid-cols-[90px_1fr] items-baseline">
-                <span class="text-[13px] font-bold text-ink">프레임워크</span>
-                <span class="text-[13px] text-neutral-600"
-                  >Vanilla JS · Vite(MPA)</span
-                >
-              </li>
-              <li class="grid grid-cols-[90px_1fr] items-baseline">
-                <span class="text-[13px] font-bold text-ink">스타일링</span>
-                <span class="text-[13px] text-neutral-600"
-                  >Tailwind CSS v4</span
-                >
-              </li>
-              <li class="grid grid-cols-[90px_1fr] items-baseline">
-                <span class="text-[13px] font-bold text-ink">DB</span>
-                <span class="text-[13px] text-neutral-600"
-                  >PostgreSQL(Supabase)</span
-                >
-              </li>
-              <li class="grid grid-cols-[90px_1fr] items-baseline">
-                <span class="text-[13px] font-bold text-ink">인증</span>
-                <span class="text-[13px] text-neutral-600"
-                  >Supabase Auth(GitHub·Google OAuth)</span
-                >
-              </li>
-              <li class="grid grid-cols-[90px_1fr] items-baseline">
-                <span class="text-[13px] font-bold text-ink">API</span>
-                <span class="text-[13px] text-neutral-600"
-                  >Edge Function(공공데이터포털 공휴일 프록시)</span
-                >
-              </li>
-              <li class="grid grid-cols-[90px_1fr] items-baseline">
-                <span class="text-[13px] font-bold text-ink">라이브러리</span>
-                <span class="text-[13px] text-neutral-600"
-                  >자체 npm 패키지(markdown-block-preview)</span
-                >
-              </li>
-              <li class="grid grid-cols-[90px_1fr] items-baseline">
-                <span class="text-[13px] font-bold text-ink">배포/인프라</span>
-                <span class="text-[13px] text-neutral-600"
-                  >Vercel · GitHub Actions(CI, gitleaks)</span
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
         <div class="slide-foot">
           <span>김도혁 Portfolio</span>
           <span>09 / 11</span>
