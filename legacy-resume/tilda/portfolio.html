@@ -985,7 +985,7 @@
           </div>
 
           <div class="relative flex flex-col gap-14 py-1 pl-11">
-            <div class="absolute bottom-42 left-[15px] top-5 w-px bg-gradient-to-b from-slate-300 via-red-300 to-blue-400"></div>
+            <div class="absolute bottom-24 left-[15px] top-5 w-px bg-gradient-to-b from-slate-300 via-red-300 to-blue-400"></div>
 
             <div class="relative">
               <span class="absolute -left-11 top-0 flex h-8 w-8 items-center justify-center rounded-full border-4 border-white bg-slate-900 text-[10px] font-extrabold text-white shadow-sm">01</span>
@@ -1103,11 +1103,11 @@
 
         <div class="mt-8 grid h-[112mm] grid-cols-[1.15fr_0.85fr] gap-6">
           <div class="flex h-full min-h-0 flex-col">
-            <figure class="min-h-0 w-full overflow-hidden rounded-xl">
+            <figure class="min-h-0 overflow-hidden rounded-xl mt-4">
               <img
                 src="./myblog/devLog.png"
                 alt="DoHyuk.dev 블로그 목록 화면"
-                class="h-full w-full object-contain"
+                class="object-contain"
               />
             </figure>
             <div class="mt-3 flex w-full items-center justify-start gap-3" aria-label="기술 스택">
@@ -1135,11 +1135,11 @@
 
           <div class="flex flex-col gap-4">
             <div>
-              <h3 class="text-[16px] font-bold text-accent">프로젝트 개요</h3>
+              <h3 class="text-[16px] font-bold text-accent">개요</h3>
               <ul class="pf-list mt-2 pl-5 text-[13px]">
                 <li>개인 프로젝트 · 2026.01 - 2026.03</li>
                 <li>
-                  직접 관리·유지보수할 수 있는 기술 블로그와 마크다운 작성 경험의 불편함을 개선하기 위해 개발
+                  관리·유지보수할 수 있는 기술 블로그가 필요하다고 생각해 개발
                 </li>
                 <li>
                   Vanilla JavaScript와 Vite 멀티 페이지 빌드로 페이지별 스크립트만 로드하는 MPA 구조 설계
@@ -1147,29 +1147,27 @@
               </ul>
             </div>
             <div class="border-t border-gray-200 pt-2">
-              <h3 class="text-[16px] font-bold text-accent">핵심 기능</h3>
               <ul class="pf-list mt-3 pl-5 text-[13px]">
                 <li>
-                  <b>마크다운 에디터</b> - 블록 단위 프리뷰로 8.2배 빠른
-                  렌더링, 자체 npm 패키지(markdown-block-preview)로 개발·배포
+                  <p class="text-[15px] font-bold">npm 패키지</p>
+                  블록 단위 프리뷰로 8.2배 빠른 렌더링, 자체 npm 패키지(markdown-block-preview)로 개발·배포
                 </li>
                 <li>
-                  <b>게시글 관리</b> - 작성·수정·삭제 CRUD, 임시저장·휴지통
-                  상태 머신으로 실수 방지
+                  <p class="text-[15px] font-bold">API 연동</p>
+                  공공데이터 포털 API를 Supabase Edge Function으로 프록시에 API키를 은닉하고 공휴일 조회 구현
                 </li>
                 <li>
-                  <b>이미지 지연 업로드</b> - blob 임시 주소로 미리보기,
-                  발행 시점에만 실제 업로드해 고아 이미지 방지
+                  <p class="text-[15px] font-bold">게시글 상태 관리</p>
+                  발행·임시저장·휴지통의 3단계 상태 관리와 게시글 ID 기반 중복 생성 방지를 활용하여 게시글 상태 관리              
                 </li>
-                <li><b>소셜 로그인</b> - Supabase Auth 기반 GitHub·Google OAuth</li>
-              </ul>
-            </div>
-            <div class="border-t border-gray-200 pt-2">
-              <p class="text-[11px] font-bold uppercase tracking-[.16em] text-muted">Project Environment</p>
-              <ul class="pf-list mt-3 pl-5 text-[12px]">
-                <li><b>Frontend</b> · JavaScript, Vite(MPA), Tailwind CSS v4</li>
-                <li><b>Data &amp; Auth</b> · PostgreSQL, Supabase Auth, Edge Function</li>
-                <li><b>Deploy</b> · Vercel, GitHub Actions(CI·gitleaks)</li>
+                <li>
+                  <p class="text-[15px] font-bold">이미지 최적화</p>
+                  작성 중에는 Blob URL로 미리보기를 제공하고, 발행 시점에만 Supabase Storage 업로드 및 마크다운 URL 치환하여 이미지 지연 업로드 구현
+                </li>
+                <li>
+                  <p class="text-[15px] font-bold">접근성</p>
+                  ARIA 상태 속성과 inert, 포커스 이동·복원, Escape 키 처리를 적용해 메뉴와 테마 전환의 키보드·스크린 리더 접근성 개선
+                </li>
               </ul>
             </div>
           </div>
@@ -1186,138 +1184,101 @@
         <p class="slide-kicker">04. DoHyuk.dev</p>
         <h2 class="mt-3 text-[28px] font-extrabold">구현과 문제 해결</h2>
 
-        <div class="flex gap-2 flex-1 flex-col justify-evenly">
-          <div>
-            <div class="flex gap-3 mb-4">
-              <div class="flex items-center my-auto flex-col gap-4 p-4 shadow-[0_0_4px_rgba(0,0,0,0.2)] rounded-xl">
-                <div class="w-[64mm] bg-white">
-                  <img
-                    src="./myblog/npm.png"
-                    alt="myBlog 에디터에 실제 적용된 블록 단위 프리뷰"
-                    class="max-h-full object-contain"
-                  />
-                </div>
-                <div class="w-[64mm] bg-white">
-                  <img
-                    src="./myblog/markdown-npm.PNG"
-                    alt="markdown-block-preview npm 배포 페이지"
-                    class="max-h-full object-contain"
-                  />
-                </div>
-                <div class="w-[56mm] bg-white">
-                  <img
-                    src="./myblog/pref.png"
-                    alt="성능 실측"
-                    class="max-h-full object-contain"
-                  />
-                </div>
-              </div>
+        <div class="mt-3 grid grid-cols-2 gap-4 divide-x divide-gray-200">
+          <article class="flex min-h-0 flex-col bg-white p-4">
+            <div class="flex items-center justify-between gap-3">
+              <h3 class="text-[18px] font-extrabold text-neutral-900">
+                변경 블록만 렌더링하는 미리보기
+              </h3>
+              <a href="https://hyeeoooook.tistory.com/75" target="_blank" rel="noopener"
+                aria-label="블로그에서 markdown-block-preview 문제 해결 글 보기" title="블로그 글 보기"
+                class="inline-flex h-8 w-8 shrink-0 transition hover:opacity-80">
+                <svg viewBox="0 0 50 50" class="h-8 w-8" aria-hidden="true">
+                  <path d="M50 25c0 13.807-11.193 25-25 25S0 38.807 0 25 11.193 0 25 0s25 11.193 25 25" fill="#FF5A4A" />
+                  <g fill="#FFF">
+                    <path d="M25.544 14.674a2.717 2.717 0 1 0 0 5.435 2.717 2.717 0 0 0 0-5.435M16.848 14.674a2.717 2.717 0 1 0 0 5.435 2.717 2.717 0 0 0 0-5.435M34.24 14.674a2.718 2.718 0 1 0 0 5.435 2.718 2.718 0 0 0 0-5.435M25.544 23.37a2.718 2.718 0 1 0 0 5.435 2.718 2.718 0 0 0 0-5.435M25.544 32.065a2.718 2.718 0 1 0 0 5.436 2.718 2.718 0 0 0 0-5.436" />
+                  </g>
+                </svg>
+              </a>
+            </div>
+
+            <div class="mt-4">
+              <figure>
+                <img src="./myblog/markdown-npm.PNG" alt="markdown-block-preview npm 배포 페이지"
+                  class="h-full w-full object-contain" />
+                <figcaption class="mt-1 text-right text-[10px] text-muted">npm 패키지 공개·문서화</figcaption>
+              </figure>
+            </div>
+
+            <div class="mt-4">
               <div>
-                <h3 class="text-[16px] mb-3 font-bold text-accent">
-                  <a
-                    href="https://hyeeoooook.tistory.com/75"
-                    target="_blank"
-                    rel="noopener"
-                    class="pf-title-link"
-                    >markdown-block-preview · 자체 npm 패키지<svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="h-3.5 w-3.5 shrink-0"
-                    ><path d="M15 3h6v6" /><path d="M10 14 21 3" /><path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      /></svg
-                  ></a>
-                </h3>
-                <p class="text-[13px] ml-4">
-                  마크다운 에디터에서 입력할 때마다 <code>innerHTML</code>을
-                  통째로 교체하며 미리보기 전체를 다시 그리다 보니, 글자
-                  하나 칠 때마다 미리보기 영역이 통째로 깜빡거렸습니다.
-                  <br />또한, 글이 길어질수록 재렌더링하는 영역이 많아 성능이 떨어질 것으로 판단했습니다.
-                </p>
-                <h4 class="text-[14px] mt-1 ml-4 text-accent font-semibold">원인 실측</h4>
-                <ul class="pf-list pl-6">
-                  <li>
-                    전체 문서 재파싱 <b>0.98ms</b> vs 블록 1개만 파싱
-                    <b>0.005ms</b> → 파싱은 병목이 아님
-                  </li>
-                  <li>
-                    전체 <code>innerHTML</code> 반영 <b>13.45ms</b> vs 블록
-                    1개만 반영 <b>0.18ms</b> → <b>DOM 트리 재구성이 병목</b>
-                  </li>
-                  <li>
-                    naive 방식(매번 전체 재파싱 + innerHTML 통째 교체)은
-                    <b>700블록부터 프레임 예산(16.6ms)을 초과</b>
-                  </li>
-                </ul>
-                <h4 class="text-[14px] mt-1 ml-4 text-accent font-semibold">해결</h4>
-                <ul class="pf-list px-6">
-                  <li>
-                    빈 줄 기준으로 문서를 블록 단위로 나누고, 이전 블록과 비교해 <b>바뀐 블록만</b>
-                    DOM에 반영, 구조가 바뀌면 전체 재구성으로 폴백
-                  </li>
-                  <li>
-                    마땅한 라이브러리가 없어 <b>별도 npm 패키지로 직접
-                    개발·배포</b>해 이 프로젝트 글쓰기 에디터에 적용
-                  </li>
-                  <li>
-                    문서 길이와 무관하게 편집당
-                    <b>0.03~0.07ms(naive 대비 최대 8.2배 개선)</b> 유지
-                  </li>
-                </ul>
+                <p class="text-[13px] font-bold">원인</p>
+                <p class="mt-1 ml-2 text-[13px] leading-[1.5]">글을 입력할 때마다 우측 미리보기 전체가 다시 렌더링되어 화면이 깜빡이고 작성 흐름을 방해했습니다.</p>
               </div>
             </div>
-          </div>
-          <div class="border-t border-gray-200 pt-6">
-            <div class="flex items-start gap-4 mb-4">
-              <div class="flex flex-col my-auto gap-4 p-4 shadow-[0_0_4px_rgba(0,0,0,0.2)] rounded-xl">
-                <div class="w-[64mm] bg-white">
-                  <img
-                    src="./myblog/imageupload.png"
-                    alt="blob 임시 주소로 이미지를 미리보기하는 에디터 화면"
-                    class="max-h-full object-contain"
-                  />
-                </div>
-                <div class="w-[64mm] bg-white">
-                  <img
-                    src="./myblog/blob.png"
-                    alt="blob 임시 주소로 이미지를 미리보기하는 에디터 화면"
-                    class="max-h-full object-contain"
-                  />
-                </div>
-              </div>
-              <div>
-                <h3 class="text-[16px] mb-3 font-bold text-accent">
-                  이미지 지연 업로드 패턴
-                </h3>
-                <p class="text-[13px] ml-4">
-                  처음엔 이미지를 선택하는 즉시 Storage에 업로드했는데, 임시저장
-                  없이 중간에 나가버리면 쓰이지 않는 이미지가 Storage에 그대로
-                  쌓이는 문제가 있었습니다.
-                </p>
-                <ul class="pf-list mt-2 pl-6">
-                  <li>
-                    <b>발행 시점에만</b> 실제 업로드하도록 바꿨는데, 그
-                    전까지 미리보기는 어떻게 보여줄지가 새로운 문제였습니다.
-                  </li>
-                  <li>
-                    <b>URL.createObjectURL()</b>로 만든 <b>blob: 임시 주소</b>로
-                    해결했습니다 - 파일을 선택하면 브라우저가 그 파일을 가리키는
-                    로컬 주소를 즉석에서 만들어 미리보기에 쓰고, 실제 파일은
-                    별도 Map에 그 주소와 함께 잠깐 담아뒀습니다.
-                  </li>
-                  <li>
-                    발행 버튼을 누른 시점에만 이 주소들을 찾아 실제로
-                    업로드하고, 마크다운 속 주소를 진짜 업로드된 주소로
-                    바꿔치기해 불필요한 업로드와 고아 이미지 발생을 줄였습니다.
-                  </li>
-                </ul>
-              </div>
+
+            <div class="mt-4">
+              <p class="text-[12px] font-bold text-accent">해결</p>
+              <ul class="pf-list mt-1 !pl-4 text-[11.5px] leading-[1.45]">
+                <li>문서를 블록으로 나눠 이전 결과와 비교하고 <b>변경된 블록만 DOM에 반영</b></li>
+                <li>구조 변경 시 전체 재구성으로 폴백하는 로직을 패키지로 분리·배포</li>
+                <li>50블록 기준 <b>0.03~0.07ms, naive 대비 최대 8.2배 개선</b></li>
+              </ul>
             </div>
-          </div>
+            
+            <div class="mt-4">
+              <p class="text-[12px] font-bold text-neutral-900">병목 측정</p>
+              <ul class="pf-list mt-1 !pl-4 text-[11.5px] leading-[1.45]">
+                <li>파싱보다 전체 <code>innerHTML</code> 교체에 따른 <b>DOM 트리 재구성</b>이 병목</li>
+                <li>전체 DOM 반영 <b>13.45ms</b> vs 변경 블록 반영 <b>0.18ms</b></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="flex min-h-0 flex-col bg-white p-4">
+            <div class="flex items-center justify-between gap-3">
+              <h3 class="mt-1 text-[18px] font-extrabold text-neutral-900">
+                발행 시점 이미지 지연 업로드
+              </h3>
+            </div>
+
+            <div class="mt-4">
+              <figure>
+                <img src="./myblog/blob.png" alt="마크다운에 삽입된 Blob 임시 URL"
+                  class="h-[62mm] w-full object-contain" />
+                <figcaption class="pr-16 mt-1 text-center text-[10px] text-right text-muted">Blob 임시 URL</figcaption>
+              </figure>
+            </div>
+
+            <div class="mt-4">
+              <p class="text-[12px] font-bold">문제</p>
+              <p class="mt-1 pl-2 text-[11.5px] leading-[1.5] text-neutral-700">
+                이미지를 첨부하는 즉시 Storage에 업로드하면, 글을 발행하지 않고 이탈했을 때 사용되지 않는 이미지가 남았습니다.
+              </p>
+            </div>
+
+            <div class="mt-4">
+              <p class="text-[12px] font-bold text-accent">해결</p>
+              <p class="mt-1 pl-2 text-[11.5px] leading-[1.5] text-neutral-700">
+                Blob URL로 로컬 미리보기를 제공하고, 발행 시점에만 이미지를 Storage에 업로드한 뒤 마크다운의 임시 URL을 실제 URL로 치환했습니다.
+              </p>
+            </div>
+
+            <div class="mt-3">
+              <p class="text-[12px] font-bold">업로드 흐름</p>
+              <ol class="mt-2 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-2 text-center text-[10.5px] font-semibold">
+                <li class="rounded-lg bg-slate-100 px-2 py-3">Blob URL<br />미리보기</li>
+                <li aria-hidden="true" class="text-accent">→</li>
+                <li class="rounded-lg bg-slate-100 px-2 py-3">파일·URL<br />Map 보관</li>
+                <li aria-hidden="true" class="text-accent">→</li>
+                <li class="rounded-lg bg-blue-100 px-2 py-3 text-blue-800">발행 시 업로드<br />URL 치환</li>
+              </ol>
+              <ul class="pf-list mt-3 !pl-4 text-[11.5px] leading-[1.45]">
+                <li><code>URL.createObjectURL()</code>로 업로드 전 로컬 미리보기 제공</li>
+                <li>발행 시에만 Supabase Storage에 업로드해 <b>불필요한 저장과 불필요 이미지 발생 감소</b></li>
+              </ul>
+            </div>
+          </article>
         </div>
         <div class="slide-foot">
           <span>김도혁 Portfolio</span><span>10 / 11</span>
@@ -1601,7 +1562,7 @@
         <h2 class="mt-3 text-[28px] font-extrabold">화면 기획부터 API 연동·E2E 검수까지</h2>
         <p class="mt-2 text-[14px] text-neutral-600">요구사항을 화면·API·테스트까지 연결한 개발 과정</p>
 
-        <div class="mt-5 grid grid-cols-2">
+        <div class="mt-4 grid grid-cols-2">
           <div class="border-b border-r border-gray-300 px-6 pb-6">
             <p class="text-[11px] font-bold uppercase tracking-wider text-muted">01 · 화면 기획</p>
             <h3 class="mt-3 text-[17px] font-bold text-accent">요구사항을 화면·데이터·일정 단위로 구체화</h3>
@@ -1642,7 +1603,7 @@
           </div>
         </div>
 
-        <div class="mt-4 rounded-xl bg-white px-7 py-5 text-ink">
+        <div class="rounded-xl bg-white px-7 py-5 text-ink">
           <p class="text-[11px] font-bold uppercase tracking-[.16em] text-muted">Development &amp; Collaboration Flow</p>
           <div class="mt-4 flex items-center justify-between gap-2 text-center text-[11px] font-semibold">
             <span class="flex-1 rounded-lg bg-neutral-100 px-2 py-3">요구사항 분석</span><span class="shrink-0 text-accent">→</span>
