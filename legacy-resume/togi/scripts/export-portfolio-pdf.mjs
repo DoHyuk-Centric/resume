@@ -36,7 +36,7 @@ try {
       // 1번 표지는 좌측 장식 SVG를 의도적으로 캔버스 밖에 배치합니다.
       .filter((item) => item.height > 1 || (item.slide !== 1 && item.width > 1)),
   }));
-  if (validation.slideCount !== 11 || !validation.hasProjectFocus || validation.overflowSlides.length) {
+  if (validation.slideCount !== 12 || !validation.hasProjectFocus || validation.overflowSlides.length) {
     throw new Error(`포트폴리오 레이아웃 검증 실패: ${JSON.stringify(validation)}`);
   }
 
