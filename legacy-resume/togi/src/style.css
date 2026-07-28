@@ -53,4 +53,30 @@
   .contact-item {
     @apply inline-flex items-center px-2 py-0.5;
   }
+
+  /* 프로젝트 유형 책갈피: 팀은 파랑, 개인·미니 프로젝트는 회색 */
+  .project-summary {
+    @apply relative;
+  }
+  .project-summary h3 {
+    @apply relative pl-5;
+  }
+  .project-summary h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    width: 0.7rem;
+    height: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 76%, 0 100%);
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .project-summary-team h3::before {
+    @apply bg-blue-500;
+  }
+  .project-summary-personal h3::before {
+    @apply bg-gray-400;
+  }
+
 }
