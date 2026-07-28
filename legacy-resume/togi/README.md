@@ -10,8 +10,8 @@
 npm run dev:resume
 ```
 
-- 이력서: `http://localhost:3000/legacy-resume/tilda/resume.html`
-- 포트폴리오: `http://localhost:3000/legacy-resume/tilda/portfolio.html`
+- 이력서: `http://localhost:3000/legacy-resume/togi/resume.html`
+- 포트폴리오: `http://localhost:3000/legacy-resume/togi/portfolio.html`
 
 이 명령은 `legacy-resume`를 루트로 하는 Vite 서버를 3000번 포트에서
 실행하고 Tilda 이력서를 자동으로 엽니다.
