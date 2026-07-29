@@ -1138,25 +1138,55 @@
         <p class="slide-kicker">02. Kanto</p>
         <div class="mt-4 flex items-end justify-between">
           <div>
-            <h2 class="text-[32px] font-extrabold">반응형 내정보 페이지</h2>
+            <h2 class="text-[32px] font-extrabold">내정보 페이지</h2>
           </div>
         </div>
 
-        <div class="mb-[4mm] mt-5 grid min-h-0 flex-1 grid-cols-[1.2fr_0.8fr] gap-6">
-          <figure class="grid min-h-0 grid-cols-[minmax(0,1fr)_140px] items-start gap-3 overflow-hidden p-3">
-            <img
-              src="./kanto/profile.PNG"
-              alt="Kanto 데스크톱 내정보 페이지"
-              class="h-full min-h-0 w-full object-contain object-top"
-            />
-            <img
-              src="./kanto/내정보 모바일.png"
-              alt="Kanto 모바일 내정보 페이지"
-              class="h-full min-h-0 w-full object-contain object-top"
-            />
+        <div class="relative mb-[4mm] mt-5 min-h-0 flex-1">
+          <figure class="absolute bottom-[4mm] right-0 z-0 flex h-full w-[50%] items-end justify-end">
+            <div class="relative w-full pb-[16mm]">
+              <div class="relative mx-auto w-[92%]">
+                <div class="overflow-hidden rounded-t-xl border-[4px] border-b-0 border-slate-800 bg-white shadow-xl">
+                  <img
+                    src="./kanto/내정보.png"
+                    alt="Kanto 데스크톱 내정보 페이지"
+                    class="aspect-[1.38/1] w-full object-cover object-top"
+                  />
+                </div>
+                <div class="relative h-[5mm] rounded-b-[5px] bg-slate-300 shadow-md">
+                  <div class="absolute left-1/2 top-0 h-[1.4mm] w-[18%] -translate-x-1/2 rounded-b bg-slate-400"></div>
+                </div>
+                <div class="mx-auto h-[2mm] w-[108%] -translate-x-[4%] rounded-b-full bg-slate-400 shadow-sm"></div>
+              </div>
+
+              <div class="absolute bottom-[4mm] right-[1mm] z-20 w-[34mm]">
+                <div class="rounded-[5mm] border-[3px] border-slate-800 bg-slate-800 p-[2px] shadow-2xl">
+                  <div class="relative overflow-hidden rounded-[3.8mm] bg-white">
+                    <div class="absolute left-1/2 top-[1.2mm] z-10 h-[1.4mm] w-[9mm] -translate-x-1/2 rounded-full bg-slate-800"></div>
+                    <img
+                      src="./kanto/알림 모바일.png"
+                      alt="Kanto 모바일 내정보 페이지"
+                      class="block h-auto w-full"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="absolute bottom-[4mm] right-[40mm] z-20 w-[34mm]">
+                <div class="rounded-[5mm] border-[3px] border-slate-800 bg-slate-800 p-[2px] shadow-2xl">
+                  <div class="relative overflow-hidden rounded-[3.8mm] bg-white">
+                    <div class="absolute left-1/2 top-[1.2mm] z-10 h-[1.4mm] w-[9mm] -translate-x-1/2 rounded-full bg-slate-800"></div>
+                    <img
+                      src="./kanto/내정보 모바일.png"
+                      alt="Kanto 모바일 알림 페이지"
+                      class="block h-auto w-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </figure>
 
-          <article class="flex min-h-0 flex-col">
+          <article class="relative z-10 flex min-h-0 w-[45%] flex-col">
             <h3 class="text-[22px] font-extrabold">서버 선조회로 안정적인 초기 화면 구성</h3>
             <p class="mt-2 text-[13.5px] leading-[1.7] text-neutral-600">
               사용자 정보와 소셜 계정 상태를 안정적으로 제공하면서, 모바일과 데스크톱에서 탐색하기 쉬운 내정보 화면을 구현했습니다.
@@ -1165,23 +1195,26 @@
             <div class="mt-5 divide-y divide-neutral-200 border-y border-neutral-200 text-[13px] leading-[1.6] text-neutral-600">
               <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
                 <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">반응형 UI</b>
-                <span>데스크톱은 세로 사이드바, 모바일은 가로 스크롤 탭으로 구성해 화면 크기에 맞게 탐색 구조 전환</span>
+                <ul class="list-disc space-y-1 pl-4">
+                  <li>Tailwind CSS의 <code>md(768px)</code>를 기준으로 모바일과 PC 레이아웃 분기</li>
+                  <li><code>ProfileAside</code>·<code>ProfileMobileTabs</code>를 분리해 PC는 세로 사이드바, 모바일은 가로 스크롤 탭으로 렌더링하고 동일한 <code>activeTab</code> 상태 공유</li>
+                </ul>
               </div>
               <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
-                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">서버 컴포넌트</b>
-                <span>비동기 서버 컴포넌트에서 인증·프로필·알림·소셜 계정 정보를 선조회해 초기 Props로 전달</span>
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">소셜 연동 UX 개선</b>
+                <ul class="list-disc space-y-1 pl-4">
+                  <li><b class="text-slate-700">문제</b>: 소셜 계정 연동 상태를 클라이언트에서 조회해 완료 전까지 스켈레톤이 노출되고 상태 확인이 지연</li>
+                  <li><b class="text-slate-700">해결</b>: 서버 컴포넌트에서 소셜 identities를 선조회해 <code>initialIdentities</code> Props로 전달</li>
+                  <li><b class="text-slate-700">결과</b>: 마운트 후 추가 조회와 스켈레톤을 제거하고 첫 화면부터 실제 계정 연동 상태 표시</li>
+                </ul>
               </div>
               <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
-                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">클라이언트 분리</b>
-                <span>탭 전환·프로필 수정·소셜 계정 연결과 해제처럼 사용자 상호작용이 필요한 영역만 클라이언트에서 관리</span>
-              </div>
-              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
-                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">깜빡임 해결</b>
-                <span>연동 상태를 서버에서 먼저 전달해 ‘연결하기’가 잠시 노출된 뒤 ‘연결됨’으로 바뀌는 현상을 제거</span>
-              </div>
-              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
-                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">로딩 경험</b>
-                <span>비동기 데이터가 필요한 구간에는 스켈레톤을 적용해 레이아웃 변화와 빈 화면 노출 최소화</span>
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">거래내역 개선</b>
+                <ul class="list-disc space-y-1 pl-4">
+                  <li><b class="text-slate-700">문제</b>: 게시글 삭제 후 거래내역에서 제목이 사라지는 문제 발생</li>
+                  <li><b class="text-slate-700">해결</b>: 8개 단위 페이지네이션·상태 필터링을 적용하고, 거래 시점 제목 스냅샷 저장과 FK <code>SET NULL</code> 구조 도입</li>
+                  <li><b class="text-slate-700">결과</b>: 유효한 거래만 탐색하고 게시글 삭제 후에도 거래 당시 제목을 유지하도록 게시글과 거래 기록의 생명주기 분리</li>
+                </ul>
               </div>
             </div>
           </article>
@@ -1201,16 +1234,40 @@
           </div>
         </div>
 
-        <div class="mb-[4mm] mt-5 grid min-h-0 flex-1 grid-cols-[1.12fr_.88fr] gap-6">
-          <figure class="flex min-h-0 items-start overflow-hidden rounded-xl border border-neutral-200 bg-slate-900 p-3">
-            <img
-              src="./kanto/terms-service.png"
-              alt="Notion CMS로 관리하는 Kanto 서비스 이용약관"
-              class="h-full w-full rounded-lg object-cover object-top"
-            />
+        <div class="relative mb-[4mm] mt-5 min-h-0 flex-1">
+          <figure class="absolute bottom-[4mm] right-0 z-0 flex h-full w-[50%] items-end justify-end">
+            <div class="relative w-full pb-[16mm]">
+              <div class="relative mx-auto w-[92%]">
+                <div class="overflow-hidden rounded-t-xl border-[4px] border-b-0 border-slate-800 bg-white shadow-xl">
+                  <img
+                    src="./kanto/이용약관.png"
+                    alt="Notion CMS로 관리하는 Kanto 데스크톱 서비스 이용약관"
+                    class="aspect-[1.44/1] w-full object-cover object-top"
+                  />
+                </div>
+                <div class="relative h-[5mm] rounded-b-[5px] bg-slate-300 shadow-md">
+                  <div class="absolute left-1/2 top-0 h-[1.4mm] w-[18%] -translate-x-1/2 rounded-b bg-slate-400"></div>
+                </div>
+                <div class="mx-auto h-[2mm] w-[108%] -translate-x-[4%] rounded-b-full bg-slate-400 shadow-sm"></div>
+              </div>
+
+              <div class="absolute bottom-[8mm] right-[1mm] z-20 w-[34mm]">
+                <div class="rounded-[5mm] border-[3px] border-slate-800 bg-slate-800 p-[2px] shadow-2xl">
+                  <div class="relative overflow-hidden rounded-[3.8mm] bg-white">
+                    <div class="absolute left-1/2 top-[1.2mm] z-10 h-[1.4mm] w-[9mm] -translate-x-1/2 rounded-full bg-slate-800"></div>
+                    <img
+                      src="./kanto/회원가입 이용약관.PNG"
+                      alt="Kanto 모바일 회원가입 서비스 이용약관"
+                      class="block h-auto w-full"
+                    />
+                  </div>
+                </div>
+                <p class="absolute left-6 top-full mt-2 w-full text-center text-[11px] text-gray-700">* 회원가입 약관</p>
+              </div>
+            </div>
           </figure>
 
-          <article class="flex min-h-0 flex-col">
+          <article class="relative z-10 flex min-h-0 w-[45%] flex-col">
             <h3 class="text-[22px] font-extrabold">배포 없이 수정하고, 캐시로 빠르게 조회</h3>
             <p class="mt-2 text-[13.5px] leading-[1.7] text-neutral-600">
               약관 수정마다 코드를 다시 배포하지 않도록 Notion을 CMS로 활용하고, 반복 조회로 느려진 탭 전환은 클라이언트 캐시로 개선했습니다.
@@ -1218,24 +1275,28 @@
 
             <div class="mt-5 divide-y divide-neutral-200 border-y border-neutral-200 text-[13px] leading-[1.6] text-neutral-600">
               <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">반응형 UI</b>
+                <span>모바일은 현재 약관 중심의 드롭다운, 데스크탑은 가로 탭으로 구성하고 탭이 넘치면 좌우 이동 버튼과 페이드 표시</span>
+              </div>
+              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">공통 컴포넌트</b>
+                <span><code>TermsHeader</code>·<code>TermsNav</code>·<code>TermsContent</code>로 헤더·탐색·본문을 분리해 약관 종류별 동일한 UI 재사용</span>
+              </div>
+              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
                 <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">Notion CMS</b>
                 <span>운영자가 Notion에서 약관을 수정하면 서비스가 최신 콘텐츠를 조회하도록 코드와 콘텐츠 관리 영역 분리</span>
               </div>
               <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
-                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">GET API</b>
-                <span><code>/api/terms?type=&amp;locale=</code> 요청을 약관 종류·언어별 Notion 페이지 ID에 매핑해 제목과 본문 조회</span>
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">약관 라우트 통합</b>
+                <span>운영정책·서비스 등 6개의 개별 페이지를 <code>/terms/[type]</code> 동적 라우트로 통합하고, URL의 <code>type</code>을 Notion 페이지 ID에 매핑해 중복 코드 제거</span>
               </div>
               <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
-                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">문제 상황</b>
-                <span>약관 탭을 전환할 때마다 Notion API를 다시 호출해 콘텐츠가 늦게 표시되고 사용 흐름이 끊기는 문제 발생</span>
-              </div>
-              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
-                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">10시간 캐시</b>
-                <span>약관 종류와 언어를 키로 응답과 저장 시각을 <code>localStorage</code>에 보관하고 TTL 이내 재방문 시 캐시 우선 사용</span>
-              </div>
-              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
-                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">탭 전환 개선</b>
-                <span>캐시가 없거나 만료된 경우에만 GET 요청과 로딩 UI를 실행해 탭 이동·새로고침 시 반복 요청 제거</span>
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">문제 해결</b>
+                <ul class="list-disc space-y-1 pl-4">
+                  <li><b class="text-slate-700">문제</b>: 약관 탭을 전환할 때마다 Notion API를 다시 호출해 콘텐츠 표시가 늦어지고 사용 흐름이 끊김</li>
+                  <li><b class="text-slate-700">해결</b>: 약관 종류·언어를 키로 응답과 저장 시각을 브라우저 로컬 저장소에 보관하고 10시간 TTL 이내에는 캐시 우선 사용</li>
+                  <li><b class="text-slate-700">결과</b>: 캐시가 없거나 만료된 경우에만 GET 요청과 로딩 UI를 실행해 탭 이동·새로고침 시 반복 요청 제거</li>
+                </ul>
               </div>
             </div>
           </article>
@@ -1457,7 +1518,6 @@
 
         <div class="mt-6 grid min-h-0 flex-1 grid-cols-[0.7fr_1.3fr] gap-8">
           <div class="relative flex flex-col gap-12 py-1 pl-11">
-            <div class="absolute bottom-32 left-[15px] top-5 w-px bg-gradient-to-b from-red-300 via-slate-300 to-blue-400"></div>
 
             <div class="relative">
               <span class="absolute -left-11 top-0 flex h-8 w-8 items-center justify-center rounded-full border-4 border-white bg-slate-900 text-[10px] font-extrabold text-white shadow-sm">01</span>
@@ -1557,7 +1617,6 @@
           </div>
 
           <div class="relative flex flex-col gap-14 py-1 pl-11">
-            <div class="absolute bottom-32 left-[15px] top-5 w-px bg-gradient-to-b from-slate-300 via-red-300 to-blue-400"></div>
 
             <div class="relative">
               <span class="absolute -left-11 top-0 flex h-8 w-8 items-center justify-center rounded-full border-4 border-white bg-slate-900 text-[10px] font-extrabold text-white shadow-sm">01</span>
