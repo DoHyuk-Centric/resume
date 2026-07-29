@@ -428,7 +428,7 @@
           <div
             class="flex items-center justify-between border-t border-white/20 pt-3 text-[11px] text-blue-200"
           >
-            <span>01 / 12</span>
+          <span>01 / 14</span>
           </div>
         </div>
       </section>
@@ -551,7 +551,7 @@
         </div>
 
         <div class="slide-foot">
-          <span>02 / 12</span>
+          <span>02 / 14</span>
         </div>
       </section>
 
@@ -563,7 +563,7 @@
           <h2 class="text-[32px] font-extrabold">기획 &amp; 프로토타입</h2>
         </div>
 
-        <div class="mt-2 grid min-h-0 flex-1 grid-cols-[0.95fr_1.05fr] gap-7">
+        <div class="mb-[4mm] mt-2 grid min-h-0 flex-1 grid-cols-[0.95fr_1.05fr] gap-7">
           <article class="flex min-h-0 flex-col">
             <div>
               <h3 class="mt-1 text-[22px] font-extrabold">일정ㆍ버전 관리</h3>
@@ -582,10 +582,10 @@
                 <div class="px-3 py-3">
                   <p class="text-[13px] font-bold text-slate-800">핵심 서비스 출시</p>
                   <ul class="mt-1.5 space-y-1 text-[11.5px] leading-[1.45] text-neutral-600">
-                    <li><b class="text-slate-700">인증·계정</b> · 카카오·구글·페이스북 로그인, 이메일·본인 인증, 비밀번호 재설정</li>
-                    <li><b class="text-slate-700">게시판·탐색</b> · 중고거래·구인구직·부동산, 이미지 업로드, 검색·필터, 찜·좋아요</li>
-                    <li><b class="text-slate-700">거래·소통</b> · 실시간 채팅, Xendit 에스크로 결제, 알림, 사용자 차단, 후기·별점</li>
-                    <li><b class="text-slate-700">운영·글로벌</b> · 신고·제재, KPI 기반 관리자 대시보드, 한·영·필리핀어 지원</li>
+                    <li><b class="text-slate-700">인증·계정</b> · 소셜 로그인, 이메일·본인 인증, 비밀번호 재설정</li>
+                    <li><b class="text-slate-700">게시판·탐색</b> · 중고거래·구인구직·부동산, 검색·필터, 찜·좋아요</li>
+                    <li><b class="text-slate-700">거래·소통</b> · 채팅, 안전결제, 알림, 사용자 차단, 후기·별점</li>
+                    <li><b class="text-slate-700">운영·글로벌</b> · 신고·제재, KPI 관리자 대시보드, 한·영·필리핀어 지원</li>
                   </ul>
                 </div>
               </div>
@@ -594,13 +594,13 @@
                 <div class="flex flex-col px-3 py-3">
                   <p class="text-[15px] font-extrabold text-red-400">Hotfix</p>
                   <p class="mt-1 text-[11px] font-bold text-slate-700">v1.0.1</p>
-                  <time class="mt-0.5 text-[10.5px] font-medium text-neutral-500">06.21–06.22</time>
+                  <time class="mt-0.5 text-[10.5px] font-medium text-neutral-500">06.21-06.22</time>
                 </div>
                 <div class="px-3 py-3">
                   <p class="text-[13px] font-bold text-slate-800">출시 안정화</p>
                   <ul class="mt-1.5 space-y-1 text-[11.5px] leading-[1.45] text-neutral-600">
-                    <li><b class="text-slate-700">약관 성능</b> · 탭 이동마다 발생하던 Notion API 재호출을 10시간 캐싱으로 제거</li>
-                    <li><b class="text-slate-700">다국어·계정</b> · 약관·404 다국어 적용, 프로필 지역 정보 누락 수정</li>
+                    <li><b class="text-slate-700">약관 페이지 성능</b> · 탭 이동마다 발생하던 Notion API 재호출을 10시간 캐싱으로 제거</li>
+                    <li><b class="text-slate-700">다국어·계정</b> · 약관페이지 404 다국어 적용, 프로필 지역 정보 누락 수정</li>
                     <li><b class="text-slate-700">UI·호환성</b> · 토스트·페이지네이션 피드백 개선, Next.js 16 규약 대응</li>
                   </ul>
                 </div>
@@ -631,7 +631,6 @@
                 <div class="px-3 py-3">
                   <p class="text-[13px] font-bold text-slate-800">2차 출시 전후 오류 보완</p>
                   <ul class="mt-1.5 space-y-1 text-[11.5px] leading-[1.45] text-neutral-600">
-                    <li><b class="text-slate-700">배포 전환</b> · v1.2.0 공개를 보류하고 배포 후 확인된 오류를 수정해 v1.2.1로 전환</li>
                     <li><b class="text-slate-700">인증·화면</b> · 페이스북 로그인, Kanto Go·AI 챗봇 스크롤·모달 오류 수정</li>
                     <li><b class="text-slate-700">콘텐츠 UI</b> · 공지 배너, 인기 공고·다중 이미지 인디케이터 표시 보완</li>
                     <li><b class="text-slate-700">이미지 트래픽</b> · 업로드 이미지를 WebP로 변환해 Supabase 트래픽 절감</li>
@@ -677,33 +676,22 @@
             </div>
 
             <div>
-              <h3 class="mt-1 text-[22px] font-extrabold">반응형 화면 흐름 구체화</h3>
-              <p class="mt-2 text-[13px] leading-[1.65] text-neutral-600">
-                거래·구인·부동산 정보를 한 흐름에서 탐색할 수 있도록 데스크톱과 모바일 화면을 설계했습니다.
+              <h3 class="mt-1 text-[22px] font-extrabold">프로토타입 ㆍ Figma</h3>
+              <p class="text-[13px] leading-[1.65] text-neutral-600">
+                기능 요구사항을 바탕으로 Figma와 Figma Make를 활용해 UI 디자인 및 인터랙티브 프로토타입을 제작했습니다.
               </p>
             </div>
 
-            <div class="mt-4 grid min-h-0 flex-1 grid-cols-[1fr_0.38fr] gap-3">
-              <figure class="relative min-h-0 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
-                <img src="./kanto/kanto-main-desktop.png" alt="Kanto 데스크톱 프로토타입" class="h-full w-full object-cover object-top" />
-                <figcaption class="absolute bottom-3 left-3 rounded-full bg-white/95 px-3 py-1.5 text-[11px] font-bold text-neutral-700 shadow">Desktop</figcaption>
+            <div class="mt-4 min-h-0 flex-1 overflow-hidden">
+              <figure class="relative h-full min-h-0 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
+                <img src="./kanto/칸토프로토타입.png" alt="Kanto 데스크톱 프로토타입" class="h-full w-full object-cover object-top" />
               </figure>
-              <figure class="relative min-h-0 overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50">
-                <img src="./kanto/kanto-main-mobile.png" alt="Kanto 모바일 프로토타입" class="h-full w-full object-cover object-top" />
-                <figcaption class="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-white/95 px-3 py-1.5 text-[11px] font-bold text-neutral-700 shadow">Mobile</figcaption>
-              </figure>
-            </div>
-
-            <div class="mt-4 grid grid-cols-3 gap-2 text-center text-[11.5px] font-semibold text-neutral-700">
-              <div class="rounded-lg border border-neutral-200 px-2 py-2.5">통합 탐색</div>
-              <div class="rounded-lg border border-neutral-200 px-2 py-2.5">반응형 구조</div>
-              <div class="rounded-lg border border-neutral-200 px-2 py-2.5">공통 UI 기준</div>
             </div>
           </article>
         </div>
 
         <div class="slide-foot">
-          <span>04 / 12</span>
+          <span>04 / 14</span>
         </div>
       </section>
 
@@ -722,6 +710,21 @@
             />
             <h2 class="text-[42px] font-extrabold leading-none">Kanto</h2>
           </div>
+
+          <dl class="flex items-center divide-x divide-neutral-200 text-[12px]">
+            <div class="px-5 text-center">
+              <dt class="font-semibold text-neutral-400">인원</dt>
+              <dd class="mt-1 font-bold text-slate-700">4인</dd>
+            </div>
+            <div class="px-5 text-center">
+              <dt class="font-semibold text-neutral-400">기간</dt>
+              <dd class="mt-1 font-bold text-slate-700">2026.05–07</dd>
+            </div>
+            <div class="pl-5 text-center">
+              <dt class="font-semibold text-neutral-400">결과</dt>
+              <dd class="mt-1 font-bold text-accent">파이널 프로젝트 1위</dd>
+            </div>
+          </dl>
 
           <div class="hidden">
             <a
@@ -818,7 +821,7 @@
           </div>
         </div>
 
-        <div class="mt-4 grid h-[106mm] flex-none grid-cols-[1.15fr_0.85fr] gap-4">
+        <div class="mb-[4mm] mt-4 grid min-h-0 flex-1 grid-cols-[1.15fr_0.85fr] gap-4 overflow-hidden">
           <div class="flex h-full min-h-0 flex-col">
             <figure class="relative min-h-0 w-full flex-1 overflow-hidden rounded-md">
               <img
@@ -892,7 +895,7 @@
             </div>
           </div>
 
-          <div class="flex h-full min-w-0 flex-col">
+          <div class="flex h-full min-h-0 min-w-0 flex-col overflow-hidden">
 
             <h3 class="mt-3 text-[25px] font-extrabold leading-[1.35]">
               Kanto는 필리핀에서 "우리 동네"라는 뜻을 가지고 있습니다.
@@ -900,16 +903,8 @@
             <p class="text-slate-600 pl-4 mt-3">
               필리핀에 흩어진 거래·일자리·주거 정보를 올인원을 목적으로 빠르고 안전하게 제공하기 위해서 만든 통합 생활 플랫폼입니다.
             </p>
-            <div class="border-t border-neutral-200 mt-2 pt-2">
-              <ul class="list-inside list-disc marker:text-slate-700 ml-4 text-slate-500 text-[16px]">
-                <li>인원: 4인</li>
-                <li>기간: 2026.05 ~ 07</li>
-                <li>결과: 파이널 프로젝트 1위</li>
-              </ul>
-            </div>
-
-            <div class="border-t border-neutral-200 mt-2 pt-2">
-              <div class="mb-2">
+            <div class="border-t border-neutral-200 mt-4 pt-4">
+              <div class="mb-4">
                 <h4 class="font-bold">주요 기능</h4>
                 <ul class="ml-4 list-inside list-disc text-[16px] text-slate-500 marker:text-slate-700">
                   <li><span class="font-semibold text-slate-700">거래·생활:</span> 중고거래, 구인구직, 부동산, Kanto Go</li>
@@ -991,12 +986,268 @@
         </div>
 
         <div class="slide-foot">
-          <span>03 / 12</span>
+          <span>03 / 14</span>
         </div>
       </section>
 
-      <!-- ========== 05. Kanto - 경험 ========== -->
+      <!-- ========== 05. Kanto - 문서 자동화 & 점수 분포 시뮬레이션 ========== -->
       <section class="slide order-[5] break-keep break-after-page">
+        <p class="slide-kicker">02. Kanto</p>
+        <div class="mt-4">
+          <h2 class="text-[32px] font-extrabold">AI 활용 방식</h2>
+        </div>
+
+        <div class="mb-[4mm] mt-2 grid min-h-0 flex-1 grid-cols-[1.05fr_0.95fr] gap-7">
+          <article class="flex min-h-0 flex-col">
+            <div>
+              <h3 class="mt-1 text-[22px] font-extrabold">문서 자동화</h3>
+              <p class="text-[13px] leading-[1.65] text-neutral-600">
+                AI 기반 취합·요약을 위해 문서의 분류, 파일명, 작성 순서를 표준화하고 팀의 작업 기록에 적용했습니다.
+              </p>
+            </div>
+            <ul class="mt-4 text-[13px] leading-[1.65] text-neutral-600">
+              <li class="flex gap-3 border-t border-neutral-200 pt-3">
+                <span class="shrink-0 font-bold text-accent">문서화</span>
+                <span>구현 당시의 문제 인식·판단 과정·설계 의도를 이력으로 남겨, 이후 다른 팀원이 작업 배경을 파악하고 후속 개발에 참고할 수 있도록 기록</span>
+              </li>
+              <li class="mt-4 flex gap-3 border-t border-neutral-200 pt-3">
+                <span class="shrink-0 font-bold text-accent">자동화</span>
+                <span>상세한 작업 기록에 드는 시간을 줄이기 위해 팀원들과 필수 항목·작성 규칙을 합의하고, AI로 초안을 구조화·정리해 문서 작성 시간을 단축</span>
+              </li>
+            </ul>
+
+            <div class="mt-6 overflow-hidden rounded-lg border border-neutral-200">
+              <table class="w-full table-fixed border-collapse text-left text-[12.5px] leading-[1.6] text-neutral-600">
+                <thead class="bg-neutral-50 text-slate-800">
+                  <tr>
+                    <th class="w-[78px] border-r border-neutral-200 px-3 py-2.5 font-extrabold">유형</th>
+                    <th class="w-[165px] border-r border-neutral-200 px-3 py-2.5 font-extrabold">파일명</th>
+                    <th class="px-3 py-2.5 font-extrabold">작성 구조</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-neutral-200">
+                  <tr>
+                    <th class="border-r border-neutral-200 px-3 py-2.5 font-bold text-slate-700">작업기록</th>
+                    <td class="whitespace-nowrap border-r border-neutral-200 px-3 py-2.5 font-mono text-[11px]">날짜-작업주제[-작성자].md</td>
+                    <td class="px-3 py-2.5">목적·배경 → 변경 내용·파일 → 결과·검증</td>
+                  </tr>
+                  <tr>
+                    <th class="border-r border-neutral-200 px-3 py-2.5 font-bold text-slate-700">설계</th>
+                    <td class="border-r border-neutral-200 px-3 py-2.5">날짜형 또는 기능명 기반</td>
+                    <td class="px-3 py-2.5">배경 → 목표·비목표 → 설계안 → 구현·테스트</td>
+                  </tr>
+                  <tr>
+                    <th class="border-r border-neutral-200 px-3 py-2.5 font-bold text-slate-700">성능검사</th>
+                    <td class="border-r border-neutral-200 px-3 py-2.5 font-mono text-[11px]">페이지·라우트명.md</td>
+                    <td class="px-3 py-2.5">측정 환경·지표 → 문제 → 우선순위</td>
+                  </tr>
+                  <tr>
+                    <th class="border-r border-neutral-200 px-3 py-2.5 font-bold text-slate-700">성능개선</th>
+                    <td class="border-r border-neutral-200 px-3 py-2.5 font-mono text-[11px]">범위-개선주제.md</td>
+                    <td class="px-3 py-2.5">병목·원인 → 개선 → 전후 수치 → 검증</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="mt-4 border-t border-neutral-200 pt-3 text-[13px] leading-[1.65]">
+              <p class="font-extrabold text-slate-800">활용 결과</p>
+              <ol class="mt-2 space-y-1.5 text-neutral-600">
+                <li class="flex gap-2">
+                  <span class="font-bold text-accent">01</span>
+                  <span>후속 코드 수정 시 기존 구현의 배경·설계 의도·검증 이력을 확인하는 참고 자료로 활용</span>
+                </li>
+                <li class="flex gap-2">
+                  <span class="font-bold text-accent">02</span>
+                  <span>작업 문서와 커밋 이력을 AI로 취합해 주간 보고서로 재구성하고, 팀의 진행 현황과 개인별 기여도를 한눈에 확인</span>
+                </li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="flex min-h-0 flex-col border-l border-neutral-200 pl-7">
+            <div>
+              <h3 class="mt-1 text-[22px] font-extrabold">점수 분포 시뮬레이션</h3>
+              <p class="text-[13px] leading-[1.65] text-neutral-600">
+                AI로 다양한 사용자·게시물 조건을 생성하고 KTS·KPPS를 적용해, 실제 서비스에서 예상되는 점수 분포와 정책의 경계 사례를 사전에 검토했습니다.
+              </p>
+            </div>
+
+            <figure class="mt-4 overflow-hidden rounded-xl bg-[#0d1117] p-3">
+              <img
+                src="./kanto/kts 점수분포.png"
+                alt="사용자 유형별 예상 KTS 점수 분포"
+                class="h-full w-full rounded-lg object-contain"
+              />
+            </figure>
+
+            <div class="mt-4 grid grid-cols-3 gap-1 text-[10.5px] leading-[1.3]">
+              <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-2">
+                  <p class="font-bold text-slate-700">신규 가입</p>
+                  <p class="mt-0.5 text-neutral-500">0–4주 · 거래 없음</p>
+              </div>
+              <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-2">
+                  <p class="font-bold text-slate-700">초기 정착</p>
+                  <p class="mt-0.5 text-neutral-500">가입 4주 · 안정 활동</p>
+              </div>
+              <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-2">
+                  <p class="font-bold text-slate-700">활동 정착</p>
+                  <p class="mt-0.5 text-neutral-500">3개월 · C등급 안착</p>
+              </div>
+              <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-2">
+                  <p class="font-bold text-slate-700">신뢰 상승</p>
+                  <p class="mt-0.5 text-neutral-500">6개월 · C→B 상승세</p>
+              </div>
+              <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-2">
+                  <p class="font-bold text-slate-700">간헐적 활동</p>
+                  <p class="mt-0.5 text-neutral-500">B↔C 등급 반복</p>
+              </div>
+              <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-2">
+                  <p class="font-bold text-slate-700">활동 감소</p>
+                  <p class="mt-0.5 text-neutral-500">하락세 유지</p>
+              </div>
+              <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-2">
+                  <p class="font-bold text-slate-700">장기 활동</p>
+                  <p class="mt-0.5 text-neutral-500">12개월 · B등급 유지</p>
+              </div>
+              <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-2">
+                  <p class="font-bold text-slate-700">우수 사용자</p>
+                  <p class="mt-0.5 text-neutral-500">18개월+ · 거래 20건+</p>
+              </div>
+              <div class="rounded-lg border border-neutral-200 bg-neutral-50 p-2">
+                  <p class="font-bold text-red-700">위험 사용자</p>
+                  <p class="mt-0.5 text-red-500">신고 누적 · 제재 이력</p>
+              </div>
+            </div>
+
+            <ul class="mt-4 space-y-2 pl-4 text-[13px] text-neutral-700">
+              <li class="flex gap-2"><span class="font-bold text-accent">01</span><span>사용자 활동 수준에 따라 신뢰도 점수가 합리적으로 구분되는지 확인</span></li>
+              <li class="flex gap-2"><span class="font-bold text-accent">02</span><span>특정 점수·등급에 사용자가 몰리거나 경계값에서 의도하지 않은 결과가 발생하는지 예측</span></li>
+              <li class="flex gap-2"><span class="font-bold text-accent">03</span><span>신고·제재 이력이 있는 사용자가 인기 게시물에 노출되는 예외 상황 방지</span></li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="slide-foot">
+          <span>05 / 14</span>
+        </div>
+      </section>
+
+      <!-- ========== 06. Kanto - 반응형 내정보 ========== -->
+      <section class="slide order-[6] break-keep break-after-page">
+        <p class="slide-kicker">02. Kanto</p>
+        <div class="mt-4 flex items-end justify-between">
+          <div>
+            <h2 class="text-[32px] font-extrabold">반응형 내정보 페이지</h2>
+          </div>
+        </div>
+
+        <div class="mb-[4mm] mt-5 grid min-h-0 flex-1 grid-cols-[1.2fr_0.8fr] gap-6">
+          <figure class="grid min-h-0 grid-cols-[minmax(0,1fr)_140px] items-start gap-3 overflow-hidden p-3">
+            <img
+              src="./kanto/profile.PNG"
+              alt="Kanto 데스크톱 내정보 페이지"
+              class="h-full min-h-0 w-full object-contain object-top"
+            />
+            <img
+              src="./kanto/내정보 모바일.png"
+              alt="Kanto 모바일 내정보 페이지"
+              class="h-full min-h-0 w-full object-contain object-top"
+            />
+          </figure>
+
+          <article class="flex min-h-0 flex-col">
+            <h3 class="text-[22px] font-extrabold">서버 선조회로 안정적인 초기 화면 구성</h3>
+            <p class="mt-2 text-[13.5px] leading-[1.7] text-neutral-600">
+              사용자 정보와 소셜 계정 상태를 안정적으로 제공하면서, 모바일과 데스크톱에서 탐색하기 쉬운 내정보 화면을 구현했습니다.
+            </p>
+
+            <div class="mt-5 divide-y divide-neutral-200 border-y border-neutral-200 text-[13px] leading-[1.6] text-neutral-600">
+              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">반응형 UI</b>
+                <span>데스크톱은 세로 사이드바, 모바일은 가로 스크롤 탭으로 구성해 화면 크기에 맞게 탐색 구조 전환</span>
+              </div>
+              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">서버 컴포넌트</b>
+                <span>비동기 서버 컴포넌트에서 인증·프로필·알림·소셜 계정 정보를 선조회해 초기 Props로 전달</span>
+              </div>
+              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">클라이언트 분리</b>
+                <span>탭 전환·프로필 수정·소셜 계정 연결과 해제처럼 사용자 상호작용이 필요한 영역만 클라이언트에서 관리</span>
+              </div>
+              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">깜빡임 해결</b>
+                <span>연동 상태를 서버에서 먼저 전달해 ‘연결하기’가 잠시 노출된 뒤 ‘연결됨’으로 바뀌는 현상을 제거</span>
+              </div>
+              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">로딩 경험</b>
+                <span>비동기 데이터가 필요한 구간에는 스켈레톤을 적용해 레이아웃 변화와 빈 화면 노출 최소화</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="slide-foot">
+          <span>06 / 14</span>
+        </div>
+      </section>
+
+      <!-- ========== 07. Kanto - Notion CMS 이용약관 ========== -->
+      <section class="slide order-[7] break-keep break-after-page">
+        <p class="slide-kicker">02. Kanto</p>
+        <div class="mt-4 flex items-end justify-between">
+          <div>
+            <h2 class="text-[32px] font-extrabold">Notion CMS 기반 이용약관</h2>
+          </div>
+        </div>
+
+        <div class="mb-[4mm] mt-5 grid min-h-0 flex-1 grid-cols-[1.12fr_.88fr] gap-6">
+          <figure class="flex min-h-0 items-start overflow-hidden rounded-xl border border-neutral-200 bg-slate-900 p-3">
+            <img
+              src="./kanto/terms-service.png"
+              alt="Notion CMS로 관리하는 Kanto 서비스 이용약관"
+              class="h-full w-full rounded-lg object-cover object-top"
+            />
+          </figure>
+
+          <article class="flex min-h-0 flex-col">
+            <h3 class="text-[22px] font-extrabold">배포 없이 수정하고, 캐시로 빠르게 조회</h3>
+            <p class="mt-2 text-[13.5px] leading-[1.7] text-neutral-600">
+              약관 수정마다 코드를 다시 배포하지 않도록 Notion을 CMS로 활용하고, 반복 조회로 느려진 탭 전환은 클라이언트 캐시로 개선했습니다.
+            </p>
+
+            <div class="mt-5 divide-y divide-neutral-200 border-y border-neutral-200 text-[13px] leading-[1.6] text-neutral-600">
+              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">Notion CMS</b>
+                <span>운영자가 Notion에서 약관을 수정하면 서비스가 최신 콘텐츠를 조회하도록 코드와 콘텐츠 관리 영역 분리</span>
+              </div>
+              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">GET API</b>
+                <span><code>/api/terms?type=&amp;locale=</code> 요청을 약관 종류·언어별 Notion 페이지 ID에 매핑해 제목과 본문 조회</span>
+              </div>
+              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">문제 상황</b>
+                <span>약관 탭을 전환할 때마다 Notion API를 다시 호출해 콘텐츠가 늦게 표시되고 사용 흐름이 끊기는 문제 발생</span>
+              </div>
+              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">10시간 캐시</b>
+                <span>약관 종류와 언어를 키로 응답과 저장 시각을 <code>localStorage</code>에 보관하고 TTL 이내 재방문 시 캐시 우선 사용</span>
+              </div>
+              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">탭 전환 개선</b>
+                <span>캐시가 없거나 만료된 경우에만 GET 요청과 로딩 UI를 실행해 탭 이동·새로고침 시 반복 요청 제거</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="slide-foot">
+          <span>07 / 14</span>
+        </div>
+      </section>
+
+      <!-- ========== 08. Kanto - 경험 ========== -->
+      <section class="slide order-[8] break-keep break-after-page">
         <p class="slide-kicker">02. Kanto</p>
         <div class="mt-4 flex items-end justify-between">
           <div>
@@ -1004,89 +1255,196 @@
           </div>
         </div>
 
-        <div class="mb-[4mm] mt-7 grid min-h-0 flex-1 grid-cols-2 gap-6 divide-x divide-slate-200">
+        <div class="mb-[4mm] mt-4 grid min-h-0 flex-1 grid-cols-2 gap-2 divide-x divide-slate-200">
           <article class="flex min-h-0 flex-col p-2">
-            <div class="h-[220px] overflow-hidden rounded-xl p-3">
+            <h3 class="mb-3 mt-2 text-[22px] font-extrabold">KTS·KPPS 신뢰도 시스템</h3>
+            <div class="overflow-hidden rounded-xl p-3">
               <img
                 src="./kanto/score.png"
                 alt="Kanto 망고 신뢰도 점수"
-                class="h-full w-full rounded-lg object-contain"
+                class="w-full rounded-lg object-cover object-[100%]"
               />
             </div>
 
-            <div class="mt-5">
-              <h3 class="mt-2 text-[22px] font-extrabold">KTS·KPPS 신뢰도 시스템</h3>
-              <p class="mt-3 text-[13.5px] leading-[1.7] text-neutral-600">
-                거래 전 상대방을 신뢰할 수 있는지 판단할 객관적인 기준이 필요했습니다.
+            <div class="mt-4">
+              <p class="text-[13.5px] leading-[1.7] text-neutral-600">
+                거래 상대방의 신뢰도와 인기 게시물을 객관적으로 판단할 기준이 필요했습니다.
               </p>
               <p class="text-[13.5px] leading-[1.7] text-neutral-600">
                 이에 거래·리뷰·활동·신고 데이터를 KTS로, 게시물 반응·최신성·작성자 신뢰도를 KPPS로 산정해 프로필 신뢰도와 인기 게시물 노출에 반영했습니다.
               </p>
             </div>
 
-            <ul class="mt-4 pl-4 space-y-2 text-[13px] text-neutral-700">
-              <li class="flex gap-2"><span class="font-bold text-accent">01</span><span>9가지 사용자 행동 시나리오를 AI 기반으로 시뮬레이션해 평균 점수와 등급별 분포의 적정성을 사전 검증</span></li>
-              <li class="flex gap-2"><span class="font-bold text-accent">02</span><span>KTS와 KPPS를 각각 user.kts_score와 posts.kpps_score로 관리하고, pg_cron을 통해 매일 자동 재계산</span></li>
-              <li class="flex gap-2"><span class="font-bold text-accent">03</span><span>작성자가 위험 등급(E등급)이면 KPPS와 관계없이 인기 배지 노출에서 자동 제외</span></li>
+            <div class="mt-2 rounded-xl p-3">
+              <div class="mt-2 divide-y divide-neutral-200 text-[12.5px] leading-[1.5] text-neutral-600">
+                <div class="grid grid-cols-[100px_1fr] gap-3 py-2">
+                  <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">점수 시각화</b>
+                  <div>
+                    <ul class="list-disc space-y-1 pl-4">
+                      <li>KTS를 1.2초 카운트업 애니메이션과 등급별 색상으로 표현</li>
+                      <li>거래·리뷰·활동·신고 데이터의 가중치로 산정된 A–E 신뢰 등급 표시</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="grid grid-cols-[100px_1fr] gap-3 py-2">
+                  <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">인기 게시물</b>
+                  <div>
+                    <ul class="list-disc space-y-1 pl-4">
+                      <li>작성자의 신뢰도 점수는 게시물의 인기 점수에 직접적 영향</li>
+                      <li>위험 등급 작성자의 게시물은 인기 목록에서 제외</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="grid grid-cols-[100px_1fr] gap-3 py-2">
+                  <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">인기 배지 연동</b>
+                  <div>
+                    <ul class="list-disc space-y-1 pl-4">
+                      <li>DB 컬럼 <code>is_popular</code> 값에 따라 방렌트·중고거래 카드에 인기 배지를 조건부 렌더링</li>
+                      <li>KTS와 KPPS의 연계 결과를 게시물 카드에서 즉시 식별하도록 시각화</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <ul class="mt-2 pl-4 space-y-2 text-[13px] text-neutral-700">
+              <li class="flex gap-2">
+                <span class="w-[48px] shrink-0 font-bold text-accent">RPC</span>
+                <span>Server Action에서 KTS 계산 후 KPPS를 순차 재계산해 최신 점수 반영</span>
+              </li>
             </ul>
           </article>
 
-          <article class="flex min-h-0 flex-col p-2 pl-8">
-            <div class="grid h-[220px] grid-cols-2 gap-3 overflow-hidden rounded-xl p-3">
-              <img
-                src="./kanto/chatLog.png"
-                alt="관리자 채팅 로그 조회 화면"
-                class="h-full w-full rounded-lg object-contain"
-              />
-              <img
-                src="./kanto/chatlog_txt.png"
-                alt="다운로드한 채팅 로그"
-                class="h-full w-full rounded-lg object-contain"
-              />
-            </div>
+          <article class="flex min-h-0 flex-col p-2">
+            <h3 class="mt-2 mb-2 text-[22px] font-extrabold">실시간 채팅·운영 로그</h3>
 
-            <div class="mt-5">
-              <h3 class="mt-2 text-[22px] font-extrabold">실시간 채팅·운영 로그</h3>
-              <p class="mt-3 text-[13.5px] leading-[1.7] text-neutral-600">
-                거래 전 상품 상태와 거래 조건을 확인할 수 있는 실시간 소통 수단이 필요했습니다.
+            <div>
+              <p class="text-[13.5px] leading-[1.7] text-neutral-600">
+                거래 전 사용자의 상호작용을 위해서 실시간 소통 수단이 필요했습니다.
               </p>
               <p class="text-[13.5px] leading-[1.7] text-neutral-600">
                 이에 사용자 간 원활한 거래를 위해 1:1 실시간 채팅을 구현했습니다. 또한 신고·분쟁 발생 가능성을 고려해 관리자가 대화 내역을 확인하고 대응할 수 있는 운영 도구도 함께 구축했습니다.
               </p>
             </div>
 
-            <ul class="mt-4 pl-4 space-y-2 text-[13px] text-neutral-700">
-              <li class="flex gap-2">
-                <span class="font-bold text-accent">01</span>
-                <span>Supabase Realtime 기반 사용자 간 실시간 1:1 채팅 구현</span>
-              </li>
-              <li class="flex gap-2">
-                <span class="font-bold text-accent">02</span>
-                <span>메시지 읽음 상태 동기화와 낙관적 업데이트로 즉각적인 전송 경험 제공</span>
-              </li>
-              <li class="flex gap-2">
-                <span class="font-bold text-accent">03</span>
-                <span>짧은 시간 내 반복 전송을 제한하는 도배 방지 로직 구현</span>
-              </li>
-              <li class="flex gap-2">
-                <span class="font-bold text-accent">04</span>
-                <span>Zustand로 채팅 위젯·채팅 목록·미읽음 수 등 전역 상태 관리</span>
-              </li>
-              <li class="flex gap-2">
-                <span class="font-bold text-accent">05</span>
-                <span>채팅방 메시지와 페이지네이션을 커스텀 훅의 로컬 상태로 분리</span>
-              </li>
-            </ul>
+            <div class="mt-2 rounded-xl p-3">
+              <div class="mt-2 divide-y divide-neutral-200 text-[12.5px] leading-[1.5] text-neutral-600">
+                <p class="grid grid-cols-[100px_1fr] gap-3 py-2">
+                  <b class="border-r border-neutral-200 pr-3 text-slate-700">실시간 수신</b>
+                  <span>Supabase Realtime 기반 사용자 간 실시간 1:1 채팅 구현</span>
+                </p>
+                <p class="grid grid-cols-[100px_1fr] gap-3 py-2">
+                  <b class="border-r border-neutral-200 pr-3 text-slate-700">전송 경험</b>
+                  <span>읽음 상태 동기화와 낙관적 업데이트로 즉각적인 메시지 전송 경험 제공</span>
+                </p>
+                <p class="grid grid-cols-[100px_1fr] gap-3 py-2">
+                  <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">전송 실패 처리</b>
+                  <span>전송 실패 시 임시 메시지를 제거하고 오류 Toast로 사용자에게 안내</span>
+                </p>
+                <p class="grid grid-cols-[100px_1fr] gap-3 py-2">
+                  <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">예약 상태 연동</b>
+                  <span>서버에서 받은 예약 상태를 로컬 상태로 관리하고, 낙관적 업데이트 후 실패 시 이전 상태로 롤백</span>
+                </p>
+                <p class="grid grid-cols-[100px_1fr] gap-3 py-2">
+                  <b class="border-r border-neutral-200 pr-3 text-slate-700">전역 상태</b>
+                  <span>Zustand로 채팅 위젯·채팅 목록·미읽음 수를 관리</span>
+                </p>
+                <p class="grid grid-cols-[100px_1fr] gap-3 py-2">
+                  <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">페이지네이션</b>
+                  <span>가장 오래된 메시지의 작성 시각을 기준으로 이전 메시지를 50개씩 조회하고, 추가 로드 후 스크롤 위치 복원</span>
+                </p>
+                <p class="grid grid-cols-[100px_1fr] gap-3 py-2">
+                  <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">운영 로그</b>
+                  <span>관리자가 채팅 대화 내역을 조회하고 TXT 파일로 다운로드할 수 있도록 구현</span>
+                </p>
+                <p class="grid grid-cols-[100px_1fr] gap-3 py-2">
+                  <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">운영 정책</b>
+                  <span>TanStack Query Mutation으로 감지 시간·최대 전송 횟수·쿨다운을 저장하고, 갱신된 설정을 채팅 훅의 전송 제한에 반영</span>
+                </p>
+              </div>
+            </div>
+
           </article>
         </div>
 
         <div class="slide-foot">
-          <span>05 / 12</span>
+          <span>08 / 14</span>
         </div>
       </section>
 
-      <!-- ========== 06. Kanto - 문제해결 ========== -->
-      <section class="slide order-[6] break-keep break-after-page">
+      <!-- ========== 09. Kanto - Sentry 오류 모니터링 ========== -->
+      <section class="slide order-[9] break-keep break-after-page">
+        <p class="slide-kicker">02. Kanto</p>
+        <div class="mt-3 border-b border-neutral-200 pb-5">
+          <h2 class="text-[28px] font-extrabold">Sentry 기반 오류 모니터링과 성능 수집</h2>
+          <p class="mt-3 text-[14px] leading-relaxed text-neutral-600">
+            운영 환경의 오류를 수집하되, Session Replay가 모든 페이지의 초기 로딩 성능을 저하하지 않도록 로딩 시점을 분리했습니다.
+          </p>
+        </div>
+
+        <div class="mt-7 grid min-h-0 flex-1 grid-cols-[0.9fr_1.1fr] gap-4">
+          <figure class="flex min-h-0 flex-col mt-4">
+            <div class="w-[120mm] overflow-hidden rounded-xl p-3">
+              <img
+                src="./kanto/통계모니터링.png"
+                alt="Kanto 관리자 통계 및 Sentry 기반 Core Web Vitals 모니터링 화면"
+                class="h-full w-full rounded-lg object-contain object-top"
+              />
+            </div>
+            <figcaption class="mt-1 px-6 text-[12.5px] leading-[1.6] text-neutral-500">
+              관리자 화면에서 서비스 통계와 최근 24시간 전체 페이지의 Core Web Vitals를 함께 확인
+            </figcaption>
+          </figure>
+
+          <div class="flex min-h-0 flex-col">
+            <div>
+              <h3 class="text-[21px] font-extrabold">운영 오류 수집</h3>
+              <p class="mt-1 text-[13px] leading-[1.65] text-neutral-600">
+                배포 후 실제 사용자 환경에서 발생하는 오류를 확인하기 어려워, 클라이언트·서버 오류와 발생 경로를 Sentry로 수집했습니다.
+              </p>
+            </div>
+
+            <div class="mt-5 divide-y divide-neutral-200 border-y border-neutral-200 text-[12.5px] leading-[1.55] text-neutral-600">
+              <div class="grid grid-cols-[104px_1fr] gap-3 py-3">
+                <b class="border-r border-neutral-200 pr-3 text-slate-700">오류 현황 조회</b>
+                <span>최근 24시간의 오류 메시지·발생 경로·발생 횟수·최근 발생 시각을 관리자 화면에서 조회</span>
+              </div>
+              <div class="grid grid-cols-[104px_1fr] gap-3 py-3">
+                <b class="border-r border-neutral-200 pr-3 text-slate-700">시각화 지표</b>
+                <ul class="list-disc space-y-1 pl-4">
+                  <li>Sentry Discover API에서 <code>pageload</code> 트랜잭션의 LCP·FCP·CLS·TTFB를 P75로 집계해 지표 카드로 시각화</li>
+                  <li>Sentry·Supabase 내부 요청을 제외한 최근 24시간의 트랜잭션을 호출 수 기준 상위 10개로 조회해 평균 응답 시간·P95·실패율을 목록으로 분석</li>
+                  <li>트랜잭션 통계와 Web Vitals를 서버에서 병렬 조회하고, 60초 캐시 재검증을 적용해 반복 요청을 줄이면서 최신 지표 제공</li>
+                </ul>
+              </div>
+              <div class="grid grid-cols-[104px_1fr] gap-3 py-3">
+                <b class="border-r border-neutral-200 pr-3 text-slate-700">모니터링 화면</b>
+                <span>서비스 통계·성능·오류 로그를 탭으로 분리하고 필요한 데이터를 병렬로 조회</span>
+              </div>
+              <div class="grid grid-cols-[104px_1fr] gap-3 py-3">
+                <b class="border-r border-neutral-200 pr-3 text-slate-700">전역 오류 처리</b>
+                <span><code>global-error.tsx</code>에서 예외를 수집하고 사용자가 다시 시도할 수 있는 복구 UI 제공</span>
+              </div>
+              <div class="grid grid-cols-[104px_1fr] gap-3 py-3">
+                <b class="border-r border-neutral-200 pr-3 text-slate-700">환경별 수집</b>
+                <span>Client·Server·Edge 설정을 분리하고 프로덕션 환경에서만 오류와 로그 전송</span>
+              </div>
+              <div class="grid grid-cols-[104px_1fr] gap-3 py-3">
+                <b class="border-r border-neutral-200 pr-3 text-slate-700">Replay 정책</b>
+                <span>일반 세션은 10%만 기록하고 오류 발생 세션은 100% 수집해 분석 정보 확보</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="slide-foot">
+          <span>09 / 14</span>
+        </div>
+      </section>
+
+      <!-- ========== 10. Kanto - 문제해결 ========== -->
+      <section class="slide order-[10] break-keep break-after-page">
         <p class="slide-kicker">02. Kanto</p>
         <div class="mt-3 flex items-end justify-between border-b border-neutral-200 pb-5">
           <div>
@@ -1160,12 +1518,12 @@
         </div>
 
         <div class="slide-foot">
-          <span>06 / 12</span>
+          <span>10 / 14</span>
         </div>
       </section>
 
-      <!-- ========== 07. Kanto - 문제해결 (2) ========== -->
-      <section class="slide order-[7] break-keep break-after-page">
+      <!-- ========== 11. Kanto - 문제해결 (2) ========== -->
+      <section class="slide order-[11] break-keep break-after-page">
         <p class="slide-kicker">02. Kanto</p>
         <div class="mt-3 flex items-end justify-between border-b border-neutral-200 pb-5">
           <div>
@@ -1236,12 +1594,12 @@
         </div>
 
         <div class="slide-foot">
-          <span>07 / 12</span>
+          <span>11 / 14</span>
         </div>
       </section>
 
-      <!-- ========== 10. myBlog - 프로젝트 소개 ========== -->
-      <section class="slide order-[10] landscape-fit break-after-page">
+      <!-- ========== 12. myBlog - 프로젝트 소개 ========== -->
+      <section class="slide order-[12] landscape-fit break-after-page">
         <p class="slide-kicker">04. DoHyuk.dev</p>
         <div class="mt-3 flex items-center justify-between border-b border-neutral-200 px-1 pb-4">
           <div class="flex items-center gap-4">
@@ -1388,12 +1746,12 @@
         </div>
 
         <div class="slide-foot">
-          <span>10 / 12</span>
+          <span>12 / 14</span>
         </div>
       </section>
 
-      <!-- ========== 11. myBlog - 경험 ========== -->
-      <section class="slide order-[11] compact-slide landscape-fit break-after-page">
+      <!-- ========== 13. myBlog - 경험 ========== -->
+      <section class="slide order-[13] compact-slide landscape-fit break-after-page">
         <p class="slide-kicker">04. DoHyuk.dev</p>
         <h2 class="mt-3 text-[28px] font-extrabold">구현과 문제 해결</h2>
 
@@ -1494,7 +1852,7 @@
           </article>
         </div>
         <div class="slide-foot">
-          <span>11 / 12</span>
+          <span>13 / 14</span>
         </div>
       </section>
 
@@ -1647,12 +2005,12 @@
           </div>
         </div>
         <div class="slide-foot">
-          <span>10 / 13</span>
+          <span>10 / 14</span>
         </div>
       </section>
 
       <!-- ========== 08. GentleLion - 프로젝트 소개 ========== -->
-      <section class="slide order-[8] break-after-page">
+      <section class="hidden">
         <p class="slide-kicker">03. GentleLion</p>
         <div class="mt-3 flex items-center justify-between border-b border-neutral-200 px-1 pb-4">
           <div class="flex items-center gap-4">
@@ -1767,11 +2125,11 @@
             </div>
           </div>
         </div>
-        <div class="slide-foot"><span>08 / 12</span></div>
+        <div class="slide-foot"><span>08 / 14</span></div>
       </section>
 
       <!-- ========== 09. GentleLion - 구현과 검수 ========== -->
-      <section class="slide order-[9] break-after-page">
+      <section class="hidden">
         <p class="slide-kicker">03. GentleLion</p>
         <h2 class="mt-3 text-[28px] font-extrabold">화면 기획부터 API 연동·E2E 검수까지</h2>
         <p class="mt-2 text-[14px] text-neutral-600">요구사항을 화면·API·테스트까지 연결한 개발 과정</p>
@@ -1828,7 +2186,7 @@
           </div>
           <p class="mt-4 text-[13px] leading-relaxed text-neutral-600">팀장으로서 화면 요구사항이 명세·코드·리뷰·테스트까지 이어지도록 작업 기준을 연결하고, 여러 실무자가 같은 흐름으로 구현·검수할 수 있게 관리했습니다.</p>
         </div>
-        <div class="slide-foot"><span>09 / 12</span></div>
+        <div class="slide-foot"><span>09 / 14</span></div>
       </section>
 
       <!-- ========== 11. Frontie - 프로젝트 소개 (보관) ========== -->
@@ -2023,7 +2381,7 @@
           </div>
         </div>
         <div class="slide-foot">
-          <span>11 / 13</span>
+          <span>11 / 14</span>
         </div>
       </section>
 
@@ -2166,7 +2524,7 @@
           </div>
         </div>
         <div class="slide-foot">
-          <span>12 / 13</span>
+          <span>12 / 14</span>
         </div>
       </section>
 
@@ -2431,9 +2789,9 @@
         <div class="slide-foot"><span>09 / 10</span></div>
       </section>
 
-      <!-- ========== 12. 끝 ========== -->
+      <!-- ========== 14. 끝 ========== -->
       <section
-        class="slide order-[12] relative items-start justify-center overflow-hidden bg-slate-600 p-0! text-white"
+        class="slide order-[14] relative items-start justify-center overflow-hidden bg-slate-600 p-0! text-white"
       >
         <!-- 발자국 워터마크 (표지와 대칭, 반대쪽에 배치) -->
         <svg
