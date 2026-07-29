@@ -563,34 +563,119 @@
           <h2 class="text-[32px] font-extrabold">기획 &amp; 프로토타입</h2>
         </div>
 
-        <div class="mt-6 grid min-h-0 flex-1 grid-cols-[0.95fr_1.05fr] gap-7">
+        <div class="mt-2 grid min-h-0 flex-1 grid-cols-[0.95fr_1.05fr] gap-7">
           <article class="flex min-h-0 flex-col">
             <div>
-              <h3 class="mt-1 text-[22px] font-extrabold">기능 명세와 일정 구조화</h3>
-              <p class="mt-2 text-[13px] leading-[1.65] text-neutral-600">
-                사용자·관리자 기능을 작업 단위로 나누고, 개발 전반과 후반의 WBS를 분리해 담당자와 진행 상태를 추적했습니다.
+              <h3 class="mt-1 text-[22px] font-extrabold">일정ㆍ버전 관리</h3>
+              <p class="text-[13px] leading-[1.65] text-neutral-600">
+                초기 기획을 세 차례의 배포 범위로 나누고, 개발 중 우선순위와 완성도를 재검토하며 각 마일스톤의 구현 범위를 조정했습니다.
               </p>
             </div>
 
-            <div class="mt-4 grid flex-1 grid-rows-2 gap-3">
-              <figure class="overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50 p-3">
-                <img src="./kanto/wbs-0524-0613.png" alt="Kanto 5월 24일부터 6월 13일까지의 WBS" class="h-[105px] w-full object-contain" />
-                <figcaption class="mt-2 text-[11.5px] font-semibold text-neutral-600">초기 설계·핵심 기능 WBS</figcaption>
-              </figure>
-              <figure class="overflow-hidden rounded-xl border border-neutral-200 bg-neutral-50 p-3">
-                <img src="./kanto/wbs-0614-0708.png" alt="Kanto 6월 14일부터 7월 8일까지의 WBS" class="h-[105px] w-full object-contain" />
-                <figcaption class="mt-2 text-[11.5px] font-semibold text-neutral-600">기능 확장·품질 개선 WBS</figcaption>
-              </figure>
-            </div>
+            <div class="mt-2 overflow-hidden text-neutral-700">
+              <div class="grid grid-cols-[88px_1fr]">
+                <div class="flex flex-col px-3 py-3">
+                  <p class="text-[15px] font-extrabold text-accent">1차</p>
+                  <p class="mt-1 text-[11px] font-bold text-slate-700">v1.0.0</p>
+                  <time class="mt-0.5 text-[10.5px] font-medium text-neutral-500">05.28-06.20</time>
+                </div>
+                <div class="px-3 py-3">
+                  <p class="text-[13px] font-bold text-slate-800">핵심 서비스 출시</p>
+                  <ul class="mt-1.5 space-y-1 text-[11.5px] leading-[1.45] text-neutral-600">
+                    <li><b class="text-slate-700">인증·계정</b> · 카카오·구글·페이스북 로그인, 이메일·본인 인증, 비밀번호 재설정</li>
+                    <li><b class="text-slate-700">게시판·탐색</b> · 중고거래·구인구직·부동산, 이미지 업로드, 검색·필터, 찜·좋아요</li>
+                    <li><b class="text-slate-700">거래·소통</b> · 실시간 채팅, Xendit 에스크로 결제, 알림, 사용자 차단, 후기·별점</li>
+                    <li><b class="text-slate-700">운영·글로벌</b> · 신고·제재, KPI 기반 관리자 대시보드, 한·영·필리핀어 지원</li>
+                  </ul>
+                </div>
+              </div>
 
-            <ul class="mt-4 space-y-2 text-[12.5px] text-neutral-700">
-              <li class="flex gap-2"><span class="font-bold text-accent">01</span><span>사용자·관리자 화면과 API 요구사항을 기능 단위로 분해</span></li>
-              <li class="flex gap-2"><span class="font-bold text-accent">02</span><span>우선순위·담당자·진행 상태를 WBS로 관리</span></li>
-              <li class="flex gap-2"><span class="font-bold text-accent">03</span><span>외부 리뷰와 변경 요구를 일정에 반영해 구현 범위 조정</span></li>
-            </ul>
+              <div class="grid grid-cols-[88px_1fr] border-t border-neutral-200">
+                <div class="flex flex-col px-3 py-3">
+                  <p class="text-[15px] font-extrabold text-red-400">Hotfix</p>
+                  <p class="mt-1 text-[11px] font-bold text-slate-700">v1.0.1</p>
+                  <time class="mt-0.5 text-[10.5px] font-medium text-neutral-500">06.21–06.22</time>
+                </div>
+                <div class="px-3 py-3">
+                  <p class="text-[13px] font-bold text-slate-800">출시 안정화</p>
+                  <ul class="mt-1.5 space-y-1 text-[11.5px] leading-[1.45] text-neutral-600">
+                    <li><b class="text-slate-700">약관 성능</b> · 탭 이동마다 발생하던 Notion API 재호출을 10시간 캐싱으로 제거</li>
+                    <li><b class="text-slate-700">다국어·계정</b> · 약관·404 다국어 적용, 프로필 지역 정보 누락 수정</li>
+                    <li><b class="text-slate-700">UI·호환성</b> · 토스트·페이지네이션 피드백 개선, Next.js 16 규약 대응</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-[88px_1fr] border-t border-neutral-200">
+                <div class="flex flex-col justify-center px-3 py-3">
+                  <p class="text-[15px] font-extrabold text-accent">2차</p>
+                  <p class="mt-1 text-[11px] font-bold text-slate-700">v1.2.0</p>
+                  <time class="mt-1 text-[10.5px] font-medium text-neutral-500">06.22–07.01</time>
+                </div>
+                <div class="px-3 py-3">
+                  <p class="text-[13px] font-bold text-slate-800">핵심 기능 확장</p>
+                  <ul class="mt-1.5 space-y-1 text-[11.5px] leading-[1.45] text-neutral-600">
+                    <li><b class="text-slate-700">서비스 확장</b> · Kanto Go 지도 모임·그룹채팅, AI 챗봇·이미지 검수</li>
+                    <li><b class="text-slate-700">운영 고도화</b> · 공지·금칙어·스팸·권한·감사 로그·모니터링</li>
+                    <li><b class="text-slate-700">신뢰·성능</b> · KTS·KPPS, 결제 보안, DB 페이지네이션 개선</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-[88px_1fr] border-t border-neutral-200">
+                <div class="flex flex-col px-3 py-3">
+                  <p class="text-[15px] font-extrabold text-red-400">Hotfix</p>
+                  <p class="mt-1 text-[11px] font-bold text-slate-700">v1.2.1–v1.2.2</p>
+                  <time class="mt-0.5 text-[10.5px] font-medium text-neutral-500">07.01–07.03</time>
+                </div>
+                <div class="px-3 py-3">
+                  <p class="text-[13px] font-bold text-slate-800">2차 출시 전후 오류 보완</p>
+                  <ul class="mt-1.5 space-y-1 text-[11.5px] leading-[1.45] text-neutral-600">
+                    <li><b class="text-slate-700">배포 전환</b> · v1.2.0 공개를 보류하고 배포 후 확인된 오류를 수정해 v1.2.1로 전환</li>
+                    <li><b class="text-slate-700">인증·화면</b> · 페이스북 로그인, Kanto Go·AI 챗봇 스크롤·모달 오류 수정</li>
+                    <li><b class="text-slate-700">콘텐츠 UI</b> · 공지 배너, 인기 공고·다중 이미지 인디케이터 표시 보완</li>
+                    <li><b class="text-slate-700">이미지 트래픽</b> · 업로드 이미지를 WebP로 변환해 Supabase 트래픽 절감</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
           </article>
 
           <article class="flex min-h-0 flex-col border-l border-neutral-200 pl-7">
+            <div class="mb-4 overflow-hidden text-neutral-700">
+              <div class="grid grid-cols-[88px_1fr]">
+                <div class="flex flex-col justify-center px-3 py-3">
+                  <p class="text-[15px] font-extrabold text-accent">3차</p>
+                  <p class="mt-1 text-[11px] font-bold text-slate-700">v1.3.0</p>
+                  <time class="mt-1 text-[10.5px] font-medium text-neutral-500">07.02–07.06</time>
+                </div>
+                <div class="px-3 py-3">
+                  <p class="text-[13px] font-bold text-slate-800">최종 안정화</p>
+                  <ul class="mt-1.5 space-y-1 text-[11.5px] leading-[1.45] text-neutral-600">
+                    <li><b class="text-slate-700">성능·보안</b> · 이미지·쿼리·번들 최적화, 중복 로그인 세션 차단</li>
+                    <li><b class="text-slate-700">품질·검증</b> · 반응형·모달·SEO 보완, 코드 리뷰·E2E 기반 QA</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-[88px_1fr] border-t border-neutral-200">
+                <div class="flex flex-col px-3 py-3">
+                  <p class="text-[15px] font-extrabold text-red-400">Hotfix</p>
+                  <p class="mt-1 text-[11px] font-bold text-slate-700">v1.3.1–v1.3.3</p>
+                  <time class="mt-0.5 text-[10.5px] font-medium text-neutral-500">07.06–07.07</time>
+                </div>
+                <div class="px-3 py-3">
+                  <p class="text-[13px] font-bold text-slate-800">출시 후 주요 오류 수정</p>
+                  <ul class="mt-1.5 space-y-1 text-[11.5px] leading-[1.45] text-neutral-600">
+                    <li><b class="text-slate-700">v1.3.1</b> · 가입 흐름·Kanto Go 공유 오류, 모바일 헤더·관리자 UI 문제 수정</li>
+                    <li><b class="text-slate-700">v1.3.2</b> · 금칙어 게시물 서버 차단, 참여자 이름 실시간 반영, 판매완료 인기순 노출 수정</li>
+                    <li><b class="text-slate-700">v1.3.3</b> · Vercel 이미지 402 오류를 전역 우회해 목록·상세 이미지 표시 복구</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
             <div>
               <h3 class="mt-1 text-[22px] font-extrabold">반응형 화면 흐름 구체화</h3>
               <p class="mt-2 text-[13px] leading-[1.65] text-neutral-600">
@@ -638,7 +723,7 @@
             <h2 class="text-[42px] font-extrabold leading-none">Kanto</h2>
           </div>
 
-          <div class="flex items-center gap-2">
+          <div class="hidden">
             <a
               href="https://kanto-iota.vercel.app/main"
               target="_blank"
@@ -815,52 +900,93 @@
             <p class="text-slate-600 pl-4 mt-3">
               필리핀에 흩어진 거래·일자리·주거 정보를 올인원을 목적으로 빠르고 안전하게 제공하기 위해서 만든 통합 생활 플랫폼입니다.
             </p>
-            <div
-              class="mt-4 rounded-xl border border-neutral-200 bg-neutral-50 px-5 py-4"
-              aria-label="Kanto 번역 및 프로젝트 정보 코드"
-            >
-              <code class="block font-mono text-[13px] leading-[1.55]">
-                <span class="block"><span class="font-semibold text-accent">const</span> <span class="text-neutral-700">getKantoOverview = () =&gt; ({</span></span>
-                <span class="block pl-4"><span class="text-neutral-500">meaning</span><span class="text-neutral-700">: Kanto.</span><span class="font-semibold text-accent">translate</span><span class="text-neutral-700">(</span><span class="text-emerald-700">"fil-PH"</span><span class="text-neutral-700">, </span><span class="text-emerald-700">"ko-KR"</span><span class="text-neutral-700">),</span></span>
-                <span class="block pl-4 text-neutral-400">// "우리 동네"</span>
-                <span class="block pl-4"><span class="text-neutral-500">members</span><span class="text-neutral-700">: </span><span class="text-emerald-700">4</span><span class="text-neutral-700">,</span></span>
-                <span class="block pl-4"><span class="text-neutral-500">period</span><span class="text-neutral-700">: </span><span class="text-emerald-700">"2026.05–07"</span><span class="text-neutral-700">,</span></span>
-                <span class="block pl-4"><span class="text-neutral-500">result</span><span class="text-neutral-700">: </span><span class="text-emerald-700">"프로젝트 1위"</span><span class="text-neutral-700">,</span></span>
-                <span class="block text-neutral-700">});</span>
-              </code>
+            <div class="border-t border-neutral-200 mt-2 pt-2">
+              <ul class="list-inside list-disc marker:text-slate-700 ml-4 text-slate-500 text-[16px]">
+                <li>인원: 4인</li>
+                <li>기간: 2026.05 ~ 07</li>
+                <li>결과: 파이널 프로젝트 1위</li>
+              </ul>
             </div>
 
-            <div class="mt-4 grid grid-cols-2 gap-2.5">
-                <div class="flex flex-col rounded-xl border border-neutral-200 px-4 py-3">
-                  <div class="flex items-center gap-4">
-                    <span class="flex h-7 w-7 shrink-0 items-center justify-center text-[13px] font-extrabold text-slate-900">01</span>
-                    <p class="text-[14px]"><b>생활 게시판</b></p>
-                  </div>
-                  <p class="text-[13px] pl-11">거래, 구인, 부동산, 모임 통합</p>
-                </div>
-                <div class="flex flex-col rounded-xl border border-neutral-200 px-4 py-3">
-                  <div class="flex items-center gap-4">
-                    <span class="flex h-7 w-7 shrink-0 items-center justify-center text-[13px] font-extrabold text-slate-900">02</span>
-                    <p class="text-[14px]"><b>Kanto Go</b></p>
-                  </div>
-                  <p class="text-[13px] pl-11">지도 기반 실시간 모임 매칭</p>
-                </div>
-                <div class="flex flex-col rounded-xl border border-neutral-200 px-4 py-3">
-                  <div class="flex items-center gap-4">
-                    <span class="flex h-7 w-7 shrink-0 items-center justify-center text-[13px] font-extrabold text-slate-900">03</span>
-                    <p class="text-[14px]"><b>신뢰 기능</b></p>
-                  </div>
-                  <p class="text-[13px] pl-11">채팅, 점수, AI 이미지 검열</p>
-                </div>
-                <div class="flex flex-col rounded-xl border border-neutral-200 px-4 py-3">
-                  <div class="flex items-center gap-4">
-                    <span class="flex h-7 w-7 shrink-0 items-center justify-center text-[13px] font-extrabold text-slate-900">04</span>
-                    <p class="text-[14px]"><b>관리자 기능</b></p>
-                  </div>
-                  <p class="text-[13px] pl-11">유저 관리, 운영 관리, 모니터링</p>
-                </div>
+            <div class="border-t border-neutral-200 mt-2 pt-2">
+              <div class="mb-2">
+                <h4 class="font-bold">주요 기능</h4>
+                <ul class="ml-4 list-inside list-disc text-[16px] text-slate-500 marker:text-slate-700">
+                  <li><span class="font-semibold text-slate-700">거래·생활:</span> 중고거래, 구인구직, 부동산, Kanto Go</li>
+                  <li><span class="font-semibold text-slate-700">소통·지원:</span> AI 챗봇, 1:1 실시간 채팅, 알림</li>
+                  <li><span class="font-semibold text-slate-700">콘텐츠·다국어:</span> 공지사항, 이용약관, 국제화(i18n)</li>
+                  <li><span class="font-semibold text-slate-700">안전결제:</span> Xendit 기반 결제</li>
+                  <li><span class="font-semibold text-slate-700">운영·보안:</span> 금칙어 필터링, 도배·스팸 방지, 권한 관리, 채팅 로그</li>
+                  <li><span class="font-semibold text-slate-700">모니터링:</span> Sentry 기반 오류 추적</li>
+                </ul>
+              </div>
+              <div class="overflow-hidden rounded-lg border border-neutral-200">
+                <table class="w-full table-fixed border-collapse text-[13px] text-slate-600">
+                  <tbody class="divide-y divide-neutral-200">
+                    <tr>
+                      <th scope="row" class="w-[92px] bg-neutral-50 px-3 py-2 text-left font-semibold text-slate-700">
+                        유저페이지
+                      </th>
+                      <td class="px-3 py-2">
+                        <a
+                          href="https://kanto-iota.vercel.app/main"
+                          target="_blank"
+                          rel="noopener"
+                          class="break-all hover:text-accent hover:underline"
+                        >https://kanto-iota.vercel.app/main</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="bg-neutral-50 px-3 py-2 text-left font-semibold text-slate-700">
+                        관리자페이지
+                      </th>
+                      <td class="px-3 py-2">
+                        <a
+                          href="https://kanto-iota.vercel.app/admin"
+                          target="_blank"
+                          rel="noopener"
+                          class="break-all hover:text-accent hover:underline"
+                        >https://kanto-iota.vercel.app/admin</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="bg-neutral-50 px-3 py-2 text-left font-semibold text-slate-700">
+                        임시계정
+                      </th>
+                      <td class="px-3 py-2 font-mono text-[12px]">
+                        asdf1234@naver.com / asdf1234
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="mt-2 flex items-center justify-end gap-2" aria-label="Kanto 관련 문서">
+                  <a
+                    href="https://github.com/FRONTENDBOOTCAMP-17th/kanto"
+                    target="_blank"
+                    rel="noopener"
+                    class="pf-icon-link"
+                    title="GitHub 저장소"
+                    aria-label="Kanto GitHub 저장소"
+                  ><svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                  <a
+                    href="https://www.figma.com/design/CQmnk9mfFP83bnl937dIj6/Kanto-?node-id=194-8349&amp;t=ioaWC09Cq1vzB2kd-0"
+                    target="_blank"
+                    rel="noopener"
+                    class="pf-icon-link"
+                    title="Figma 디자인"
+                    aria-label="Kanto Figma 디자인"
+                  ><svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4" aria-hidden="true"><path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z"/></svg></a>
+                  <a
+                    href="https://app.notion.com/p/1-it-s-real-36e73873401a8099b037f045e2d2c9eb"
+                    target="_blank"
+                    rel="noopener"
+                    class="pf-icon-link"
+                    title="Notion 문서"
+                    aria-label="Kanto Notion 문서"
+                  ><svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4" aria-hidden="true"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg></a>
+              </div>
             </div>
-
           </div>
         </div>
 
