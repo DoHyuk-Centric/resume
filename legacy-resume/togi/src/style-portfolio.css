@@ -38,7 +38,7 @@
 
   .slide-foot {
     @apply absolute inset-x-[12mm] bottom-[7mm] flex items-center justify-end
-           border-t border-gray-100 pt-3 text-[10px] text-muted;
+           pt-3 text-[10px] text-muted;
   }
 
   .pf-card {
