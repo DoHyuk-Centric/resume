@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -120,9 +121,9 @@
                 <td class="pt-3 text-[11.5px] text-neutral-500">DoHyuk.dev 프로젝트 소개 <span class="text-neutral-400">(14p)</span></td>
               </tr>
               <tr class="h-[42px] border-b-[0.5px] border-slate-200 align-top"><th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Core Feature</th><td class="pt-3 text-[11.5px] text-neutral-500">변경 블록만 렌더링하는 미리보기 <span class="text-neutral-400">(15p)</span></td></tr>
-              <tr class="h-[42px] border-b-[0.5px] border-slate-200 align-top"><th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Interactive UI</th><td class="pt-3 text-[11.5px] text-neutral-500">반응형 인터랙티브 목업 <span class="text-neutral-400">(16p)</span></td></tr>
-              <tr class="h-[42px] border-b-[0.5px] border-slate-200 align-top"><th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Troubleshooting</th><td class="pt-3 text-[11.5px] text-neutral-500">Firebase → Supabase 인증 일원화 <span class="text-neutral-400">(17p)</span></td></tr>
-              <tr class="h-[42px] align-top"><th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Accessibility</th><td class="pt-3 text-[11.5px] text-neutral-500">ARIA · 시맨틱 · 포커스 관리 <span class="text-neutral-400">(18p)</span></td></tr>
+              <tr class="h-[42px] border-b-[0.5px] border-slate-200 align-top"><th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Accessibility</th><td class="pt-3 text-[11.5px] text-neutral-500">ARIA · 시맨틱 · 포커스 관리 <span class="text-neutral-400">(16p)</span></td></tr>
+              <tr class="h-[42px] border-b-[0.5px] border-slate-200 align-top"><th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Interactive UI</th><td class="pt-3 text-[11.5px] text-neutral-500">반응형 인터랙티브 목업 <span class="text-neutral-400">(17p)</span></td></tr>
+              <tr class="h-[42px] align-top"><th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Troubleshooting</th><td class="pt-3 text-[11.5px] text-neutral-500">Firebase → Supabase 인증 일원화 <span class="text-neutral-400">(18p)</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -1499,28 +1500,64 @@
                 <div class="px-3 text-center"><dt class="font-semibold text-neutral-400">기간</dt><dd class="mt-1 font-bold text-slate-700">2026.01–03</dd></div>
               </dl>
             </div>
-            <h3 class="mt-3 text-[25px] font-extrabold leading-[1.35]">Supabase CRUD와 마크다운 미리보기를 활용한 개인 블로그 프로젝트입니다.</h3>
-            <p class="mt-3 pl-4 text-slate-600">
-              Vanilla JavaScript와 Vite 멀티 페이지 빌드로 페이지별 스크립트만 로드하는 MPA 구조를 설계했습니다.
-              <span class="mt-2 block border-l-2 border-slate-300 pl-3 text-[12px] leading-[1.3]">시각적 재미 요소를 위해서 인트로에 고양이 발 모양의 인터렉션 넣어 <br /> 누르면 메인페이지로 접근이 가능하도록 했습니다.</span>
-            </p>
-            <div class="mt-4 border-t border-neutral-200 pt-4">
-              <div class="mb-4">
-                <h4 class="font-bold">주요 기능</h4>
-                <ul class="ml-4 mt-2 flex flex-col gap-1 list-inside list-disc text-[16px] text-slate-500 marker:text-slate-700">
-                  <li><span class="font-semibold text-slate-700">성능:</span> 블록 단위 프리뷰로 렌더링 8.2배 개선</li>
-                  <li><span class="font-semibold text-slate-700">콘텐츠:</span> 발행·임시저장·휴지통 3단계 상태 관리</li>
-                  <li><span class="font-semibold text-slate-700">스크롤:</span> CSS Scroll Snap으로 섹션 단위 이동을 구성하고 <code>IntersectionObserver</code>로 현재 인덱스 동기화</li>
-                  <li><span class="font-semibold text-slate-700">외부 API:</span> Edge Function 기반 공휴일 조회</li>
-                  <li><span class="font-semibold text-slate-700">접근성:</span> 포커스 이동·복원과 키보드 조작 지원</li>
-                </ul>
-              </div>
-              <div class="overflow-hidden rounded-lg border border-neutral-200">
-                <table class="w-full table-fixed border-collapse text-[13px] text-slate-600"><tbody class="divide-y divide-neutral-200">
-                  <tr><th scope="row" class="w-[92px] bg-neutral-50 px-3 py-2 text-left font-semibold text-slate-700">서비스</th><td class="px-3 py-2"><a href="https://dohyuk.dev" target="_blank" rel="noopener" class="break-all hover:text-accent hover:underline">https://dohyuk.dev</a></td></tr>
-                  <tr><th scope="row" class="bg-neutral-50 px-3 py-2 text-left font-semibold text-slate-700">GitHub</th><td class="px-3 py-2"><a href="https://github.com/DoHyuk-Centric/myBlog" target="_blank" rel="noopener" class="break-all hover:text-accent hover:underline">github.com/DoHyuk-Centric/myBlog</a></td></tr>
-                  <tr><th scope="row" class="bg-neutral-50 px-3 py-2 text-left font-semibold text-slate-700">npm</th><td class="px-3 py-2"><a href="https://www.npmjs.com/package/markdown-block-preview" target="_blank" rel="noopener" class="break-all hover:text-accent hover:underline">markdown-block-preview</a></td></tr>
-                </tbody></table>
+            <div class="mt-3 overflow-hidden rounded-lg border border-neutral-200">
+              <table class="w-full table-fixed border-collapse text-[13px] text-slate-600"><tbody class="divide-y divide-neutral-200">
+                <tr><th scope="row" class="w-[92px] bg-neutral-50 px-3 py-2 text-left font-semibold text-slate-700">서비스</th><td class="px-3 py-2"><a href="https://dohyuk.dev" target="_blank" rel="noopener" class="break-all hover:text-accent hover:underline">https://dohyuk.dev</a></td></tr>
+                <tr><th scope="row" class="bg-neutral-50 px-3 py-2 text-left font-semibold text-slate-700">GitHub</th><td class="px-3 py-2"><a href="https://github.com/DoHyuk-Centric/myBlog" target="_blank" rel="noopener" class="break-all hover:text-accent hover:underline">github.com/DoHyuk-Centric/myBlog</a></td></tr>
+                <tr><th scope="row" class="bg-neutral-50 px-3 py-2 text-left font-semibold text-slate-700">npm</th><td class="px-3 py-2"><a href="https://www.npmjs.com/package/markdown-block-preview" target="_blank" rel="noopener" class="break-all hover:text-accent hover:underline">markdown-block-preview</a></td></tr>
+              </tbody></table>
+            </div>
+            <h3 class="mt-3 border-t border-neutral-200 pt-3 text-[25px] font-extrabold leading-[1.35]">#Supabase #CRUD #마크다운 #미리보기 #개인프로젝트 #블로그</h3>
+            <div>
+              <div>
+                <figure id="dohyuk-feature-wheel" class="flex justify-center" aria-label="DoHyuk.dev 주요 기능 4가지">
+                  <svg viewBox="0 0 320 320" class="h-[96mm] w-[96mm]" role="img" aria-labelledby="dohyuk-feature-wheel-title dohuk-feature-wheel-desc">
+                    <title id="dohyuk-feature-wheel-title">DoHyuk.dev 주요 기능</title>
+                    <desc id="dohyuk-feature-wheel-desc">미리보기 기능, 인증과 보안, 반응형, 접근성의 네 영역으로 나눈 원형 다이어그램</desc>
+
+                    <g transform="translate(6 0)">
+                    <path d="M160 160 L160 28 A132 132 0 0 1 292 160 Z" fill="#dbeafe" stroke="#fff" stroke-width="4" />
+                    <path d="M160 160 L292 160 A132 132 0 0 1 160 292 Z" fill="#e0e7ff" stroke="#fff" stroke-width="4" />
+                    <path d="M160 160 L160 292 A132 132 0 0 1 28 160 Z" fill="#ede9fe" stroke="#fff" stroke-width="4" />
+                    <path d="M160 160 L28 160 A132 132 0 0 1 160 28 Z" fill="#e0f2fe" stroke="#fff" stroke-width="4" />
+                    <circle cx="160" cy="160" r="132" fill="none" stroke="#cbd5e1" stroke-width="1.5" />
+
+                    <foreignObject x="42" y="84" width="118" height="68">
+                      <div xmlns="http://www.w3.org/1999/xhtml" class="font-jua" style="display:flex;height:100%;flex-direction:column;align-items:center;text-align:center;line-height:1.15">
+                        <div style="color:#1e3a8a;font-size:16px;font-weight:500;white-space:nowrap">미리보기 기능</div>
+                        <div style="margin-top:4px;color:#475569;font-size:11.5px;white-space:nowrap">렌더링 8.2× 개선</div>
+                      </div>
+                    </foreignObject>
+
+                    <foreignObject x="160" y="84" width="118" height="82">
+                      <div xmlns="http://www.w3.org/1999/xhtml" class="font-jua" style="display:flex;height:100%;flex-direction:column;align-items:center;text-align:center;line-height:1.15">
+                        <div style="color:#3730a3;font-size:16px;font-weight:500;white-space:nowrap">인증·보안</div>
+                        <div style="margin-top:4px;color:#475569;font-size:10.5px;white-space:nowrap">인증 공급자 일원화</div>
+                        <div style="margin-right:-8px;color:#475569;font-size:11.5px;white-space:nowrap">Firebase → Supabase</div>
+                      </div>
+                    </foreignObject>
+
+                    <foreignObject x="160" y="186" width="118" height="62">
+                      <div xmlns="http://www.w3.org/1999/xhtml" class="font-jua" style="display:flex;height:100%;flex-direction:column;align-items:center;text-align:center;line-height:1.15">
+                        <div style="color:#5b21b6;font-size:16px;font-weight:500;white-space:nowrap">반응형</div>
+                        <div style="margin-top:4px;color:#475569;font-size:11.5px;white-space:nowrap">Desktop · Mobile</div>
+                      </div>
+                    </foreignObject>
+
+                    <foreignObject x="42" y="186" width="118" height="62">
+                      <div xmlns="http://www.w3.org/1999/xhtml" class="font-jua" style="display:flex;height:100%;flex-direction:column;align-items:center;text-align:center;line-height:1.15">
+                        <div style="color:#075985;font-size:16px;font-weight:500;white-space:nowrap">접근성 (a11y)</div>
+                        <div style="margin-top:4px;color:#475569;font-size:11.5px;white-space:nowrap">포커스 · 키보드</div>
+                      </div>
+                    </foreignObject>
+                    </g>
+
+                    <rect x="6" y="22" width="100" height="44" rx="16" ry="16" fill="#fff" stroke="#cbd5e1" stroke-width="1.5" />
+                    <foreignObject x="6" y="22" width="100" height="44">
+                      <div xmlns="http://www.w3.org/1999/xhtml" class="font-jua" style="display:flex;height:100%;align-items:center;justify-content:center;color:#0f172a;font-size:12px">주요 기능</div>
+                    </foreignObject>
+                  </svg>
+                </figure>
               </div>
             </div>
           </div>
@@ -2288,8 +2325,8 @@
         </div>
       </section>
 
-      <!-- ========== 16. DoHyuk.dev - Firebase → Supabase 인증 일원화 ========== -->
-      <section class="slide order-[17] break-keep break-after-page">
+      <!-- ========== 18. DoHyuk.dev - Firebase → Supabase 인증 일원화 ========== -->
+      <section class="slide order-[18] break-keep break-after-page">
         <p class="slide-kicker">03. DoHyuk.dev</p>
         <div class="mt-4 flex items-end justify-between">
           <h2 class="text-[32px] font-extrabold font-nanum-round">Firebase → Supabase, 인증 공급자 일원화</h2>
@@ -2297,26 +2334,26 @@
 
         <div class="mt-5 grid min-h-0 flex-1 grid-cols-[1.5fr_0.5fr] gap-6">
           <article class="flex min-h-0 flex-col">
-            <h3 class="text-[22px] font-extrabold font-nanum-round">공급자 불일치로 발생한 소유권 검증 허점 제거</h3>
+            <h3 class="text-[22px] font-extrabold font-nanum-round">인증 공급자 분리로 드러난 수정·삭제 권한 문제 해결</h3>
             <p class="mt-2 text-[13.5px] leading-[1.7] text-neutral-600">
-              게시글을 작성자가 아닌 사용자도 수정·삭제할 수 있는 보안 취약점을 발견하고, 인증(Firebase)과 데이터(Supabase)의 공급자가 서로 달라 UID 체계가 어긋난 것을 원인으로 지목해 해결했습니다.
+              Supabase에서 데이터를 관리하면서 Firebase로 사용자를 인증해 게시글 수정·삭제 시 작성자를 구분하기 어려운 문제를 발견했습니다. 서로 다른 UID를 직접 연동하기 어렵다고 판단해 인증 수단을 Supabase로 옮겼습니다.
             </p>
 
             <div class="mt-8 grid grid-cols-2 gap-8 text-[12.5px] leading-[1.65]">
               <section>
                 <p class="font-bold text-slate-700">검토했지만 기각한 방안</p>
                 <ul class="mt-2 list-disc space-y-1 pl-5 text-neutral-600 marker:text-neutral-400">
-                  <li><code>UID 매핑 DB</code> · Firebase UID와 Supabase 데이터를 잇는 매핑 테이블 → 조회마다 이중 경유로 성능 저하</li>
-                  <li><code>JWT 로컬스토리지 저장</code> · 클라이언트에 토큰 저장 → 탈취 시 소유권 위조로 이어지는 XSS 위험</li>
+                  <li><code>UID 매핑 DB</code> · Firebase UID와 Supabase ID를 중간 테이블에 저장 → 두 시스템을 경유하고 결합 관계가 느슨해짐</li>
+                  <li><code>JWT 로컬 세션 저장</code> · 웹을 미들웨어처럼 사용 → 클라이언트 보관에 따른 보안 부담과 쿠키 제한 환경을 고려</li>
                 </ul>
               </section>
 
               <section>
                 <p class="font-bold text-slate-700">최종 선택 - 공급자 일원화</p>
                 <ul class="mt-2 list-disc space-y-1 pl-5 text-neutral-600 marker:text-neutral-400">
-                  <li>Firebase를 걷어내고 <code>Supabase Auth</code>(GitHub·Google OAuth)로 인증·데이터 공급자 통합</li>
-                  <li><code>checkPostOwner</code>가 로그인 사용자 id와 게시글 <code>user_id</code>를 직접 비교</li>
-                  <li><code>RLS</code>로 DB 레벨에서 소유권 검증을 강제</li>
+                  <li>Firebase 로그인을 포기하고 <code>Supabase Auth</code>로 인증 수단 교체</li>
+                  <li><code>onAuthStateChanged</code>를 Supabase의 <code>onAuthStateChange</code>로 변경</li>
+                  <li>DB·Storage·Auth를 Supabase SDK 한 곳에서 관리</li>
                 </ul>
               </section>
             </div>
@@ -2328,20 +2365,20 @@
               </div>
               <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
                 <b class="border-r border-neutral-200 pr-3 text-slate-700">원인</b>
-                <span>데이터(Supabase)와 인증(Firebase)의 공급자가 달라 UID 체계가 일치하지 않아 소유권을 안전하게 검증할 방법이 없음</span>
+                <span>Firebase UID와 Supabase ID의 체계가 달라 게시글 작성자 정보를 직접 연결하기 어려웠음</span>
               </div>
               <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
                 <b class="border-r border-neutral-200 pr-3 text-slate-700">해결</b>
-                <span>Firebase를 걷어내고 Supabase Auth(GitHub·Google OAuth)로 인증·데이터 공급자를 일원화</span>
+                <span>Firebase 인증을 Supabase Auth로 교체해 인증과 데이터 공급자를 일원화</span>
               </div>
               <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
-                <b class="border-r border-neutral-200 pr-3 text-slate-700">검증</b>
-                <span><code>checkPostOwner</code>가 사용자 id와 게시글 <code>user_id</code>를 비교하고 <code>RLS</code>로 소유권을 DB 레벨에서 강제</span>
+                <b class="border-r border-neutral-200 pr-3 text-slate-700">변경</b>
+                <span>Firebase의 <code>onAuthStateChanged</code>를 Supabase의 <code>onAuthStateChange</code>로 교체</span>
               </div>
               <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
                 <b class="border-r border-neutral-200 pr-3 text-slate-700">문서화</b>
                 <div>
-                  <span>문제 발견부터 공급자 일원화, RLS 검증까지의 해결 과정을 기술 블로그에 기록</span>
+                  <span>UID 연동 방안 검토부터 Supabase 인증수단 교체까지의 과정을 기술 블로그에 기록</span>
                   <a href="https://hyeeoooook.tistory.com/40" target="_blank" rel="noopener" class="mt-1 block break-all text-neutral-600 hover:underline"><b class="text-slate-700">주소:</b> https://hyeeoooook.tistory.com/40</a>
                 </div>
               </div>
@@ -2369,11 +2406,11 @@
             </div>
           </figure>
         </div>
-        <div class="slide-foot"><span>17 / 19</span></div>
+        <div class="slide-foot"><span>18 / 19</span></div>
       </section>
 
-      <!-- ========== 15. DoHyuk.dev - 반응형 인터랙티브 목업 ========== -->
-      <section class="slide order-[16] break-keep break-after-page">
+      <!-- ========== 17. DoHyuk.dev - 반응형 인터랙티브 목업 ========== -->
+      <section class="slide order-[17] break-keep break-after-page">
         <p class="slide-kicker">03. DoHyuk.dev</p>
         <div class="mt-4 flex items-end justify-between">
           <h2 class="text-[32px] font-extrabold font-nanum-round">Windows XP와 One UI를 재현한 반응형 목업</h2>
@@ -2408,11 +2445,17 @@
             </ul>
           </article>
         </div>
-        <div class="slide-foot"><span>16 / 19</span></div>
+        <div class="slide-foot"><span>17 / 19</span></div>
       </section>
 
-      <!-- ========== 16-2. DoHyuk.dev - 웹 접근성 ========== -->
-      <section class="slide order-[18] break-keep break-after-page">
+      <!-- ========== 16. DoHyuk.dev - 웹 접근성 ========== -->
+      <section class="slide order-[16] break-keep break-after-page">
+        <img
+          src="./myblog/waiaria.png"
+          alt=""
+          aria-hidden="true"
+          class="pointer-events-none absolute right-[8mm] top-[8mm] z-0 w-[38%] object-contain object-right-top opacity-15"
+        />
         <p class="slide-kicker">03. DoHyuk.dev</p>
         <div class="mt-4 flex items-end justify-between">
           <h2 class="text-[32px] font-extrabold font-nanum-round">웹 접근성 - 시맨틱 구조와 ARIA</h2>
@@ -2496,7 +2539,7 @@
             </div>
           </figure>
         </div>
-        <div class="slide-foot"><span>18 / 19</span></div>
+        <div class="slide-foot"><span>16 / 19</span></div>
       </section>
 
       <!-- ========== 16. 끝 ========== -->
