@@ -1617,34 +1617,30 @@
             <h3 class="text-[22px] font-extrabold font-nanum-round">전체 DOM 교체 대신 변경된 블록만 갱신</h3>
             <p class="mt-2 text-[13.5px] leading-[1.7] text-neutral-600">입력할 때마다 미리보기 전체를 다시 그려 발생하던 깜빡임과 작성 지연을 측정하고, 변경 범위를 블록 단위로 줄였습니다.</p>
 
-            <div class="mt-5 divide-y divide-neutral-200 border-y border-neutral-200 text-[13px] leading-[1.6] text-neutral-600">
-              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
-                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">문제</b>
-                <span>글을 입력할 때마다 우측 미리보기 전체가 다시 렌더링되어 화면이 깜빡이고 작성 흐름을 방해</span>
+            <div class="mt-8 flex flex-1 flex-col justify-center">
+            <div class="divide-y divide-neutral-200 border-y border-neutral-200 text-[15px] leading-[1.6] text-neutral-600">
+              <div class="grid grid-cols-[110px_1fr] items-center gap-3 py-4">
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 font-jua text-xl font-normal text-slate-700">상황</b>
+                <span>글을 입력할 때마다 우측 미리보기의 전체 DOM이 교체되어 화면이 깜빡이고 작성 흐름이 끊겼습니다.</span>
               </div>
-              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
-                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">병목 측정</b>
-                <span>파싱보다 전체 <code>innerHTML</code> 교체에 따른 DOM 트리 재구성이 병목임을 확인</span>
+              <div class="grid grid-cols-[110px_1fr] items-center gap-3 py-4">
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 font-jua text-xl font-normal text-slate-700">과제</b>
+                <span>파싱과 DOM 반영 시간을 분리 측정해 병목을 찾고, 전체 재구성 없이 변경된 영역만 갱신해야 했습니다.</span>
               </div>
-              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
-                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">해결</b>
-                <span>문서를 블록으로 나눠 이전 결과와 비교하고 변경된 블록만 DOM에 반영, 구조 변경 시 전체 재구성으로 폴백</span>
+              <div class="grid grid-cols-[110px_1fr] items-center gap-3 py-4">
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 font-jua text-xl font-normal text-slate-700">행동</b>
+                <span>문서를 블록 단위로 분리해 이전 결과와 비교하고 변경된 블록만 DOM에 반영했습니다. 구조 변경 시 전체 재구성으로 폴백하고, 로직을 <code>markdown-block-preview</code>로 분리·배포했습니다.</span>
               </div>
-              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
-                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">검증</b>
-                <span>전체 DOM 반영 <b class="text-slate-700">13.45ms</b>에서 변경 블록 반영 <b class="text-slate-700">0.18ms</b>로 단축</span>
+              <div class="grid grid-cols-[110px_1fr] items-center gap-3 py-4">
+                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 font-jua text-xl font-normal text-slate-700">결과</b>
+                <span>전체 DOM 반영 시간을 <b class="text-slate-700">13.45ms → 0.18ms</b>로 약 98.7% 단축했습니다. 50블록 환경에서는 0.03~0.07ms를 기록해 naive 방식 대비 최대 <b class="text-accent">8.2배 개선</b>했습니다.</span>
               </div>
-              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
-                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">배포</b>
-                <span>50블록 기준 0.03~0.07ms, naive 대비 최대 <b class="text-accent">8.2배 개선</b>한 로직을 <code>markdown-block-preview</code>로 분리·배포</span>
-              </div>
-              <div class="grid grid-cols-[110px_1fr] gap-3 py-4">
-                <b class="whitespace-nowrap border-r border-neutral-200 pr-3 text-slate-700">문서화</b>
-                <div>
-                  <span>문제 정의부터 병목 측정, 블록 단위 갱신 설계와 성능 검증까지의 해결 과정을 기술 블로그에 기록</span>
-                  <a href="https://hyeeoooook.tistory.com/75" target="_blank" rel="noopener" class="mt-1 block break-all text-neutral-600 hover:underline"><b class="text-slate-700">주소:</b> https://hyeeoooook.tistory.com/75</a>
-                </div>
-              </div>
+            </div>
+
+            <p class="mt-3 text-[11px] text-neutral-500">
+              <span class="font-bold text-slate-700">문서화</span> ·
+              <a href="https://hyeeoooook.tistory.com/75" target="_blank" rel="noopener" class="hover:underline">hyeeoooook.tistory.com/75</a>
+            </p>
             </div>
           </article>
         </div>
@@ -2466,40 +2462,38 @@
           <code>Tab</code>으로 메뉴 항목을 순차 이동하고 <code>Enter</code>로 접근할 수 있도록 키보드 흐름을 구현했습니다. 시맨틱 마크업과 ARIA 상태를 연결하고, 메뉴가 열리고 닫힐 때 포커스를 이동·복원하도록 개선했습니다.
         </p>
 
-        <div class="mx-auto mt-5 grid w-fit grid-cols-[96mm_64mm_64mm] grid-rows-2 items-center gap-x-16 gap-y-2 text-[14px] leading-[1.55]">
+        <div class="mx-auto mt-5 grid w-fit grid-cols-[96mm_64mm_64mm] grid-rows-2 items-center gap-x-16 gap-y-8 text-[14px] leading-[1.55]">
           <section class="relative col-start-2 row-start-1 flex h-[64mm] w-[64mm] flex-col items-center justify-center rounded-full bg-rose-100/80 p-7 text-center shadow-sm">
-            <p class="absolute top-[9mm] text-[18px] font-bold text-rose-600">상황</p>
+            <p class="absolute top-[9mm] font-jua text-xl text-rose-600">상황</p>
             <p class="mt-1 translate-y-4 text-neutral-600">메뉴가 <code>div</code> 중심으로 구성되어 스크린리더가 상태를 읽지 못하고 키보드만으로 조작할 수 없었습니다.</p>
           </section>
-          <section class="relative col-start-2 row-start-2 flex h-[64mm] w-[64mm] flex-col items-center justify-center rounded-full bg-amber-100/80 p-7 text-center shadow-sm">
-            <p class="absolute top-[9mm] text-[18px] font-bold text-amber-600">과제</p>
+          <section class="relative col-start-3 row-start-1 flex h-[64mm] w-[64mm] flex-col items-center justify-center rounded-full bg-amber-100/80 p-7 text-center shadow-sm">
+            <p class="absolute top-[9mm] font-jua text-xl text-amber-600">과제</p>
             <p class="mt-1 translate-y-4 text-neutral-600">마우스 없이도 메뉴를 탐색·선택하고, 열린 상태와 현재 포커스를 보조기기에 전달해야 했습니다.</p>
           </section>
 
-          <figure class="col-start-1 row-span-2 row-start-1 flex items-center justify-center">
+          <figure class="col-start-1 row-span-2 row-start-1 flex flex-col items-center justify-center rounded-2xl bg-blue-100/60 p-4">
             <img
               src="./myblog/접근성.PNG"
               alt="Tab과 Enter 키를 이용한 DoHyuk.dev 메뉴 포커스 이동 순서"
               class="w-full rounded-lg object-contain"
             />
+            <p class="mt-3 w-full text-left text-[11px] text-neutral-500">
+              <span class="font-bold text-slate-700">문서화</span> ·
+              <a href="https://hyeeoooook.tistory.com/33" target="_blank" rel="noopener" class="hover:underline">hyeeoooook.tistory.com/33</a>
+            </p>
           </figure>
 
-          <section class="relative col-start-3 row-start-1 flex h-[64mm] w-[64mm] flex-col items-center justify-center rounded-full bg-sky-100/80 p-7 text-center shadow-sm">
-            <p class="absolute top-[9mm] text-[18px] font-bold text-sky-600">행동</p>
+          <section class="relative col-start-2 row-start-2 flex h-[64mm] w-[64mm] flex-col items-center justify-center rounded-full bg-sky-100/80 p-7 text-center shadow-sm">
+            <p class="absolute top-[9mm] font-jua text-xl text-sky-600">행동</p>
             <p class="mt-1 translate-y-4 text-neutral-600">시맨틱 태그와 ARIA를 적용하고 <code>Tab</code>·<code>Enter</code>·<code>Escape</code>, 포커스 이동·복원 로직을 구현했습니다.</p>
           </section>
           <section class="relative col-start-3 row-start-2 flex h-[64mm] w-[64mm] flex-col items-center justify-center rounded-full bg-emerald-100/80 p-7 text-center shadow-sm">
-            <p class="absolute top-[9mm] text-[18px] font-bold text-emerald-600">결과</p>
+            <p class="absolute top-[9mm] font-jua text-xl text-emerald-600">결과</p>
             <p class="mt-1 translate-y-4 text-neutral-600">키보드만으로 메뉴를 열고 이동·선택·닫을 수 있으며, 스크린리더가 메뉴 상태를 인식하게 됐습니다.</p>
           </section>
         </div>
 
-        <p class="mt-3 text-[11px] text-neutral-500">
-          구현 과정 문서화 ·
-          <a href="https://hyeeoooook.tistory.com/32" target="_blank" rel="noopener" class="hover:underline">hyeeoooook.tistory.com/32</a>
-          ·
-          <a href="https://hyeeoooook.tistory.com/33" target="_blank" rel="noopener" class="hover:underline">hyeeoooook.tistory.com/33</a>
-        </p>
         <div class="slide-foot"><span>16 / 19</span></div>
       </section>
 
