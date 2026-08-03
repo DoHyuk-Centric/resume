@@ -2449,7 +2449,7 @@
       </section>
 
       <!-- ========== 16. DoHyuk.dev - 웹 접근성 ========== -->
-      <section class="slide order-[16] break-keep break-after-page">
+      <section id="dohyuk-accessibility-slide" class="slide order-[16] break-keep break-after-page">
         <img
           src="./myblog/waiaria.png"
           alt=""
@@ -2461,84 +2461,45 @@
           <h2 class="text-[32px] font-extrabold font-nanum-round">웹 접근성 - 시맨틱 구조와 ARIA</h2>
         </div>
 
-        <div class="mt-5 grid min-h-0 flex-1 grid-cols-[1.5fr_0.5fr] gap-6">
-          <article class="flex min-h-0 flex-col">
-            <h3 class="text-[22px] font-extrabold font-nanum-round">스크린리더와 키보드로도 동일하게 열리는 메뉴</h3>
-            <p class="mt-2 text-[13.5px] leading-[1.7] text-neutral-600">
-              의미 없는 <code>div</code> 중첩과 ARIA 속성 부재로 스크린리더가 메뉴 상태를 읽지 못하던 구조를 발견하고, 시맨틱 마크업과 포커스·키보드 흐름을 다시 설계했습니다.
-            </p>
+        <h3 class="mt-5 text-[22px] font-extrabold font-nanum-round">스크린리더와 키보드로도 동일하게 열리는 메뉴</h3>
+        <p class="mt-2 text-[13.5px] leading-[1.7] text-neutral-600">
+          <code>Tab</code>으로 메뉴 항목을 순차 이동하고 <code>Enter</code>로 접근할 수 있도록 키보드 흐름을 구현했습니다. 시맨틱 마크업과 ARIA 상태를 연결하고, 메뉴가 열리고 닫힐 때 포커스를 이동·복원하도록 개선했습니다.
+        </p>
 
-            <div class="mt-8 grid grid-cols-2 gap-8 text-[12.5px] leading-[1.65]">
-              <section>
-                <p class="font-bold text-slate-700">기존 구조</p>
-                <ul class="mt-2 list-disc space-y-1 pl-5 text-neutral-600 marker:text-neutral-400">
-                  <li>의미 없는 <code>div</code> 중첩으로 메뉴·토글 버튼 구성</li>
-                  <li>ARIA 속성 전무 · 스크린리더가 메뉴 열림 여부를 알 수 없음</li>
-                  <li>네비게이션이 <code>nav</code>로 감싸지지 않아 랜드마크 탐색 불가</li>
-                </ul>
-              </section>
+        <div class="mx-auto mt-5 grid w-fit grid-cols-[96mm_64mm_64mm] grid-rows-2 items-center gap-x-16 gap-y-2 text-[14px] leading-[1.55]">
+          <section class="relative col-start-2 row-start-1 flex h-[64mm] w-[64mm] flex-col items-center justify-center rounded-full bg-rose-100/80 p-7 text-center shadow-sm">
+            <p class="absolute top-[9mm] text-[18px] font-bold text-rose-600">상황</p>
+            <p class="mt-1 translate-y-4 text-neutral-600">메뉴가 <code>div</code> 중심으로 구성되어 스크린리더가 상태를 읽지 못하고 키보드만으로 조작할 수 없었습니다.</p>
+          </section>
+          <section class="relative col-start-2 row-start-2 flex h-[64mm] w-[64mm] flex-col items-center justify-center rounded-full bg-amber-100/80 p-7 text-center shadow-sm">
+            <p class="absolute top-[9mm] text-[18px] font-bold text-amber-600">과제</p>
+            <p class="mt-1 translate-y-4 text-neutral-600">마우스 없이도 메뉴를 탐색·선택하고, 열린 상태와 현재 포커스를 보조기기에 전달해야 했습니다.</p>
+          </section>
 
-              <section>
-                <p class="font-bold text-slate-700">개선 후 구조</p>
-                <ul class="mt-2 list-disc space-y-1 pl-5 text-neutral-600 marker:text-neutral-400">
-                  <li><code>div</code> → <code>nav</code>·<code>h2</code>·<code>button</code>으로 시맨틱 태그 교체</li>
-                  <li><code>aria-expanded</code>·<code>aria-controls</code>·<code>aria-pressed</code>로 상태를 스크린리더에 전달</li>
-                  <li>닫힌 메뉴는 <code>aria-hidden</code>과 <code>inert</code>로 완전히 제외</li>
-                </ul>
-              </section>
-            </div>
-
-            <div class="mt-8 divide-y divide-neutral-200 border-y border-neutral-200 text-[12.5px] leading-[1.55] text-neutral-600">
-              <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
-                <b class="border-r border-neutral-200 pr-3 text-slate-700">문제</b>
-                <span>의미 없는 div 중첩과 ARIA 부재로 스크린리더가 메뉴 상태를 읽지 못하고, 키보드만으로 메뉴를 열고 닫을 수 없음</span>
-              </div>
-              <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
-                <b class="border-r border-neutral-200 pr-3 text-slate-700">해결</b>
-                <span>메뉴 버튼에 <code>aria-expanded</code>·<code>aria-controls</code>를 연결하고, 닫힌 메뉴는 <code>aria-hidden</code>과 <code>inert</code>로 완전히 제외</span>
-              </div>
-              <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
-                <b class="border-r border-neutral-200 pr-3 text-slate-700">포커스·키보드</b>
-                <span>메뉴 열림 시 내부 첫 포커스 가능 요소로 이동, 닫힘 시 이전 포커스 위치로 복원, <code>Escape</code> 키로 메뉴 닫기 지원</span>
-              </div>
-              <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
-                <b class="border-r border-neutral-200 pr-3 text-slate-700">문서화</b>
-                <div>
-                  <span>시맨틱 구조 개선과 메뉴 접근성 구현 과정을 기술 블로그에 기록</span>
-                  <a href="https://hyeeoooook.tistory.com/32" target="_blank" rel="noopener" class="mt-1 block break-all text-neutral-600 hover:underline"><b class="text-slate-700">주소:</b> https://hyeeoooook.tistory.com/32</a>
-                  <a href="https://hyeeoooook.tistory.com/33" target="_blank" rel="noopener" class="block break-all text-neutral-600 hover:underline"><b class="text-slate-700">주소:</b> https://hyeeoooook.tistory.com/33</a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <figure class="flex min-h-0 flex-col justify-center gap-4">
-            <div class="rounded-lg bg-slate-900 p-3 font-mono text-[10px] leading-[1.6] text-slate-300 shadow-md">
-              <p class="mb-1.5 text-[10px] font-bold uppercase tracking-wide text-neutral-500">Before</p>
-              <pre class="whitespace-pre-wrap break-all"><code>&lt;div class="menu-toggle"
-  onclick="toggle()"&gt;
-  &lt;img src="menu.svg" /&gt;
-&lt;/div&gt;
-&lt;div class="menu"&gt;
-  &lt;div class="item"&gt;홈&lt;/div&gt;
-  &lt;div class="item"&gt;소개&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-            </div>
-
-            <div class="rounded-lg bg-slate-900 p-3 font-mono text-[10px] leading-[1.6] text-slate-300 shadow-md">
-              <p class="mb-1.5 text-[10px] font-bold uppercase tracking-wide text-accent">After</p>
-              <pre class="whitespace-pre-wrap break-all"><code>&lt;button <span class="text-teal-300">aria-expanded</span>="false"
-  <span class="text-teal-300">aria-controls</span>="site-menu"&gt;
-  &lt;img src="menu.png" alt="" /&gt;
-&lt;/button&gt;
-&lt;nav id="site-menu"
-  <span class="text-teal-300">aria-hidden</span>="true" <span class="text-teal-300">inert</span>&gt;
-  &lt;h2 class="sr-only"&gt;사이트 메뉴&lt;/h2&gt;
-  &lt;a href="/"&gt;홈&lt;/a&gt;
-&lt;/nav&gt;</code></pre>
-            </div>
+          <figure class="col-start-1 row-span-2 row-start-1 flex items-center justify-center">
+            <img
+              src="./myblog/접근성.PNG"
+              alt="Tab과 Enter 키를 이용한 DoHyuk.dev 메뉴 포커스 이동 순서"
+              class="w-full rounded-lg object-contain"
+            />
           </figure>
+
+          <section class="relative col-start-3 row-start-1 flex h-[64mm] w-[64mm] flex-col items-center justify-center rounded-full bg-sky-100/80 p-7 text-center shadow-sm">
+            <p class="absolute top-[9mm] text-[18px] font-bold text-sky-600">행동</p>
+            <p class="mt-1 translate-y-4 text-neutral-600">시맨틱 태그와 ARIA를 적용하고 <code>Tab</code>·<code>Enter</code>·<code>Escape</code>, 포커스 이동·복원 로직을 구현했습니다.</p>
+          </section>
+          <section class="relative col-start-3 row-start-2 flex h-[64mm] w-[64mm] flex-col items-center justify-center rounded-full bg-emerald-100/80 p-7 text-center shadow-sm">
+            <p class="absolute top-[9mm] text-[18px] font-bold text-emerald-600">결과</p>
+            <p class="mt-1 translate-y-4 text-neutral-600">키보드만으로 메뉴를 열고 이동·선택·닫을 수 있으며, 스크린리더가 메뉴 상태를 인식하게 됐습니다.</p>
+          </section>
         </div>
+
+        <p class="mt-3 text-[11px] text-neutral-500">
+          구현 과정 문서화 ·
+          <a href="https://hyeeoooook.tistory.com/32" target="_blank" rel="noopener" class="hover:underline">hyeeoooook.tistory.com/32</a>
+          ·
+          <a href="https://hyeeoooook.tistory.com/33" target="_blank" rel="noopener" class="hover:underline">hyeeoooook.tistory.com/33</a>
+        </p>
         <div class="slide-foot"><span>16 / 19</span></div>
       </section>
 
