@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "@kfonts/nanum-square-round-otf";
 
 /* Pretendard 웹폰트 (프로젝트에 번들 → 오프라인에서도 PDF 동일).
    dynamic-subset: "Pretendard" 패밀리를 모든 굵기로 등록, 필요한 한글 서브셋만 로드 */
@@ -13,6 +14,8 @@
   --color-ink: #1a1a1a;
   --color-muted: #6b7280;
   --font-sans: "Pretendard", "Malgun Gothic", sans-serif;
+  --font-jua: "Jua", "Pretendard", "Malgun Gothic", sans-serif;
+  --font-nanum-round: "나눔스퀘어라운드OTF", "NanumSquareRoundOTF", "Pretendard", sans-serif;
 }
 
 @layer base {

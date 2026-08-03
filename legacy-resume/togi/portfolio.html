@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
     <title>김도혁 포트폴리오</title>
     <link rel="stylesheet" href="./src/style-portfolio.css" />
   </head>
@@ -25,6 +31,7 @@
       <section
         class="slide order-[1] break-after-page relative items-start justify-center overflow-hidden bg-slate-600 p-0! text-white"
       >
+        <div class="relative left-20 font-jua text-7xl font-normal"><span class="text-teal-400">사용자</span>의 <br /> <span class="text-orange-400">고민</span>을 <br /> 웹 서비스로 <span class="text-violet-400">해결</span></div>
         <!-- 발자국 워터마크 (github.com/DoHyuk-Centric/myBlog catpaw.svg) -->
         <svg
           viewBox="0 0 960 960"
@@ -50,24 +57,10 @@
         </svg>
 
         <div
-          class="absolute left-[25mm] top-[50mm] flex flex-col items-center"
-        >
-          <h2
-            class="text-[64px] font-extrabold leading-[1.4] tracking-wide text-right mb-16"
-          >
-            <span class="block text-left">기본에</span>
-            <span class="block">집중하는 개발자</span>
-          </h2>
-        </div>
-        <div
           class="absolute bottom-[16mm] right-[16mm] flex flex-col items-end text-right"
         >
           <div class="mb-6 h-px w-16 bg-blue-200/60"></div>
-          <p
-            class="text-[13px] font-bold uppercase tracking-[0.45em] text-blue-200"
-          >
-            Web Frontend Developer
-          </p>
+          <p class="font-jua text-2xl font-normal text-teal-200">Frontend Developer</p>
           <h1
             class="mt-5 text-[30px] font-extrabold leading-[1.05] tracking-tight"
           >
@@ -85,488 +78,104 @@
           <p
             class="mt-6 text-[12px] uppercase tracking-[0.35em] text-blue-200/80"
           >
-            Portfolio · 2026
+            2026
           </p>
         </div>
       </section>
 
-      <!-- ========== About Me (이력서와 중복되어 보관) ========== -->
-      <section
-        class="legacy-slide hidden"
-        style="
-          background-image:
-            linear-gradient(
-              to bottom,
-              rgba(10, 14, 28, 0.58),
-              rgba(10, 14, 28, 0.7)
-            ),
-            url(&quot;./포트폴리오 배경2.jpg&quot;);
-        "
-      >
-        <div class="flex h-full flex-col p-[16mm]">
-          <p
-            class="text-[13px] font-bold uppercase tracking-[0.25em] text-blue-200"
-          >
-            01. About Me
-          </p>
+      <!-- ========== 02. 목차 ========== -->
+      <section class="slide order-[2] break-after-page">
+        <div class="grid flex-1 grid-cols-[210px_1fr] items-start gap-10 px-5">
+          <h2 class="text-[48px] font-extrabold tracking-tight text-slate-900">Contents</h2>
 
-          <div
-            class="mt-24 grid grid-cols-[60mm_minmax(0,1fr)] items-start gap-x-30 gap-y-8"
-          >
-            <div
-              class="flex w-[60mm] shrink-0 flex-col"
-            >
+          <table class="mt-16 w-max table-fixed border-collapse text-left">
+            <colgroup>
+              <col class="w-[170px]" />
+              <col class="w-[170px]" />
+              <col class="w-[160px]" />
+              <col />
+            </colgroup>
+            <tbody>
+              <tr class="h-[90px] border-b border-slate-300 align-top">
+                <th scope="row" class="pt-4 text-[23px] font-extrabold">소개</th>
+                <td colspan="3" class="pt-4 text-[20px] font-extrabold">Timeline <span class="mx-2 text-neutral-300">·</span> Introduce</td>
+              </tr>
 
-              <div
-                class="flex w-full flex-col gap-2.5 text-left text-[13px] text-blue-100"
-              >
-                <a
-                  href="mailto:hyeeoooook@gmail.com"
-                  target="_blank"
-                  rel="noopener"
-                  class="flex items-center gap-2 text-blue-100 hover:text-white"
-                >
-                  <svg
-                    class="h-3.5 w-3.5 shrink-0"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"
-                    />
-                    <path
-                      d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"
-                    />
-                  </svg>
-                  hyeeoooook@gmail.com
-                </a>
-                <a
-                  href="tel:+821094006992"
-                  target="_blank"
-                  rel="noopener"
-                  class="flex items-center gap-2 text-blue-100 hover:text-white"
-                >
-                  <svg
-                    class="h-3.5 w-3.5 shrink-0"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25z"
-                    />
-                  </svg>
-                  010-9400-6992
-                </a>
-                <a
-                  href="https://hyeeoooook.tistory.com/"
-                  target="_blank"
-                  rel="noopener"
-                  class="flex items-center gap-2 text-blue-100 hover:text-white"
-                >
-                  <svg
-                    class="h-3.5 w-3.5 shrink-0"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <circle cx="12" cy="12" r="9" />
-                    <path
-                      d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"
-                    />
-                  </svg>
-                  hyeeoooook.tistory.com
-                </a>
-                <a
-                  href="https://github.com/DoHyuk-Centric"
-                  target="_blank"
-                  rel="noopener"
-                  class="flex items-center gap-2 text-blue-100 hover:text-white"
-                >
-                  <svg
-                    class="h-3.5 w-3.5 shrink-0"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.523 2 12 2z"
-                    />
-                  </svg>
-                  github.com/DoHyuk-Centric
-                </a>
-              </div>
+              <tr class="h-[42px] border-b-[0.5px] border-slate-200 align-top">
+                <th scope="rowgroup" rowspan="12" class="pt-6 text-[23px] font-extrabold">프로젝트</th>
+                <th scope="rowgroup" rowspan="7" class="w-max whitespace-nowrap pt-6 text-[20px] font-extrabold">Kanto</th>
+                <th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Intro</th>
+                <td class="pt-3 text-[11.5px] text-neutral-500">Kanto 프로젝트 소개 <span class="text-neutral-400">(4p)</span></td>
+              </tr>
+              <tr class="h-[42px] border-b-[0.5px] border-slate-200 align-top"><th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Development Approach</th><td class="pt-3 text-[11.5px] text-neutral-500">유저 권한 · 채팅 · 공지사항 <span class="text-neutral-400">(5p)</span></td></tr>
+              <tr class="h-[42px] border-b-[0.5px] border-slate-200 align-top"><th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Planning</th><td class="pt-3 text-[11.5px] text-neutral-500">기획 &amp; 프로토타입 <span class="text-neutral-400">(6p)</span></td></tr>
+              <tr class="h-[42px] border-b-[0.5px] border-slate-200 align-top"><th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">AI Workflow</th><td class="pt-3 text-[11.5px] text-neutral-500">AI 활용 방식 <span class="text-neutral-400">(7p)</span></td></tr>
+              <tr class="h-[42px] border-b-[0.5px] border-slate-200 align-top"><th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Core Feature</th><td class="pt-3 text-[11.5px] text-neutral-500">내정보 · 이용약관 · 신뢰 수치화 &amp; 채팅 <span class="text-neutral-400">(8–10p)</span></td></tr>
+              <tr class="h-[42px] border-b-[0.5px] border-slate-200 align-top"><th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Back Office</th><td class="pt-3 text-[11.5px] text-neutral-500">Sentry 모니터링 <span class="text-neutral-400">(11p)</span></td></tr>
+              <tr class="h-[52px] align-top"><th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Troubleshooting</th><td class="pt-3 pb-4 text-[11.5px] leading-relaxed text-neutral-500">서버 상태 및 요청 최적화 <span class="text-neutral-400">(12p)</span><br />Storage Egress 원인 분석 <span class="text-neutral-400">(13p)</span></td></tr>
 
-            </div>
-
-            <div
-              class="col-start-2 row-start-1 row-span-2 flex h-full flex-col gap-8"
-            >
-              <div class="flex flex-1 gap-4">
-                <div
-                  class="flex mt-1 h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15 text-[16px] font-bold text-white"
-                >
-                  1
-                </div>
-                <p class="text-[15px] leading-relaxed text-blue-50">
-                  <b class="text-[17px] text-white">PR·문서화로 팀의 결정을 연결</b>
-                  <br />
-                  팀의 의견을 듣고 결정 과정과 작업 기준을 기록해 프로젝트 96점, 5개 팀 중 <b>1위</b>에 기여
-                </p>
-              </div>
-              <div class="flex flex-1 gap-4">
-                <div
-                  class="flex mt-1 h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15 text-[16px] font-bold text-white"
-                >
-                  2
-                </div>
-                <p class="text-[15px] leading-relaxed text-blue-50">
-                  <b class="text-[17px] text-white">UI부터 데이터 흐름까지 재사용 구조 제작</b>
-                  <br />
-                  공통 UI·인터랙션, URL 상태 훅과 좋아요 DB 호출 로직을 분리해 여러 페이지에서 <b>재사용</b>
-                </p>
-              </div>
-              <div class="flex flex-1 gap-4">
-                <div
-                  class="flex mt-1 h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/15 text-[16px] font-bold text-white"
-                >
-                  3
-                </div>
-                <p class="text-[15px] leading-relaxed text-blue-50">
-                  <b class="text-[17px] text-white">예상 문제를 먼저 찾아 미리 공통 해결책 제안</b>
-                  <br />
-                  Supabase 무료 한도와 인증 구현 전 개발 공백을 발견해 팀이 함께 적용할 대응 방식을 정리 및 공유
-                </p>
-              </div>
-            </div>
-          
-
-            <div class="col-start-1 row-start-2 w-[65mm]">
-              <div
-                class="rounded-xl border border-white/20 bg-white/10 p-4 backdrop-blur-sm"
-              >
-                <p
-                  class="text-[12px] font-bold uppercase tracking-wide text-blue-200"
-                >
-                  기술 스택
-                </p>
-                <div class="mt-3 grid grid-cols-4 place-items-center gap-2.5">
-                  <div
-                    class="flex h-11 w-11 items-center justify-center rounded-lg bg-[#3178C6]"
-                    title="TypeScript"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      viewBox="0 0 24 24"
-                      fill="white"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="flex h-11 w-11 items-center justify-center rounded-lg bg-[#F7DF1E]"
-                    title="JavaScript"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      viewBox="0 0 24 24"
-                      fill="black"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="flex h-11 w-11 items-center justify-center rounded-lg bg-[#20232a]"
-                    title="React"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      viewBox="0 0 24 24"
-                      fill="#61DAFB"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="flex h-11 w-11 items-center justify-center rounded-lg bg-black"
-                    title="Next.js"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      viewBox="0 0 24 24"
-                      fill="white"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M18.665 21.978C16.758 23.255 14.465 24 12 24 5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251l9.85 12.727Zm-3.332-8.533 1.6 2.061V7.2h-1.6v6.245Z"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="flex h-11 w-11 items-center justify-center rounded-lg bg-[#0f172a]"
-                    title="Tailwind CSS"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      viewBox="0 0 24 24"
-                      fill="#38BDF8"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="flex h-11 w-11 items-center justify-center rounded-lg bg-[#3ECF8E]"
-                    title="Supabase"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      viewBox="0 0 24 24"
-                      fill="black"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C-.33 13.427.65 15.455 2.409 15.455h9.579l.113 7.51c.014.985 1.259 1.408 1.873.636l9.262-11.653c1.093-1.375.113-3.403-1.645-3.403h-9.642z"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="flex h-11 w-11 items-center justify-center rounded-lg bg-[#DC382D]"
-                    title="Redis"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      viewBox="0 0 24 24"
-                      fill="white"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M22.71 13.145c-1.66 2.092-3.452 4.483-7.038 4.483-3.203 0-4.397-2.825-4.48-5.12.701 1.484 2.073 2.685 4.214 2.63 4.117-.133 6.94-3.852 6.94-7.239 0-4.05-3.022-6.972-8.268-6.972-3.752 0-8.4 1.428-11.455 3.685C2.59 6.937 3.885 9.958 4.35 9.626c2.648-1.904 4.748-3.13 6.784-3.744C8.12 9.244.886 17.05 0 18.425c.1 1.261 1.66 4.648 2.424 4.648.232 0 .431-.133.664-.365a100.49 100.49 0 0 0 5.54-6.765c.222 3.104 1.748 6.898 6.014 6.898 3.819 0 7.604-2.756 9.33-8.965.2-.764-.73-1.361-1.261-.73zm-4.349-5.013c0 1.959-1.926 2.922-3.685 2.922-.941 0-1.664-.247-2.235-.568 1.051-1.592 2.092-3.225 3.21-4.973 1.972.334 2.71 1.43 2.71 2.619z"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="flex h-11 w-11 items-center justify-center overflow-hidden rounded-lg bg-white/90"
-                    title="Zustand"
-                  >
-                    <img
-                      src="./zustand-icon.png"
-                      alt="Zustand"
-                      class="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div
-                    class="flex h-11 w-11 items-center justify-center rounded-lg bg-[#F05033]"
-                    title="Git"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      viewBox="0 0 24 24"
-                      fill="white"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M13.09 23.549a1.54 1.54 0 0 1-2.18 0L.451 13.089a1.54 1.54 0 0 1 0-2.179l7.191-7.19 2.733 2.733a1.85 1.85 0 0 0 .964 2.326v6.66a1.849 1.849 0 1 0 1.54 0V8.957l2.508 2.508a1.85 1.85 0 1 0 1.09-1.09l-2.634-2.634a1.85 1.85 0 0 0-2.378-2.377L8.73 2.63 10.91.451a1.54 1.54 0 0 1 2.179 0l10.459 10.46a1.54 1.54 0 0 1 0 2.179z"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="flex h-11 w-11 items-center justify-center rounded-lg bg-black"
-                    title="GitHub"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      viewBox="0 0 24 24"
-                      fill="white"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-                      />
-                    </svg>
-                  </div>
-                  <div
-                    class="flex h-11 w-11 items-center justify-center rounded-lg bg-[#4B32C3]"
-                    title="ESLint"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      viewBox="0 0 24 24"
-                      fill="white"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M7.257 9.132L11.816 6.5a.369.369 0 0 1 .368 0l4.559 2.632a.369.369 0 0 1 .184.32v5.263a.37.37 0 0 1-.184.319l-4.559 2.632a.369.369 0 0 1-.368 0l-4.559-2.632a.369.369 0 0 1-.184-.32V9.452a.37.37 0 0 1 .184-.32M23.852 11.53l-5.446-9.475c-.198-.343-.564-.596-.96-.596H6.555c-.396 0-.762.253-.96.596L.149 11.509a1.127 1.127 0 0 0 0 1.117l5.447 9.398c.197.342.563.517.959.517h10.893c.395 0 .76-.17.959-.512l5.446-9.413a1.069 1.069 0 0 0 0-1.086m-4.51 4.556a.4.4 0 0 1-.204.338L12.2 20.426a.395.395 0 0 1-.392 0l-6.943-4.002a.4.4 0 0 1-.205-.338V8.08c0-.14.083-.269.204-.338L11.8 3.74c.12-.07.272-.07.392 0l6.943 4.003a.4.4 0 0 1 .206.338z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex-1"></div>
-
-          <div
-            class="flex items-center justify-between border-t border-white/20 pt-3 text-[11px] text-blue-200"
-          >
-          <span>01 / 16</span>
-          </div>
+              <tr class="h-[42px] border-t border-b-[0.5px] border-slate-200 align-top">
+                <th scope="rowgroup" rowspan="5" class="w-max whitespace-nowrap pt-5 text-[20px] font-extrabold">DoHyuk.dev</th>
+                <th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Intro</th>
+                <td class="pt-3 text-[11.5px] text-neutral-500">DoHyuk.dev 프로젝트 소개 <span class="text-neutral-400">(14p)</span></td>
+              </tr>
+              <tr class="h-[42px] border-b-[0.5px] border-slate-200 align-top"><th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Core Feature</th><td class="pt-3 text-[11.5px] text-neutral-500">변경 블록만 렌더링하는 미리보기 <span class="text-neutral-400">(15p)</span></td></tr>
+              <tr class="h-[42px] border-b-[0.5px] border-slate-200 align-top"><th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Interactive UI</th><td class="pt-3 text-[11.5px] text-neutral-500">반응형 인터랙티브 목업 <span class="text-neutral-400">(16p)</span></td></tr>
+              <tr class="h-[42px] border-b-[0.5px] border-slate-200 align-top"><th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Troubleshooting</th><td class="pt-3 text-[11.5px] text-neutral-500">Firebase → Supabase 인증 일원화 <span class="text-neutral-400">(17p)</span></td></tr>
+              <tr class="h-[42px] align-top"><th scope="row" class="pt-3 text-[12.5px] font-bold text-slate-700">Accessibility</th><td class="pt-3 text-[11.5px] text-neutral-500">ARIA · 시맨틱 · 포커스 관리 <span class="text-neutral-400">(18p)</span></td></tr>
+            </tbody>
+          </table>
         </div>
+        <div class="slide-foot"><span>02 / 19</span></div>
       </section>
 
-      <!-- ========== 02. TimeLine ========== -->
-      <section class="slide order-[2] landscape-fit timeline-scale-70 break-after-page">
-        <p class="slide-kicker text-[19px]!">01. TimeLine</p>
+      <!-- ========== 03. 개발자 소개 및 타임라인 ========== -->
+      <section class="slide order-[3] break-after-page">
+        <p class="slide-kicker">01. About</p>
+        <h2 class="mt-3 text-[32px] font-extrabold">TimeLine &amp; Introduce</h2>
 
-        <div
-          class="mt-4 flex flex-1 items-center justify-center"
-        >
-
-          <div class="relative h-[550px] w-full px-7">
-            <div
-              class="pointer-events-none absolute inset-0 opacity-35"
-              style="background-image: radial-gradient(#bfdbfe 0.8px, transparent 0.8px); background-size: 18px 18px"
-            ></div>
-
-            <div
-              class="absolute inset-x-0 top-[320px] grid w-full grid-cols-[20fr_26fr_22fr_22fr_4fr] gap-3 ml-6"
-            >
-            <div class="w-full min-w-0 border-t-[10px] border-t-slate-300 pl-5 pt-4">
-              <p class="text-[25px] font-extrabold text-slate-700">컴퓨터학부 학사</p>
-              <p class="mt-1 text-[20px] font-semibold text-slate-500">세명대학교 · 2017.03-2022.02</p>
-              <ul class="list-inside list-disc marker:text-slate-700 text-slate-500 ml-4 mt-2 text-[18px]">
-                <li>CㆍC++ㆍUnity</li>
-                <li>ROTC 60기</li>
-              </ul>
-            </div>
-
-            <div class="w-full min-w-0 border-l border-t-[10px] border-l-slate-300/70 border-t-[#a3ad7d] pl-5 pt-4">
-              <p class="text-[25px] font-extrabold text-[#556B2F]">육군 1사단 장교</p>
-              <p class="mt-1 text-[20px] font-semibold text-slate-500">중위 · 2022.02-2024.06</p>
-              <ul class="list-inside list-disc marker:text-slate-700 text-slate-500 ml-4 mt-2 text-[18px]">
-                <li>소대장ㆍ작전장교ㆍ상황장교</li>
-              </ul>
-            </div>
-
-            <div class="w-full min-w-0 border-l border-t-[10px] border-l-slate-300/70 border-t-fuchsia-200 pl-5 pt-4">
-              <p class="text-[25px] font-extrabold text-fuchsia-600">프로방스 하우스</p>
-              <p class="mt-1 text-[20px] font-semibold text-slate-500">파주 개인사업 · 2024.08-2025.09</p>
-              <ul class="list-inside list-disc marker:text-slate-700 text-slate-500 ml-4 mt-2 text-[18px]">
-                <li>재무ㆍ응대ㆍ운영ㆍ마케팅</li>
-              </ul>
-            </div>
-
-            <div class="w-full min-w-0 border-l border-t-[10px] border-l-slate-300/70 border-t-amber-200 pl-5 pt-4">
-              <p class="text-[25px] font-extrabold text-amber-600">멋쟁이사자처럼</p>
-              <p class="mt-1 text-[20px] font-semibold text-slate-500">부트캠프 · 2025.12-2026.07</p>
-              <ul class="list-inside list-disc marker:text-slate-700 text-slate-500 ml-4 mt-2 text-[18px]">
-                <li>ReactㆍNext.js</li>
-                <li>JavaScriptㆍTypeScript</li>
-              </ul>
-            </div>
-            </div>
-
-            
-
-            <!-- 상단 가로형 리본 타임라인 -->
-            <div
-              class="absolute inset-x-7 top-[80px] flex items-center"
-            >
-            <div
-              class="relative flex h-[200px] min-w-0 flex-1 items-center justify-center bg-slate-500 text-[30px] font-extrabold text-white drop-shadow-md"
-              style="clip-path: polygon(0 0, 84% 0, 100% 50%, 84% 100%, 0 100%, 14% 50%)"
-            >
-              <span class="ml-4">2017 ~ 2022</span>
-            </div>
-
-            <div
-              class="relative flex h-[200px] min-w-0 flex-1 items-center justify-center bg-teal-400 text-[30px] font-extrabold text-white drop-shadow-md"
-              style="clip-path: polygon(0 0, 84% 0, 100% 50%, 84% 100%, 0 100%, 14% 50%)"
-            >
-              <span class="ml-4">2022 ~ 2024</span>
-            </div>
-
-            <div
-              class="relative flex h-[200px] min-w-0 flex-1 items-center justify-center bg-indigo-500 text-[30px] font-extrabold text-white drop-shadow-md"
-              style="clip-path: polygon(0 0, 84% 0, 100% 50%, 84% 100%, 0 100%, 14% 50%)"
-            >
-              <span class="ml-4">2024 ~ 2025</span>
-            </div>
-
-            <div
-              class="relative flex h-[200px] min-w-0 flex-1 items-center justify-center bg-violet-500 text-[30px] font-extrabold text-white drop-shadow-md"
-              style="clip-path: polygon(0 0, 84% 0, 100% 50%, 84% 100%, 0 100%, 14% 50%)"
-            >
-              <span class="ml-4">2025 ~ 2026</span>
-            </div>
-
-            <div
-              class="relative flex h-[200px] min-w-0 flex-1 items-center justify-center bg-amber-400 text-[30px] font-extrabold text-white drop-shadow-md"
-              style="clip-path: polygon(0 0, 84% 0, 100% 50%, 84% 100%, 0 100%, 14% 50%)"
-            >
-              <span class="ml-4">2026 ~</span>
-            </div>
-
-            <span
-              class="pointer-events-none absolute left-[21%] top-1/2 z-10 h-12 w-5 -translate-x-1/2 -translate-y-1/2 bg-gray-100 drop-shadow-md"
-              style="clip-path: polygon(0 0, 58% 0, 100% 50%, 58% 100%, 0 100%, 42% 50%)"
-              aria-hidden="true"
-            ></span>
-            <span
-              class="pointer-events-none absolute left-[41%] top-1/2 z-10 h-12 w-5 -translate-x-1/2 -translate-y-1/2 bg-gray-100 drop-shadow-md"
-              style="clip-path: polygon(0 0, 58% 0, 100% 50%, 58% 100%, 0 100%, 42% 50%)"
-              aria-hidden="true"
-            ></span>
-            <span
-              class="pointer-events-none absolute left-[61%] top-1/2 z-10 h-12 w-5 -translate-x-1/2 -translate-y-1/2 bg-gray-100 drop-shadow-md"
-              style="clip-path: polygon(0 0, 58% 0, 100% 50%, 58% 100%, 0 100%, 42% 50%)"
-              aria-hidden="true"
-            ></span>
-            <span
-              class="pointer-events-none absolute left-[81%] top-1/2 z-10 h-12 w-5 -translate-x-1/2 -translate-y-1/2 bg-gray-100 drop-shadow-md"
-              style="clip-path: polygon(0 0, 58% 0, 100% 50%, 58% 100%, 0 100%, 42% 50%)"
-              aria-hidden="true"
-            ></span>
-            </div>
+        <div class="mt-7 border-b border-slate-200 pb-8">
+          <div class="grid grid-cols-4 gap-3">
+            <article class="border-t-[7px] border-slate-400 pt-4"><p class="text-[14px] font-bold text-slate-400">2017–2022</p><h3 class="mt-2 text-[18px] font-extrabold">컴퓨터학부 학사</h3><p class="mt-2 text-[12px] leading-relaxed text-neutral-500">C · C++ · Unity(C#) · ARCore · ARKit<br />ROTC 60기</p></article>
+            <article class="border-t-[7px] border-teal-400 pt-4"><p class="text-[14px] font-bold text-teal-500">2022–2024</p><h3 class="mt-2 text-[18px] font-extrabold">육군 1사단 장교</h3><p class="mt-2 text-[12px] leading-relaxed text-neutral-500">소대장 · 상황장교<br />인원 관리와 작전 보고체계 운용</p></article>
+            <article class="border-t-[7px] border-indigo-400 pt-4"><p class="text-[14px] font-bold text-indigo-500">2024–2025</p><h3 class="mt-2 text-[18px] font-extrabold">공간임대 파트너 사업</h3><p class="mt-2 text-[12px] leading-relaxed text-neutral-500">"프로방스 하우스" 공간대여<br />재무 · 고객 응대 · 운영 · 마케팅</p></article>
+            <article class="border-t-[7px] border-amber-400 pt-4"><p class="text-[14px] font-bold text-amber-500">2025–2026</p><h3 class="mt-2 text-[18px] font-extrabold">멋쟁이사자처럼 부트캠프</h3><p class="mt-2 text-[12px] leading-relaxed text-neutral-500">React · Next.js<br />JavaScript · TypeScript</p></article>
           </div>
         </div>
 
-        <div class="slide-foot">
-          <span>02 / 16</span>
+        <div class="relative isolate mt-24 ml-16 flex items-center gap-32 px-12 py-9 text-slate-900">
+          <span
+            aria-hidden="true"
+            class="pointer-events-none absolute -right-72 -bottom-96 -z-10 h-[36rem] w-[36rem] rounded-full bg-orange-100"
+          ></span>
+          <p class="relative isolate -mt-32 font-nanum-round text-5xl font-extrabold text-blue-600">
+            <span
+              aria-hidden="true"
+              class="absolute -left-[35%] top-[115%] -z-10 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-100"
+            ></span>
+            저는
+          </p>
+          <div class="mt-6 space-y-8 font-jua text-[27px] font-normal leading-[1.45] tracking-[-0.025em]">
+            <p>사용자와 운영자에게 초점을 맞춰 개발합니다.</p>
+            <p>기획부터 배포까지 모두 설계합니다.</p>
+            <p>누구나 이용할 수 있는 웹을 구현합니다.</p>
+          </div>
         </div>
+        <div class="slide-foot"><span>03 / 19</span></div>
       </section>
 
       <!-- ========== 04. Kanto - 기획 & 프로토타입 ========== -->
-      <section class="slide order-[4] break-keep break-after-page">
+      <section class="slide order-[6] break-keep break-after-page">
         <p class="slide-kicker">02. Kanto</p>
 
         <div class="mt-4">
-          <h2 class="text-[32px] font-extrabold">기획 &amp; 프로토타입</h2>
+          <h2 class="text-[32px] font-extrabold font-nanum-round">기획 &amp; 프로토타입</h2>
         </div>
 
         <div class="mb-[4mm] mt-2 grid min-h-0 flex-1 grid-cols-[0.95fr_1.05fr] gap-7">
           <article class="flex min-h-0 flex-col">
             <div>
-              <h3 class="mt-1 text-[22px] font-extrabold">일정ㆍ버전 관리</h3>
+              <h3 class="mt-1 text-[22px] font-extrabold font-nanum-round">일정ㆍ버전 관리</h3>
               <p class="text-[13px] leading-[1.65] text-neutral-600">
                 초기 기획을 세 차례의 배포 범위로 나누고, 개발 중 우선순위와 완성도를 재검토하며 각 마일스톤의 구현 범위를 조정했습니다.
               </p>
@@ -676,7 +285,7 @@
             </div>
 
             <div>
-              <h3 class="mt-1 text-[22px] font-extrabold">프로토타입 ㆍ Figma</h3>
+              <h3 class="mt-1 text-[22px] font-extrabold font-nanum-round">프로토타입 ㆍ Figma</h3>
               <p class="text-[13px] leading-[1.65] text-neutral-600">
                 기능 요구사항을 바탕으로 Figma와 Figma Make를 활용해 UI 디자인 및 인터랙티브 프로토타입을 제작했습니다.
               </p>
@@ -691,16 +300,16 @@
         </div>
 
         <div class="slide-foot">
-          <span>04 / 16</span>
+          <span>06 / 19</span>
         </div>
       </section>
 
       <!-- ========== 03. Kanto - 프로젝트 소개 ========== -->
-      <section class="slide order-[3] break-keep break-after-page">
+      <section class="slide order-[4] break-keep break-after-page">
         <p class="slide-kicker">02. Kanto</p>
 
         <div
-          class="mt-4 flex items-center justify-between border-b border-neutral-200 px-1 pb-4"
+          class="hidden"
         >
           <div class="flex items-center gap-3">
             <img
@@ -710,21 +319,6 @@
             />
             <h2 class="text-[42px] font-extrabold leading-none">Kanto</h2>
           </div>
-
-          <dl class="flex items-center divide-x divide-neutral-200 text-[12px]">
-            <div class="px-5 text-center">
-              <dt class="font-semibold text-neutral-400">인원</dt>
-              <dd class="mt-1 font-bold text-slate-700">4인</dd>
-            </div>
-            <div class="px-5 text-center">
-              <dt class="font-semibold text-neutral-400">기간</dt>
-              <dd class="mt-1 font-bold text-slate-700">2026.05–07</dd>
-            </div>
-            <div class="pl-5 text-center">
-              <dt class="font-semibold text-neutral-400">결과</dt>
-              <dd class="mt-1 font-bold text-accent">파이널 프로젝트 1위</dd>
-            </div>
-          </dl>
 
           <div class="hidden">
             <a
@@ -821,19 +415,54 @@
           </div>
         </div>
 
-        <div class="mb-[4mm] mt-4 grid min-h-0 flex-1 grid-cols-[1.15fr_0.85fr] gap-4 overflow-hidden">
+        <div class="mb-[4mm] mt-4 grid min-h-0 flex-1 grid-cols-[1.15fr_0.85fr] gap-4">
           <div class="flex h-full min-h-0 flex-col">
-            <figure class="relative min-h-0 w-full flex-1 overflow-hidden rounded-md">
-              <img
-                src="./kanto/칸토 메인.png"
-                alt="Kanto 메인화면"
-                class="h-full w-full object-cover object-top shadow-lg"
-              />
-              <figcaption
-                class="absolute bottom-4 left-4 rounded-full bg-white/95 px-4 py-2 text-[12px] font-bold text-neutral-700 shadow"
-              >
-                Kanto 메인 페이지
-              </figcaption>
+            <figure
+              class="relative min-h-0 w-full flex-1"
+              aria-label="Kanto 주요 화면 모음"
+            >
+              <div class="absolute left-[5%] top-[3%] z-10 aspect-square h-[68%] overflow-hidden rounded-full border-[6px] border-white bg-slate-100 shadow-xl">
+                <img
+                  src="./kanto/칸토 메인.png"
+                  alt="Kanto 메인 화면"
+                  class="h-full w-full object-cover object-top"
+                />
+              </div>
+
+              <div class="absolute right-[3%] top-[1%] z-20 aspect-square h-[43%] overflow-hidden rounded-full border-4 border-white bg-slate-100 shadow-lg">
+                <img
+                  src="./kanto/kanto-main-mobile.png"
+                  alt="Kanto 모바일 메인 화면"
+                  class="h-full w-full object-cover object-top"
+                />
+              </div>
+
+              <div class="absolute bottom-[3%] right-[10%] z-30 aspect-square h-[47%] overflow-hidden rounded-full border-[5px] border-white bg-slate-100 shadow-xl">
+                <img
+                  src="./kanto/통계모니터링.png"
+                  alt="Kanto 관리자 대시보드"
+                  class="h-full w-full object-cover object-top"
+                />
+              </div>
+
+              <div class="absolute bottom-[2%] left-[1%] z-20 aspect-square h-[38%] overflow-hidden rounded-full border-4 border-white bg-slate-100 shadow-lg">
+                <img
+                  src="./kanto/관리자운영관리.png"
+                  alt="Kanto 관리자 운영관리 화면"
+                  class="h-full w-full origin-top scale-110 object-cover object-[50%_top]"
+                />
+              </div>
+
+              <div class="absolute bottom-[1%] left-[43%] z-40 aspect-square h-[24%] overflow-hidden rounded-full border-4 border-white bg-slate-100 shadow-md">
+                <img
+                  src="./kanto/kantogo.PNG"
+                  alt="Kanto Go 화면"
+                  class="h-full w-full object-cover object-top"
+                />
+              </div>
+
+              <span aria-hidden="true" class="absolute right-[5%] top-[46%] h-8 w-8 rounded-full bg-blue-200/80"></span>
+              <span aria-hidden="true" class="absolute left-[36%] top-[1%] h-5 w-5 rounded-full bg-orange-200/90"></span>
             </figure>
             <div
               class="mt-3 flex w-full items-center justify-start gap-3"
@@ -897,25 +526,34 @@
 
           <div class="flex h-full min-h-0 min-w-0 flex-col overflow-hidden">
 
-            <h3 class="mt-3 text-[25px] font-extrabold leading-[1.35]">
-              Kanto는 필리핀에서 "우리 동네"라는 뜻을 가지고 있습니다.
-            </h3>
-            <p class="text-slate-600 pl-4 mt-3">
-              필리핀에 흩어진 거래·일자리·주거 정보를 올인원을 목적으로 빠르고 안전하게 제공하기 위해서 만든 통합 생활 플랫폼입니다.
-            </p>
-            <div class="border-t border-neutral-200 mt-4 pt-4">
-              <div class="mb-4">
-                <h4 class="font-bold">주요 기능</h4>
-                <ul class="ml-4 mt-2 flex flex-col gap-1 list-inside list-disc text-[16px] text-slate-500 marker:text-slate-700">
-                  <li><span class="font-semibold text-slate-700">거래·생활:</span> 중고거래, 구인구직, 부동산, Kanto Go</li>
-                  <li><span class="font-semibold text-slate-700">소통·지원:</span> AI 챗봇, 1:1 실시간 채팅, 알림</li>
-                  <li><span class="font-semibold text-slate-700">콘텐츠·다국어:</span> 공지사항, 이용약관, 국제화(i18n)</li>
-                  <li><span class="font-semibold text-slate-700">안전결제:</span> Xendit 기반 결제</li>
-                  <li><span class="font-semibold text-slate-700">운영·보안:</span> 금칙어, 도배·스팸, 권한 관리, 채팅 로그</li>
-                  <li><span class="font-semibold text-slate-700">모니터링:</span> Sentry 기반 오류 추적</li>
-                </ul>
+            <div class="mb-4 flex items-center justify-between gap-4 border-b border-neutral-200 pb-4">
+              <div class="flex shrink-0 items-center gap-3">
+                <img
+                  src="./kanto-favicon.png"
+                  alt="Kanto 파비콘"
+                  class="h-11 w-11 rounded-xl bg-white object-contain shadow-sm"
+                />
+                <h2 class="text-[36px] font-extrabold leading-none">Kanto</h2>
               </div>
-              <div class="overflow-hidden rounded-lg border border-neutral-200">
+
+              <dl class="flex shrink-0 items-center divide-x divide-neutral-200 text-[11px]">
+                <div class="px-3 text-center">
+                  <dt class="font-semibold text-neutral-400">인원</dt>
+                  <dd class="mt-1 font-bold text-slate-700">4인</dd>
+                </div>
+                <div class="px-3 text-center">
+                  <dt class="font-semibold text-neutral-400">기간</dt>
+                  <dd class="mt-1 font-bold text-slate-700">2026.05–07</dd>
+                </div>
+                <div class="pl-3 text-center">
+                  <dt class="font-semibold text-neutral-400">결과</dt>
+                  <dd class="mt-1 font-bold text-accent">파이널 프로젝트 1위</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="flex flex-col">
+              <div class="order-2 overflow-hidden rounded-lg border border-neutral-200">
                 <table class="w-full table-fixed border-collapse text-[13px] text-slate-600">
                   <tbody class="divide-y divide-neutral-200">
                     <tr>
@@ -955,7 +593,7 @@
                   </tbody>
                 </table>
               </div>
-              <div class="mt-2 flex items-center justify-end gap-2" aria-label="Kanto 관련 문서">
+              <div class="order-1 mb-2 flex items-center justify-end gap-2" aria-label="Kanto 관련 문서">
                   <a
                     href="https://github.com/FRONTENDBOOTCAMP-17th/kanto"
                     target="_blank"
@@ -981,26 +619,136 @@
                     aria-label="Kanto Notion 문서"
                   ><svg viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4" aria-hidden="true"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg></a>
               </div>
+
+              <h3 class="order-3 mt-6 border-t border-neutral-200 pt-4 text-[25px] font-extrabold leading-[1.35]">
+                Kanto는 필리핀에서 "우리 동네"라는 뜻을 가지고 있습니다.
+              </h3>
+              <p class="order-4 mt-3 pl-4 text-slate-600">
+                필리핀에 흩어진 거래·일자리·주거 정보를 올인원을 목적으로 빠르고 안전하게 제공하기 위해서 만든 통합 생활 플랫폼입니다.
+              </p>
+
+              <div class="font-jua relative order-5 mt-3 h-[190px]" aria-label="Kanto 구현 영역별 비중">
+                <div class="absolute left-[6%] top-[16px] flex h-[118px] w-[118px] flex-col items-center justify-center rounded-full bg-blue-200 text-center text-blue-900 shadow-md">
+                  <span class="font-normal text-[16px] leading-tight">사용자 서비스</span>
+                  <span class="absolute bottom-4 text-[12px] text-blue-600">25%</span>
+                </div>
+                <div class="absolute left-[28%] top-[58px] flex h-[118px] w-[118px] flex-col items-center justify-center rounded-full bg-orange-200 text-center text-orange-900 shadow-md">
+                  <span class="font-normal text-[16px] leading-tight">백오피스</span>
+                  <span class="absolute bottom-4 text-[12px] text-orange-600">25%</span>
+                </div>
+                <div class="absolute right-[22%] top-[8px] flex h-[106px] w-[106px] flex-col items-center justify-center rounded-full bg-violet-200 text-center text-violet-900 shadow-md">
+                  <span class="font-normal text-[15px] leading-tight">데이터·API</span>
+                  <span class="absolute bottom-3 text-[11px] text-violet-600">20%</span>
+                </div>
+                <div class="absolute bottom-[8px] right-[6%] flex h-[106px] w-[106px] flex-col items-center justify-center rounded-full bg-teal-200 text-center text-teal-900 shadow-md">
+                  <span class="font-normal text-[15px] leading-tight">품질·운영</span>
+                  <span class="absolute bottom-3 text-[11px] text-teal-600">20%</span>
+                </div>
+                <div class="absolute bottom-[9px] left-[54%] flex h-[78px] w-[78px] flex-col items-center justify-center rounded-full bg-amber-200 text-center text-amber-900 shadow-md">
+                  <span class="font-normal text-[12px] leading-tight">비즈니스</span>
+                  <span class="absolute bottom-2 text-[10px] text-amber-700">10%</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="slide-foot">
-          <span>03 / 16</span>
+          <span>04 / 19</span>
         </div>
       </section>
 
-      <!-- ========== 05. Kanto - 문서 자동화 & 점수 분포 시뮬레이션 ========== -->
+      <!-- ========== 05. Kanto - 담당 영역 ========== -->
       <section class="slide order-[5] break-keep break-after-page">
         <p class="slide-kicker">02. Kanto</p>
+
+        <div class="mt-4 pb-5">
+          <div class="flex items-end justify-between gap-8">
+            <div>
+              <h2 class="text-[34px] font-extrabold tracking-tight font-nanum-round">사용자 시스템을 운영 가능한 구조로 설계</h2>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 grid min-h-0 flex-1 grid-cols-2 grid-rows-2 gap-x-10 gap-y-6">
+          <section class="col-span-2 border-b border-slate-200 pb-6" aria-labelledby="approach-user">
+            <div class="flex items-baseline gap-4">
+              <span class="text-[12px] font-extrabold text-blue-500">01</span>
+              <h3 id="approach-user" class="text-[25px] font-extrabold text-slate-900 font-nanum-round">유저 권한</h3>
+            </div>
+            <dl class="mt-4 flex items-center justify-center gap-14">
+              <div class="flex h-[160px] w-[160px] shrink-0 flex-col items-center justify-center rounded-full bg-blue-100/80 px-5 text-center shadow-sm">
+                <dt class="text-[15px] font-extrabold text-blue-900">사용자 시스템</dt>
+                <dd class="mt-2 text-[12px] leading-[1.5] text-slate-600">user·admin<br />super_admin<br />3단계 역할 구분</dd>
+              </div>
+              <div class="flex h-[178px] w-[178px] shrink-0 flex-col items-center justify-center rounded-full bg-orange-100/80 px-5 text-center shadow-sm">
+                <dt class="text-[15px] font-extrabold text-orange-900">운영 관리</dt>
+                <dd class="mt-2 text-[12px] leading-[1.5] text-slate-600">슈퍼어드민 권한<br />팀 생성·관리자 배정<br />기능별 권한 제어</dd>
+              </div>
+              <div class="flex h-[160px] w-[160px] shrink-0 flex-col items-center justify-center rounded-full bg-violet-100/80 px-5 text-center shadow-sm">
+                <dt class="text-[15px] font-extrabold text-violet-900">권한 상태 관리</dt>
+                <dd class="mt-2 text-[12px] leading-[1.5] text-slate-600">승격·팀 변경<br />권한 회수<br />감사 로그 기록</dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="border-r border-slate-200 pr-10" aria-labelledby="approach-chat">
+            <div class="flex items-baseline gap-4">
+              <span class="text-[12px] font-extrabold text-teal-600">02</span>
+              <h3 id="approach-chat" class="text-[25px] font-extrabold text-slate-900 font-nanum-round">채팅</h3>
+            </div>
+            <dl class="mt-5 flex items-center justify-center gap-1">
+              <div class="flex h-[144px] w-[144px] shrink-0 flex-col items-center justify-center rounded-full bg-blue-100/80 px-4 text-center shadow-sm">
+                <dt class="text-[14px] font-extrabold text-blue-900">사용자 시스템</dt>
+                <dd class="mt-2 text-[11px] leading-[1.45] text-slate-600">1:1 채팅<br />읽지 않은<br />메시지 안내</dd>
+              </div>
+              <div class="flex h-[156px] w-[156px] shrink-0 flex-col items-center justify-center rounded-full bg-orange-100/80 px-4 text-center shadow-sm">
+                <dt class="text-[14px] font-extrabold text-orange-900">운영 관리</dt>
+                <dd class="mt-2 text-[11px] leading-[1.45] text-slate-600">메시지 페이지네이션<br />도배 방지<br />채팅방 이탈 처리</dd>
+              </div>
+              <div class="flex h-[150px] w-[150px] shrink-0 flex-col items-center justify-center rounded-full bg-violet-100/80 px-4 text-center shadow-sm">
+                <dt class="text-[13px] font-extrabold leading-tight text-violet-900">실시간 구독<br />라이프사이클</dt>
+                <dd class="mt-2 text-[11px] leading-[1.45] text-slate-600">연결·온라인 상태<br />메시지·읽음 갱신<br />실시간 구독 해제</dd>
+              </div>
+            </dl>
+          </section>
+
+          <section aria-labelledby="approach-notice">
+            <div class="flex items-baseline gap-4">
+              <span class="text-[12px] font-extrabold text-violet-500">03</span>
+              <h3 id="approach-notice" class="text-[25px] font-extrabold text-slate-900 font-nanum-round">공지사항</h3>
+            </div>
+            <dl class="mt-5 flex items-center justify-center gap-1">
+              <div class="flex h-[144px] w-[144px] shrink-0 flex-col items-center justify-center rounded-full bg-blue-100/80 px-4 text-center shadow-sm">
+                <dt class="text-[14px] font-extrabold text-blue-900">사용자 시스템</dt>
+                <dd class="mt-2 text-[11px] leading-[1.45] text-slate-600">영어·필리핀어<br />사용자 언어에<br />맞춰 제공</dd>
+              </div>
+              <div class="flex h-[156px] w-[156px] shrink-0 flex-col items-center justify-center rounded-full bg-orange-100/80 px-4 text-center shadow-sm">
+                <dt class="text-[14px] font-extrabold text-orange-900">운영 관리</dt>
+                <dd class="mt-2 text-[11px] leading-[1.45] text-slate-600">MyMemory API<br />공지 번역·검토<br />저장</dd>
+              </div>
+              <div class="flex h-[150px] w-[150px] shrink-0 flex-col items-center justify-center rounded-full bg-violet-100/80 px-4 text-center shadow-sm">
+                <dt class="text-[14px] font-extrabold text-violet-900">번역 처리 흐름</dt>
+                <dd class="mt-2 text-[11px] leading-[1.45] text-slate-600">병렬 번역 요청<br />원문 fallback·저장<br />언어별 노출</dd>
+              </div>
+            </dl>
+          </section>
+        </div>
+
+        <div class="slide-foot"><span>05 / 19</span></div>
+      </section>
+
+      <!-- ========== 06. Kanto - 문서 자동화 & 점수 분포 시뮬레이션 ========== -->
+      <section class="slide order-[7] break-keep break-after-page">
+        <p class="slide-kicker">02. Kanto</p>
         <div class="mt-4">
-          <h2 class="text-[32px] font-extrabold">AI 활용 방식</h2>
+          <h2 class="text-[32px] font-extrabold font-nanum-round">AI 활용 방식</h2>
         </div>
 
         <div class="mb-[4mm] mt-2 grid min-h-0 flex-1 grid-cols-[1.05fr_0.95fr] gap-7">
           <article class="flex min-h-0 flex-col">
             <div>
-              <h3 class="mt-1 text-[22px] font-extrabold">문서 자동화</h3>
+              <h3 class="mt-1 text-[22px] font-extrabold font-nanum-round">문서 자동화</h3>
               <p class="text-[13px] leading-[1.65] text-neutral-600">
                 AI 기반 취합·요약을 위해 문서의 분류, 파일명, 작성 순서를 표준화하고 팀의 작업 기록에 적용했습니다.
               </p>
@@ -1067,7 +815,7 @@
 
           <article class="flex min-h-0 flex-col border-l border-neutral-200 pl-7">
             <div>
-              <h3 class="mt-1 text-[22px] font-extrabold">점수 분포 시뮬레이션</h3>
+              <h3 class="mt-1 text-[22px] font-extrabold font-nanum-round">점수 분포 시뮬레이션</h3>
               <p class="text-[13px] leading-[1.65] text-neutral-600">
                 AI로 다양한 사용자·게시물 조건을 생성하고 KTS·KPPS를 적용해, 실제 서비스에서 예상되는 점수 분포와 정책의 경계 사례를 사전에 검토했습니다.
               </p>
@@ -1129,16 +877,16 @@
         </div>
 
         <div class="slide-foot">
-          <span>05 / 16</span>
+          <span>07 / 19</span>
         </div>
       </section>
 
-      <!-- ========== 06. Kanto - 반응형 내정보 ========== -->
-      <section class="slide order-[6] break-keep break-after-page">
+      <!-- ========== 07. Kanto - 반응형 내정보 ========== -->
+      <section class="slide order-[8] break-keep break-after-page">
         <p class="slide-kicker">02. Kanto</p>
         <div class="mt-4 flex items-end justify-between">
           <div>
-            <h2 class="text-[32px] font-extrabold">내정보 페이지</h2>
+            <h2 class="text-[32px] font-extrabold font-nanum-round">내정보 페이지</h2>
           </div>
         </div>
 
@@ -1187,7 +935,7 @@
           </figure>
 
           <article class="relative z-10 flex min-h-0 w-[48%] flex-col">
-            <h3 class="text-[22px] font-extrabold">서버 선조회로 안정적인 초기 화면 구성</h3>
+            <h3 class="text-[22px] font-extrabold font-nanum-round">서버 선조회로 안정적인 초기 화면 구성</h3>
             <p class="mt-2 text-nowrap text-[13.5px] leading-[1.7] text-neutral-600">
               사용자 정보와 소셜 계정 상태를 안정적으로 제공하면서, 모바일과 데스크톱에서 탐색하기 쉬운 내정보 화면을 구현했습니다.
             </p>
@@ -1221,16 +969,16 @@
         </div>
 
         <div class="slide-foot">
-          <span>06 / 16</span>
+          <span>08 / 19</span>
         </div>
       </section>
 
-      <!-- ========== 07. Kanto - Notion CMS 이용약관 ========== -->
-      <section class="slide order-[7] break-keep break-after-page">
+      <!-- ========== 08. Kanto - Notion CMS 이용약관 ========== -->
+      <section class="slide order-[9] break-keep break-after-page">
         <p class="slide-kicker">02. Kanto</p>
         <div class="mt-4 flex items-end justify-between">
           <div>
-            <h2 class="text-[32px] font-extrabold">Notion CMS 기반 이용약관</h2>
+            <h2 class="text-[32px] font-extrabold font-nanum-round">Notion CMS 기반 이용약관</h2>
           </div>
         </div>
 
@@ -1268,7 +1016,7 @@
           </figure>
 
           <article class="relative z-10 flex min-h-0 w-[48%] flex-col">
-            <h3 class="text-[22px] font-extrabold">배포 없이 수정하고, 캐시로 빠르게 조회</h3>
+            <h3 class="text-[22px] font-extrabold font-nanum-round">배포 없이 수정하고, 캐시로 빠르게 조회</h3>
             <p class="mt-2 text-nowrap text-[13.5px] leading-[1.7] text-neutral-600">
               약관 수정마다 코드를 다시 배포하지 않도록 Notion을 CMS로 활용하고, 반복 조회로 느려진 탭 전환은 클라이언트 캐시로 개선했습니다.
             </p>
@@ -1303,22 +1051,22 @@
         </div>
 
         <div class="slide-foot">
-          <span>07 / 16</span>
+          <span>09 / 19</span>
         </div>
       </section>
 
-      <!-- ========== 08. Kanto - 경험 ========== -->
-      <section class="slide order-[8] break-keep break-after-page">
+      <!-- ========== 09. Kanto - 경험 ========== -->
+      <section class="slide order-[10] break-keep break-after-page">
         <p class="slide-kicker">02. Kanto</p>
         <div class="mt-4 flex items-end justify-between">
           <div>
-            <h2 class="text-[32px] font-extrabold">신뢰 수치화 & 채팅 운영</h2>
+            <h2 class="text-[32px] font-extrabold font-nanum-round">신뢰 수치화 & 채팅 운영</h2>
           </div>
         </div>
 
         <div class="mb-[4mm] mt-4 grid min-h-0 flex-1 grid-cols-2 gap-2 divide-x divide-slate-200">
           <article class="flex min-h-0 flex-col p-2">
-            <h3 class="mb-3 mt-2 text-[22px] font-extrabold">KTS·KPPS 신뢰도 시스템</h3>
+            <h3 class="mb-3 mt-2 text-[22px] font-extrabold font-nanum-round">KTS·KPPS 신뢰도 시스템</h3>
             <div class="overflow-hidden rounded-xl p-3">
               <img
                 src="./kanto/score.png"
@@ -1377,7 +1125,7 @@
           </article>
 
           <article class="flex min-h-0 flex-col p-2">
-            <h3 class="mt-2 mb-2 text-[22px] font-extrabold">실시간 채팅·운영 로그</h3>
+            <h3 class="mt-2 mb-2 text-[22px] font-extrabold font-nanum-round">실시간 채팅·운영 로그</h3>
 
             <div>
               <p class="text-[13.5px] leading-[1.7] text-neutral-600">
@@ -1429,15 +1177,15 @@
         </div>
 
         <div class="slide-foot">
-          <span>08 / 16</span>
+          <span>10 / 19</span>
         </div>
       </section>
 
-      <!-- ========== 09. Kanto - Sentry 오류 모니터링 ========== -->
-      <section class="slide order-[9] break-keep break-after-page">
+      <!-- ========== 10. Kanto - Sentry 오류 모니터링 ========== -->
+      <section class="slide order-[11] break-keep break-after-page">
         <p class="slide-kicker">02. Kanto</p>
         <div class="mt-3 border-b border-neutral-200 pb-5">
-          <h2 class="text-[28px] font-extrabold">Sentry 기반 오류 모니터링과 성능 수집</h2>
+          <h2 class="text-[28px] font-extrabold font-nanum-round">Sentry 기반 오류 모니터링과 성능 수집</h2>
           <p class="mt-3 text-[14px] leading-relaxed text-neutral-600">
             운영 환경의 오류를 수집하되, Session Replay가 모든 페이지의 초기 로딩 성능을 저하하지 않도록 로딩 시점을 분리했습니다.
           </p>
@@ -1459,7 +1207,7 @@
 
           <div class="flex min-h-0 flex-col">
             <div>
-              <h3 class="text-[21px] font-extrabold">운영 오류 수집</h3>
+              <h3 class="text-[21px] font-extrabold font-nanum-round">운영 오류 수집</h3>
               <p class="mt-1 text-[13px] leading-[1.65] text-neutral-600">
                 배포 후 실제 사용자 환경에서 발생하는 오류를 확인하기 어려워, 클라이언트·서버 오류와 발생 경로를 Sentry로 수집했습니다.
               </p>
@@ -1500,16 +1248,16 @@
         </div>
 
         <div class="slide-foot">
-          <span>09 / 16</span>
+          <span>11 / 19</span>
         </div>
       </section>
 
-      <!-- ========== 10. Kanto - 문제해결 ========== -->
-      <section class="slide order-[10] break-keep break-after-page">
+      <!-- ========== 11. Kanto - 문제해결 ========== -->
+      <section class="slide order-[12] break-keep break-after-page">
         <p class="slide-kicker">02. Kanto</p>
         <div class="mt-3 flex items-end justify-between border-b border-neutral-200 pb-5">
           <div>
-            <h2 class="text-[28px] font-extrabold">서버 상태 분리와 요청 최적화</h2>
+            <h2 class="text-[28px] font-extrabold font-nanum-round">서버 상태 분리와 요청 최적화</h2>
             <h3 class="mt-3 text-[16px] font-bold text-accent">
               관리자 콘텐츠 중복 GET 제거 - TanStack Query 캐싱
             </h3>
@@ -1565,7 +1313,7 @@
                 />
               </div>
               <figcaption class="mt-12 px-8">
-                <h3 class="mt-2 text-[22px] font-extrabold">탭 전환마다 반복되는 데이터 조회</h3>
+                <h3 class="mt-2 text-[22px] font-extrabold font-nanum-round">탭 전환마다 반복되는 데이터 조회</h3>
                 <p class="mt-3 text-[13.5px] leading-[1.7] text-neutral-600">
                   관리자 콘텐츠 페이지에서 금칙어·스팸 관리 탭을 이동할 때마다 컴포넌트가 다시 마운트되며 동일한 서버 데이터를 반복 조회했습니다.
                 </p>
@@ -1578,16 +1326,16 @@
         </div>
 
         <div class="slide-foot">
-          <span>10 / 16</span>
+          <span>12 / 19</span>
         </div>
       </section>
 
-      <!-- ========== 11. Kanto - 문제해결 (2) ========== -->
-      <section class="slide order-[11] break-keep break-after-page">
+      <!-- ========== 12. Kanto - 문제해결 (2) ========== -->
+      <section class="slide order-[13] break-keep break-after-page">
         <p class="slide-kicker">02. Kanto</p>
         <div class="mt-3 flex items-end justify-between border-b border-neutral-200 pb-5">
           <div>
-            <h2 class="text-[28px] font-extrabold">Storage Egress 급증 원인 분석과 재발 방지</h2>
+            <h2 class="text-[28px] font-extrabold font-nanum-round">Storage Egress 급증 원인 분석과 재발 방지</h2>
             <p class="mt-3 text-[14px] leading-relaxed text-neutral-600">
               사용량 추이로 이미지 전송량을 원인으로 특정하고 WebP 변환을 적용해 390MB에서 64MB로 감소
             </p>
@@ -1605,7 +1353,7 @@
                 />
               </div>
               <figcaption class="mt-8 px-8">
-                <h3 class="mt-2 text-[22px] font-extrabold">Supabase 트래픽 한도 초과 대응</h3>
+                <h3 class="mt-2 text-[22px] font-extrabold font-nanum-round">Supabase 트래픽 한도 초과 대응</h3>
                 <p class="mt-3 text-[13.5px] leading-[1.7] text-neutral-600">
                   시연을 위해 봇 계정과 목업 게시글을 대량 등록하는 과정에서, 사전에 예상하지 못한 Storage Egress 한도 초과가 발생했습니다.
                 </p>
@@ -1653,14 +1401,14 @@
         </div>
 
         <div class="slide-foot">
-          <span>11 / 16</span>
+          <span>13 / 19</span>
         </div>
       </section>
 
-      <!-- ========== 12. myBlog - 프로젝트 소개 ========== -->
-      <section class="slide order-[12] landscape-fit break-after-page">
-        <p class="slide-kicker">04. DoHyuk.dev</p>
-        <div class="mt-4 flex items-center justify-between border-b border-neutral-200 px-1 pb-4">
+      <!-- ========== 13. myBlog - 프로젝트 소개 ========== -->
+      <section class="slide order-[14] landscape-fit break-after-page">
+        <p class="slide-kicker">03. DoHyuk.dev</p>
+        <div class="hidden">
           <div class="flex items-center gap-3">
             <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#15202f] text-white shadow-sm">
               <svg
@@ -1697,12 +1445,21 @@
 
         <div class="mb-[4mm] mt-4 grid min-h-0 flex-1 grid-cols-[1.15fr_0.85fr] gap-4 overflow-hidden">
           <div class="flex h-full min-h-0 flex-col">
-            <figure class="relative min-h-0 w-full flex-1 overflow-hidden rounded-md">
-              <img
-                src="./myblog/intro.png"
-                alt="DoHyuk.dev 블로그 목록 화면"
-                class="h-full w-full object-cover shadow-lg"
-              />
+            <figure class="relative min-h-0 w-full flex-1" aria-label="DoHyuk.dev 주요 화면 모음">
+              <div class="absolute left-[4%] top-[3%] z-10 aspect-square h-[68%] overflow-hidden rounded-full border-[6px] border-white bg-slate-100 shadow-xl">
+                <img src="./myblog/홈페이지.png" alt="DoHyuk.dev 홈페이지 화면" class="h-full w-full object-cover" />
+              </div>
+              <div class="absolute right-[4%] top-[2%] z-20 aspect-square h-[43%] overflow-hidden rounded-full border-4 border-white bg-slate-100 shadow-lg">
+                <img src="./myblog/홈페이지2.png" alt="DoHyuk.dev 홈페이지2 화면" class="h-full w-full object-cover" />
+              </div>
+              <div class="absolute bottom-[3%] right-[8%] z-30 aspect-square h-[48%] overflow-hidden rounded-full border-[5px] border-white bg-slate-100 shadow-xl">
+                <img src="./myblog/dohyuk-xp-desktop.png" alt="DoHyuk.dev Windows XP 데스크톱 화면" class="h-full w-full object-cover object-top" />
+              </div>
+              <div class="absolute bottom-[2%] left-[2%] z-20 aspect-square h-[37%] overflow-hidden rounded-full border-4 border-white bg-slate-100 shadow-lg">
+                <img src="./myblog/intro.png" alt="DoHyuk.dev 메인 화면" class="h-full w-full object-cover object-top" />
+              </div>
+              <span aria-hidden="true" class="absolute right-[5%] top-[47%] h-8 w-8 rounded-full bg-blue-200/80"></span>
+              <span aria-hidden="true" class="absolute left-[38%] top-[1%] h-5 w-5 rounded-full bg-orange-200/90"></span>
             </figure>
             <div class="mt-3 flex w-full items-center justify-start gap-3" aria-label="기술 스택">
               <span class="flex h-9 w-9 items-end justify-end rounded-lg bg-[#F7DF1E] p-1 text-[12px] font-bold text-black" title="JavaScript">JS</span>
@@ -1728,6 +1485,20 @@
           </div>
 
           <div class="flex h-full min-h-0 min-w-0 flex-col overflow-hidden">
+            <div class="mb-4 flex items-center justify-between gap-4 border-b border-neutral-200 pb-4">
+              <div class="flex shrink-0 items-center gap-3">
+                <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#15202f] text-white shadow-sm">
+                  <svg viewBox="0 0 960 960" class="h-7 w-7" fill="currentColor" aria-hidden="true">
+                    <path d="M200 330c62-3 101 81 75 153-18 48-75 51-111 15-52-52-23-165 36-168Zm560 0c-62-3-101 81-75 153 18 48 75 51 111 15 52-52 23-165-36-168ZM330 128c75-25 119 42 116 98-3 109-66 144-121 117-68-34-64-192 5-215Zm300 0c-75-25-119 42-116 98 3 109 66 144 121 117 68-34 64-192-5-215ZM212 705c0 102 187 149 268 149s268-47 268-149c0-82-61-106-135-177-48-53-71-119-133-119s-85 66-133 119c-74 71-135 95-135 177Z" />
+                  </svg>
+                </div>
+                <h2 class="text-[36px] font-extrabold leading-none">DoHyuk.dev</h2>
+              </div>
+              <dl class="flex shrink-0 items-center divide-x divide-neutral-200 text-[11px]">
+                <div class="px-3 text-center"><dt class="font-semibold text-neutral-400">인원</dt><dd class="mt-1 font-bold text-slate-700">개인</dd></div>
+                <div class="px-3 text-center"><dt class="font-semibold text-neutral-400">기간</dt><dd class="mt-1 font-bold text-slate-700">2026.01–03</dd></div>
+              </dl>
+            </div>
             <h3 class="mt-3 text-[25px] font-extrabold leading-[1.35]">Supabase CRUD와 마크다운 미리보기를 활용한 개인 블로그 프로젝트입니다.</h3>
             <p class="mt-3 pl-4 text-slate-600">
               Vanilla JavaScript와 Vite 멀티 페이지 빌드로 페이지별 스크립트만 로드하는 MPA 구조를 설계했습니다.
@@ -1756,12 +1527,12 @@
         </div>
 
         <div class="slide-foot">
-          <span>12 / 16</span>
+          <span>14 / 19</span>
         </div>
       </section>
 
-      <!-- ========== 13. myBlog - 경험 ========== -->
-      <section class="slide order-[13] break-keep break-after-page">
+      <!-- ========== 14. myBlog - 경험 ========== -->
+      <section class="slide order-[15] break-keep break-after-page">
         <img
           src="./myblog/markdown-npm.PNG"
           alt=""
@@ -1769,9 +1540,9 @@
           class="pointer-events-none absolute right-[8mm] top-[8mm] z-0 max-h-[92mm] w-[50%] object-contain object-right-top opacity-55"
           style="-webkit-mask-image: radial-gradient(ellipse at center, #000 18%, rgba(0, 0, 0, 0.82) 42%, rgba(0, 0, 0, 0.18) 62%, transparent 82%); mask-image: radial-gradient(ellipse at center, #000 18%, rgba(0, 0, 0, 0.82) 42%, rgba(0, 0, 0, 0.18) 62%, transparent 82%);"
         />
-        <p class="slide-kicker relative z-10">04. DoHyuk.dev</p>
+        <p class="slide-kicker relative z-10">03. DoHyuk.dev</p>
         <div class="relative z-10 mt-4 flex items-end justify-between">
-          <h2 class="text-[32px] font-extrabold">변경 블록만 렌더링하는 미리보기</h2>
+          <h2 class="text-[32px] font-extrabold font-nanum-round">변경 블록만 렌더링하는 미리보기</h2>
         </div>
 
         <div class="relative z-10 mb-[4mm] mt-5 min-h-0 flex-1">
@@ -1806,7 +1577,7 @@
           </figure>
 
           <article class="relative z-10 flex min-h-0 w-[47%] flex-col">
-            <h3 class="text-[22px] font-extrabold">전체 DOM 교체 대신 변경된 블록만 갱신</h3>
+            <h3 class="text-[22px] font-extrabold font-nanum-round">전체 DOM 교체 대신 변경된 블록만 갱신</h3>
             <p class="mt-2 text-[13.5px] leading-[1.7] text-neutral-600">입력할 때마다 미리보기 전체를 다시 그려 발생하던 깜빡임과 작성 지연을 측정하고, 변경 범위를 블록 단위로 줄였습니다.</p>
 
             <div class="mt-5 divide-y divide-neutral-200 border-y border-neutral-200 text-[13px] leading-[1.6] text-neutral-600">
@@ -1841,7 +1612,7 @@
           </article>
         </div>
         <div class="slide-foot">
-          <span>13 / 16</span>
+          <span>15 / 19</span>
         </div>
       </section>
 
@@ -2517,297 +2288,35 @@
         </div>
       </section>
 
-      <!-- ========== 03. Kanto - 개요 ========== -->
-      <section class="legacy-slide hidden">
-        <p class="slide-kicker">02. Project · Kanto (1/3)</p>
-        <div class="mt-3 flex items-end justify-between">
-          <div>
-            <h2 class="text-[30px] font-extrabold">Kanto</h2>
-            <p class="mt-2 text-[15px] text-neutral-600">필리핀 한인 대상 중고거래·구인·부동산 통합 플랫폼</p>
-          </div>
-          <span class="pf-badge-accent">4인 팀 · 2026.05–07</span>
-        </div>
-
-        <img src="./kanto/kanto-main-desktop.png" alt="Kanto 메인 화면" class="mt-7 h-[80mm] w-full rounded-xl border border-gray-200 object-cover object-top shadow-sm" />
-
-        <div class="mt-7 grid grid-cols-2 gap-4">
-          <div class="pf-card">
-            <p class="text-[12px] font-bold text-accent">ROLE</p>
-            <p class="mt-2 text-[18px] font-bold">기술·구조 설계 및 의사결정</p>
-            <p class="mt-3 text-[14px] leading-relaxed text-neutral-600">재사용 구조, 실시간 데이터 흐름, 운영 기능을 설계하고 팀의 기술적 선택을 구체화했습니다.</p>
-          </div>
-          <div class="pf-card">
-            <p class="text-[12px] font-bold text-accent">RESULT</p>
-            <p class="mt-2 text-[18px] font-bold">96점 · 5개 팀 중 1위</p>
-            <p class="mt-3 text-[14px] leading-relaxed text-neutral-600">PR·문서화·리뷰 대응을 통해 구현뿐 아니라 팀 전체의 완성도를 높였습니다.</p>
-          </div>
-        </div>
-
-        <div class="mt-6 flex flex-wrap gap-2">
-          <span class="pf-tag">Next.js</span><span class="pf-tag">TypeScript</span><span class="pf-tag">Supabase</span>
-          <span class="pf-tag">Zustand</span><span class="pf-tag">TanStack Query</span><span class="pf-tag">next-intl</span>
-          <span class="pf-tag">Upstash Redis</span><span class="pf-tag">Google Maps</span><span class="pf-tag">Sentry</span>
-        </div>
-        <div class="slide-foot"><span>03 / 10</span></div>
-      </section>
-
-      <!-- ========== 04. Kanto - 재사용 구조와 데이터 흐름 ========== -->
-      <section class="legacy-slide hidden">
-        <p class="slide-kicker">02. Project · Kanto (2/3)</p>
-        <h2 class="mt-3 text-[28px] font-extrabold">UI부터 데이터 흐름까지 재사용 구조로</h2>
-        <p class="mt-3 max-w-[155mm] text-[14px] leading-relaxed text-neutral-600">화면만 공통화하지 않고 사용자 인터랙션, URL 상태, 반복되는 DB 호출의 책임을 나눠 여러 도메인이 같은 구조를 사용할 수 있도록 설계했습니다.</p>
-
-        <div class="mt-7 grid grid-cols-3 gap-3">
-          <div class="rounded-xl border border-blue-100 bg-blue-50 p-5">
-            <p class="text-[12px] font-bold text-accent">UI</p>
-            <p class="mt-2 text-[17px] font-bold">ContentCard<br />GlobalLayout</p>
-            <p class="mt-3 text-[13px] leading-relaxed text-neutral-600">중고거래·구인·방렌트 카드와 전역 레이아웃의 중복 제거</p>
-          </div>
-          <div class="rounded-xl border border-blue-100 bg-blue-50 p-5">
-            <p class="text-[12px] font-bold text-accent">INTERACTION</p>
-            <p class="mt-2 text-[17px] font-bold">InteractionButtons</p>
-            <p class="mt-3 text-[13px] leading-relaxed text-neutral-600">좋아요·공유·신고 동작과 반응형 표현을 상세 페이지에서 공통 사용</p>
-          </div>
-          <div class="rounded-xl border border-blue-100 bg-blue-50 p-5">
-            <p class="text-[12px] font-bold text-accent">DATA</p>
-            <p class="mt-2 text-[17px] font-bold">useUrlParams<br />toggleLike</p>
-            <p class="mt-3 text-[13px] leading-relaxed text-neutral-600">검색·필터 URL 상태와 Supabase 좋아요 호출 로직을 분리</p>
-          </div>
-        </div>
-
-        <div class="mt-8 rounded-xl border border-gray-200 p-6">
-          <p class="text-[14px] font-bold">실시간 채팅 데이터 흐름</p>
-          <div class="mt-5 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-3 text-center">
-            <div class="rounded-lg bg-slate-50 p-4"><b>채팅 UI</b><br /><span class="text-[12px] text-neutral-500">Zustand 상태</span></div>
-            <span class="text-accent">→</span>
-            <div class="rounded-lg bg-slate-50 p-4"><b>Supabase Realtime</b><br /><span class="text-[12px] text-neutral-500">송수신·읽음 처리</span></div>
-            <span class="text-accent">→</span>
-            <div class="rounded-lg bg-slate-50 p-4"><b>Upstash Redis</b><br /><span class="text-[12px] text-neutral-500">요청 제한</span></div>
-          </div>
-        </div>
-
-        <div class="mt-8 border-l-4 border-accent pl-5">
-          <p class="text-[16px] font-bold">결과</p>
-          <p class="mt-2 text-[14px] leading-relaxed text-neutral-600">UI 컴포넌트는 표현에, 훅은 URL 상태에, 서비스 함수는 DB 호출에 집중하도록 책임을 분리해 변경 범위를 줄였습니다.</p>
-        </div>
-        <div class="slide-foot"><span>04 / 10</span></div>
-      </section>
-
-      <!-- ========== 05. Kanto - 운영 개선과 협업 ========== -->
-      <section class="legacy-slide hidden">
-        <p class="slide-kicker">02. Project · Kanto (3/3)</p>
-        <h2 class="mt-3 text-[28px] font-extrabold">운영 문제를 구조와 협업 방식으로 해결</h2>
-
-        <div class="mt-7 grid grid-cols-2 gap-5">
-          <div class="pf-card">
-            <span class="pf-badge-accent">운영 관리</span>
-            <h3 class="mt-4 text-[19px] font-bold">서버 상태와 UI 상태가 뒤섞인 문제</h3>
-            <p class="mt-3 text-[14px] leading-relaxed text-neutral-600">금칙어·스팸 관리 페이지의 서버 데이터를 TanStack Query로 분리하고, 저장 후 전체 재조회 대신 캐시를 교체했습니다.</p>
-            <div class="mt-5 rounded-lg bg-slate-50 p-4 text-center">
-              <span class="text-[13px] text-neutral-500">금칙어·스팸 탭 반복 전환</span>
-              <p class="mt-1 text-[24px] font-extrabold text-accent">30초 내 GET 3회</p>
-            </div>
-          </div>
-          <div class="pf-card">
-            <span class="pf-badge-accent">오류 대응</span>
-            <h3 class="mt-4 text-[19px] font-bold">외부 번역 API 장애 시 데이터 유실</h3>
-            <p class="mt-3 text-[14px] leading-relaxed text-neutral-600">한·영·필 공지 자동 번역이 실패해도 원문을 저장하도록 fallback을 두어 운영 흐름이 중단되지 않게 했습니다.</p>
-            <div class="mt-5 rounded-lg bg-slate-50 p-4 text-[13px] text-neutral-600">정상: 번역문 저장<br />장애: 원문 저장 → 운영 지속</div>
-          </div>
-        </div>
-
-        <div class="mt-7 rounded-xl bg-slate-900 p-6 text-white">
-          <p class="text-[12px] font-bold text-blue-300">COLLABORATION</p>
-          <h3 class="mt-2 text-[20px] font-bold">리뷰를 개인 피드백이 아닌 팀 태스크로 전환</h3>
-          <ul class="mt-4 grid grid-cols-2 gap-x-6 gap-y-3 text-[13.5px] text-slate-200">
-            <li>• 외부 멘토 리뷰를 팀원·우선순위별로 재구성</li>
-            <li>• 완료 여부를 문서에서 함께 추적</li>
-            <li>• hotfix 브랜치·1인 승인 규칙 문서화</li>
-            <li>• Discord·Notion 기반 결정 사항 공유</li>
-          </ul>
-        </div>
-
-        <p class="mt-7 text-[15px] leading-relaxed text-neutral-700"><b>경청한 내용을 결정과 규칙으로 남겨</b>, 다른 팀원이 같은 기준으로 기능을 이어갈 수 있도록 만들었습니다.</p>
-        <div class="slide-foot"><span>05 / 10</span></div>
-      </section>
-
-      <!-- ========== 06. Gentlelion - 개요 ========== -->
-      <section class="legacy-slide hidden">
-        <p class="slide-kicker">03. Project · Gentlelion (1/2)</p>
-        <div class="mt-3 flex items-end justify-between">
-          <div>
-            <h2 class="text-[30px] font-extrabold">Gentlelion</h2>
-            <p class="mt-2 text-[15px] text-neutral-600">Gentle Monster 클론코딩</p>
-          </div>
-          <span class="pf-badge-accent">3인 팀 · 팀장 · 2026.03–04</span>
-        </div>
-
-        <div class="mt-8 rounded-2xl bg-slate-950 p-8 text-white">
-          <p class="text-[12px] font-bold text-blue-300">KEY ARCHITECTURE</p>
-          <h3 class="mt-3 text-[23px] font-bold">npm Workspaces 모노레포</h3>
-          <div class="mt-7 grid grid-cols-3 gap-4 text-center">
-            <div class="rounded-xl border border-white/15 bg-white/10 p-5"><b>User App</b><p class="mt-2 text-[12px] text-slate-300">상품·장바구니·주문</p></div>
-            <div class="rounded-xl border border-white/15 bg-white/10 p-5"><b>Admin App</b><p class="mt-2 text-[12px] text-slate-300">사용자·주문 관리</p></div>
-            <div class="rounded-xl border border-white/15 bg-white/10 p-5"><b>Shared API</b><p class="mt-2 text-[12px] text-slate-300">공용 데이터 호출</p></div>
-          </div>
-          <p class="mt-6 text-center text-[14px] text-slate-200">앱의 책임을 분리하고 사용자·관리자 서비스를 각각 독립 배포</p>
-        </div>
-
-        <div class="mt-7 grid grid-cols-2 gap-4">
-          <div class="pf-card"><p class="text-[12px] font-bold text-accent">ROLE</p><p class="mt-2 text-[18px] font-bold">팀장 · 프론트엔드 개발</p><p class="mt-3 text-[14px] text-neutral-600">API 명세·WBS 작성, 브랜치 전략과 이슈 관리 환경 구성</p></div>
-          <div class="pf-card"><p class="text-[12px] font-bold text-accent">PROCESS</p><p class="mt-2 text-[18px] font-bold">스크럼 기록과 검수</p><p class="mt-3 text-[14px] text-neutral-600">진행 상황을 GitHub Wiki에 기록하고 핵심 흐름을 E2E로 검수</p></div>
-        </div>
-
-        <div class="mt-6 flex flex-wrap gap-2"><span class="pf-tag">JavaScript</span><span class="pf-tag">Vite</span><span class="pf-tag">npm Workspaces</span><span class="pf-tag">Tailwind CSS</span><span class="pf-tag">REST API</span><span class="pf-tag">Playwright</span></div>
-        <div class="slide-foot"><span>06 / 10</span></div>
-      </section>
-
-      <!-- ========== 07. Gentlelion - 구현과 검수 ========== -->
-      <section class="legacy-slide hidden">
-        <p class="slide-kicker">03. Project · Gentlelion (2/2)</p>
-        <h2 class="mt-3 text-[28px] font-extrabold">화면 구현부터 API·E2E 검수까지</h2>
-
-        <div class="mt-7 space-y-4">
-          <div class="grid grid-cols-[32mm_1fr] rounded-xl border border-gray-200 p-5">
-            <b class="text-accent">재사용 UI</b>
-            <p class="text-[14px] leading-relaxed text-neutral-600">상품 카드·더보기 버튼을 모듈로 분리하고 Footer·서브메뉴, 헤더 메뉴·스크롤 인터랙션을 구현했습니다.</p>
-          </div>
-          <div class="grid grid-cols-[32mm_1fr] rounded-xl border border-gray-200 p-5">
-            <b class="text-accent">REST API</b>
-            <p class="text-[14px] leading-relaxed text-neutral-600">상품 조회·필터, 장바구니 수량 변경, 주문 생성, 관리자 사용자·주문 관리 CRUD를 구현했습니다.</p>
-          </div>
-          <div class="grid grid-cols-[32mm_1fr] rounded-xl border border-gray-200 p-5">
-            <b class="text-accent">E2E 검수</b>
-            <p class="text-[14px] leading-relaxed text-neutral-600">Playwright 테스트 구조를 만들고 회원가입·로그인·장바구니·주문·프로필의 5개 핵심 흐름을 자동 검수했습니다.</p>
-          </div>
-        </div>
-
-        <div class="mt-8 rounded-xl bg-blue-50 p-6">
-          <p class="text-[12px] font-bold text-accent">DATA FLOW</p>
-          <div class="mt-5 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-3 text-center text-[14px]">
-            <div class="rounded-lg bg-white p-4 shadow-sm">사용자 인터랙션</div><span class="text-accent">→</span>
-            <div class="rounded-lg bg-white p-4 shadow-sm">Shared API</div><span class="text-accent">→</span>
-            <div class="rounded-lg bg-white p-4 shadow-sm">User·Admin UI 갱신</div>
-          </div>
-        </div>
-
-        <div class="mt-8 border-l-4 border-accent pl-5">
-          <p class="text-[17px] font-bold">클론 화면보다 구조와 검수 과정에 집중했습니다.</p>
-          <p class="mt-2 text-[14px] leading-relaxed text-neutral-600">앱 경계를 나누고 공용 API를 분리한 뒤, 실제 사용 흐름을 자동화 테스트로 확인해 개발부터 배포까지의 흐름을 경험했습니다.</p>
-        </div>
-        <div class="slide-foot"><span>07 / 10</span></div>
-      </section>
-
-      <!-- ========== 08. DoHyuk.dev - 개요 ========== -->
-      <section class="legacy-slide hidden">
-        <p class="slide-kicker">04. Project · DoHyuk.dev (1/2)</p>
-        <div class="mt-3 flex items-end justify-between">
-          <div><h2 class="text-[30px] font-extrabold">DoHyuk.dev</h2><p class="mt-2 text-[15px] text-neutral-600">바닐라 JavaScript 기반 개인 기술 블로그</p></div>
-          <span class="pf-badge-accent">개인 · 기획·설계·개발·배포</span>
-        </div>
-
-        <div class="mt-8 grid grid-cols-2 gap-5">
-          <div class="pf-card">
-            <p class="text-[12px] font-bold text-accent">SERVICE FLOW</p>
-            <h3 class="mt-3 text-[20px] font-bold">Supabase 기반 데이터 흐름</h3>
-            <ul class="mt-5 space-y-3 text-[14px] text-neutral-600">
-              <li>• Auth — Google·GitHub 로그인</li>
-              <li>• DB — 게시글·프로필 데이터</li>
-              <li>• Storage — 게시글·프로필 이미지</li>
-              <li>• Edge Function — 외부 API 호출 분리</li>
-            </ul>
-          </div>
-          <div class="pf-card">
-            <p class="text-[12px] font-bold text-accent">CONTENT FLOW</p>
-            <h3 class="mt-3 text-[20px] font-bold">게시글 상태와 이미지 업로드</h3>
-            <div class="mt-5 space-y-3 text-[14px] text-neutral-600">
-              <p>발행 · 임시저장 · 휴지통의 3단 상태 관리</p>
-              <p>작성 중에는 blob 미리보기만 사용</p>
-              <p>발행 시점에 Storage 업로드 및 URL 치환</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="mt-7 rounded-xl bg-slate-900 p-6 text-white">
-          <p class="text-[12px] font-bold text-blue-300">PUBLIC DATA API</p>
-          <h3 class="mt-2 text-[20px] font-bold">공공데이터 기반 공휴일 캘린더</h3>
-          <div class="mt-5 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-3 text-center text-[13px]">
-            <div class="rounded-lg bg-white/10 p-4">캘린더 UI</div><span>→</span>
-            <div class="rounded-lg bg-white/10 p-4">Supabase<br />Edge Function</div><span>→</span>
-            <div class="rounded-lg bg-white/10 p-4">공공데이터포털<br />공휴일 API</div>
-          </div>
-        </div>
-
-        <div class="mt-6 flex flex-wrap gap-2"><span class="pf-tag">JavaScript</span><span class="pf-tag">Vite</span><span class="pf-tag">Tailwind CSS</span><span class="pf-tag">Supabase</span><span class="pf-tag">Edge Functions</span><span class="pf-tag">npm</span></div>
-        <div class="slide-foot"><span>08 / 10</span></div>
-      </section>
-
-      <!-- ========== 09. DoHyuk.dev - 구현과 문제해결 ========== -->
-      <section class="legacy-slide hidden">
-        <p class="slide-kicker">04. Project · DoHyuk.dev (2/2)</p>
-        <h2 class="mt-3 text-[28px] font-extrabold">측정한 병목을 독립 패키지로 해결</h2>
-
-        <div class="mt-7 grid grid-cols-2 gap-5">
-          <div class="rounded-xl border border-red-100 bg-red-50 p-6">
-            <p class="text-[12px] font-bold text-red-600">PROBLEM</p>
-            <h3 class="mt-3 text-[19px] font-bold">입력할 때마다 전체 DOM 교체</h3>
-            <p class="mt-4 text-[14px] leading-relaxed text-neutral-600">마크다운 문서 전체를 다시 파싱하고 미리보기 DOM을 통째로 교체해 글이 길수록 입력 반응이 느려졌습니다.</p>
-          </div>
-          <div class="rounded-xl border border-blue-100 bg-blue-50 p-6">
-            <p class="text-[12px] font-bold text-accent">SOLUTION</p>
-            <h3 class="mt-3 text-[19px] font-bold">변경 블록만 선택적으로 반영</h3>
-            <p class="mt-4 text-[14px] leading-relaxed text-neutral-600">문서를 빈 줄 기준 블록으로 나누고 이전 상태와 비교해 변경된 블록의 DOM만 갱신했습니다.</p>
-          </div>
-        </div>
-
-        <div class="mt-7 rounded-xl border border-gray-200 p-6">
-          <div class="flex items-end justify-between">
-            <div><p class="text-[12px] font-bold text-accent">RESULT</p><h3 class="mt-2 text-[20px] font-bold">markdown-block-preview</h3></div>
-            <p class="text-[30px] font-extrabold text-accent">최대 8.2배</p>
-          </div>
-          <p class="mt-4 text-[14px] leading-relaxed text-neutral-600">로직을 npm 패키지로 분리·배포하고 50블록 문서에서 성능을 비교해 개선 효과를 검증했습니다.</p>
-        </div>
-
-        <div class="mt-7 grid grid-cols-3 gap-4">
-          <div class="pf-card"><b>문제 정의</b><p class="mt-2 text-[13px] text-neutral-600">긴 글에서 입력 지연 확인</p></div>
-          <div class="pf-card"><b>원인 측정</b><p class="mt-2 text-[13px] text-neutral-600">파싱보다 DOM 교체 비용 확인</p></div>
-          <div class="pf-card"><b>검증·배포</b><p class="mt-2 text-[13px] text-neutral-600">벤치마크 후 npm 공개</p></div>
-        </div>
-
-        <p class="mt-8 text-[15px] leading-relaxed text-neutral-700">기능 구현에 그치지 않고 <b>병목을 측정하고, 재사용 가능한 도구로 분리하고, 수치로 검증</b>하는 과정을 경험했습니다.</p>
-        <div class="slide-foot"><span>09 / 10</span></div>
-      </section>
-
-      <!-- ========== 15. DoHyuk.dev - 인덱스 기반 섹션 스크롤 ========== -->
-      <section class="slide order-[15] break-keep break-after-page">
-        <p class="slide-kicker">04. DoHyuk.dev</p>
+      <!-- ========== 16. DoHyuk.dev - Firebase → Supabase 인증 일원화 ========== -->
+      <section class="slide order-[17] break-keep break-after-page">
+        <p class="slide-kicker">03. DoHyuk.dev</p>
         <div class="mt-4 flex items-end justify-between">
-          <h2 class="text-[32px] font-extrabold">Scroll Snap을 활용한 페이지 스크롤 구현</h2>
+          <h2 class="text-[32px] font-extrabold font-nanum-round">Firebase → Supabase, 인증 공급자 일원화</h2>
         </div>
 
-        <div class="mt-5 grid min-h-0 flex-1 grid-cols-[1.6fr_0.4fr] gap-6">
+        <div class="mt-5 grid min-h-0 flex-1 grid-cols-[1.5fr_0.5fr] gap-6">
           <article class="flex min-h-0 flex-col">
-            <h3 class="text-[22px] font-extrabold">좌표 비교를 실제 노출 감지 방식으로 전환</h3>
+            <h3 class="text-[22px] font-extrabold font-nanum-round">공급자 불일치로 발생한 소유권 검증 허점 제거</h3>
             <p class="mt-2 text-[13.5px] leading-[1.7] text-neutral-600">
-              모니터마다 달라지는 섹션 높이 때문에 인덱스가 중복되거나 마지막 섹션을 감지하지 못하는 문제를 재현하고, 좌표 계산에 의존하지 않는 구조로 개선했습니다.
+              게시글을 작성자가 아닌 사용자도 수정·삭제할 수 있는 보안 취약점을 발견하고, 인증(Firebase)과 데이터(Supabase)의 공급자가 서로 달라 UID 체계가 어긋난 것을 원인으로 지목해 해결했습니다.
             </p>
 
             <div class="mt-8 grid grid-cols-2 gap-8 text-[12.5px] leading-[1.65]">
               <section>
-                <p class="font-bold text-slate-700">기존 구조</p>
+                <p class="font-bold text-slate-700">검토했지만 기각한 방안</p>
                 <ul class="mt-2 list-disc space-y-1 pl-5 text-neutral-600 marker:text-neutral-400">
-                  <li><code>scroll</code> 이벤트에서 현재 <code>scrollTop</code> 확인</li>
-                  <li>각 섹션의 시작 좌표인 <code>offsetTop</code>을 순회·비교</li>
-                  <li>현재 좌표와 가장 가까운 섹션의 배열 인덱스를 활성화</li>
+                  <li><code>UID 매핑 DB</code> · Firebase UID와 Supabase 데이터를 잇는 매핑 테이블 → 조회마다 이중 경유로 성능 저하</li>
+                  <li><code>JWT 로컬스토리지 저장</code> · 클라이언트에 토큰 저장 → 탈취 시 소유권 위조로 이어지는 XSS 위험</li>
                 </ul>
               </section>
 
               <section>
-                <p class="font-bold text-slate-700">개선 후 구조</p>
+                <p class="font-bold text-slate-700">최종 선택 - 공급자 일원화</p>
                 <ul class="mt-2 list-disc space-y-1 pl-5 text-neutral-600 marker:text-neutral-400">
-                  <li><code>IntersectionObserver</code>로 50% 이상 노출된 섹션 감지</li>
-                  <li>현재 노출된 섹션의 배열 인덱스 확인</li>
-                  <li>해당 인덱스에 맞춰 우측 내비게이션 항목 활성화</li>
+                  <li>Firebase를 걷어내고 <code>Supabase Auth</code>(GitHub·Google OAuth)로 인증·데이터 공급자 통합</li>
+                  <li><code>checkPostOwner</code>가 로그인 사용자 id와 게시글 <code>user_id</code>를 직접 비교</li>
+                  <li><code>RLS</code>로 DB 레벨에서 소유권 검증을 강제</li>
                 </ul>
               </section>
             </div>
@@ -2815,65 +2324,59 @@
             <div class="mt-8 divide-y divide-neutral-200 border-y border-neutral-200 text-[12.5px] leading-[1.55] text-neutral-600">
               <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
                 <b class="border-r border-neutral-200 pr-3 text-slate-700">문제</b>
-                <span>스크롤 중 특정 인덱스가 두 번 활성화되고 마지막 섹션의 내비게이션 상태가 누락</span>
+                <span>게시글을 작성자가 아닌 사용자도 수정·삭제할 수 있는 소유권 검증 허점 발견</span>
               </div>
               <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
                 <b class="border-r border-neutral-200 pr-3 text-slate-700">원인</b>
-                <span><code>h-screen</code>의 실제 높이가 환경마다 소수점 단위로 달라 <code>scrollTop</code>과 <code>offsetTop</code> 비교에 편차 발생</span>
-              </div>
-              <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
-                <b class="border-r border-neutral-200 pr-3 text-slate-700">기존 방식</b>
-                <span><code>scroll</code> 이벤트마다 현재 좌표와 모든 섹션의 <code>offsetTop</code>을 순회·비교</span>
+                <span>데이터(Supabase)와 인증(Firebase)의 공급자가 달라 UID 체계가 일치하지 않아 소유권을 안전하게 검증할 방법이 없음</span>
               </div>
               <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
                 <b class="border-r border-neutral-200 pr-3 text-slate-700">해결</b>
-                <span>스크롤 컨테이너를 root로 지정한 <code>IntersectionObserver</code>로 노출 비율 50% 이상인 섹션 감지</span>
+                <span>Firebase를 걷어내고 Supabase Auth(GitHub·Google OAuth)로 인증·데이터 공급자를 일원화</span>
               </div>
               <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
-                <b class="border-r border-neutral-200 pr-3 text-slate-700">결과</b>
-                <span>화면 높이와 소수점 좌표에 의존하지 않고 섹션 배열 인덱스와 우측 내비게이션 상태를 동기화</span>
+                <b class="border-r border-neutral-200 pr-3 text-slate-700">검증</b>
+                <span><code>checkPostOwner</code>가 사용자 id와 게시글 <code>user_id</code>를 비교하고 <code>RLS</code>로 소유권을 DB 레벨에서 강제</span>
               </div>
               <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
                 <b class="border-r border-neutral-200 pr-3 text-slate-700">문서화</b>
                 <div>
-                  <span>화면별 편차 재현부터 원인 분석과 Observer 전환 과정까지 기술 블로그에 기록</span>
-                  <a href="https://hyeeoooook.tistory.com/30" target="_blank" rel="noopener" class="mt-1 block break-all text-neutral-600 hover:underline"><b class="text-slate-700">주소:</b> https://hyeeoooook.tistory.com/30</a>
+                  <span>문제 발견부터 공급자 일원화, RLS 검증까지의 해결 과정을 기술 블로그에 기록</span>
+                  <a href="https://hyeeoooook.tistory.com/40" target="_blank" rel="noopener" class="mt-1 block break-all text-neutral-600 hover:underline"><b class="text-slate-700">주소:</b> https://hyeeoooook.tistory.com/40</a>
                 </div>
               </div>
             </div>
           </article>
 
-          <figure class="-mt-18 mb-2 flex min-h-0 items-center">
-            <div class="grid h-full min-h-0 w-full grid-rows-6 justify-items-center gap-2 [&>div]:h-full [&>div]:max-w-full">
-                <div class="relative aspect-video overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
-                  <img src="./myblog/about-sections/01.png" alt="DoHyuk.dev 소개 페이지 첫 번째 섹션" class="h-full w-full object-cover" />
-                </div>
-                <div class="relative aspect-video overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
-                  <img src="./myblog/about-sections/02.png" alt="DoHyuk.dev 소개 페이지 두 번째 섹션" class="h-full w-full object-cover" />
-                </div>
-                <div class="relative aspect-video overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
-                  <img src="./myblog/about-sections/03.png" alt="DoHyuk.dev 소개 페이지 세 번째 섹션" class="h-full w-full object-cover" />
-                </div>
-                <div class="relative aspect-video overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
-                  <img src="./myblog/about-sections/04.png" alt="DoHyuk.dev 소개 페이지 네 번째 섹션" class="h-full w-full object-cover" />
-                </div>
-                <div class="relative aspect-video overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
-                  <img src="./myblog/about-sections/05.png" alt="DoHyuk.dev 소개 페이지 다섯 번째 섹션" class="h-full w-full object-cover" />
-                </div>
-                <div class="relative aspect-video overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
-                  <img src="./myblog/about-sections/06.png" alt="DoHyuk.dev 소개 페이지 여섯 번째 섹션" class="h-full w-full object-cover" />
-                </div>
+          <figure class="flex h-full min-h-0 flex-col items-center justify-between py-2">
+            <div class="w-full">
+              <p class="mb-2 text-center text-[11px] font-bold text-neutral-400">Before · Firebase</p>
+              <div class="overflow-hidden rounded-lg border border-slate-200 shadow-md">
+                <img src="./myblog/firebase.png" alt="Before - Firebase onAuthStateChanged로 로그인 상태 판단" class="w-full object-contain" />
+              </div>
+            </div>
+
+            <div class="flex flex-col items-center text-[11px] font-bold text-neutral-400">
+              <span>인증 공급자 교체</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-1 h-6 w-6 text-accent" aria-hidden="true"><path d="M12 5v14" /><path d="m6 13 6 6 6-6" /></svg>
+            </div>
+
+            <div class="w-full">
+              <p class="mb-2 text-center text-[11px] font-bold text-accent">After · Supabase</p>
+              <div class="overflow-hidden rounded-lg border border-slate-200 shadow-md">
+                <img src="./myblog/supabase.png" alt="After - Supabase onAuthStateChange로 교체" class="w-full object-contain" />
+              </div>
             </div>
           </figure>
         </div>
-        <div class="slide-foot"><span>15 / 16</span></div>
+        <div class="slide-foot"><span>17 / 19</span></div>
       </section>
 
-      <!-- ========== 14. DoHyuk.dev - 반응형 인터랙티브 목업 ========== -->
-      <section class="slide order-[14] break-keep break-after-page">
-        <p class="slide-kicker">04. DoHyuk.dev</p>
+      <!-- ========== 15. DoHyuk.dev - 반응형 인터랙티브 목업 ========== -->
+      <section class="slide order-[16] break-keep break-after-page">
+        <p class="slide-kicker">03. DoHyuk.dev</p>
         <div class="mt-4 flex items-end justify-between">
-          <h2 class="text-[32px] font-extrabold">Windows XP와 One UI를 재현한 반응형 목업</h2>
+          <h2 class="text-[32px] font-extrabold font-nanum-round">Windows XP와 One UI를 재현한 반응형 목업</h2>
         </div>
 
         <p class="mt-3 text-[13.5px] leading-[1.7] text-neutral-600">
@@ -2905,12 +2408,100 @@
             </ul>
           </article>
         </div>
-        <div class="slide-foot"><span>14 / 16</span></div>
+        <div class="slide-foot"><span>16 / 19</span></div>
+      </section>
+
+      <!-- ========== 16-2. DoHyuk.dev - 웹 접근성 ========== -->
+      <section class="slide order-[18] break-keep break-after-page">
+        <p class="slide-kicker">03. DoHyuk.dev</p>
+        <div class="mt-4 flex items-end justify-between">
+          <h2 class="text-[32px] font-extrabold font-nanum-round">웹 접근성 - 시맨틱 구조와 ARIA</h2>
+        </div>
+
+        <div class="mt-5 grid min-h-0 flex-1 grid-cols-[1.5fr_0.5fr] gap-6">
+          <article class="flex min-h-0 flex-col">
+            <h3 class="text-[22px] font-extrabold font-nanum-round">스크린리더와 키보드로도 동일하게 열리는 메뉴</h3>
+            <p class="mt-2 text-[13.5px] leading-[1.7] text-neutral-600">
+              의미 없는 <code>div</code> 중첩과 ARIA 속성 부재로 스크린리더가 메뉴 상태를 읽지 못하던 구조를 발견하고, 시맨틱 마크업과 포커스·키보드 흐름을 다시 설계했습니다.
+            </p>
+
+            <div class="mt-8 grid grid-cols-2 gap-8 text-[12.5px] leading-[1.65]">
+              <section>
+                <p class="font-bold text-slate-700">기존 구조</p>
+                <ul class="mt-2 list-disc space-y-1 pl-5 text-neutral-600 marker:text-neutral-400">
+                  <li>의미 없는 <code>div</code> 중첩으로 메뉴·토글 버튼 구성</li>
+                  <li>ARIA 속성 전무 · 스크린리더가 메뉴 열림 여부를 알 수 없음</li>
+                  <li>네비게이션이 <code>nav</code>로 감싸지지 않아 랜드마크 탐색 불가</li>
+                </ul>
+              </section>
+
+              <section>
+                <p class="font-bold text-slate-700">개선 후 구조</p>
+                <ul class="mt-2 list-disc space-y-1 pl-5 text-neutral-600 marker:text-neutral-400">
+                  <li><code>div</code> → <code>nav</code>·<code>h2</code>·<code>button</code>으로 시맨틱 태그 교체</li>
+                  <li><code>aria-expanded</code>·<code>aria-controls</code>·<code>aria-pressed</code>로 상태를 스크린리더에 전달</li>
+                  <li>닫힌 메뉴는 <code>aria-hidden</code>과 <code>inert</code>로 완전히 제외</li>
+                </ul>
+              </section>
+            </div>
+
+            <div class="mt-8 divide-y divide-neutral-200 border-y border-neutral-200 text-[12.5px] leading-[1.55] text-neutral-600">
+              <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
+                <b class="border-r border-neutral-200 pr-3 text-slate-700">문제</b>
+                <span>의미 없는 div 중첩과 ARIA 부재로 스크린리더가 메뉴 상태를 읽지 못하고, 키보드만으로 메뉴를 열고 닫을 수 없음</span>
+              </div>
+              <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
+                <b class="border-r border-neutral-200 pr-3 text-slate-700">해결</b>
+                <span>메뉴 버튼에 <code>aria-expanded</code>·<code>aria-controls</code>를 연결하고, 닫힌 메뉴는 <code>aria-hidden</code>과 <code>inert</code>로 완전히 제외</span>
+              </div>
+              <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
+                <b class="border-r border-neutral-200 pr-3 text-slate-700">포커스·키보드</b>
+                <span>메뉴 열림 시 내부 첫 포커스 가능 요소로 이동, 닫힘 시 이전 포커스 위치로 복원, <code>Escape</code> 키로 메뉴 닫기 지원</span>
+              </div>
+              <div class="grid grid-cols-[110px_1fr] gap-3 py-3">
+                <b class="border-r border-neutral-200 pr-3 text-slate-700">문서화</b>
+                <div>
+                  <span>시맨틱 구조 개선과 메뉴 접근성 구현 과정을 기술 블로그에 기록</span>
+                  <a href="https://hyeeoooook.tistory.com/32" target="_blank" rel="noopener" class="mt-1 block break-all text-neutral-600 hover:underline"><b class="text-slate-700">주소:</b> https://hyeeoooook.tistory.com/32</a>
+                  <a href="https://hyeeoooook.tistory.com/33" target="_blank" rel="noopener" class="block break-all text-neutral-600 hover:underline"><b class="text-slate-700">주소:</b> https://hyeeoooook.tistory.com/33</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <figure class="flex min-h-0 flex-col justify-center gap-4">
+            <div class="rounded-lg bg-slate-900 p-3 font-mono text-[10px] leading-[1.6] text-slate-300 shadow-md">
+              <p class="mb-1.5 text-[10px] font-bold uppercase tracking-wide text-neutral-500">Before</p>
+              <pre class="whitespace-pre-wrap break-all"><code>&lt;div class="menu-toggle"
+  onclick="toggle()"&gt;
+  &lt;img src="menu.svg" /&gt;
+&lt;/div&gt;
+&lt;div class="menu"&gt;
+  &lt;div class="item"&gt;홈&lt;/div&gt;
+  &lt;div class="item"&gt;소개&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="rounded-lg bg-slate-900 p-3 font-mono text-[10px] leading-[1.6] text-slate-300 shadow-md">
+              <p class="mb-1.5 text-[10px] font-bold uppercase tracking-wide text-accent">After</p>
+              <pre class="whitespace-pre-wrap break-all"><code>&lt;button <span class="text-teal-300">aria-expanded</span>="false"
+  <span class="text-teal-300">aria-controls</span>="site-menu"&gt;
+  &lt;img src="menu.png" alt="" /&gt;
+&lt;/button&gt;
+&lt;nav id="site-menu"
+  <span class="text-teal-300">aria-hidden</span>="true" <span class="text-teal-300">inert</span>&gt;
+  &lt;h2 class="sr-only"&gt;사이트 메뉴&lt;/h2&gt;
+  &lt;a href="/"&gt;홈&lt;/a&gt;
+&lt;/nav&gt;</code></pre>
+            </div>
+          </figure>
+        </div>
+        <div class="slide-foot"><span>18 / 19</span></div>
       </section>
 
       <!-- ========== 16. 끝 ========== -->
       <section
-        class="slide order-[16] relative items-start justify-center overflow-hidden bg-slate-600 p-0! text-white"
+        class="slide order-[19] relative items-start justify-center overflow-hidden bg-slate-600 p-0! text-white"
       >
         <!-- 발자국 워터마크 (표지와 대칭, 반대쪽에 배치) -->
         <svg
