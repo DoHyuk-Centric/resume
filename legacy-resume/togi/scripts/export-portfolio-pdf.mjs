@@ -67,13 +67,18 @@ try {
         height: item.scrollHeight - item.clientHeight,
         width: item.scrollWidth - item.clientWidth,
       }))
-      // 1번 표지는 좌측 장식 SVG를 의도적으로 캔버스 밖에 배치합니다.
       .filter((item) => {
-        const allowedDeviceOverflow = item.slide === 14 && item.height <= 30;
-        return (!allowedDeviceOverflow && item.height > 1) || (item.slide !== 1 && item.width > 1);
+        // 1·3·12번: 장식용 원 배경을 캔버스 밖까지 의도적으로 배치합니다.
+        const allowedBleedWidth = [1, 3, 12].includes(item.slide);
+        const allowedBleedHeight = item.slide === 3;
+        // 14·15번: 모바일 목업 이미지를 슬라이드 하단 바깥으로 의도적으로 배치합니다(30px 이내).
+        const allowedDeviceOverflow = [14, 15].includes(item.slide) && item.height <= 30;
+        const heightOverflow = item.height > 1 && !allowedBleedHeight && !allowedDeviceOverflow;
+        const widthOverflow = item.width > 1 && !allowedBleedWidth;
+        return heightOverflow || widthOverflow;
       }),
   }));
-  if (validation.slideCount !== 17 || !validation.hasProjectFocus || validation.overflowSlides.length) {
+  if (validation.slideCount !== 19 || !validation.hasProjectFocus || validation.overflowSlides.length) {
     throw new Error(`포트폴리오 레이아웃 검증 실패: ${JSON.stringify(validation)}`);
   }
 
