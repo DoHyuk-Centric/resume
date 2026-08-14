@@ -61,13 +61,13 @@
   }
 
   .link {
-    @apply px-1 text-brand4 transition-all hover:rounded hover:bg-brand3 hover:text-canvas;
+    @apply px-1 py-0.5 text-accent transition-all hover:rounded hover:bg-accent hover:text-canvas;
   }
   .link-github {
     @apply relative ml-5 before:absolute before:left-[-18px] before:top-1 before:h-[16px] before:w-[16px] before:bg-[url('../img/icon-github.svg')] before:bg-contain before:bg-no-repeat before:opacity-70;
   }
   .link-separator {
-    @apply relative after:absolute after:right-[-9px] after:top-[5px] after:mx-2 after:inline-block after:h-[14px] after:w-[1px] after:bg-brand4;
+    @apply relative after:absolute after:right-[-9px] after:top-[5px] after:mx-2 after:inline-block after:h-[14px] after:w-[1px] after:bg-accent;
   }
   .link-nomargin {
     @apply ml-[-4px];

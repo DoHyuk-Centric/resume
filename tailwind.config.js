@@ -22,6 +22,8 @@ module.exports = {
         brand2: "#1657E0",
         brand3: "#0F84D6",
         brand4: "#08B7C9",
+        accent: "#5c1a2e",
+        "accent-dark": "#3d1120",
       },
     },
   },
