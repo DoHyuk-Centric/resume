@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    word-break: keep-all;
+    font-size: 18px;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@layer components {
+  .contact {
+    @apply inline-block after:relative after:top-[2px] after:mx-2 after:inline-block after:h-[14px] after:w-[2px] after:bg-faint;
+  }
+  .contact:not(:first-child) {
+    @apply mt-[6px];
+  }
+
+  .section-main {
+    @apply mb-2 border-t border-line p-5;
+  }
+
+  .title-pri {
+    @apply mt-4 mb-3 text-xl font-bold text-brand2;
+  }
+  .title-sec {
+    @apply text-lg font-semibold text-ink;
+  }
+  .title-sec em {
+    @apply my-1 block text-sm font-normal not-italic text-muted;
+  }
+
+  .stack-wrapper {
+    @apply my-7;
+  }
+  .stack-badge-list-wrapper {
+    @apply flex flex-wrap gap-3 font-mono;
+  }
+  .stack-badge {
+    @apply whitespace-nowrap rounded-full px-[7px] py-[2px] text-[0.75rem] shadow;
+  }
+  .count-badge {
+    @apply ml-1 inline-block h-4 w-4 rounded-full bg-rose-400 text-center align-middle text-[0.65rem] not-italic leading-4 text-white;
+  }
+
+  .title-with-time-wrapper {
+    @apply flex flex-wrap items-center justify-between gap-x-3;
+  }
+  .time {
+    @apply whitespace-nowrap text-sm font-light text-muted;
+  }
+  .time-ongoing {
+    @apply after:mx-1 after:inline-block after:content-['~'];
+  }
+
+  .link {
+    @apply px-1 text-brand4 transition-all hover:rounded hover:bg-brand3 hover:text-canvas;
+  }
+  .link-github {
+    @apply relative ml-5 before:absolute before:left-[-18px] before:top-1 before:h-[16px] before:w-[16px] before:bg-[url('../img/icon-github.svg')] before:bg-contain before:bg-no-repeat before:opacity-70;
+  }
+  .link-separator {
+    @apply relative after:absolute after:right-[-9px] after:top-[5px] after:mx-2 after:inline-block after:h-[14px] after:w-[1px] after:bg-brand4;
+  }
+  .link-nomargin {
+    @apply ml-[-4px];
+  }
+
+  .description-list,
+  .description-list ul {
+    @apply ml-6 list-disc;
+  }
+  .description-list li {
+    @apply mt-1 text-[0.95rem] leading-relaxed;
+  }
+
+  .item-list {
+    @apply mt-2 mb-7;
+  }
+  .item-list li {
+    @apply my-3;
+  }
+  .item-description {
+    @apply text-[0.95rem];
+  }
+
+  .num {
+    @apply font-semibold text-brand2;
+  }
+
+  /* Stack badge colors */
+  .stack-js {
+    @apply bg-[#f0db4f40];
+  }
+  .stack-ts {
+    @apply bg-[#007acc40] text-[#007acc];
+  }
+  .stack-react {
+    @apply bg-[#61dbfb40];
+  }
+  .stack-next {
+    @apply bg-[#0000006e] text-white;
+  }
+  .stack-html {
+    @apply bg-[#e34c2640] text-[#e34c26];
+  }
+  .stack-tailwind {
+    @apply bg-[#39bcf740] text-[#0f84a3];
+  }
+  .stack-vite {
+    @apply bg-[#a855f740] text-[#7e22ce];
+  }
+  .stack-node {
+    @apply bg-[#68a06340] text-[#3f7d4c];
+  }
+  .stack-supabase {
+    @apply bg-[#3ecf8e40] text-[#0f9d63];
+  }
+  .stack-zustand {
+    @apply bg-[#5d3fd340] text-[#5d3fd3];
+  }
+  .stack-tanstack {
+    @apply bg-[#ff415440] text-[#ff4154];
+  }
+  .stack-router {
+    @apply bg-[#ca424540] text-[#ca4245];
+  }
+  .stack-shadcn {
+    @apply bg-[#00000010] text-black;
+  }
+  .stack-figma {
+    @apply bg-[#67a19340] text-[#3f7c6f];
+  }
+  .stack-git {
+    @apply bg-[#f1502f40] text-[#f1502f];
+  }
+  .stack-actions {
+    @apply bg-[#2088ff40] text-[#2088ff];
+  }
+  .stack-pages {
+    @apply bg-[#22293040] text-[#222930];
+  }
+
+  .fixed-button {
+    @apply fixed bottom-8 z-40;
+  }
+  .round-button {
+    @apply flex items-center gap-1.5 rounded-full bg-white/90 px-4 py-3 text-sm font-medium text-ink shadow-xl backdrop-blur-sm transition-all hover:bg-brand2 hover:text-canvas;
+  }
+}
+
+@layer print {
+  @media print {
+    @page {
+      size: A4;
+      margin: 15mm;
+    }
+  }
+
+  .section-main {
+    @apply print:break-inside-avoid;
+  }
+  .section-main article {
+    @apply print:break-inside-avoid;
+  }
+  .fixed-button {
+    @apply print:hidden;
+  }
+}
