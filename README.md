@@ -1,6 +1,8 @@
-# Resume Studio
+# 김도혁 이력서
 
-이력서와 포트폴리오 콘텐츠를 한 번 저장하고, 지원처에 맞게 조합해 웹과 PDF로 만드는 프로젝트입니다.
+* [개발자 김도혁의 이력서](./index.html)
+
+정적 HTML + Tailwind CSS로 만든 1페이지 이력서입니다.
 
 ## 실행
 
@@ -9,17 +11,17 @@ npm install
 npm run dev
 ```
 
-개발 서버는 기본적으로 `http://localhost:3000`에서 실행됩니다.
+`npm run dev`는 `src/styles/main.css`를 감시해 `styles/main.css`로 빌드합니다. `index.html`을 브라우저로 열면 바로 확인할 수 있습니다.
 
-## 기술 구성
+## 빌드
 
-- Next.js App Router
-- React
-- TypeScript
-- CSS
+```bash
+npm run build
+```
 
-Next.js는 Vite가 아닌 자체 빌드 도구(Turbopack/Webpack)를 사용합니다.
+## 구조
 
-## 기존 자료
-
-이전 Vite 기반 이력서·포트폴리오와 관련 문서는 `legacy-resume/`에 보존되어 있습니다.
+* `index.html` — 이력서 본문
+* `src/styles/main.css` — Tailwind 소스 (컴포넌트 클래스 정의)
+* `styles/main.css` — 빌드된 CSS (커밋됨)
+* `img/` — 프로필 사진, 아이콘
