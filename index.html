@@ -20,13 +20,17 @@
       content="체계와 끈기로 몰입하는 프론트엔드 개발자 김도혁의 이력서입니다."
     />
 
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/variable/pretendardvariable-dynamic-subset.css"
+    />
     <link href="./styles/main.css" rel="stylesheet" />
-    <link rel="icon" type="image/jpeg" href="./img/profile.jpg" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <title>김도혁 | 프론트엔드 개발자</title>
   </head>
-  <body
-    class="bg-canvas bg-gradient-to-b from-sky-100 to-canvas bg-[length:100vw_80px] bg-no-repeat py-8 font-sans text-ink print:bg-none"
-  >
+  <body class="bg-canvas py-8 font-sans text-ink print:bg-none">
     <svg class="hidden" aria-hidden="true">
       <symbol id="icon-figma" viewBox="0 0 24 24">
         <path
@@ -61,12 +65,17 @@
           d="M1.763 0C.786 0 0 .786 0 1.763v20.474C0 23.214.786 24 1.763 24h20.474c.977 0 1.763-.786 1.763-1.763V1.763C24 .786 23.214 0 22.237 0zM5.13 5.323l13.837.019-.009 13.836h-3.464l.01-10.382h-3.456L12.04 19.17H5.113z"
         />
       </symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24">
+        <path
+          d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+        />
+      </symbol>
     </svg>
 
     <div
       class="m-auto mb-[50px] max-w-3xl text-ink print:relative print:mb-0 print:max-w-[90%]"
     >
-      <header class="mb-5 mt-12 flex items-center p-5">
+      <header class="mb-5 mt-6 flex items-center p-5">
         <img
           class="h-[130px] w-[130px] rounded-full object-cover shadow-lg md:mr-5 md:h-[180px] md:w-[180px]"
           src="./img/profile.jpg"
@@ -78,7 +87,9 @@
               <span class="w-fit text-xl leading-tight text-ink md:text-3xl"
                 >안녕하세요,</span
               >
-              <span class="text-sm font-bold text-brand3 md:text-2xl">신입</span>
+              <span class="text-xl font-bold text-brand3 md:text-2xl"
+                >신입</span
+              >
             </span>
             <span
               class="inline-block w-fit text-xl font-bold text-ink md:mb-2 md:mt-2 md:text-3xl"
@@ -88,7 +99,7 @@
             <span
               class="inline-block -ml-1 w-fit text-xl text-ink md:mb-2 md:mt-2 md:text-3xl"
             >
-             입니다.
+              입니다.
             </span>
           </h1>
         </div>
@@ -101,11 +112,13 @@
             <span class="contact">Email</span
             ><a
               class="link link-nomargin text-sm leading-[1.6]"
-              href="mailto:hyeeoooook@gmail.com"
-              >hyeeoooook@gmail.com</a
+              href="mailto:clzlsdlwhgdk12@gmail.com"
+              >clzlsdlwhgdk12@gmail.com</a
             ><br />
             <span class="contact">Phone</span
-            ><a class="link link-nomargin text-sm leading-[1.6]" href="tel:+821094006992"
+            ><a
+              class="link link-nomargin text-sm leading-[1.6]"
+              href="tel:+821094006992"
               >010-9400-6992</a
             ><br />
             <span class="contact">Github</span
@@ -128,51 +141,31 @@
         </article>
 
         <section class="section-main">
-          <h2 class="title-pri">자기소개</h2>
-          <div class="mt-5 space-y-4 leading-relaxed">
+          <h2 class="sr-only">자기소개</h2>
+          <div class="mt-5 space-y-4 text-[0.85rem] text-muted leading-relaxed">
             <p>
-              <strong class="text-brand2"
-                >체계와 끈기로 몰입하는 프론트엔드 개발자</strong
-              >
-              김도혁입니다.
+              <strong class="text-emerald-600 font-medium"
+                >기본기를 바탕으로 학습을 이어가는 개발자</strong
+              >입니다. 코드 레벨에서 리팩토링을 꾸준하게 다듬으며 가독성,
+              응집도, 결합도, 예측 가능성을 고려합니다.
             </p>
             <p>
-              몰입한 문제는 끝까지 파고들고, 그 과정을 문서로 남겨 팀 전체가
-              같은 속도로 나아가게 만드는 것에서 보람을 느낍니다. 파이널
-              프로젝트
-              <strong class="text-brand2">Kanto</strong>에서 로그인 API에 시도
-              횟수 제한이 없어 무차별 대입 공격에 취약하다는 문제를 발견했을 때,
-              서버리스 환경에서는 인스턴스 간 상태가 공유되지 않아 단순
-              카운터로는 막을 수 없다는 원인까지 파고들어
-              <strong class="text-brand2"
-                >Upstash Redis로 IP별 실패 횟수를 추적해 5회 이상 실패 시 5분간
-                로그인을 차단</strong
-              >하는 구조를 직접 설계·구현했습니다. 외부 멘토가 6주간 20회 넘게
-              남긴 코드 리뷰가 팀원별로 흩어져 무엇부터 처리해야 할지
-              불명확해지자, 담당 파일·우선순위·완료 여부를 표로 정리한 리뷰 할당
-              문서를 직접 만들어 팀 전체가 진행 상황을 한눈에 추적하도록 했고,
-              그 결과 <strong class="text-brand2">참가 5개 팀 중 1위</strong>를
-              달성했습니다.
+              <strong class="text-emerald-600 font-medium"
+                >협업간에 어떤 도움이 될 수 있을지를 항상 고민</strong
+              >합니다. <br />
+              멋쟁이사자처럼 부트캠프에서 모노레포 구조와 Git-flow 기반 협업,
+              Playwright 테스트 도입을 제안해 팀 프로젝트를 이끌었으며, 나아가
+              문서화 전략을 세우고 노션 워크스페이스를 손쉽게 전환할 수 있는
+              크롬 확장 프로그램을 만들어 공유했습니다.
             </p>
             <p>
-              AI를 개인 생산성 도구가 아니라
-              <strong class="text-brand2">팀의 협업 인프라</strong>로 설계해
-              활용합니다. Kanto 프로젝트 중반, AI로 로컬 저장소 전체를 분석해
-              프로젝트 완성도를 진단하는 문서를 직접 작성했고, 이 과정에서 하위
-              라우트 3개가 page.tsx 누락으로 404가 발생하는 등 육안으로는 놓치기
-              쉬운 미완성 지점을 코드 레벨에서 찾아내 팀에 공유했습니다. 이
-              진단은 해당 기능을 배포 전에 철회하는 팀의 의사결정으로 이어졌고,
-              이 외에도 외부 코드 리뷰 대응 정리, 보고서 초안 작성, 팀 개발 규칙
-              문서화에도 AI를 반복적으로 활용하고 있습니다.
-            </p>
-            <p>
-              어떤 일이든 손을 대기 전에 먼저 설계를 고민하고, 체계가 없다면
-              스스로 체계를 만듭니다. 군 복무 시절 초급 장교로서
-              작전수행실(AOC)의 일일 보고 체계를 여러 문서로 분리돼 있던 것을
-              하나로 통합해 재설계한 경험이 있고, 이 습관은 지금도 프로젝트에
-              들어가기 전에 문서와 규칙부터 정리하는 방식으로 이어지고 있습니다.
-              Kanto에서 핫픽스 브랜치 규칙과 커밋 컨벤션을 팀 전체 적용 문서로
-              먼저 만든 것도 같은 맥락입니다.
+              <strong class="text-emerald-600 font-medium"
+                >경험과 도전을 공유하는것</strong
+              >을 좋아합니다. <br />
+              개인 블로그 프로젝트에서 렌더링 성능을 개선한 증분 렌더러를 구현해
+              npm에 배포하고, 블로그에 배움과 경험을 꾸준히 기록해 부트캠프
+              동료들에게 정보를 제공했으며, ESLint 한국어 학습 문화를 위해
+              한국어 가이드 사이트를 제작한 경험이 있습니다.
             </p>
           </div>
         </section>
@@ -181,59 +174,43 @@
           <h2 class="title-pri">
             스택
             <span class="text-sm font-medium text-muted"
-              >(참여한 프로젝트 수)</span
+              >(프로젝트 수)</span
             >
           </h2>
           <div class="stack-grid grid gap-6 sm:grid-cols-2">
             <div class="stack-wrapper">
               <strong class="title-sec mb-3 block">Frontend</strong>
               <ul class="stack-badge-list-wrapper">
-                <li class="stack-badge stack-ts">
-                  TypeScript<em class="count-badge">3</em>
-                </li>
-                <li class="stack-badge stack-js">
-                  JavaScript<em class="count-badge">2</em>
-                </li>
-                <li class="stack-badge stack-react">
-                  React<em class="count-badge">2</em>
-                </li>
-                <li class="stack-badge stack-next">
-                  Next.js<em class="count-badge">2</em>
-                </li>
-                <li class="stack-badge stack-tailwind">
-                  Tailwind CSS<em class="count-badge">3</em>
-                </li>
-                <li class="stack-badge stack-zustand">
-                  Zustand<em class="count-badge">2</em>
-                </li>
+                <li class="stack-badge stack-ts">TypeScript 3</li>
+                <li class="stack-badge stack-tailwind">Tailwind CSS 3</li>
+                <li class="stack-badge stack-js">JavaScript 2</li>
+                <li class="stack-badge stack-react">React 2</li>
+                <li class="stack-badge stack-next">Next.js 2</li>
+                <li class="stack-badge stack-zustand">Zustand 2</li>
                 <li class="stack-badge stack-tanstack">TanStack Query</li>
-                <li class="stack-badge stack-router">React Router</li>
                 <li class="stack-badge stack-shadcn">shadcn/ui</li>
-                <li class="stack-badge stack-vite">Vite</li>
                 <li class="stack-badge stack-html">HTML</li>
               </ul>
             </div>
             <div class="stack-wrapper">
-              <strong class="title-sec mb-3 block">Backend &amp; Infra</strong>
+              <strong class="title-sec mb-3 block">Backend</strong>
               <ul class="stack-badge-list-wrapper">
-                <li class="stack-badge stack-supabase">
-                  Supabase<em class="count-badge">2</em>
-                </li>
+                <li class="stack-badge stack-supabase">Supabase 2</li>
                 <li class="stack-badge stack-generic">Upstash Redis</li>
-                <li class="stack-badge stack-generic">Edge Functions</li>
-                <li class="stack-badge stack-generic">REST API</li>
+              </ul>
+            </div>
+            <div class="stack-wrapper">
+              <strong class="title-sec mb-3 block">DB</strong>
+              <ul class="stack-badge-list-wrapper">
+                <li class="stack-badge stack-generic">PostgreSQL</li>
               </ul>
             </div>
             <div class="stack-wrapper">
               <strong class="title-sec mb-3 block">협업 &amp; Tools</strong>
               <ul class="stack-badge-list-wrapper">
                 <li class="stack-badge stack-playwright">Playwright</li>
-                <li class="stack-badge stack-actions">GitHub Actions</li>
-                <li class="stack-badge stack-pages">GitHub Pages</li>
-                <li class="stack-badge stack-generic">npm Workspaces</li>
                 <li class="stack-badge stack-figma">Figma</li>
                 <li class="stack-badge stack-git">Git/GitHub</li>
-                <li class="stack-badge stack-generic">Notion</li>
               </ul>
             </div>
           </div>
@@ -245,16 +222,18 @@
           <article class="my-7">
             <header class="title-with-time-wrapper">
               <h3 class="title-sec mb-1">
-                Kanto <em>4인 팀 프로젝트 · 파이널 프로젝트 1위</em>
+                Kanto <em>4인 팀 프로젝트 · 파이널 프로젝트 1위 · 기여도 40%</em>
               </h3>
               <time class="time" datetime="2026-05">2026.05 - 2026.07</time>
             </header>
-            <p class="mb-1 text-[0.95rem]">
+            <p class="mb-1 flex flex-wrap items-center gap-x-3 text-[0.95rem] leading-none">
               <a
-                class="link link-github link-separator"
+                class="link inline-flex items-center"
                 href="https://github.com/FRONTENDBOOTCAMP-17th/kanto"
                 target="_blank"
                 rel="noopener"
+                ><svg class="mr-1 h-4 w-4" fill="currentColor">
+                  <use href="#icon-github" /></svg
                 >Github</a
               ><a
                 class="link"
@@ -269,7 +248,7 @@
                 target="_blank"
                 rel="noopener"
                 title="Figma 디자인"
-                ><svg class="inline h-4 w-4" fill="currentColor">
+                ><svg class="h-4 w-4" fill="currentColor">
                   <use href="#icon-figma" /></svg
               ></a>
               <a
@@ -278,7 +257,7 @@
                 target="_blank"
                 rel="noopener"
                 title="Notion 문서"
-                ><svg class="inline h-4 w-4" fill="currentColor">
+                ><svg class="h-4 w-4" fill="currentColor">
                   <use href="#icon-notion" /></svg
               ></a>
             </p>
@@ -297,30 +276,72 @@
             <strong class="sr-only">성과</strong>
             <ul class="description-list">
               <li>
-                역할: 기술·구조 설계 및 의사결정, Git Flow 전략(main, develop,
-                fix, bug, hotfix, release) 및 버전관리
-              </li>
-              <li>
-                실시간 1:1 채팅, 중복 로그인 보안, 프로필·활동 내역 및 사용자
-                신뢰도 지표 구현
-              </li>
-              <li>
-                관리자 게시글·신고, 공지, 금칙어·스팸, 운영 정책, 권한·감사 로그
-                및 모니터링 기능을 설계·구현
-              </li>
-              <li>
-                Zustand로 플로팅 채팅 위젯과 활성 채팅방 상태관리, Supabase
-                Realtime과 연동해 실시간 메시지 구현
-              </li>
-              <li>
-                TanStack Query 서버 상태관리를 통해 관리자 운영관리 페이지에서
-                탭 이동 시 GET 요청 최적화
-              </li>
-              <li>
-                신뢰도의 기준(KTS·KPPS)을 설계해 신뢰도 기반 점수·인기 게시물
-                관리
+                역할: 기술·구조 설계 및 의사결정, Git Flow 전략(<code
+                  class="text-[0.9rem]"
+                  >main</code
+                >, <code class="text-[0.9rem]">develop</code>,
+                <code class="text-[0.9rem]">fix</code>,
+                <code class="text-[0.9rem]">bug</code>,
+                <code class="text-[0.9rem]">hotfix</code>,
+                <code class="text-[0.9rem]">release</code>) 및 버전관리
               </li>
               <li>이미지 성능 최적화, SEO, 공통 UI 시스템 구축</li>
+              <li>
+                <code class="text-[0.9rem] text-amber-600">TanStack Query</code
+                >를 활용한 탭 이동 캐싱 처리
+                <ul>
+                  <li>
+                    <code class="text-[0.9rem]">useState</code>·<code
+                      class="text-[0.9rem]"
+                      >useEffect</code
+                    >
+                    방식은 탭을 이동(언마운트)할 때마다 매번 새로 데이터 조회
+                  </li>
+                  <li>
+                    <code class="text-[0.9rem] text-amber-600">useQuery</code>로
+                    전환해 쿼리 키와 조회 함수를 지정하고,
+                    <code class="text-[0.9rem] text-amber-600"
+                      >staleTime</code
+                    >
+                    동안은 캐시된 데이터를 재사용하도록 개선
+                  </li>
+                </ul>
+              </li>
+              <li>
+                신뢰도 점수 시스템 설계
+                <ul>
+                  <li>
+                    <code class="text-[0.9rem] text-amber-600"
+                      >recalculate_kts()</code
+                    >·<code class="text-[0.9rem] text-amber-600"
+                      >recalculate_kpps()</code
+                    >
+                    배치 함수로 구현해 pg_cron으로 하루 2회 자동 갱신, KPPS는
+                    KTS 갱신 이후 실행되도록 의존 순서 설계
+                  </li>
+                  <li>
+                    표준편차 분포도를 고려한 AI 시뮬레이션으로 검증한 신뢰도
+                    기준(KTS·KPPS)을 설계해 점수(망고지수)를 산정하고, 이를
+                    기반으로 인기 게시물 관리
+                  </li>
+                </ul>
+              </li>
+              <li>
+                관리자 권한 인증 가드 분리
+                <ul>
+                  <li>
+                    AI는 HOC와 Container를 제안했지만, layout.tsx에 걸맞지
+                    않게 구조가 한눈에 보이지 않고 조회·렌더링 책임이 한눈에
+                    드러나지 않는다고 판단해
+                    <code class="text-[0.9rem] text-amber-600">AdminGuard</code>
+                    <code class="text-[0.9rem] text-amber-600">Wrapper</code>·<code
+                      class="text-[0.9rem] text-amber-600"
+                      >Shell</code
+                    >
+                    구조로 재설계
+                  </li>
+                </ul>
+              </li>
             </ul>
           </article>
 
@@ -329,19 +350,21 @@
               <h3 class="title-sec mb-1">DoHyuk.dev <em>개인 프로젝트</em></h3>
               <time class="time" datetime="2026-01">2026.01 - 2026.03</time>
             </header>
-            <p class="mb-1 text-[0.95rem]">
+            <p class="mb-1 flex flex-wrap items-center gap-x-3 text-[0.95rem] leading-none">
               <a
-                class="link link-github link-separator"
+                class="link inline-flex items-center"
                 href="https://github.com/DoHyuk-Centric/myBlog"
                 target="_blank"
                 rel="noopener"
+                ><svg class="mr-1 h-4 w-4" fill="currentColor">
+                  <use href="#icon-github" /></svg
                 >Github</a
               ><a
-                class="link"
+                class="link inline-flex items-center"
                 href="https://www.npmjs.com/package/markdown-block-preview"
                 target="_blank"
                 rel="noopener"
-                ><svg class="mr-1 inline h-3 w-3" fill="currentColor">
+                ><svg class="mr-1 h-4 w-4" fill="currentColor">
                   <use href="#icon-npm" /></svg
                 >npm 패키지</a
               >
@@ -355,7 +378,7 @@
               <li class="stack-badge stack-vite">Vite</li>
               <li class="stack-badge stack-tailwind">Tailwind CSS</li>
               <li class="stack-badge stack-supabase">Supabase</li>
-              <li class="stack-badge stack-generic">Edge Functions</li>
+              <li class="stack-badge stack-generic">PostgreSQL</li>
             </ul>
             <strong class="sr-only">성과</strong>
             <ul class="description-list">
@@ -364,12 +387,16 @@
                 <code class="text-[0.9rem] text-amber-600"
                   >markdown-block-preview</code
                 >
-                패키지로 npm 배포, 누적 다운로드 540회 기록
-              </li>
-              <li>
-                Markdown 입력마다 미리보기 DOM 전체를 교체해 생기던 렌더링
-                지연·깜빡임 문제를 블록 단위 렌더링으로 개선(최대 8.2배 성능
-                향상)
+                패키지로 npm 배포
+                <ul>
+                  <li>
+                    Markdown 입력마다 미리보기 DOM 전체를 교체해 생기던 렌더링
+                    지연·깜빡임 문제를 블록 단위 렌더링으로 개선(최대
+                    <strong class="text-amber-600 font-medium"
+                      >8.2배 성능 향상</strong
+                    >)
+                  </li>
+                </ul>
               </li>
               <li>
                 게시글 CRUD와 임시저장·발행·휴지통 전환을 포함한 데이터 생명주기
@@ -383,10 +410,6 @@
                 Firebase Auth와 Supabase DB가 분리돼 있던 사용자 식별·데이터
                 소유권 관리를 Supabase로 일원화
               </li>
-              <li>
-                기술 블로그에 문제 해결 과정과 기술적 인사이트를 꾸준히 기록해
-                누적 조회수 800회, 방문자 460명 달성
-              </li>
             </ul>
           </article>
 
@@ -395,12 +418,14 @@
               <h3 class="title-sec mb-1">Frontie <em>개인 프로젝트</em></h3>
               <time class="time" datetime="2026-05">2026.05</time>
             </header>
-            <p class="mb-1 text-[0.95rem]">
+            <p class="mb-1 flex flex-wrap items-center gap-x-3 text-[0.95rem] leading-none">
               <a
-                class="link link-github link-separator"
+                class="link inline-flex items-center"
                 href="https://github.com/DoHyuk-Centric/frontie"
                 target="_blank"
                 rel="noopener"
+                ><svg class="mr-1 h-4 w-4" fill="currentColor">
+                  <use href="#icon-github" /></svg
                 >Github</a
               ><a
                 class="link"
@@ -440,8 +465,9 @@
                 대화 ID를 persist 대상에서 제외하고 URL과 동기화해 해결
               </li>
               <li>
-                동적 로딩·컴포넌트 분리·메모이제이션으로 Lighthouse 성능 48점 →
-                PC 92점·모바일 100점 개선
+                동적 로딩·컴포넌트 분리·메모이제이션으로
+                <code class="text-[0.9rem] text-amber-600">Lighthouse</code>
+                성능 48점 → PC 92점·모바일 100점 개선
               </li>
             </ul>
           </article>
@@ -449,16 +475,18 @@
           <article class="my-7">
             <header class="title-with-time-wrapper">
               <h3 class="title-sec mb-1">
-                Gentlelion <em>3인 팀 프로젝트 · 팀장</em>
+                Gentlelion <em>3인 팀 프로젝트 · 팀장 · 기여도 60%</em>
               </h3>
               <time class="time" datetime="2026-03">2026.03 - 2026.04</time>
             </header>
-            <p class="mb-1 text-[0.95rem]">
+            <p class="mb-1 flex flex-wrap items-center gap-x-3 text-[0.95rem] leading-none">
               <a
-                class="link link-github link-separator"
+                class="link inline-flex items-center"
                 href="https://github.com/FRONTENDBOOTCAMP-17th/gentlelion"
                 target="_blank"
                 rel="noopener"
+                ><svg class="mr-1 h-4 w-4" fill="currentColor">
+                  <use href="#icon-github" /></svg
                 >Github</a
               ><a
                 class="link"
@@ -468,30 +496,30 @@
                 >서비스 링크</a
               >
               <a
-                class="link"
+                class="link inline-flex items-center"
                 href="https://docs.google.com/spreadsheets/d/1eMk9LSMSgCT4elowuOH5ih5qwoPIU5I_DoUY5-D9W9Y/edit?gid=0"
                 target="_blank"
                 rel="noopener"
                 title="기능·API 명세 및 WBS"
-                ><svg class="inline h-4 w-4">
+                ><svg class="h-4 w-4">
                   <use href="#icon-spreadsheet" /></svg
               ></a>
               <a
-                class="link"
+                class="link inline-flex items-center"
                 href="https://www.figma.com/design/Wl4PONfUzYXLKX80Di2idD/GentleLion?node-id=494-2&t=CXWXbSv9YHxe0nx8-1"
                 target="_blank"
                 rel="noopener"
                 title="Figma 디자인"
-                ><svg class="inline h-4 w-4" fill="currentColor">
+                ><svg class="h-4 w-4" fill="currentColor">
                   <use href="#icon-figma" /></svg
               ></a>
               <a
-                class="link"
+                class="link inline-flex items-center"
                 href="https://github.com/FRONTENDBOOTCAMP-17th/gentlelion/wiki"
                 target="_blank"
                 rel="noopener"
                 title="Wiki"
-                ><svg class="inline h-4 w-4"><use href="#icon-wiki" /></svg
+                ><svg class="h-4 w-4"><use href="#icon-wiki" /></svg
               ></a>
             </p>
             <p class="item-description">
@@ -500,9 +528,7 @@
             <strong class="sr-only">사용한 스택</strong>
             <ul class="stack-badge-list-wrapper my-2">
               <li class="stack-badge stack-js">JavaScript</li>
-              <li class="stack-badge stack-generic">npm Workspaces</li>
               <li class="stack-badge stack-tailwind">Tailwind CSS</li>
-              <li class="stack-badge stack-generic">REST API</li>
               <li class="stack-badge stack-playwright">Playwright</li>
             </ul>
             <strong class="sr-only">성과</strong>
@@ -513,13 +539,28 @@
               </li>
               <li>스크럼 회의와 진행 상황을 GitHub Wiki에 기록·공유</li>
               <li>
-                npm Workspaces 모노레포로 사용자·관리자·공용 API를 분리하고
-                서비스별 독립 배포
+                <code class="text-[0.9rem] text-amber-600">npm Workspaces</code>
+                <strong class="text-amber-600 font-medium">모노레포</strong>로
+                사용자·관리자·공용 API를 분리하고 서비스별
+                <strong class="text-amber-600 font-medium">독립 배포</strong>
               </li>
               <li>상품 카드·버튼 공통화 및 메뉴·스크롤 인터랙션 구현</li>
-              <li>상품·장바구니·주문·관리자 기능의 REST API CRUD 구현</li>
               <li>
-                Playwright로 회원가입·로그인·장바구니·주문·프로필 5개 흐름 검수
+                상품·장바구니·주문·관리자 기능의 REST API CRUD 구현
+                <ul>
+                  <li>
+                    장바구니 API 호출 시 401(토큰 만료) 응답을 감지해
+                    재로그인으로 유도
+                  </li>
+                  <li>
+                    빈 장바구니 상태에서 결제 페이지 접근을 차단하는 방어 로직
+                    추가
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <code class="text-[0.9rem] text-amber-600">Playwright</code>로
+                회원가입·로그인·장바구니·주문·프로필 5개 흐름 검수
               </li>
             </ul>
           </article>
@@ -529,12 +570,14 @@
               <h3 class="title-sec mb-1">ESLint-KR <em>개인 프로젝트</em></h3>
               <time class="time" datetime="2026-03">2026.03 - 2026.04</time>
             </header>
-            <p class="mb-1 text-[0.95rem]">
+            <p class="mb-1 flex flex-wrap items-center gap-x-3 text-[0.95rem] leading-none">
               <a
-                class="link link-github link-separator"
+                class="link inline-flex items-center"
                 href="https://github.com/DoHyuk-Centric/eslint-kr"
                 target="_blank"
                 rel="noopener"
+                ><svg class="mr-1 h-4 w-4" fill="currentColor">
+                  <use href="#icon-github" /></svg
                 >Github</a
               ><a
                 class="link"
@@ -552,8 +595,6 @@
               <li class="stack-badge stack-react">React</li>
               <li class="stack-badge stack-ts">TypeScript</li>
               <li class="stack-badge stack-router">React Router</li>
-              <li class="stack-badge stack-actions">GitHub Actions</li>
-              <li class="stack-badge stack-pages">GitHub Pages</li>
             </ul>
             <strong class="sr-only">성과</strong>
             <ul class="description-list">

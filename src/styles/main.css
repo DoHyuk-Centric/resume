@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.js";
 
 @layer base {
   :root {
@@ -16,8 +15,12 @@
 }
 
 @layer components {
+  .code-panel {
+    @apply my-2 block overflow-x-auto rounded-md bg-[#F5F6F8] px-4 py-3 text-[0.85rem] leading-relaxed text-ink;
+  }
+
   .contact {
-    @apply inline-block after:relative after:top-[2px] after:mx-2 after:inline-block after:h-[14px] after:w-[2px] after:bg-faint;
+    @apply mr-2 inline-flex w-16 items-center justify-between after:inline-block after:h-[16px] after:w-[2px] after:bg-faint;
   }
   .contact:not(:first-child) {
     @apply mt-[6px];
@@ -28,7 +31,7 @@
   }
 
   .title-pri {
-    @apply mt-4 mb-3 text-xl font-bold text-brand2;
+    @apply mt-4 mb-3 text-xl font-semibold text-ink;
   }
   .title-sec {
     @apply text-lg font-semibold text-ink;
@@ -47,7 +50,7 @@
     @apply whitespace-nowrap rounded-full px-[7px] py-[2px] text-[0.75rem] shadow;
   }
   .count-badge {
-    @apply ml-1 inline-block h-4 w-4 rounded-full bg-rose-400 text-center align-middle text-[0.65rem] not-italic leading-4 text-white;
+    @apply ml-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-rose-400 align-middle text-[0.65rem] not-italic text-white;
   }
 
   .title-with-time-wrapper {
@@ -61,16 +64,10 @@
   }
 
   .link {
-    @apply px-1 py-0.5 text-accent transition-all hover:rounded hover:bg-accent hover:text-canvas;
-  }
-  .link-github {
-    @apply relative ml-5 before:absolute before:left-[-18px] before:top-1 before:h-[16px] before:w-[16px] before:bg-[url('../img/icon-github.svg')] before:bg-contain before:bg-no-repeat before:opacity-70;
-  }
-  .link-separator {
-    @apply relative after:absolute after:right-[-9px] after:top-[5px] after:mx-2 after:inline-block after:h-[14px] after:w-[1px] after:bg-accent;
+    @apply px-1.5 py-1 text-accent transition-all hover:rounded hover:bg-accent hover:text-canvas;
   }
   .link-nomargin {
-    @apply ml-[-4px];
+    @apply ml-[-6px];
   }
 
   .description-list,
@@ -78,7 +75,7 @@
     @apply ml-6 list-disc;
   }
   .description-list li {
-    @apply mt-1 text-[0.95rem] leading-relaxed;
+    @apply mt-1 text-[0.85rem] leading-relaxed text-muted;
   }
 
   .item-list {
@@ -88,7 +85,7 @@
     @apply my-3;
   }
   .item-description {
-    @apply text-[0.95rem];
+    @apply text-[0.95rem] text-muted;
   }
 
   .num {

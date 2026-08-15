@@ -10,10 +10,15 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ["Pretendard", "Noto Sans KR", ...defaultTheme.fontFamily.sans],
+        sans: [
+          "Pretendard Variable",
+          "Pretendard",
+          "Noto Sans KR",
+          ...defaultTheme.fontFamily.sans,
+        ],
       },
       colors: {
-        ink: "#1F2430",
+        ink: "#111111",
         muted: "#6B7280",
         faint: "#B0B6C0",
         canvas: "#FBFCFE",
