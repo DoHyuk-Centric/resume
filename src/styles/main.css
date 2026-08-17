@@ -70,9 +70,15 @@
     @apply ml-[-6px];
   }
 
-  .description-list,
-  .description-list ul {
+  .description-list {
     @apply ml-6 list-disc;
+  }
+  .description-list ul {
+    @apply ml-6;
+    list-style-type: circle;
+  }
+  .description-list ul ul {
+    list-style-type: "- ";
   }
   .description-list li {
     @apply mt-1 text-[0.85rem] leading-relaxed text-muted;

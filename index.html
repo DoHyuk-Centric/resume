@@ -171,22 +171,17 @@
         </section>
 
         <section class="section-main">
-          <h2 class="title-pri">
-            스택
-            <span class="text-sm font-medium text-muted"
-              >(프로젝트 수)</span
-            >
-          </h2>
+          <h2 class="title-pri">스택</h2>
           <div class="stack-grid grid gap-6 sm:grid-cols-2">
             <div class="stack-wrapper">
               <strong class="title-sec mb-3 block">Frontend</strong>
               <ul class="stack-badge-list-wrapper">
-                <li class="stack-badge stack-ts">TypeScript 3</li>
-                <li class="stack-badge stack-tailwind">Tailwind CSS 3</li>
-                <li class="stack-badge stack-js">JavaScript 2</li>
-                <li class="stack-badge stack-react">React 2</li>
-                <li class="stack-badge stack-next">Next.js 2</li>
-                <li class="stack-badge stack-zustand">Zustand 2</li>
+                <li class="stack-badge stack-ts">TypeScript</li>
+                <li class="stack-badge stack-tailwind">Tailwind CSS</li>
+                <li class="stack-badge stack-js">JavaScript</li>
+                <li class="stack-badge stack-react">React</li>
+                <li class="stack-badge stack-next">Next.js</li>
+                <li class="stack-badge stack-zustand">Zustand</li>
                 <li class="stack-badge stack-tanstack">TanStack Query</li>
                 <li class="stack-badge stack-shadcn">shadcn/ui</li>
                 <li class="stack-badge stack-html">HTML</li>
@@ -195,8 +190,7 @@
             <div class="stack-wrapper">
               <strong class="title-sec mb-3 block">Backend</strong>
               <ul class="stack-badge-list-wrapper">
-                <li class="stack-badge stack-supabase">Supabase 2</li>
-                <li class="stack-badge stack-generic">Upstash Redis</li>
+                <li class="stack-badge stack-supabase">Supabase</li>
               </ul>
             </div>
             <div class="stack-wrapper">
@@ -222,11 +216,14 @@
           <article class="my-7">
             <header class="title-with-time-wrapper">
               <h3 class="title-sec mb-1">
-                Kanto <em>4인 팀 프로젝트 · 파이널 프로젝트 1위 · 기여도 40%</em>
+                Kanto
+                <em>4인 팀 프로젝트 · 파이널 프로젝트 1위 · 기여도 40%</em>
               </h3>
               <time class="time" datetime="2026-05">2026.05 - 2026.07</time>
             </header>
-            <p class="mb-1 flex flex-wrap items-center gap-x-3 text-[0.95rem] leading-none">
+            <p
+              class="mb-1 flex flex-wrap items-center gap-x-3 text-[0.95rem] leading-none"
+            >
               <a
                 class="link inline-flex items-center"
                 href="https://github.com/FRONTENDBOOTCAMP-17th/kanto"
@@ -271,7 +268,6 @@
               <li class="stack-badge stack-supabase">Supabase</li>
               <li class="stack-badge stack-zustand">Zustand</li>
               <li class="stack-badge stack-tanstack">TanStack Query</li>
-              <li class="stack-badge stack-generic">Upstash Redis</li>
             </ul>
             <strong class="sr-only">성과</strong>
             <ul class="description-list">
@@ -300,29 +296,8 @@
                   <li>
                     <code class="text-[0.9rem] text-amber-600">useQuery</code>로
                     전환해 쿼리 키와 조회 함수를 지정하고,
-                    <code class="text-[0.9rem] text-amber-600"
-                      >staleTime</code
-                    >
+                    <code class="text-[0.9rem] text-amber-600">staleTime</code>
                     동안은 캐시된 데이터를 재사용하도록 개선
-                  </li>
-                </ul>
-              </li>
-              <li>
-                신뢰도 점수 시스템 설계
-                <ul>
-                  <li>
-                    <code class="text-[0.9rem] text-amber-600"
-                      >recalculate_kts()</code
-                    >·<code class="text-[0.9rem] text-amber-600"
-                      >recalculate_kpps()</code
-                    >
-                    배치 함수로 구현해 pg_cron으로 하루 2회 자동 갱신, KPPS는
-                    KTS 갱신 이후 실행되도록 의존 순서 설계
-                  </li>
-                  <li>
-                    표준편차 분포도를 고려한 AI 시뮬레이션으로 검증한 신뢰도
-                    기준(KTS·KPPS)을 설계해 점수(망고지수)를 산정하고, 이를
-                    기반으로 인기 게시물 관리
                   </li>
                 </ul>
               </li>
@@ -330,14 +305,12 @@
                 관리자 권한 인증 가드 분리
                 <ul>
                   <li>
-                    AI는 HOC와 Container를 제안했지만, layout.tsx에 걸맞지
-                    않게 구조가 한눈에 보이지 않고 조회·렌더링 책임이 한눈에
-                    드러나지 않는다고 판단해
+                    AI는 HOC와 Container를 제안했지만, layout.tsx에 걸맞지 않게
+                    구조가 한눈에 보이지 않고 조회·렌더링 책임이 한눈에 드러나지
+                    않는다고 판단해
                     <code class="text-[0.9rem] text-amber-600">AdminGuard</code>
-                    <code class="text-[0.9rem] text-amber-600">Wrapper</code>·<code
-                      class="text-[0.9rem] text-amber-600"
-                      >Shell</code
-                    >
+                    <code class="text-[0.9rem] text-amber-600">Wrapper</code
+                    >·<code class="text-[0.9rem] text-amber-600">Shell</code>
                     구조로 재설계
                   </li>
                 </ul>
@@ -350,7 +323,9 @@
               <h3 class="title-sec mb-1">DoHyuk.dev <em>개인 프로젝트</em></h3>
               <time class="time" datetime="2026-01">2026.01 - 2026.03</time>
             </header>
-            <p class="mb-1 flex flex-wrap items-center gap-x-3 text-[0.95rem] leading-none">
+            <p
+              class="mb-1 flex flex-wrap items-center gap-x-3 text-[0.95rem] leading-none"
+            >
               <a
                 class="link inline-flex items-center"
                 href="https://github.com/DoHyuk-Centric/myBlog"
@@ -383,91 +358,155 @@
             <strong class="sr-only">성과</strong>
             <ul class="description-list">
               <li>
-                변경된 Markdown 블록만 갱신하는 증분 렌더러를 구현해
-                <code class="text-[0.9rem] text-amber-600"
-                  >markdown-block-preview</code
+                <strong class="text-[0.9rem] font-[400]"
+                  >Markdown 기반 글쓰기 미리보기</strong
                 >
-                패키지로 npm 배포
+                <a
+                  class="text-[0.8rem] text-amber-600 underline-offset-2 hover:underline"
+                  href="https://hyeeoooook.tistory.com/75"
+                  target="_blank"
+                  rel="noopener"
+                  >관련 글</a
+                >
                 <ul>
                   <li>
-                    Markdown 입력마다 미리보기 DOM 전체를 교체해 생기던 렌더링
-                    지연·깜빡임 문제를 블록 단위 렌더링으로 개선(최대
-                    <strong class="text-amber-600 font-medium"
-                      >8.2배 성능 향상</strong
-                    >)
+                    상황
+                    <ul>
+                      <li>
+                        사진을 넣은 경우 심하게 깜빡임을 겪어 사용자의 경험 저하
+                      </li>
+                      <li>
+                        글을 작성할때마다 미리보기 섹션에서 DOM 전체를 교체해
+                        재렌더링이 발생해 깜빡임이 누적
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    해결
+                    <ul>
+                      <li>
+                        전체를 매번 다시 파싱해 교체하는 대신에 이전 블록 배열과
+                        비교해 변경된 블럭만 다시 그리는 증분 렌더링을 고안
+                      </li>
+                      <li>
+                        <code class="text-[0.9rem] text-amber-600"
+                          >markdown-block-preview</code
+                        >
+                        패키지로 분리해 같은 문제를 겪는 사람들을 위해서 npm
+                        배포
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    결과
+                    <ul>
+                      <li>
+                        블럭 단위 렌더링으로 개선해 렌더링 성능 최대
+                        <strong class="text-amber-600 font-medium"
+                          >8.2배 향상</strong
+                        >, npm 누적 다운로드수 551회 기록
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </li>
               <li>
-                게시글 CRUD와 임시저장·발행·휴지통 전환을 포함한 데이터 생명주기
-                구현
+                <strong class="text-[0.9rem] font-[400]"
+                  >글쓰기 도구 모음</strong
+                >
+                <a
+                  class="text-[0.8rem] text-amber-600 underline-offset-2 hover:underline"
+                  href="https://hyeeoooook.tistory.com/37"
+                  target="_blank"
+                  rel="noopener"
+                  >관련 글</a
+                >
+                <ul>
+                  <li>
+                    상황
+                    <ul>
+                      <li>
+                        개인적으로 Velog를 사용할때 불편했던 이미지 첨부 버튼
+                        기능간에 미세한 불편함을 느낌
+                      </li>
+                      <li>
+                        Velog 글쓰기처럼 마크다운 문법을 보다 편하게 작성할 수
+                        있도록 도와줄 수 있는 도구 모음이 필요
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    해결
+                    <ul>
+                      <li>
+                        커서 위치와 선택 범위를 읽어 제목(H1 ~ H4), 글꼴, 링크,
+                        인용, 이미지, 코드블록 8가지를 UI 버튼으로 제공
+                      </li>
+                      <li>삽입 후 커서를 다음 입력 위치로 자동 이동</li>
+                      <li>
+                        특히 velog에서 불편했던 이미지 삽입 시엔 커서 앞에
+                        줄바꿈을 먼저 넣어 기존 문장과 분리
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
               </li>
               <li>
-                공공데이터 API를 연동한 달력 기능을 Edge Function으로 분리해 API
-                호출 최적화
-              </li>
-              <li>
-                Firebase Auth와 Supabase DB가 분리돼 있던 사용자 식별·데이터
-                소유권 관리를 Supabase로 일원화
-              </li>
-            </ul>
-          </article>
-
-          <article class="my-7">
-            <header class="title-with-time-wrapper">
-              <h3 class="title-sec mb-1">Frontie <em>개인 프로젝트</em></h3>
-              <time class="time" datetime="2026-05">2026.05</time>
-            </header>
-            <p class="mb-1 flex flex-wrap items-center gap-x-3 text-[0.95rem] leading-none">
-              <a
-                class="link inline-flex items-center"
-                href="https://github.com/DoHyuk-Centric/frontie"
-                target="_blank"
-                rel="noopener"
-                ><svg class="mr-1 h-4 w-4" fill="currentColor">
-                  <use href="#icon-github" /></svg
-                >Github</a
-              ><a
-                class="link"
-                href="https://frontie-topaz.vercel.app/chat"
-                target="_blank"
-                rel="noopener"
-                >서비스 링크</a
-              >
-            </p>
-            <p class="item-description">
-              여러 AI 모델을 선택해 사용할 수 있는 멀티 LLM 챗봇입니다.
-            </p>
-            <strong class="sr-only">사용한 스택</strong>
-            <ul class="stack-badge-list-wrapper my-2">
-              <li class="stack-badge stack-next">Next.js</li>
-              <li class="stack-badge stack-react">React</li>
-              <li class="stack-badge stack-ts">TypeScript</li>
-              <li class="stack-badge stack-zustand">Zustand</li>
-              <li class="stack-badge stack-tailwind">Tailwind CSS</li>
-              <li class="stack-badge stack-shadcn">shadcn/ui</li>
-            </ul>
-            <strong class="sr-only">성과</strong>
-            <ul class="description-list">
-              <li>
-                Zustand로 채팅·모델 설정 상태를 관리, LocalStorage에 채팅 기록과
-                설정값 저장
-              </li>
-              <li>Groq·Gemini·Cerebras의 스트리밍 응답과 모델 전환 구현</li>
-              <li>
-                AI 스트리밍 응답마다 마크다운 메시지 전체가 다시 렌더링되는
-                문제를
-                <code class="text-[0.9rem] text-amber-600">React.memo</code>로
-                개선
-              </li>
-              <li>
-                새 대화 진입 시 이전 대화가 간헐적으로 활성화되던 문제를 활성
-                대화 ID를 persist 대상에서 제외하고 URL과 동기화해 해결
-              </li>
-              <li>
-                동적 로딩·컴포넌트 분리·메모이제이션으로
-                <code class="text-[0.9rem] text-amber-600">Lighthouse</code>
-                성능 48점 → PC 92점·모바일 100점 개선
+                <strong class="text-[0.9rem] font-normal"
+                  >게시글 저장 순서 문제</strong
+                >
+                <a
+                  class="text-[0.8rem] text-amber-600 underline-offset-2 hover:underline"
+                  href="https://hyeeoooook.tistory.com/39"
+                  target="_blank"
+                  rel="noopener"
+                  >관련 글</a
+                >
+                <ul>
+                  <li>
+                    상황
+                    <ul>
+                      <li>
+                        게시글 저장 버튼을 눌러도 오류 없이 목록 페이지로
+                        이동했지만 실제 DB에는 글이 저장되지 않음
+                      </li>
+                      <li>
+                        데이터가 짧은 경우엔 간헐적으로 저장돼 원인을 재현하기도
+                        어려움
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    원인
+                    <ul>
+                      <li>
+                        개발자 도구로 함수들이 모두 정상 실행되는 걸 확인했지만
+                        저장은 안 되는 상황에서, 함수 실행 순서를 바꿔가며
+                        무엇이 원인인지 실험적으로 확인
+                      </li>
+                      <li>
+                        동기 함수가 비동기 저장 요청을 보낸 뒤 응답을 기다리지
+                        않고 페이지를 이동시키는
+                        <code class="text-[0.9rem] text-amber-600"
+                          >fire-and-forget</code
+                        >
+                        호출이 원인임을 특정
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    해결
+                    <ul>
+                      <li>
+                        저장 함수를 호출하던 방식을
+                        <code class="text-[0.9rem] text-amber-600"
+                          >await</code
+                        >로 응답을 기다린 뒤 분기하도록 수정해 간헐적 저장 실패
+                        제거
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
               </li>
             </ul>
           </article>
@@ -479,7 +518,9 @@
               </h3>
               <time class="time" datetime="2026-03">2026.03 - 2026.04</time>
             </header>
-            <p class="mb-1 flex flex-wrap items-center gap-x-3 text-[0.95rem] leading-none">
+            <p
+              class="mb-1 flex flex-wrap items-center gap-x-3 text-[0.95rem] leading-none"
+            >
               <a
                 class="link inline-flex items-center"
                 href="https://github.com/FRONTENDBOOTCAMP-17th/gentlelion"
@@ -546,11 +587,10 @@
               </li>
               <li>상품 카드·버튼 공통화 및 메뉴·스크롤 인터랙션 구현</li>
               <li>
-                상품·장바구니·주문·관리자 기능의 REST API CRUD 구현
+                장바구니·주문 API 연동 시 프론트엔드 방어 로직 구현
                 <ul>
                   <li>
-                    장바구니 API 호출 시 401(토큰 만료) 응답을 감지해
-                    재로그인으로 유도
+                    API 호출 시 401(토큰 만료) 응답을 감지해 재로그인으로 유도
                   </li>
                   <li>
                     빈 장바구니 상태에서 결제 페이지 접근을 차단하는 방어 로직
@@ -561,51 +601,6 @@
               <li>
                 <code class="text-[0.9rem] text-amber-600">Playwright</code>로
                 회원가입·로그인·장바구니·주문·프로필 5개 흐름 검수
-              </li>
-            </ul>
-          </article>
-
-          <article class="my-7">
-            <header class="title-with-time-wrapper">
-              <h3 class="title-sec mb-1">ESLint-KR <em>개인 프로젝트</em></h3>
-              <time class="time" datetime="2026-03">2026.03 - 2026.04</time>
-            </header>
-            <p class="mb-1 flex flex-wrap items-center gap-x-3 text-[0.95rem] leading-none">
-              <a
-                class="link inline-flex items-center"
-                href="https://github.com/DoHyuk-Centric/eslint-kr"
-                target="_blank"
-                rel="noopener"
-                ><svg class="mr-1 h-4 w-4" fill="currentColor">
-                  <use href="#icon-github" /></svg
-                >Github</a
-              ><a
-                class="link"
-                href="https://dohyuk-centric.github.io/eslint-kr/"
-                target="_blank"
-                rel="noopener"
-                >서비스 링크</a
-              >
-            </p>
-            <p class="item-description">
-              ESLint v9 Flat Config 기반 한국어 학습 가이드입니다.
-            </p>
-            <strong class="sr-only">사용한 스택</strong>
-            <ul class="stack-badge-list-wrapper my-2">
-              <li class="stack-badge stack-react">React</li>
-              <li class="stack-badge stack-ts">TypeScript</li>
-              <li class="stack-badge stack-router">React Router</li>
-            </ul>
-            <strong class="sr-only">성과</strong>
-            <ul class="description-list">
-              <li>ESLint v9 Flat Config 한국어 가이드 10개 페이지 제작</li>
-              <li>
-                GitHub Pages의 SPA 딥링크 404 문제를 리다이렉트·경로 복원
-                방식으로 해결
-              </li>
-              <li>
-                React Router의 중첩 라우팅을 적용해 공통 Header·Sidebar·Footer와
-                문서 콘텐츠 영역을 분리
               </li>
             </ul>
           </article>
