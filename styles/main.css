@@ -11,6 +11,7 @@
     --color-sky-500: oklch(68.5% 0.169 237.323);
     --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-rose-400: oklch(71.2% 0.194 13.428);
+    --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -356,12 +357,6 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-\[\#E7E9EE\] {
-    border-color: #E7E9EE;
-  }
-  .bg-\[\#F5F6F8\] {
-    background-color: #F5F6F8;
-  }
   .bg-canvas {
     background-color: #FBFCFE;
   }
@@ -423,6 +418,14 @@
     --tw-font-weight: 400;
     font-weight: 400;
   }
+  .font-\[450\] {
+    --tw-font-weight: 450;
+    font-weight: 450;
+  }
+  .font-\[450mm\] {
+    --tw-font-weight: 450mm;
+    font-weight: 450mm;
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -442,9 +445,6 @@
   .tracking-wide {
     --tw-tracking: var(--tracking-wide);
     letter-spacing: var(--tracking-wide);
-  }
-  .text-\[\#111111\] {
-    color: #111111;
   }
   .text-amber-600 {
     color: var(--color-amber-600);
@@ -469,6 +469,9 @@
   }
   .text-faint {
     color: #B0B6C0;
+  }
+  .text-gray-400 {
+    color: var(--color-gray-400);
   }
   .text-green-600 {
     color: var(--color-green-600);
@@ -506,6 +509,9 @@
     --tw-blur: blur(8px);
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
+  .filter {
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
   .backdrop-filter {
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
@@ -541,9 +547,6 @@
     }
     .md\:w-\[180px\] {
       width: 180px;
-    }
-    .md\:max-w-5xl {
-      max-width: var(--container-5xl);
     }
     .md\:text-2xl {
       font-size: var(--text-2xl);

@@ -187,9 +187,10 @@
             <p>
               <strong class="text-emerald-600 font-medium"
                 >연예인과 끈기의 괴물이라는 별명을 가진 개발자</strong
-              >입니다. <br /> 친근함과 유쾌한 성격으로 어떤 그룹에서도 잘 지내서
-              사람들에게 인기가 많고, 프로젝트를 진행할 때는 포기하지 않고
-              끝까지 도전한다고 해서 붙여진 별명입니다.
+              >입니다. <br />
+              친근함과 유쾌한 성격으로 어떤 그룹에서도 잘 지내서 사람들에게
+              인기가 많고, 프로젝트를 진행할 때는 포기하지 않고 끝까지
+              도전한다고 해서 붙여진 별명입니다.
             </p>
             <p>
               <strong class="text-emerald-600 font-medium"
@@ -319,8 +320,8 @@
             <strong class="sr-only">성과</strong>
             <ul class="description-list">
               <li>
-                <strong class="text-[0.9rem] font-[400]"
-                  >구인구직 글쓰기</strong
+                <strong class="text-[0.9rem] font-[450mm]"
+                  >Props 18개 → 7개로 가독성ㆍ응집도ㆍ결합도 개선</strong
                 >
                 <a
                   class="text-[0.8rem] text-amber-600 underline-offset-2 hover:underline"
@@ -368,8 +369,8 @@
                 </ul>
               </li>
               <li>
-                <strong class="text-[0.9rem] font-[400]"
-                  >회원가입 - 이메일 검증</strong
+                <strong class="text-[0.9rem] font-[450mm]"
+                  >폼 단위 검증 → 필드 단위 검증으로 의존성 관리</strong
                 >
                 <a
                   class="text-[0.8rem] text-amber-600 underline-offset-2 hover:underline"
@@ -380,48 +381,14 @@
                 >
                 <ul>
                   <li>
-                    상황
-                    <ul>
-                      <li>
-                        팀원이 작성한 코드를 이어받아 보니, 이메일만 유일하게 폼
-                        전체 제출(가입하기 버튼 클릭) 시점에서 사용 가능 여부가
-                        확인됨
-                      </li>
-                      <li>
-                        에러 메시지 또한 이메일 필드가 아닌 폼 전체 에러
-                        메시지로 표시
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    근거
-                    <ul>
-                      <li>
-                        함께 수정되어야 할 코드가 함께 수정되도록 만드는것이
-                        응집도의 핵심 → 필드가 독립적으로 검증 가능하면 필드
-                        단위로, 필드 간 의존성이 있으면 폼 전체 단위로 관리
-                      </li>
-                      <li>
-                        이메일 중복확인은 이메일 값 하나에만 의존하고 다른
-                        필드와 무관하므로, 필드 단위로 옮기는 게 이 기준에
-                        부합하다고 판단
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    결과
-                    <ul>
-                      <li>
-                        이메일 필드가 blur 될 때 자체적으로 중복확인 API를
-                        호출하고, 에러도 이메일 필드 바로 아래 표시하도록 개선
-                      </li>
-                    </ul>
+                    blur 시 자체 API 호출, 에러 메시지는 이메일 필드 바로
+                    아래쪽에 표시
                   </li>
                 </ul>
               </li>
               <li>
-                <strong class="text-[0.9rem] font-[400]"
-                  >관리자 권한 인증 가드 분리</strong
+                <strong class="text-[0.9rem] font-[450mm]"
+                  >관리자 인증ㆍ레이아웃ㆍ데이터조회 책임 분리</strong
                 >
                 <a
                   class="text-[0.8rem] text-amber-600 underline-offset-2 hover:underline"
@@ -431,43 +398,10 @@
                   >관련 글</a
                 >
                 <ul>
+                  <li>layout.tsx 하나가 맡던 3가지 책임 해소</li>
                   <li>
-                    상황
-                    <ul>
-                      <li>
-                        layout.tsx 하나가 인증 검증, 레이아웃 셀 구성, 사이드바
-                        전용 데이터 조회까지 세 가지 책임을 한 함수 안에서 처리
-                      </li>
-                      <li>
-                        사이드바가 필요로 하는 데이터를 layout.tsx가 대신
-                        조회해서 넘겨주다 보니,layout.tsx가 사이드바 내부의 쿼리
-                        세부사항까지 알아야하는 상태
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    근거
-                    <ul>
-                      <li>
-                        AI의 제안은 HOC와 컴포넌트 네이밍을 Container로 제안 →
-                        구조적으로 눈에 확 들어오는 Wrapper으로도 만족되고,
-                        데이터 조회 로직까지 함께 들어있다는 Shell이라는
-                        네이밍으로 선택
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    결과
-                    <ul>
-                      <li>
-                        layout.tsx 파일 근거에 맞게 구조가 한눈에 보이도록 개선
-                        <pre
-                          class="code-panel"
-                        ><code><span class="text-faint">&lt;</span><span class="font-medium text-green-600">AdminGuard</span><span class="text-faint">&gt;</span>
-  <span class="text-faint">&lt;</span><span class="font-medium text-green-600">AdminShell</span><span class="text-faint">&gt;{</span><span class="text-blue-600">children</span><span class="text-faint">}&lt;/</span><span class="font-medium text-green-600">AdminShell</span><span class="text-faint">&gt;</span>
-<span class="text-faint">&lt;/</span><span class="font-medium text-green-600">AdminGuard</span><span class="text-faint">&gt;</span></code></pre>
-                      </li>
-                    </ul>
+                    AI는 HOC(함수로 감싸기) 방식을 제안 → layout 파일명에 따라
+                    눈에 확 들어오는 Wrapper 구조를 선택
                   </li>
                 </ul>
               </li>
@@ -514,8 +448,8 @@
             <strong class="sr-only">성과</strong>
             <ul class="description-list">
               <li>
-                <strong class="text-[0.9rem] font-[400]"
-                  >Markdown 기반 글쓰기 미리보기</strong
+                <strong class="text-[0.9rem] font-[450mm]"
+                  >블럭 단위 렌더링을 사용해 성능을 8.2배 향상</strong
                 >
                 <a
                   class="text-[0.8rem] text-amber-600 underline-offset-2 hover:underline"
@@ -529,12 +463,10 @@
                     상황
                     <ul>
                       <li>
-                        사진을 넣은 경우 심하게 깜빡임을 겪어 사용자의 경험 저하
-                      </li>
-                      <li>
                         글을 작성할때마다 미리보기 섹션에서 DOM 전체를 교체해
                         재렌더링이 발생해 깜빡임이 누적
                       </li>
+                      <li>특히 사진을 넣으면 더욱 크게 체감</li>
                     </ul>
                   </li>
                   <li>
@@ -567,8 +499,8 @@
                 </ul>
               </li>
               <li>
-                <strong class="text-[0.9rem] font-[400]"
-                  >글쓰기 도구 모음</strong
+                <strong class="text-[0.9rem] font-[450mm]"
+                  >Velog에서 겪었던 불편함을 개선한 도구 모음 UI</strong
                 >
                 <a
                   class="text-[0.8rem] text-amber-600 underline-offset-2 hover:underline"
@@ -579,36 +511,17 @@
                 >
                 <ul>
                   <li>
-                    상황
-                    <ul>
-                      <li>
-                        개인적으로 Velog를 사용할때 불편했던 이미지 첨부 버튼
-                        기능간에 미세한 불편함을 느낌
-                      </li>
-                      <li>
-                        Velog 글쓰기처럼 마크다운 문법을 보다 편하게 작성할 수
-                        있도록 도와줄 수 있는 도구 모음이 필요
-                      </li>
-                    </ul>
+                    커서 위치와 선택 범위를 기반으로 하는 UI 버튼과 다음 입력
+                    위치로 자동 이동 사용자 UX
                   </li>
                   <li>
-                    해결
-                    <ul>
-                      <li>
-                        커서 위치와 선택 범위를 읽어 제목(H1 ~ H4), 글꼴, 링크,
-                        인용, 이미지, 코드블록 8가지를 UI 버튼으로 제공
-                      </li>
-                      <li>삽입 후 커서를 다음 입력 위치로 자동 이동</li>
-                      <li>
-                        특히 velog에서 불편했던 이미지 삽입 시엔 커서 앞에
-                        줄바꿈을 먼저 넣어 기존 문장과 분리
-                      </li>
-                    </ul>
+                    Velog에선 이미지 삽입시에 "텍스트이미지"와 같은 형태로
+                    저장되는 것을 줄바꿈을 넣어 개선
                   </li>
                 </ul>
               </li>
               <li>
-                <strong class="text-[0.9rem] font-normal"
+                <strong class="text-[0.9rem] font-[450mm]"
                   >게시글 저장 순서 문제</strong
                 >
                 <a
@@ -620,46 +533,13 @@
                 >
                 <ul>
                   <li>
-                    상황
-                    <ul>
-                      <li>
-                        게시글 저장 버튼을 눌러도 오류 없이 목록 페이지로
-                        이동했지만 실제 DB에는 글이 저장되지 않음
-                      </li>
-                      <li>
-                        데이터가 짧은 경우엔 간헐적으로 저장돼 원인을 재현하기도
-                        어려움
-                      </li>
-                    </ul>
+                    게시글 저장 버튼을 눌러도 DB에 저장되지 않고, 데이터가 짧은
+                    경우엔 간헐적으로 저장되는 버그
                   </li>
                   <li>
-                    원인
-                    <ul>
-                      <li>
-                        개발자 도구로 함수들이 모두 정상 실행되는 걸 확인했지만
-                        저장은 안 되는 상황에서, 함수 실행 순서를 바꿔가며
-                        무엇이 원인인지 실험적으로 확인
-                      </li>
-                      <li>
-                        동기 함수가 비동기 저장 요청을 보낸 뒤 응답을 기다리지
-                        않고 페이지를 이동시키는
-                        <code class="text-[0.9rem] text-amber-600"
-                          >fire-and-forget</code
-                        >
-                        호출이 원인임을 특정
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    해결
-                    <ul>
-                      <li>
-                        저장 함수를 호출하던 방식을
-                        <code class="text-[0.9rem] text-amber-600">await</code
-                        >로 응답을 기다린 뒤 분기하도록 수정해 간헐적 저장 실패
-                        제거
-                      </li>
-                    </ul>
+                    동기 방식으로 저장 함수를 호출하던 방식을
+                    <code class="text-[0.9rem] text-amber-600">await</code>로
+                    응답을 기다리도록 분기하도록 수정해 해결
                   </li>
                 </ul>
               </li>
@@ -733,7 +613,6 @@
                 역할: 팀장·프론트엔드 개발, API 명세·WBS 작성, 브랜치 전략·이슈
                 관리 환경 구성
               </li>
-              <li>스크럼 회의와 진행 상황을 GitHub Wiki에 기록·공유</li>
               <li>
                 <code class="text-[0.9rem] text-amber-600">npm Workspaces</code>
                 <strong class="text-amber-600 font-medium">모노레포</strong>로
