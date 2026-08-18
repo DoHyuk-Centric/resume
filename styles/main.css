@@ -197,6 +197,9 @@
     white-space: nowrap;
     border-width: 0;
   }
+  .static {
+    position: static;
+  }
   .right-4 {
     right: calc(var(--spacing) * 4);
   }
@@ -247,6 +250,9 @@
   }
   .block {
     display: block;
+  }
+  .contents {
+    display: contents;
   }
   .flex {
     display: flex;
