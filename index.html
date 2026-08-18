@@ -21,7 +21,10 @@
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="김도혁 이력서" />
     <meta property="og:locale" content="ko_KR" />
-    <meta property="og:url" content="https://dohyuk-centric.github.io/resume/" />
+    <meta
+      property="og:url"
+      content="https://dohyuk-centric.github.io/resume/"
+    />
     <meta property="og:title" content="김도혁 | 프론트엔드 개발자" />
     <meta
       property="og:description"
@@ -183,9 +186,10 @@
           <div class="mt-5 space-y-4 text-[0.85rem] text-muted leading-relaxed">
             <p>
               <strong class="text-emerald-600 font-medium"
-                >기본기를 바탕으로 학습을 이어가는 개발자</strong
-              >입니다. 코드 레벨에서 리팩토링을 꾸준하게 다듬으며 가독성,
-              응집도, 결합도, 예측 가능성을 고려합니다.
+                >연예인과 끈기의 괴물이라는 별명을 가진 개발자</strong
+              >입니다. <br /> 친근함과 유쾌한 성격으로 어떤 그룹에서도 잘 지내서
+              사람들에게 인기가 많고, 프로젝트를 진행할 때는 포기하지 않고
+              끝까지 도전한다고 해서 붙여진 별명입니다.
             </p>
             <p>
               <strong class="text-emerald-600 font-medium"
@@ -200,10 +204,15 @@
               <strong class="text-emerald-600 font-medium"
                 >경험과 도전을 공유하는것</strong
               >을 좋아합니다. <br />
-              개인 블로그 프로젝트에서 렌더링 성능을 개선한 증분 렌더러를 구현해
-              npm에 배포하고, 블로그에 배움과 경험을 꾸준히 기록해 부트캠프
-              동료들에게 정보를 제공했으며, ESLint 한국어 학습 문화를 위해
-              한국어 가이드 사이트를 제작한 경험이 있습니다.
+              개인 블로그 프로젝트에서 렌더링 성능을 8.2배 개선하고 npm에
+              배포(누적 다운로드 551회)했으며, ESLint 한국어 학습 문화를 위한
+              <a
+                class="text-blue-600 underline-offset-2 hover:underline"
+                href="https://dohyuk-centric.github.io/eslint-kr/"
+                target="_blank"
+                rel="noopener"
+                >한국어 가이드 사이트</a
+              >를 만들었습니다.
             </p>
           </div>
         </section>
@@ -310,46 +319,155 @@
             <strong class="sr-only">성과</strong>
             <ul class="description-list">
               <li>
-                역할: 기술·구조 설계 및 의사결정, Git Flow 전략(<code
-                  class="text-[0.9rem]"
-                  >main</code
-                >, <code class="text-[0.9rem]">develop</code>,
-                <code class="text-[0.9rem]">fix</code>,
-                <code class="text-[0.9rem]">bug</code>,
-                <code class="text-[0.9rem]">hotfix</code>,
-                <code class="text-[0.9rem]">release</code>) 및 버전관리
-              </li>
-              <li>이미지 성능 최적화, SEO, 공통 UI 시스템 구축</li>
-              <li>
-                <code class="text-[0.9rem] text-amber-600">TanStack Query</code
-                >를 활용한 탭 이동 캐싱 처리
+                <strong class="text-[0.9rem] font-[400]"
+                  >구인구직 글쓰기</strong
+                >
+                <a
+                  class="text-[0.8rem] text-amber-600 underline-offset-2 hover:underline"
+                  href="https://wild-guardian-21d.notion.site/Form-Page-Service-3b9642d2c237808483dcff6f769477cf"
+                  target="_blank"
+                  rel="noopener"
+                  >관련 글</a
+                >
                 <ul>
                   <li>
-                    <code class="text-[0.9rem]">useState</code>·<code
-                      class="text-[0.9rem]"
-                      >useEffect</code
-                    >
-                    방식은 탭을 이동(언마운트)할 때마다 매번 새로 데이터 조회
+                    상황
+                    <ul>
+                      <li>
+                        팀원과 함께 고민해 구인구직 글쓰기 폼을 두 페이지로
+                        나눴음에도, 약 18개의 Props 받아와 코드의 가독성을 해침
+                      </li>
+                      <li>
+                        관련 없는 도메인의 상태가 한 컴포넌트에 뭉쳐있어서
+                        코드의 응집도가 낮고 결합도가 높음
+                      </li>
+                    </ul>
                   </li>
                   <li>
-                    <code class="text-[0.9rem] text-amber-600">useQuery</code>로
-                    전환해 쿼리 키와 조회 함수를 지정하고,
-                    <code class="text-[0.9rem] text-amber-600">staleTime</code>
-                    동안은 캐시된 데이터를 재사용하도록 개선
+                    근거
+                    <ul>
+                      <li>
+                        인간심리학자 조지 밀러는 인간이 한 번에 기억하거나
+                        처리할 수 있는 정보의 한계는 7가지 정도라고 주장
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    해결
+                    <ul>
+                      <li>
+                        도메인별로 세부 컴포넌트를 추가 분리해 컴포넌트당 최대
+                        18개였던 Props를 7개 이하로 재분리
+                      </li>
+                      <li>
+                        job / company 정보 도메인 폴더와 import가 늘어남에 따라
+                        배럴 패턴을 도입
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </li>
               <li>
-                관리자 권한 인증 가드 분리
+                <strong class="text-[0.9rem] font-[400]"
+                  >회원가입 - 이메일 검증</strong
+                >
+                <a
+                  class="text-[0.8rem] text-amber-600 underline-offset-2 hover:underline"
+                  href="https://wild-guardian-21d.notion.site/vs-3bb642d2c23780d3a5f9e68241b9dba2?pvs=73"
+                  target="_blank"
+                  rel="noopener"
+                  >관련 글</a
+                >
                 <ul>
                   <li>
-                    AI는 HOC와 Container를 제안했지만, layout.tsx에 걸맞지 않게
-                    구조가 한눈에 보이지 않고 조회·렌더링 책임이 한눈에 드러나지
-                    않는다고 판단해
-                    <code class="text-[0.9rem] text-amber-600">AdminGuard</code>
-                    <code class="text-[0.9rem] text-amber-600">Wrapper</code
-                    >·<code class="text-[0.9rem] text-amber-600">Shell</code>
-                    구조로 재설계
+                    상황
+                    <ul>
+                      <li>
+                        팀원이 작성한 코드를 이어받아 보니, 이메일만 유일하게 폼
+                        전체 제출(가입하기 버튼 클릭) 시점에서 사용 가능 여부가
+                        확인됨
+                      </li>
+                      <li>
+                        에러 메시지 또한 이메일 필드가 아닌 폼 전체 에러
+                        메시지로 표시
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    근거
+                    <ul>
+                      <li>
+                        함께 수정되어야 할 코드가 함께 수정되도록 만드는것이
+                        응집도의 핵심 → 필드가 독립적으로 검증 가능하면 필드
+                        단위로, 필드 간 의존성이 있으면 폼 전체 단위로 관리
+                      </li>
+                      <li>
+                        이메일 중복확인은 이메일 값 하나에만 의존하고 다른
+                        필드와 무관하므로, 필드 단위로 옮기는 게 이 기준에
+                        부합하다고 판단
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    결과
+                    <ul>
+                      <li>
+                        이메일 필드가 blur 될 때 자체적으로 중복확인 API를
+                        호출하고, 에러도 이메일 필드 바로 아래 표시하도록 개선
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong class="text-[0.9rem] font-[400]"
+                  >관리자 권한 인증 가드 분리</strong
+                >
+                <a
+                  class="text-[0.8rem] text-amber-600 underline-offset-2 hover:underline"
+                  href="https://wild-guardian-21d.notion.site/3bb642d2c2378017ae11f92423fc3ed1?pvs=73"
+                  target="_blank"
+                  rel="noopener"
+                  >관련 글</a
+                >
+                <ul>
+                  <li>
+                    상황
+                    <ul>
+                      <li>
+                        layout.tsx 하나가 인증 검증, 레이아웃 셀 구성, 사이드바
+                        전용 데이터 조회까지 세 가지 책임을 한 함수 안에서 처리
+                      </li>
+                      <li>
+                        사이드바가 필요로 하는 데이터를 layout.tsx가 대신
+                        조회해서 넘겨주다 보니,layout.tsx가 사이드바 내부의 쿼리
+                        세부사항까지 알아야하는 상태
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    근거
+                    <ul>
+                      <li>
+                        AI의 제안은 HOC와 컴포넌트 네이밍을 Container로 제안 →
+                        구조적으로 눈에 확 들어오는 Wrapper으로도 만족되고,
+                        데이터 조회 로직까지 함께 들어있다는 Shell이라는
+                        네이밍으로 선택
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    결과
+                    <ul>
+                      <li>
+                        layout.tsx 파일 근거에 맞게 구조가 한눈에 보이도록 개선
+                        <pre
+                          class="code-panel"
+                        ><code><span class="text-faint">&lt;</span><span class="font-medium text-green-600">AdminGuard</span><span class="text-faint">&gt;</span>
+  <span class="text-faint">&lt;</span><span class="font-medium text-green-600">AdminShell</span><span class="text-faint">&gt;{</span><span class="text-blue-600">children</span><span class="text-faint">}&lt;/</span><span class="font-medium text-green-600">AdminShell</span><span class="text-faint">&gt;</span>
+<span class="text-faint">&lt;/</span><span class="font-medium text-green-600">AdminGuard</span><span class="text-faint">&gt;</span></code></pre>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </li>
@@ -537,8 +655,7 @@
                     <ul>
                       <li>
                         저장 함수를 호출하던 방식을
-                        <code class="text-[0.9rem] text-amber-600"
-                          >await</code
+                        <code class="text-[0.9rem] text-amber-600">await</code
                         >로 응답을 기다린 뒤 분기하도록 수정해 간헐적 저장 실패
                         제거
                       </li>
