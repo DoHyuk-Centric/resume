@@ -475,38 +475,11 @@
     .print\:mt-2 {
       margin-top: calc(var(--spacing) * 2);
     }
-    .print\:mt-4 {
-      margin-top: calc(var(--spacing) * 4);
-    }
-    .print\:mt-8 {
-      margin-top: calc(var(--spacing) * 8);
-    }
     .print\:mb-0 {
       margin-bottom: 0px;
     }
-    .print\:flex {
-      display: flex;
-    }
-    .print\:min-h-screen {
-      min-height: 100vh;
-    }
     .print\:max-w-\[90\%\] {
       max-width: 90%;
-    }
-    .print\:break-before-page {
-      break-before: page;
-    }
-    .print\:break-inside-avoid {
-      break-inside: avoid;
-    }
-    .print\:break-after-page {
-      break-after: page;
-    }
-    .print\:flex-col {
-      flex-direction: column;
-    }
-    .print\:justify-center {
-      justify-content: center;
     }
     .print\:border-t-0 {
       border-top-style: var(--tw-border-style);
