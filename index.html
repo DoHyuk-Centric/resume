@@ -77,7 +77,9 @@
       }
     </script>
   </head>
-  <body class="bg-canvas py-8 font-sans text-ink print:bg-none">
+  <body
+    class="bg-canvas py-8 font-sans text-ink print:bg-none print:bg-white print:py-4"
+  >
     <svg class="hidden" aria-hidden="true">
       <symbol id="icon-figma" viewBox="0 0 24 24">
         <path
@@ -122,7 +124,7 @@
     <div
       class="m-auto mb-[50px] max-w-3xl text-ink print:relative print:mb-0 print:max-w-[90%]"
     >
-      <header class="mb-5 mt-6 flex items-center p-5">
+      <header class="mb-5 mt-6 flex items-center p-5 print:mt-2">
         <img
           class="h-[130px] w-[130px] rounded-full object-cover shadow-lg md:mr-5 md:h-[180px] md:w-[180px]"
           src="./img/profile.jpg"
@@ -222,34 +224,20 @@
           <h2 class="title-pri">스택</h2>
           <div class="stack-grid grid gap-6 sm:grid-cols-2">
             <div class="stack-wrapper">
-              <strong class="title-sec mb-3 block">Frontend</strong>
+              <strong class="title-sec mb-3 block">Skills</strong>
               <ul class="stack-badge-list-wrapper">
                 <li class="stack-badge stack-ts">TypeScript</li>
                 <li class="stack-badge stack-tailwind">Tailwind CSS</li>
                 <li class="stack-badge stack-js">JavaScript</li>
                 <li class="stack-badge stack-react">React</li>
                 <li class="stack-badge stack-next">Next.js</li>
-                <li class="stack-badge stack-zustand">Zustand</li>
-                <li class="stack-badge stack-tanstack">TanStack Query</li>
-                <li class="stack-badge stack-shadcn">shadcn/ui</li>
-                <li class="stack-badge stack-html">HTML</li>
-              </ul>
-            </div>
-            <div class="stack-wrapper">
-              <strong class="title-sec mb-3 block">Backend</strong>
-              <ul class="stack-badge-list-wrapper">
                 <li class="stack-badge stack-supabase">Supabase</li>
               </ul>
             </div>
             <div class="stack-wrapper">
-              <strong class="title-sec mb-3 block">DB</strong>
+              <strong class="title-sec mb-3 block">Tools</strong>
               <ul class="stack-badge-list-wrapper">
                 <li class="stack-badge stack-generic">PostgreSQL</li>
-              </ul>
-            </div>
-            <div class="stack-wrapper">
-              <strong class="title-sec mb-3 block">협업 &amp; Tools</strong>
-              <ul class="stack-badge-list-wrapper">
                 <li class="stack-badge stack-playwright">Playwright</li>
                 <li class="stack-badge stack-figma">Figma</li>
                 <li class="stack-badge stack-git">Git/GitHub</li>
@@ -348,8 +336,10 @@
                     근거
                     <ul>
                       <li>
-                        인간심리학자 <span class="font-medium">조지 밀러</span>는 인간이 한 번에 기억하거나
-                        처리할 수 있는 정보의 한계는 7가지 정도라고 주장
+                        인간심리학자
+                        <span class="font-medium">조지 밀러</span>는 인간이 한
+                        번에 기억하거나 처리할 수 있는 정보의 한계는 7가지
+                        정도라고 주장
                       </li>
                     </ul>
                   </li>
@@ -358,11 +348,16 @@
                     <ul>
                       <li>
                         도메인별로 세부 컴포넌트를 추가 분리해 컴포넌트당 최대
-                        <strong class="text-amber-600 font-medium">18개였던 Props를 7개 이하로 재분리</strong>
+                        <strong class="text-amber-600 font-medium"
+                          >18개였던 Props를 7개 이하로 재분리</strong
+                        >
                       </li>
                       <li>
-                        <code class="text-[0.9rem]">job/company</code> 정보 도메인 폴더와 import가 늘어남에 따라
-                        <strong class="text-amber-600 font-medium">배럴 패턴</strong>을 도입
+                        <code class="text-[0.9rem]">job/company</code> 정보
+                        도메인 폴더와 import가 늘어남에 따라
+                        <strong class="text-amber-600 font-medium"
+                          >배럴 패턴</strong
+                        >을 도입
                       </li>
                     </ul>
                   </li>
@@ -610,14 +605,23 @@
             <strong class="sr-only">성과</strong>
             <ul class="description-list">
               <li>
-                역할: 팀장·프론트엔드 개발, API 명세·WBS 작성, 브랜치 전략·이슈
-                관리 환경 구성
+                역할: 팀장, API 명세·WBS 작성, 브랜치 전략·이슈 관리 환경 구성
               </li>
               <li>
                 <code class="text-[0.9rem] text-amber-600">npm Workspaces</code>
                 <strong class="text-amber-600 font-medium">모노레포</strong>로
-                사용자·관리자·공용 API를 분리하고 서비스별
+                사용자·관리자를 분리하고 서비스별
                 <strong class="text-amber-600 font-medium">독립 배포</strong>
+                <ul>
+                  <li>
+                    관리자 전용 API 호출·권한 로직이 사용자 페이지
+                    개발자도구에서 노출되지 않아야 한다고 판단
+                  </li>
+                  <li>
+                    워크스페이스를 완전히 분리해, 사용자 번들에는 관리자 코드가
+                    전혀 포함되지 않도록 구성
+                  </li>
+                </ul>
               </li>
               <li>상품 카드·버튼 공통화 및 메뉴·스크롤 인터랙션 구현</li>
               <li>

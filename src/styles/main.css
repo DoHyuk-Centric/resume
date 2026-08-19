@@ -27,11 +27,11 @@
   }
 
   .section-main {
-    @apply mb-2 border-t border-line p-5;
+    @apply mb-2 border-t border-line p-5 print:mb-1 print:p-3;
   }
 
   .title-pri {
-    @apply mt-4 mb-3 text-xl font-semibold text-ink;
+    @apply mt-4 mb-3 text-xl font-semibold text-ink print:mt-2 print:mb-2;
   }
   .title-sec {
     @apply text-lg font-semibold text-ink;
